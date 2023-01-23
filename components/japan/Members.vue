@@ -492,6 +492,11 @@ const members = [
         image: "rodos.png",
         href: "http://rodos.tech/",
       },
+      {
+        name: "株式会社幻冬舎（あたらしい経済）",
+        image: "★あたらしい経済ロゴ横（黒透過） - 設楽悠介.png",
+        href: "https://www.neweconomy.jp/",
+      },
     ],
   },
 ];
