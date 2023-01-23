@@ -492,6 +492,11 @@ const members = [
         image: "rodos.png",
         href: "http://rodos.tech/",
       },
+      {
+        name: "MAGHUB",
+        image: "maghub logo -1 - 金城蓉晴.png",
+        href: "https://www.mugenart.io/",
+      },
     ],
   },
 ];
