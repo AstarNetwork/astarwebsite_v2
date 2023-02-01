@@ -106,7 +106,7 @@ const nav = [
       },
       {
         name: "Astar Japan Lab",
-        href: "https://japan.astar.network/",
+        href: "https://astar.network/japan",
       },
       {
         name: "Astar Space Lab",
