@@ -553,11 +553,6 @@ const members = [
        href: "http://www.kyotoma.co.jp/",
       },
       {
-       name: "woollet",
-       image: "woollet.png",
-       href: "https://woollet.network",
-      },
-      {
        name: "Parallax Network",
        image: "Parallax Network.png",
        href: "https://parallaxnetwork.io",
