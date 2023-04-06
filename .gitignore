@@ -1,9 +1,3 @@
-node_modules
-*.log*
-.nuxt
-.nitro
-.cache
-.output
-.env
-dist
 .DS_Store
+.env
+backend/ecosystem.config.js

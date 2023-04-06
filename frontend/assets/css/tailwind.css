@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@900&family=Roboto+Mono:wght@300&family=Roboto:wght@300,400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply overflow-x-hidden;
+  }
+  body {
+    @apply leading-relaxed text-base;
+  }
+}
+
+@layer components {
+  .space-gradient {
+    background: linear-gradient(
+      120deg,
+      #e6007a -5.77%,
+      #703ac2 13.57%,
+      #0070eb 34.18%,
+      #0297fb 58.08%,
+      #0ae2ff 74.93%
+    );
+  }
+  .title {
+    @apply font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight;
+  }
+  .title span {
+    background: linear-gradient(
+      90deg,
+      #e6007a -5.88%,
+      #703ac2 15.42%,
+      #0070eb 40.77%,
+      #0297fb 72.21%,
+      #0ae2ff 95.53%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-outlined-box {
+    @apply bg-space-gray-dark relative;
+    border-radius: 1.4rem;
+  }
+  .gradient-outlined-box::after {
+    @apply rounded-3xl;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    background-image: linear-gradient(
+      120deg,
+      #e6007a -5.88%,
+      #703ac2 15.42%,
+      #0070eb 40.77%,
+      #0297fb 72.21%,
+      #0ae2ff 95.53%
+    );
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+
+  .float-animation {
+    animation: 2s float infinite;
+  }
+
+  .tab {
+    @apply text-space-blue hover:text-space-blue-lighter cursor-pointer;
+  }
+  .tab.current {
+    @apply text-space-gray cursor-default outline-0;
+  }
+  .tab-panel {
+    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 max-w-7xl mx-auto px-4 sm:px-6;
+  }
+}
