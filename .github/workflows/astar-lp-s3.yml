@@ -1,23 +1,18 @@
-name: Astar-Stage-SynctoS3
+name: Astar-SynctoS3
 'on':
   push:
     branches:
-      - ecosystem-page
+      - main
   pull_request:
     branches:
-      - ecosystem-page
-  workflow_dispatch:
-    name:
-      - from Strapi
+      - main 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: |
-         cd frontend
-         npm ci && npm run generate
-         ls .output/public/index.html
+      - run: npm ci && npm run generate
+      - run: ls .output/public/index.html
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -25,4 +20,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync frontend/.output/public/  s3://astar-git.astar.network --delete
+        run: aws s3 sync .output/public/  s3://astar.network --delete
