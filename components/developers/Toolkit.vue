@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative overflow-x-hidden">
     <div data-aos="zoom-out-left" class="absolute right-4 z-[4]">
       <img
         class="h-48 lg:h-auto float-animation"

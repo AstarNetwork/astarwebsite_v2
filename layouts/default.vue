@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden">
+  <div>
     <Header />
     <slot name="space" />
     <div class="relative z-10">

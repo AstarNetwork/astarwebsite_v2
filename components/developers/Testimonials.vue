@@ -1,44 +1,50 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-    <h2 class="title text-center mb-12">
-      <span>Testimonials</span>
-    </h2>
-    <carousel :items-to-show="1.2">
-      <slide v-for="item in testimonials" class="px-2 sm:px-8">
-        <div
-          class="bg-gradient w-full rounded-3xl text-white px-4 py-6 sm:px-12 sm:py-12 h-full flex items-center"
-        >
-          <div class="relative">
-            <blockquote class="pt-6 pb-4">
-              <div class="mx-auto text-center sm:text-xl sm:leading-9">
-                <p>{{ item.text }}</p>
-              </div>
-              <footer class="mt-8">
-                <div class="md:flex md:items-center md:justify-center">
-                  <div class="md:flex-shrink-0">
-                    <img
-                      class="mx-auto h-16 w-16 rounded-full"
-                      :src="'/images/developers/testimonials/' + item.image"
-                      :alt="item.name"
-                    />
-                  </div>
-                  <div class="mt-3 md:mt-0 md:ml-4 md:flex md:items-center">
-                    <div class="text-left leading-tight">
-                      <div class="sm:text-xl font-medium">{{ item.name }}</div>
-                      <div class="text-sm sm:text-base">{{ item.company }}</div>
+  <div class="overflow-x-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <h2 class="title text-center mb-12">
+        <span>Testimonials</span>
+      </h2>
+      <carousel :items-to-show="1.2">
+        <slide v-for="item in testimonials" class="px-2 sm:px-8">
+          <div
+            class="bg-gradient w-full rounded-3xl text-white px-4 py-6 sm:px-12 sm:py-12 h-full flex items-center"
+          >
+            <div class="relative">
+              <blockquote class="pt-6 pb-4">
+                <div class="mx-auto text-center sm:text-xl sm:leading-9">
+                  <p>{{ item.text }}</p>
+                </div>
+                <footer class="mt-8">
+                  <div class="md:flex md:items-center md:justify-center">
+                    <div class="md:flex-shrink-0">
+                      <img
+                        class="mx-auto h-16 w-16 rounded-full"
+                        :src="'/images/developers/testimonials/' + item.image"
+                        :alt="item.name"
+                      />
+                    </div>
+                    <div class="mt-3 md:mt-0 md:ml-4 md:flex md:items-center">
+                      <div class="text-left leading-tight">
+                        <div class="sm:text-xl font-medium">
+                          {{ item.name }}
+                        </div>
+                        <div class="text-sm sm:text-base">
+                          {{ item.company }}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </footer>
-            </blockquote>
+                </footer>
+              </blockquote>
+            </div>
           </div>
-        </div>
-      </slide>
-      <template #addons>
-        <navigation />
-        <pagination />
-      </template>
-    </carousel>
+        </slide>
+        <template #addons>
+          <navigation />
+          <pagination />
+        </template>
+      </carousel>
+    </div>
   </div>
 </template>
 

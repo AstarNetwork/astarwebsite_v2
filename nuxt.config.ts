@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/strapi",
     "@nuxtjs/apollo",
+    "@nuxt/content",
     ['nuxt3-lazy-load', {
       defaultImage: '/images/placeholder.png',
     }]
