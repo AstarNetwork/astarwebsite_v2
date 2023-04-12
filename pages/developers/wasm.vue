@@ -34,17 +34,20 @@
         class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full sm:flex sm:items-start sm:justify-between"
       >
         <div class="top-4 sticky w-1/4 pr-2 hidden sm:block">
-          <p class="text-xs lg:text-sm uppercase text-gray-400 mb-2">
+          <p class="text-xs lg:text-sm uppercase text-gray-400 mb-3">
             Table of Contents:
           </p>
           <ul v-if="toc.length > 0" class="space-y-2 text-sm lg:text-base">
             <li v-for="link in toc" :key="link.text">
-              <a :href="`#${link.id}`">
+              <a :href="`#${link.id}`" class="text-gray-300 hover:text-white">
                 {{ link.text }}
               </a>
               <ul v-if="link.children" class="pl-4">
                 <li v-for="child in link.children">
-                  <a :href="`#${child.id}`">
+                  <a
+                    :href="`#${child.id}`"
+                    class="text-gray-300 hover:text-white"
+                  >
                     {{ child.text }}
                   </a>
                 </li>
@@ -52,10 +55,41 @@
             </li>
           </ul>
         </div>
-        <article class="entry-content sm:w-3/4 pb-24">
-          <!-- <ContentDoc path="/test" /> -->
-          <ContentRenderer :value="data" />
-        </article>
+        <div class="sm:w-3/4 pb-24">
+          <div class="mb-24">
+            <h2 class="title text-center text-3xl sm:text-4xl mb-6 sm:mb-8">
+              <span>Sign up for Wasm RMRK NFT</span>
+            </h2>
+            <div
+              class="border border-gray-500 rounded-3xl overflow-hidden"
+              data-tf-widget="y15vHT0R"
+              data-tf-opacity="100"
+              data-tf-iframe-props="title=Wasm Launch Day"
+              data-tf-transitive-search-params
+              data-tf-medium="snippet"
+              style="width: 100%; height: 430px"
+            />
+            <p class="text-xs mt-4 text-gray-400">
+              Astar Network may use the contact information you provide to us to
+              contact you about our products and services. By clicking “submit”
+              above you consent to receive such communications. You may
+              unsubscribe from these communications at any time. For information
+              on how to unsubscribe, as well as our privacy practices and
+              commitment to protecting your privacy, please review our
+              <NuxtLink
+                class="text-space-cyan hover:text-space-cyan-lighter"
+                to="https://docs.google.com/document/d/1jEbhRfh292TahRMRdeN4z-8MYNU27dCS_vVopV6xQgk/edit?usp=sharing"
+                target="_blank"
+                >Privacy Policy</NuxtLink
+              >.
+            </p>
+          </div>
+
+          <article class="entry-content">
+            <!-- <ContentDoc path="/test" /> -->
+            <ContentRenderer :value="data" />
+          </article>
+        </div>
       </div>
     </template>
     <template #earth>
@@ -70,6 +104,10 @@ const { data } = await useAsyncData("wasm", () =>
 );
 let toc = [];
 toc = data.value.body.toc.links;
+
+useHead({
+  script: [{ src: "//embed.typeform.com/next/embed.js" }],
+});
 
 definePageMeta({
   layout: false,
