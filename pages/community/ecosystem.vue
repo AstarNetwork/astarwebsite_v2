@@ -171,32 +171,31 @@ let categories = [];
 projects = data.value.projects.data;
 categories = data.value.projectCategories.data;
 
-// const { find } = useStrapi();
-// const projectData = await find(
-//   "projects?sort=name&pagination[limit]=-1&populate=*"
-// );
-// const categoryData = await find(
-//   "project-categories?sort=name&pagination[limit]=-1&populate=*"
-// );
-// projects = projectData.data;
-// categories = categoryData.data;
+const route = useRoute();
+import { meta } from "../../content/meta";
+const seoTitle = `Ecosystem | ${meta.siteName} - ${meta.tagline}`;
+const seoDescription =
+  "Who's Building on Astar Network. Check out some of the many projects and DApps with Astar Network deployments.";
+const seoUrl = `${meta.url}${route.fullPath}`;
+const seoImage = `${meta.image}ecosystem.png`;
 
-// const filter = ref(0);
-// const filteredProject = computed(() => {
-//   if (filter.value === 0) return projects;
-//   return projects.filter((project) =>
-//     project.attributes.project_categories.data.some(
-//       (category) => category.id === filter.value
-//     )
-//   );
-// });
+useServerSeoMeta({
+  title: () => seoTitle,
+  description: () => seoDescription,
+  ogTitle: () => seoTitle,
+  ogDescription: () => seoDescription,
+  ogImage: () => seoImage,
+  ogImageUrl: () => seoImage,
+  ogType: () => "website",
+  ogUrl: () => seoUrl,
+  twitterCard: () => "summary_large_image",
+  twitterTitle: () => seoTitle,
+  twitterDescription: () => seoDescription,
+  twitterImage: () => seoImage,
+});
 
 definePageMeta({
   layout: false,
-  title: "Ecosystem",
-  slug: "community/ecosystem",
-  description:
-    "Who's Building on Astar Network. Check out some of the many projects and DApps with Astar Network deployments.",
 });
 </script>
 

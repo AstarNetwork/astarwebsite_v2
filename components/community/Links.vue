@@ -5,7 +5,7 @@
     <li v-for="(item, index) in links">
       <NuxtLink
         :to="item.href"
-        target="_blank"
+        :target="item.href.includes('https') ? '_blank' : '_self'"
         class="py-12 px-6 h-full flex items-center justify-center rounded-3xl text-center shadow-xl"
         :class="
           index === 2
@@ -24,7 +24,11 @@
             :class="index === 2 ? 'border-space-gray-dark' : 'border-white'"
           >
             {{ item.to }}
-            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
+            <ArrowTopRightOnSquareIcon
+              class="w-5 h-5 stroke-2 ml-1"
+              v-if="item.href.includes('https')"
+            />
+            <span class="ml-1" v-else>-></span>
           </span>
         </div>
       </NuxtLink>
@@ -38,8 +42,8 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 const links = [
   {
     label: "Announcements, Developments, Articles",
-    to: "Go to Medium",
-    href: "https://medium.com/astar-network",
+    to: "Go to Blog",
+    href: "/blog",
     color: "bg-space-pink hover:bg-space-pink-lighter",
   },
   {

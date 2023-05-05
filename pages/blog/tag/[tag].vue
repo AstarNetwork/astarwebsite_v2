@@ -14,25 +14,17 @@
         >
           <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="text-center">
+              <p class="text-lg sm:text-2xl -mb-2">Tag:</p>
               <h1
-                class="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight drop-shadow"
+                class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
               >
-                Astar Blog
+                {{ tag }}
               </h1>
-              <p class="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">
-                The latest posts about all things Astar Network, major news,
-                ecosystem announcements, engineering updates, and more.
-              </p>
             </div>
           </div>
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <h2
-          class="text-center text-3xl sm:text-4xl font-semibold mb-8 sm:mb-12"
-        >
-          Latest Posts
-        </h2>
         <ul
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
         >
@@ -50,16 +42,18 @@
 import gql from "graphql-tag";
 
 // The subsocial space where the dApp staking news updates come from: https://polkaverse.com/10802
+const route = useRoute();
+const tag = route.params.tag;
+
 const astarSpace = 10802;
 const query = gql`
-  query PostsBySpaceId {
-    posts(where: { space: { id_eq: "${astarSpace}" } }, orderBy: id_DESC) {
+query PostsByTag {
+    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "${tag}" }, orderBy: id_DESC) {
       publishedDate: createdOnDay
       title
       href: canonical
       image
       slug
-      id
     }
   }
 `;
@@ -83,9 +77,8 @@ const posts = data.value.posts.map(
   }
 );
 
-const route = useRoute();
-import { meta } from "../../content/meta";
-const seoTitle = `Astar Blog | ${meta.siteName} - ${meta.tagline}`;
+import { meta } from "../../../content/meta";
+const seoTitle = `Tag | ${meta.siteName} - ${meta.tagline}`;
 const seoDescription =
   "The latest posts about all things Astar Network, major news, ecosystem announcements, engineering updates, and more.";
 const seoUrl = `${meta.url}${route.fullPath}`;

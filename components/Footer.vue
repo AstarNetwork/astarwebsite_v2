@@ -32,6 +32,7 @@
                 v-if="item.href.includes('https')"
                 class="w-4 h-4 inline-block stroke-2"
               />
+              <span v-else class="ml-0.5">-></span>
             </NuxtLink>
           </li>
         </ul>
@@ -122,7 +123,7 @@ const nav = [
   {
     name: "Learn",
     nav: [
-      { name: "Blog", href: "https://medium.com/astar-network" },
+      { name: "Blog", href: "/blog" },
       { name: "Videos", href: "https://www.youtube.com/c/AstarNetwork" },
       { name: "Forum", href: "https://forum.astar.network/" },
     ],

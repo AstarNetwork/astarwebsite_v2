@@ -18,30 +18,42 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxtjs/tailwindcss",
-    "~/modules/sitemap",
     "@nuxtjs/i18n",
     "@nuxtjs/strapi",
     "@nuxtjs/apollo",
-    ['nuxt3-lazy-load', {
-      defaultImage: '/images/placeholder.png',
-    }]
+    "nuxt-simple-sitemap",
+    "nuxt-schema-org",
+    [
+      "nuxt3-lazy-load",
+      {
+        defaultImage: "/images/placeholder.png",
+      },
+    ],
   ],
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://astar.network',
+    }
+  },
+  schemaOrg: {
+    host: 'https://astar.network',
+  },
   apollo: {
     clients: {
       community: {
-        httpEndpoint: 'https://community.astar.network/graphql'
+        httpEndpoint: "https://community.astar.network/graphql",
       },
       subsocial: {
-        httpEndpoint: 'https://squid.subsquid.io/subsocial/graphql'
-      }
+        httpEndpoint: "https://squid.subsquid.io/subsocial/graphql",
+      },
     },
   },
   strapi: {
     url: "https://community.astar.network",
-    prefix: '/api',
-    version: 'v4',
+    prefix: "/api",
+    version: "v4",
     cookie: {},
-    cookieName: 'strapi_jwt'
+    cookieName: "strapi_jwt",
   },
   i18n: {
     baseUrl: "https://astar.network",
@@ -62,14 +74,10 @@ export default defineNuxtConfig({
     langDir: "lang",
     defaultLocale: "en",
     strategy: "prefix_except_default",
-    vueI18n: {
-      legacy: false,
-      locale: "en",
-      fallbackLocale: "en",
-    },
   },
   plugins: [{ src: "~/plugins/aos" }],
   sitemap: {
-    hostname: "https://astar.network",
+    siteUrl: "https://astar.network",
+    discoverImages: false,
   },
 });

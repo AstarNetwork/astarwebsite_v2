@@ -42,7 +42,7 @@
 import gql from "graphql-tag";
 
 // The subsocial space where the dApp staking news updates come from: https://polkaverse.com/11132
-const japanNewsSpace = 11132;
+const japanNewsSpace = 11215;
 const query = gql`
   query PostsBySpaceId {
     posts(where: { space: { id_eq: "${japanNewsSpace}" } }, orderBy: id_DESC) {

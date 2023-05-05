@@ -128,6 +128,13 @@
                         Ecosystem
                         <ArrowRightIcon class="w-4 h-4 ml-2" />
                       </NuxtLink>
+                      <NuxtLink
+                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
+                        to="/blog"
+                      >
+                        Blog
+                        <ArrowRightIcon class="w-4 h-4 ml-2" />
+                      </NuxtLink>
                     </DisclosurePanel>
                   </Disclosure>
                 </li>

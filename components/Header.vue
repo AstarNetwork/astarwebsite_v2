@@ -123,7 +123,7 @@
                   leave-to-class="opacity-0 -translate-y-1"
                 >
                   <PopoverPanel
-                    class="bg-space-gray-dark shadow-lg bg-opacity-95 absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 p-10 after:bottom-[100%] after:border-t-transparent after:border-b-space-gray-dark after:absolute after:left-1/2 after:-translate-x-1/2 after:border-8 after:border-x-transparent after:opacity-95"
+                    class="bg-space-gray-dark shadow-lg bg-opacity-95 absolute left-1/2 z-10 mt-4 w-screen max-w-max -translate-x-1/2 py-6 px-10 after:bottom-[100%] after:border-t-transparent after:border-b-space-gray-dark after:absolute after:left-1/2 after:-translate-x-1/2 after:border-8 after:border-x-transparent after:opacity-95"
                   >
                     <NuxtLink
                       class="flex justify-between items-center w-36 py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
@@ -137,6 +137,13 @@
                       to="/community/ecosystem"
                     >
                       Ecosystem
+                      <ArrowRightIcon class="inline-block w-5 h-5" />
+                    </NuxtLink>
+                    <NuxtLink
+                      class="flex justify-between items-center w-36 py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
+                      to="/blog"
+                    >
+                      Blog
                       <ArrowRightIcon class="inline-block w-5 h-5" />
                     </NuxtLink>
                   </PopoverPanel>
