@@ -15,12 +15,10 @@
           Welcome to Astar Network!
         </h2>
         <p class="sm:text-xl sm:leading-loose">
-          Astar Network provides the infrastructure for building dApps with EVM
-          and WASM smart contracts offering developers true interoperability
-          with cross-consensus messaging (XCM) and a cross-virtual machine
-          (XVM). Astar’s unique Build2Earn model empowers developers to get paid
-          through a dApp staking mechanism for the code they write and dApps
-          they build.
+          Astar is Japan's most popular smart contract platform supporting both
+          EVM and WebAssembly (Wasm) environments, and interoperability between
+          them using a Cross-Virtual Machine. Our innovative Build2Earn program
+          allows developers to earn incentives for building decentralized apps.
         </p>
       </div>
       <dl class="shrink-0">

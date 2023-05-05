@@ -58,7 +58,7 @@
             </template>
 
             <template v-else-if="item.slug === 'technical'">
-              <Button href="https://discord.gg/Z3nC9U4" target="_blank">
+              <Button href="https://discord.gg/astarnetwork" target="_blank">
                 <component
                   :is="Discord"
                   class="h-5 w-5 mr-1.5"
@@ -113,11 +113,30 @@ useHead({
   script: [{ src: "//embed.typeform.com/next/embed.js" }],
 });
 
+const route = useRoute();
+import { meta } from "../content/meta";
+const seoTitle = `Contact Us | ${meta.siteName} - ${meta.tagline}`;
+const seoDescription = "Get in touch with the Astar Network team";
+const seoUrl = `${meta.url}${route.fullPath}`;
+const seoImage = `${meta.image}common.png`;
+
+useServerSeoMeta({
+  title: () => seoTitle,
+  description: () => seoDescription,
+  ogTitle: () => seoTitle,
+  ogDescription: () => seoDescription,
+  ogImage: () => seoImage,
+  ogImageUrl: () => seoImage,
+  ogType: () => "website",
+  ogUrl: () => seoUrl,
+  twitterCard: () => "summary_large_image",
+  twitterTitle: () => seoTitle,
+  twitterDescription: () => seoDescription,
+  twitterImage: () => seoImage,
+});
+
 definePageMeta({
   layout: false,
-  title: "Contact Us",
-  slug: "contact",
-  description: "Get in touch with the Astar Network team",
 });
 
 const Marketing = resolveComponent("IconMarketingRequest");

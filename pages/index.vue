@@ -3,7 +3,7 @@
     <template #space>
       <div class="banner--hiring">
         <NuxtLink
-          to="https://angel.co/company/astar-network"
+          to="https://wellfound.com/company/astar-network"
           target="_blank"
           class="link--hiring"
         >
@@ -90,6 +90,27 @@
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
+
+import { meta } from "../content/meta";
+const seoTitle = `${meta.siteName} - ${meta.tagline}`;
+const seoDescription = meta.description;
+const seoUrl = meta.url;
+const seoImage = `${meta.image}common.png`;
+
+useServerSeoMeta({
+  title: () => seoTitle,
+  description: () => seoDescription,
+  ogTitle: () => seoTitle,
+  ogDescription: () => seoDescription,
+  ogImage: () => seoImage,
+  ogImageUrl: () => seoImage,
+  ogType: () => "website",
+  ogUrl: () => seoUrl,
+  twitterCard: () => "summary_large_image",
+  twitterTitle: () => seoTitle,
+  twitterDescription: () => seoDescription,
+  twitterImage: () => seoImage,
+});
 
 definePageMeta({
   layout: false,

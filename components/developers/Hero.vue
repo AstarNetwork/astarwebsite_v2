@@ -57,6 +57,6 @@ const hero = [
     icon: Github,
   },
   { name: "Docs", href: "https://docs.astar.network/", icon: DocumentTextIcon },
-  { name: "Discord", href: "https://discord.gg/Z3nC9U4", icon: Discord },
+  { name: "Discord", href: "https://discord.gg/astarnetwork", icon: Discord },
 ];
 </script>

@@ -39,46 +39,28 @@
 </template>
 
 <script setup lang="ts">
-const news = [
-  {
-    publishedDate: "Oct 21 2022",
-    text: "Astar Japan Lab 1st offline event will be held!",
-    href: "",
-  },
-  {
-    publishedDate: "Sep 26 2022",
-    text: "AstarNetwork ran a full-page ad in the Nihon Keizai Shimbun and distributed NFTs in the paper.",
-    href: "",
-  },
-  {
-    publishedDate: "Sep 22 2022",
-    text: "$ASTR will be listed in Japan",
-    href: "",
-  },
-  {
-    publishedDate: "Sep 2 2022",
-    text: "[9/2 18:00] Astar Network x Web3 Startup",
-    href: "",
-  },
-  {
-    publishedDate: "Aug 29 2022",
-    text: "AstarWeek",
-    href: "",
-  },
-  {
-    publishedDate: "Aug 16 2022",
-    text: "Astar Japan Lab Activity Report and AstarWeek",
-    href: "",
-  },
-  {
-    publishedDate: "Jul 13 2022",
-    text: "Astar Japan Lab Activity Report and the First Study Session",
-    href: "",
-  },
-  {
-    publishedDate: "Jun 23 2022",
-    text: "Astar Japan Lab is established.",
-    href: "",
-  },
-];
+import gql from "graphql-tag";
+
+// The subsocial space where the dApp staking news updates come from: https://polkaverse.com/11132
+const japanNewsSpace = 11215;
+const query = gql`
+  query PostsBySpaceId {
+    posts(where: { space: { id_eq: "${japanNewsSpace}" } }, orderBy: id_DESC) {
+      publishedDate: createdOnDay
+      text: title
+      href: canonical
+    }
+  }
+`;
+
+const { data } = await useAsyncQuery({query, clientId: 'subsocial'});
+const news = data.value.posts.map((item: { publishedDate: string | number | Date; }) => {
+  const date = new Date(item.publishedDate);
+    const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    return {
+        ...item,
+        publishedDate: formattedDate
+    };
+});
+
 </script>

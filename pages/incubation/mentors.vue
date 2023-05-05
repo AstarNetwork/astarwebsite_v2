@@ -29,11 +29,31 @@
 import { mentors } from "../../content/mentors";
 import { ref } from "vue";
 
+const route = useRoute();
+import { meta } from "../../content/meta";
+const { t } = useI18n();
+const seoTitle = `${t("meta.mentors.title")} | ${t("meta.title")}`;
+const seoDescription = t("meta.mentors.description");
+const seoUrl = `${meta.url}${route.fullPath}`;
+const seoImage = `${meta.image}incubation.png`;
+
+useServerSeoMeta({
+  title: () => seoTitle,
+  description: () => seoDescription,
+  ogTitle: () => seoTitle,
+  ogDescription: () => seoDescription,
+  ogImage: () => seoImage,
+  ogImageUrl: () => seoImage,
+  ogType: () => "website",
+  ogUrl: () => seoUrl,
+  twitterCard: () => "summary_large_image",
+  twitterTitle: () => seoTitle,
+  twitterDescription: () => seoDescription,
+  twitterImage: () => seoImage,
+});
+
 definePageMeta({
   layout: false,
-  pageTitle: "meta.mentors.title",
-  slug: "mentors",
-  description: "meta.mentors.description",
 });
 
 const open = ref(false);

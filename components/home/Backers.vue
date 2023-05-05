@@ -45,7 +45,7 @@ const query = gql`
     }
   }
 `;
-const { data } = await useAsyncQuery(query);
+const { data } = await useAsyncQuery({query, clientId: 'community'});
 
 let projects = [];
 projects = data.value.projects.data.sort((a, b) => {

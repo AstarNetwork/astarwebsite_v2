@@ -56,7 +56,7 @@ const social = [
   },
   {
     name: "Discord",
-    href: "https://discord.gg/Z3nC9U4",
+    href: "https://discord.gg/astarnetwork",
     icon: Discord,
   },
   {
