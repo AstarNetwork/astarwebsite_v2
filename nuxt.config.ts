@@ -23,12 +23,12 @@ export default defineNuxtConfig({
     "@nuxtjs/apollo",
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
-    [
-      "nuxt3-lazy-load",
-      {
-        defaultImage: "/images/placeholder.png",
-      },
-    ],
+    // [
+    //   "nuxt3-lazy-load",
+    //   {
+    //     defaultImage: "/images/placeholder.png",
+    //   },
+    // ],
   ],
   runtimeConfig: {
     public: {
