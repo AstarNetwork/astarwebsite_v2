@@ -5,7 +5,7 @@
     >
       <span class="whitespace-pre-wrap">{{ $t("home.gateway") }}</span>
     </h2>
-    <div data-aos="fade-up">
+    <div>
       <img
         src="/images/home/gateway.svg"
         alt="The Gateway in the multichain era"

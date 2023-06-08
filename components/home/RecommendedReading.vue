@@ -10,11 +10,7 @@
     </p>
     <ul class="grid sm:grid-cols-3 gap-x-4 lg:gap-x-8 mt-12 sm:mt-28">
       <template v-for="(item, index) in reading">
-        <li
-          class="mb-16 sm:mb-0 rounded-3xl bg-space-gray"
-          data-aos="flip-left"
-          :data-aos-delay="index * 200"
-        >
+        <li class="mb-16 sm:mb-0 rounded-3xl bg-space-gray">
           <div class="-mx-5 -mt-12 -mb-4">
             <img
               :src="'/images/home/' + item.image"

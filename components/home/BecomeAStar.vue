@@ -16,8 +16,6 @@
             class="mx-auto"
             :src="'/images/home/' + item.image"
             :alt="item.name"
-            data-aos="fade-up"
-            :data-aos-delay="index * 200"
             width="240"
             height="210"
           />

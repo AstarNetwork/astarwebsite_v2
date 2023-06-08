@@ -4,7 +4,6 @@
   >
     <div v-for="(item, index) in features" class="sm:flex">
       <div
-        data-aos="fade-up"
         class="shrink-0 mb-6 sm:mb-0"
         :class="index % 2 === 0 && 'sm:order-2'"
       >

@@ -1,6 +1,6 @@
 <template>
   <div class="lg:flex lg:items-end relative z-10">
-    <div class="shrink-0 mb-8 sm:mb-0" data-aos="zoom-out-right">
+    <div class="shrink-0 mb-8 sm:mb-0">
       <img
         class="mx-auto max-w-[280px] sm:max-w-[350px] lg:max-w-full float-animation"
         src="/images/home/welcome-astronaut.svg"
@@ -19,11 +19,7 @@
         </p>
       </div>
       <dl class="shrink-0">
-        <div
-          class="flex flex-col mb-12 xl:mb-16 leading-[0.9]"
-          data-aos="zoom-out-left"
-          data-aos-delay="200"
-        >
+        <div class="flex flex-col mb-12 xl:mb-16 leading-[0.9]">
           <dt
             class="order-2 mt-2 sm:mt-0 text-3xl lg:text-4xl font-bold sm:pl-12"
           >
@@ -33,11 +29,7 @@
             <span class="tracking-tighter">+50</span>
           </dd>
         </div>
-        <div
-          class="flex flex-col leading-none"
-          data-aos="zoom-out-left"
-          data-aos-delay="300"
-        >
+        <div class="flex flex-col leading-none">
           <dt
             class="order-2 mt-2 sm:mt-0 text-2xl lg:text-3xl font-bold sm:pl-12"
           >
