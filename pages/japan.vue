@@ -10,16 +10,14 @@
           height="1281"
           data-not-lazy
         />
-        <ScrollParallax :speed="0.2">
-          <img
-            class="absolute z-[3] w-screen h-screen object-scale-down portrait:hidden"
-            src="/images/japan/hero-landscape.svg"
-            :alt="$t('japan.title')"
-            width="1460"
-            height="808"
-            data-not-lazy
-          />
-        </ScrollParallax>
+        <img
+          class="absolute z-[3] w-screen h-screen object-scale-down portrait:hidden"
+          src="/images/japan/hero-landscape.svg"
+          :alt="$t('japan.title')"
+          width="1460"
+          height="808"
+          data-not-lazy
+        />
         <img
           class="fixed z-[2] portrait:h-screen landscape:w-screen object-cover"
           src="/images/common/space-stars.svg"
@@ -61,8 +59,6 @@
 </template>
 
 <script setup lang="ts">
-import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
-
 const route = useRoute();
 import { meta } from "@/content/meta";
 const { t } = useI18n();

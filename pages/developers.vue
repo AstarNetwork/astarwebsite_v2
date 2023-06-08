@@ -10,16 +10,14 @@
           height="1281"
           data-not-lazy
         />
-        <ScrollParallax :speed="0.2">
-          <img
-            class="absolute z-[2] right-0 portrait:max-h-[40vh] landscape:max-h-[65vh] landscape:xl:max-h-[80vh] w-auto"
-            src="/images/developers/hero.svg"
-            alt="Developers"
-            width="1106"
-            height="804"
-            data-not-lazy
-          />
-        </ScrollParallax>
+        <img
+          class="absolute z-[2] right-0 portrait:max-h-[40vh] landscape:max-h-[65vh] landscape:xl:max-h-[80vh] w-auto"
+          src="/images/developers/hero.svg"
+          alt="Developers"
+          width="1106"
+          height="804"
+          data-not-lazy
+        />
         <img
           class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
           src="/images/common/space-stars.svg"
@@ -43,8 +41,6 @@
 </template>
 
 <script setup lang="ts">
-import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
-
 const route = useRoute();
 const { t } = useI18n();
 import { meta } from "@/content/meta";

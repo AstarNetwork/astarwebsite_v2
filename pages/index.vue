@@ -13,18 +13,16 @@
       </div>
       <div class="bg-black">
         <div class="absolute z-0 w-full h-screen flex items-center">
-          <ScrollParallax :speed="0.25" class="mx-auto">
-            <video
-              webkit-playsinline
-              playsinline
-              muted
-              autoplay
-              loop
-              data-not-lazy
-            >
-              <source src="/videos/astar.mp4" type="video/mp4" />
-            </video>
-          </ScrollParallax>
+          <video
+            webkit-playsinline
+            playsinline
+            muted
+            autoplay
+            loop
+            data-not-lazy
+          >
+            <source src="/videos/astar.mp4" type="video/mp4" />
+          </video>
         </div>
         <div class="space-gradient mix-blend-screen">
           <img
@@ -91,7 +89,6 @@
 
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 
 import { meta } from "@/content/meta";
 const { t } = useI18n();
