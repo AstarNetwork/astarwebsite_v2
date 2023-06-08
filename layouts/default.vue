@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden">
-    <Header />
+    <!-- <Header /> -->
     <slot name="space" />
     <div class="relative z-10">
       <img
