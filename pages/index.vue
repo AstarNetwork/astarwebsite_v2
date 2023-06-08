@@ -13,7 +13,7 @@
       </div>
       <div class="bg-black">
         <div class="absolute z-0 w-full h-screen flex items-center">
-          <video
+          <!-- <video
             webkit-playsinline
             playsinline
             muted
@@ -22,7 +22,7 @@
             data-not-lazy
           >
             <source src="/videos/astar.mp4" type="video/mp4" />
-          </video>
+          </video> -->
         </div>
         <div class="space-gradient mix-blend-screen">
           <img
