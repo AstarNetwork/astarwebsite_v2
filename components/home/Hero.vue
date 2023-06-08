@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-center h-screen flex items-center justify-center z-10 relative"
+    class="text-center aspect-video flex items-center justify-center z-10 relative"
   >
     <div class="max-w-7xl px-4 sm:px-6 pt-12">
       <h1

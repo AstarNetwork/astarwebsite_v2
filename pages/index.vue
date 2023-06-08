@@ -12,7 +12,7 @@
         </NuxtLink>
       </div>
       <div class="bg-black">
-        <div class="absolute z-0 w-full h-screen flex items-center">
+        <div class="absolute z-0 w-full flex items-center">
           <ScrollParallax :speed="0.25" class="mx-auto">
             <video
               webkit-playsinline
