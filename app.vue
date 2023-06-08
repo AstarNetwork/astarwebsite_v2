@@ -17,18 +17,9 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
 const { locale } = useI18n();
-import { meta } from "@/content/meta";
-const seoUrl = `${meta.url}${route.fullPath}`;
 useHead(() => ({
   htmlAttrs: { lang: locale.value },
-  link: [
-    {
-      rel: "canonical",
-      href: seoUrl,
-    },
-  ],
   script: [{ src: "/js/astarAi.js" }],
 }));
 
