@@ -13,7 +13,7 @@
     <NuxtPage />
   </NuxtLayout>
 
-  <Gdpr />
+  <!-- <Gdpr /> -->
 </template>
 
 <script setup lang="ts">

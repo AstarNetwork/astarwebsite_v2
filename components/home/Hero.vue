@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="text-center h-screen flex items-center justify-center z-10 relative"
-  >
+  <div class="text-center flex items-center justify-center z-10 relative">
     <div class="max-w-7xl px-4 sm:px-6 pt-12">
       <h1
         class="text-3xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] drop-shadow tracking-tight"
