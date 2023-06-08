@@ -22,12 +22,12 @@ useHead(() => ({
   htmlAttrs: { lang: locale.value },
 }));
 
-useSchemaOrg([
-  defineOrganization({
-    name: "Astar Foundation",
-    logo: "/logo.png",
-  }),
-  defineWebSite(),
-  defineWebPage(),
-]);
+// useSchemaOrg([
+//   defineOrganization({
+//     name: "Astar Foundation",
+//     logo: "/logo.png",
+//   }),
+//   defineWebSite(),
+//   defineWebPage(),
+// ]);
 </script>
