@@ -87,11 +87,13 @@ const query = gql`
 const { data } = await useAsyncQuery({ query, clientId: "community" });
 
 let projects = [];
-projects = data.value.projects.data.sort((a, b) => {
-  if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
-    return 1;
-  } else {
-    return -1;
-  }
-});
+if (data.value !== null) {
+  projects = data.value.projects.data.sort((a, b) => {
+    if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+}
 </script>

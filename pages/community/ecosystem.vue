@@ -164,8 +164,10 @@ const { data } = await useAsyncQuery({ query, clientId: "community" });
 
 let projects = [];
 let categories = [];
-projects = data.value.projects.data;
-categories = data.value.projectCategories.data;
+if (data.value !== null) {
+  projects = data.value.projects.data;
+  categories = data.value.projectCategories.data;
+}
 
 const route = useRoute();
 const { t } = useI18n();
