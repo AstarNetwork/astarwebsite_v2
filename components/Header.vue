@@ -238,6 +238,10 @@ const network = [
         href: "https://blastapi.io/",
       },
       {
+        label: "Dwellir",
+        href: "https://www.dwellir.com/networks/astar",
+      },
+      {
         label: "OnFinality",
         href: "https://www.onfinality.io/marketplace/astar",
       },
