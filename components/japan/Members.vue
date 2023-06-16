@@ -56,7 +56,7 @@ const query = gql`
   query getAllData {
     projects(
       pagination: { page: 1, pageSize: 1000 }
-      filters: { project_categories: { id: { eq: 15 } }, id: { ne: 300 } }
+      filters: { project_categories: { id: { eq: 15 } } }
     ) {
       data {
         attributes {
@@ -94,7 +94,7 @@ const query = gql`
           name
           projects(
             pagination: { page: 1, pageSize: 1000 }
-            filters: { project_categories: { id: { eq: 15 } }, id: { ne: 300 } }
+            filters: { project_categories: { id: { eq: 15 } } }
           ) {
             data {
               id
