@@ -63,6 +63,12 @@
             />
           </div>
         </div>
+        <div>
+          <label for="image" class="form-label">Image</label>
+          <div class="mt-2">
+            <input type="file" name="image" class="text-white" />
+          </div>
+        </div>
         <div class="text-center">
           <button
             class="space-gradient font-medium text-lg px-12 py-3 rounded-lg hover:brightness-125 focus:brightness-90 before:hidden focus:ring-2 focus:ring-space-cyan-light"
