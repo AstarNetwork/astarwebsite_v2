@@ -25,7 +25,7 @@
       </div>
       <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10 space-y-12">
         <div>
-          <label for="title" class="form-label">Event Title</label>
+          <label for="title" class="form-label">Event title</label>
           <div class="mt-2">
             <input
               type="text"
@@ -33,6 +33,17 @@
               class="text-form block w-full"
               placeholder="Astar Tech Talk"
             />
+          </div>
+        </div>
+        <div>
+          <label for="category" class="form-label">Event type</label>
+          <div class="mt-2">
+            <select name="category" class="text-form block w-full">
+              <option selected>Crowdcast</option>
+              <option>Twitter Space</option>
+              <option>Hackathon</option>
+              <option>Conference</option>
+            </select>
           </div>
         </div>
         <div>
