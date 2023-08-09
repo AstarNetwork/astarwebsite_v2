@@ -24,7 +24,8 @@
 </template>
 
 <script setup lang="ts">
-const { path } = useRoute();
+let { path } = useRoute();
+path = path.replace("/ja", "");
 const { data } = await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne();
 });
