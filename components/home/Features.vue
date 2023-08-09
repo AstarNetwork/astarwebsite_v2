@@ -46,7 +46,7 @@ const features = [
   {
     title: t("home.features.build2earn.title"),
     description: t("home.features.build2earn.description"),
-    href: "https://docs.astar.network/docs/dapp-staking/",
+    href: "https://docs.astar.network/docs/build/dapp-staking/",
     image: "features-basic-income.svg",
   },
   {
