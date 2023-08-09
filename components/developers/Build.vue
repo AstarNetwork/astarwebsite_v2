@@ -67,7 +67,7 @@ const building = [
   {
     title: t("developers.start.collator"),
     image: "building-collator.svg",
-    href: "https://docs.astar.network/docs/build/nodes/",
+    href: "https://docs.astar.network/docs/nodes/",
     color: "bg-space-blue hover:bg-space-blue-lighter",
   },
   {

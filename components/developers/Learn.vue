@@ -70,17 +70,17 @@ const docs = [
   {
     title: t("developers.learn.docs.node.title"),
     description: t("developers.learn.docs.node.description"),
-    href: "https://docs.astar.network/docs/build/nodes/",
+    href: "https://docs.astar.network/docs/nodes/",
   },
   {
     title: t("developers.learn.docs.xcm.title"),
     description: t("developers.learn.docs.xcm.description"),
-    href: "https://docs.astar.network/docs/learn/xcm/",
+    href: "https://docs.astar.network/docs/xcm/",
   },
   {
     title: t("developers.learn.docs.tool.title"),
     description: t("developers.learn.docs.tool.description"),
-    href: "https://docs.astar.network/docs/build/integrations/",
+    href: "https://docs.astar.network/docs/integrations/",
   },
 ];
 </script>

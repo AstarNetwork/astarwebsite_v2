@@ -23,7 +23,7 @@
         </p>
         <div class="text-center">
           <Button
-            href="https://docs.astar.network/docs/build/dapp-staking/"
+            href="https://docs.astar.network/docs/dapp-staking/"
             size="lg"
             target="_blank"
             class="w-72"

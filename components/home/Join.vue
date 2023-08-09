@@ -61,14 +61,14 @@ const developers = [
     name: t("home.ecosystem.collator.title"),
     image: "become-collator.svg",
     description: t("home.ecosystem.collator.description"),
-    href: "https://docs.astar.network/docs/build/nodes/collator/learn",
+    href: "https://docs.astar.network/docs/nodes/",
     color: "text-space-sky hover:text-space-sky-lighter",
   },
   {
     name: t("home.ecosystem.staker.title"),
     image: "become-staker.svg",
     description: t("home.ecosystem.staker.description"),
-    href: "https://docs.astar.network/docs/build/dapp-staking/",
+    href: "https://portal.astar.network/#/astar/dapp-staking/discover",
     color: "text-space-cyan hover:text-space-cyan-lighter",
   },
   {
