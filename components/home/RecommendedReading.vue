@@ -64,7 +64,7 @@ const reading = [
   {
     title: t("home.reading.tokenomics.title"),
     description: t("home.reading.tokenomics.description"),
-    href: "https://docs.astar.network/docs/learn/token-economics/inflationary-model",
+    href: "https://docs.astar.network/docs/about/token-economics/economics",
     image: "reading-token.svg",
   },
   {
