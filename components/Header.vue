@@ -160,7 +160,7 @@ const menus = [
         nav: [
           {
             label: "Build2Earn",
-            href: "https://docs.astar.network/docs/dapp-staking/",
+            href: "https://docs.astar.network/docs/build/dapp-staking/",
           },
           { label: "ink!ubator", href: "https://use.ink/ubator/" },
         ],
