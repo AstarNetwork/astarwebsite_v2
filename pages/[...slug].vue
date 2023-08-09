@@ -1,23 +1,21 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <template v-if="data">
-        <ContentRenderer :value="data">
-          <SubPageHeader>
-            <h1
-              class="text-3xl sm:text-4xl lg:text-6xl font-extrabold drop-shadow leading-tight"
-            >
-              {{ data.title }}
-            </h1>
-          </SubPageHeader>
+      <ContentRenderer :value="data">
+        <SubPageHeader>
+          <h1
+            class="text-3xl sm:text-4xl lg:text-6xl font-extrabold drop-shadow leading-tight"
+          >
+            {{ data.title }}
+          </h1>
+        </SubPageHeader>
 
-          <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
-            <div class="entry-content leading-9">
-              <ContentRendererMarkdown :value="data" />
-            </div>
-          </article>
-        </ContentRenderer>
-      </template>
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
+          <div class="entry-content leading-9">
+            <ContentRendererMarkdown :value="data" />
+          </div>
+        </article>
+      </ContentRenderer>
     </template>
     <template #earth>
       <Footer />
@@ -35,12 +33,10 @@ const { data } = await useAsyncData(`content-${path}`, () => {
 const route = useRoute();
 const { t } = useI18n();
 import { meta } from "@/data/meta";
-let seoTitle = `${meta.siteName} - ${t("meta.tagline")}`;
-let seoDescription = "";
-if (data.value) {
-  seoTitle = `${data.value.title} | ${meta.siteName} - ${t("meta.tagline")}`;
-  seoDescription = data.value.description;
-}
+const seoTitle = `${data.value.title} | ${meta.siteName} - ${t(
+  "meta.tagline"
+)}`;
+const seoDescription = data.value.description;
 const seoUrl = `${meta.url}${route.fullPath}`;
 const seoImage = `${meta.image}common.png`;
 
