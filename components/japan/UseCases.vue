@@ -11,20 +11,24 @@
           <NuxtLink :to="item.href" target="_blank" class="block group">
             <div class="mb-4">
               <img
-                class="h-52 w-full object-cover rounded-3xl"
+                class="object-cover w-full aspect-blog rounded"
                 :class="item.href !== '' && 'group-hover:brightness-125'"
                 :src="'/images/japan/use-cases/' + item.image"
                 :alt="item.title"
               />
             </div>
-            <p
-              class="font-medium mb-2 line-clamp-3"
-              :class="
-                item.href !== '' &&
-                'transition group-hover:underline group-hover:text-blue-600'
-              "
-            >
+            <p class="font-medium mb-2">
               {{ item.title }}
+            </p>
+
+            <p
+              v-if="item.href"
+              class="text-blue-600 group-hover:underline transition"
+            >
+              Learn more
+              <ArrowTopRightOnSquareIcon
+                class="w-4 h-4 inline-block stroke-2"
+              />
             </p>
           </NuxtLink>
         </li>
@@ -34,38 +38,39 @@
 </template>
 
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 const { t } = useI18n();
 
 const cases = [
   {
-    title: t("japan.use_cases.astar_farm"),
-    image: "astarfarm.webp",
-    href: "",
+    title: t("japan.use_cases.sony"),
+    image: "sony.webp",
+    href: "https://astar.network/incubation",
   },
   {
-    title: t("japan.use_cases.miliyah"),
-    image: "miliyah.webp",
-    href: "",
+    title: t("japan.use_cases.toyota"),
+    image: "toyota.webp",
+    href: "https://medium.com/astar-network/toyota-x-astar-web3-hackathon-report-dca3a60e4413",
   },
   {
-    title: t("japan.use_cases.ellen"),
-    image: "ellen.webp",
-    href: "",
+    title: t("japan.use_cases.calbee"),
+    image: "calbee.webp",
+    href: "https://medium.com/astar-network/leading-japanese-snack-food-maker-calbee-inc-1df16b42b2b6",
   },
   {
-    title: t("japan.use_cases.revolt"),
-    image: "revolt.webp",
-    href: "",
+    title: t("japan.use_cases.eren"),
+    image: "eren.webp",
+    href: "https://tofunft.com/ja/launchpad/eren_the_southpaw",
   },
   {
     title: t("japan.use_cases.nikkei"),
     image: "nikkei.webp",
-    href: "",
+    href: "https://medium.com/astar-network/top-japanese-companies-join-astar-to-celebrate-web3-36766593d661",
   },
   {
-    title: t("japan.use_cases.rkb"),
-    image: "rkb.webp",
-    href: "",
+    title: t("japan.use_cases.candy"),
+    image: "candy.webp",
+    href: "https://tofunft.com/collection/candygirl/items",
   },
 ];
 </script>
