@@ -58,7 +58,7 @@
                           'text-center'
                         "
                       >
-                        {{ discoveries[discoveryId]["description"] }}
+                        <div v-html="discoveries[discoveryId]['description']" />
                       </p>
                       <NuxtLink
                         v-if="discoveries[discoveryId]['href']"
@@ -221,16 +221,9 @@
                   </span>
                 </li>
                 <li>
-                  <span @click="clickAction('vision')" class="popup-link"
-                    >Astar 2.0</span
-                  >
-                </li>
-                <li>RMRK ink! NFT</li>
-                <li>
-                  Swanky /
-                  {{
-                    locale === "ja" ? "分散型ツール" : "Decentralized Tooling"
-                  }}
+                  <span @click="clickAction('vision')" class="popup-link">
+                    Astar 2.0
+                  </span>
                 </li>
               </ul>
             </div>
@@ -265,6 +258,12 @@
                 {{ $t("starmap.expansion.plan") }}
               </p>
               <ul class="list-disc pl-4">
+                <li>
+                  <span @click="clickAction('swanky')" class="popup-link">
+                    {{ $t("starmap.expansion.swanky.title") }}
+                  </span>
+                </li>
+                <li>Ink!redible NFT</li>
                 <li>
                   {{
                     locale === "ja"
@@ -384,6 +383,12 @@ const discoveries: { [index: string]: Discovery } = {
     description: t("vision.intro"),
     href: i18n + "/astar2",
     image: "vision.webp",
+  },
+  swanky: {
+    title: t("starmap.expansion.swanky.title"),
+    description: `${t("starmap.expansion.swanky.description")}<ul class="list-disc pl-6 my-6"><li>Swanky node</li><li>Swanky CLI</li><li>Swanky dApps</li><li>ink! examples</li></ul>${t("starmap.expansion.swanky.more")}<br><br><strong>${t("starmap.expansion.swanky.welcome")}</strong>`,
+    href: "https://github.com/swankyhub",
+    image: "swanky.svg",
   },
   comingSoon: {
     title: "Coming soon!",
