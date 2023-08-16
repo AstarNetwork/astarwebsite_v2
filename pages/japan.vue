@@ -49,7 +49,7 @@
           href="#useCases"
           variant="outlined"
         >
-          See latest use cases ->
+          {{ $t("japan.see_use_cases") }} ->
         </Button>
       </div>
 
