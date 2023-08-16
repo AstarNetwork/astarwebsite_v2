@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-b from-white to-[#D0E9F0] relative z-10">
+  <div id="useCases" class="relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <h2 class="title text-center mb-12 sm:mb-16">
         <span>{{ $t("japan.use_cases.title") }}</span>

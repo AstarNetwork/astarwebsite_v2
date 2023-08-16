@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@900&family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@900&family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +8,9 @@
   html,
   body {
     @apply overflow-x-hidden;
+  }
+  html {
+    @apply scroll-smooth;
   }
   body {
     @apply leading-relaxed text-base;
@@ -90,7 +93,7 @@
   .tab-panel {
     @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 max-w-7xl mx-auto px-4 sm:px-6;
   }
-  
+
   /* Article */
   .entry-content {
     @apply prose prose-invert lg:prose-xl mx-auto prose-a:text-space-cyan hover:prose-a:text-space-cyan-lighter prose-headings:text-white bg-space-gray-dark prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:text-tiny lg:prose-blockquote:text-base prose-blockquote:bg-white/5 prose-strong:font-medium prose-em:text-white prose-img:mx-auto;
@@ -111,7 +114,7 @@
   }
 
   .entry-content h2 a,
-  .entry-content h3 a{
+  .entry-content h3 a {
     @apply text-white no-underline hover:text-white;
   }
 }
