@@ -40,7 +40,13 @@
     "expansion": {
       "title": "The Expansion Nebula",
       "description": "At Astar we plan to expand our reach even further. By creating high quality tools and projects, we can further attract top talent. We will focus on improving not only the user experience, but also the developer experience.",
-      "plan": "We can look forward to discoveries that relate to the following:"
+      "plan": "We can look forward to discoveries that relate to the following:",
+      "swanky": {
+        "title": "Swanky Hub",
+        "description": "Swanky Hub is the one-source of truth for everything related to Swanky.\n\nSwanky Hub is a space where all teams and developers can contribute in the Polkadot ecosystem and help support and boost this all-in-one ink! tool! The Swanky Hub contains:",
+        "more":"and so much more!",
+        "welcome":"We welcome you to our hub, where we share our work and our passion for ink! smart contracts and dApps development!"
+      }
     },
     "shine": {
       "title": "The Shine Nebula",
