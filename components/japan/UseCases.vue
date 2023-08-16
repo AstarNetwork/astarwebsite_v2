@@ -23,7 +23,7 @@
 
             <p
               v-if="item.href"
-              class="text-blue-600 group-hover:underline transition"
+              class="text-space-cyan group-hover:underline transition"
             >
               Learn more
               <ArrowTopRightOnSquareIcon
