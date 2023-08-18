@@ -79,7 +79,7 @@ const building = [
   {
     title: t("developers.start.templates"),
     image: "building-template.svg",
-    href: "https://github.com/orgs/swanky-dapps/repositories",
+    href: "https://github.com/swankyhub",
     color: "bg-space-cyan hover:bg-space-cyan-lighter",
   },
 ];
