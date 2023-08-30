@@ -75,7 +75,7 @@ const docs = [
   {
     title: t("developers.learn.docs.xcm.title"),
     description: t("developers.learn.docs.xcm.description"),
-    href: "https://docs.astar.network/docs/learn/xcm/",
+    href: "https://docs.astar.network/docs/learn/interoperability/xcm/",
   },
   {
     title: t("developers.learn.docs.tool.title"),
