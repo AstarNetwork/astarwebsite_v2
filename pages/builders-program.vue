@@ -7,6 +7,6 @@ definePageMeta({
 });
 const router = useRouter();
 watchEffect(() => {
-  router.push("/community");
+  router.push("/developers");
 });
 </script>

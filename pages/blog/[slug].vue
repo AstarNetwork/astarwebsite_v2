@@ -84,6 +84,7 @@ const md = new MarkdownIt();
 
 const route = useRoute();
 const slug = route.params.slug;
+const id = route.params.slug.slice(-5);
 
 // The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
 const { locale, t } = useI18n();
@@ -92,7 +93,7 @@ const i18n = locale.value === "ja" ? "/ja" : "";
 
 const query = gql`
   query PostsBySlug {
-    posts(where: { space: { id_eq: "10802" }, slug_eq: "${slug}", hidden_eq: false, OR: { space: { id_eq: "11315" }, slug_eq: "${slug}", hidden_eq: false } }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "10802" }, id_eq: "${id}", hidden_eq: false, OR: { space: { id_eq: "11315" }, id_eq: "${id}", hidden_eq: false } }, orderBy: id_DESC) {
 
       publishedDate: createdOnDay
       title
@@ -137,7 +138,7 @@ const orConditions = post.tagsOriginal
 
 const querySpace = gql`
   query PostsByTag {
-    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, slug_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC, limit: 6) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, id_not_eq: "${id}", hidden_eq: false }, orderBy: id_DESC, limit: 6) {
       publishedDate: createdOnDay
       title
       href: canonical
@@ -153,6 +154,7 @@ const dataRelated = await useAsyncQuery({
 });
 const posts = dataRelated.data.value.posts.map(
   (item: { publishedDate: string | number | Date }) => {
+    const lowercaseSlug = item.slug.toLowerCase();
     const date = new Date(item.publishedDate);
     const formattedDate = date.toLocaleDateString("en-US", {
       month: "short",
@@ -165,6 +167,7 @@ const posts = dataRelated.data.value.posts.map(
         ? "https://ipfs.subsocial.network/ipfs/" + item.image
         : "/images/blog/placeholder.webp",
       publishedDate: formattedDate,
+      slug: lowercaseSlug,
     };
   }
 );
