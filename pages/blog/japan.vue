@@ -52,6 +52,7 @@ const query = gql`
 const { data } = await useAsyncQuery({ query, clientId: "subsocial" });
 const posts = data.value.posts.map(
   (item: { publishedDate: string | number | Date }) => {
+    const lowercaseSlug = item.slug.toLowerCase();
     const date = new Date(item.publishedDate);
     const formattedDate = date.toLocaleDateString("en-US", {
       month: "short",
@@ -64,6 +65,7 @@ const posts = data.value.posts.map(
         ? "https://ipfs.subsocial.network/ipfs/" + item.image
         : "/images/blog/placeholder.webp",
       publishedDate: formattedDate,
+      slug: lowercaseSlug,
     };
   }
 );

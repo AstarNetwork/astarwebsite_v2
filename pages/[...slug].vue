@@ -26,6 +26,9 @@
 <script setup lang="ts">
 let { path } = useRoute();
 path = path.replace("/ja", "");
+if (path.slice(-1) === "/") {
+  path = path.slice(0, path.length - 1);
+}
 const { data } = await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne();
 });

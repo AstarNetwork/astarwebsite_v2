@@ -9,9 +9,9 @@
   body {
     @apply overflow-x-hidden;
   }
-  html {
+  /* html {
     @apply scroll-smooth;
-  }
+  } */
   body {
     @apply leading-relaxed text-base;
   }
@@ -99,8 +99,8 @@
     @apply prose prose-invert lg:prose-xl mx-auto prose-a:text-space-cyan hover:prose-a:text-space-cyan-lighter prose-headings:text-white bg-space-gray-dark prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:text-tiny lg:prose-blockquote:text-base prose-blockquote:bg-white/5 prose-strong:font-medium prose-em:text-white prose-img:mx-auto;
   }
   .entry-content p code {
-    font-size: 0.9em;
-    @apply bg-white/20 font-normal rounded p-2;
+    font-size: 0.85em;
+    @apply bg-white/20 font-normal rounded py-1 px-2;
   }
   .entry-content p code::before,
   .entry-content p code::after,
@@ -112,7 +112,21 @@
   .entry-content ol li::marker {
     @apply text-white;
   }
-
+  .entry-content h1 {
+    font-size: 1.8em;
+    margin-top: 1.5555556em;
+    margin-bottom: 0.8888889em;
+    line-height: 1.1111111;
+    @media only screen and (max-width: 1024px) {
+      font-size: 1.5em;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      line-height: 1.3333333;
+    }
+  }
+  .entry-content h1 strong {
+    @apply font-bold;
+  }
   .entry-content h2 a,
   .entry-content h3 a {
     @apply text-white no-underline hover:text-white;
