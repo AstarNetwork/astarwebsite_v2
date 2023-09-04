@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { CheckCircleIcon } from "@heroicons/Vue/24/solid";
+import { CheckCircleIcon } from "@heroicons/vue/24/solid";
 
 const { t } = useI18n();
 
