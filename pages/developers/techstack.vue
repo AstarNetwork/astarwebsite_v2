@@ -18,14 +18,16 @@
           height="1281"
           data-not-lazy
         />
-        <img
-          class="absolute z-[2] right-0 bottom-4 portrait:max-h-[50vh] landscape:max-h-[80vh] w-auto"
-          src="/images/community/hero.svg"
-          alt="Community"
+
+        <!-- <img
+          class="absolute z-[2] right-0 portrait:max-h-[40vh] landscape:max-h-[65vh] landscape:xl:max-h-[80vh] w-auto"
+          src="/images/developers/hero.svg"
+          alt="Developers"
           width="1106"
           height="804"
           data-not-lazy
-        />
+        /> -->
+
         <img
           class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
           src="/images/common/space-stars.svg"
@@ -34,12 +36,12 @@
           height="1728"
           data-not-lazy
         />
-        <CommunityHero />
+        <TechstackHero />
       </div>
-      <CommunityOnlineCommunity class="pb-28 sm:pb-64 pt-12" />
-      <CommunityBuilders class="pb-28 sm:pb-64" />
-      <CommunityGrants class="pb-28 sm:pb-40" />
-      <CommunityAmbassador class="pb-28 sm:pb-40" />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <TechstackBattleCards />
+        <TechstackToolkit class="py-44" />
+      </div>
     </template>
     <template #earth>
       <Footer />
@@ -51,12 +53,12 @@
 const route = useRoute();
 const { t } = useI18n();
 import { meta } from "@/data/meta";
-const seoTitle = `${t("community.title")} | ${meta.siteName} - ${t(
+const seoTitle = `${t("developers.title")} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;
-const seoDescription = t("community.description");
+const seoDescription = t("developers.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}community.png`;
+const seoImage = `${meta.image}developers.png`;
 
 useServerSeoMeta({
   title: () => seoTitle,

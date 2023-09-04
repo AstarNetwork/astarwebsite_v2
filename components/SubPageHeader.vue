@@ -1,5 +1,13 @@
 <template>
-  <div class="space-gradient relative">
+  <div class="relative overflow-hidden">
+    <img
+      class="absolute z-[-1] w-full h-full"
+      src="/images/common/zkevm-bg.webp"
+      alt=""
+      width="1728"
+      height="1429"
+      data-not-lazy
+    />
     <img
       class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
       src="/images/common/space-cloud.webp"
@@ -28,13 +36,4 @@
   </div>
 </template>
 
-<style lang="postcss" scoped>
-.sub-page-header::before {
-  @apply w-full h-full absolute content-[""] z-[0] bottom-0;
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
-}
-</style>
+<style lang="postcss" scoped></style>

@@ -2,17 +2,29 @@
   <div
     class="text-center h-screen flex items-center justify-center z-10 relative"
   >
-    <div class="max-w-7xl px-4 sm:px-6 pt-12">
+    <div class="max-w-4xl px-4 sm:px-6 pt-12">
+      <p class="font-medium text-xl mb-2">Astar 2.0 is here.</p>
       <h1
-        class="text-3xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] drop-shadow tracking-tight"
+        class="text-3xl sm:text-6xl lg:text-9xl font-extrabold leading-none drop-shadow tracking-tight"
       >
-        The Future of Multichain Smart Contracts
+        The Frontier of Innovation.
       </h1>
       <p class="sm:text-xl mt-6 sm:mt-10 mb-8 sm:mb-14">
         {{ $t("home.hero.description") }}
       </p>
       <div class="sm:flex justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <Button
+          color="secondary"
+          size="lg"
+          href="#"
+          target="_blank"
+          class="w-[260px] !border-[#C09CFF] bg-gradient-to-r from-[#8A46FF] to-[#6E38CC] !text-white hover:brightness-125"
+          style="box-shadow: 0px 2px 10px 0px rgba(255, 255, 255, 0.3)"
+        >
+          Astar zkEVM
+          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
+        </Button>
+        <!-- <Button
           color="secondary"
           variant="outlined"
           size="lg"
@@ -22,7 +34,7 @@
         >
           {{ $t("home.hero.doc") }}
           <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
-        </Button>
+        </Button> -->
         <!-- <Button
           variant="outlined"
           size="lg"
