@@ -77,7 +77,7 @@ const battleCards = [
       t("techstack.solution.substrate.features.dapp_staking_rewards"),
       t("techstack.solution.substrate.features.low_fees"),
     ],
-    lean_more: "",
+    lean_more: "https://docs.astar.network/docs/build/",
   },
   {
     title: "Astar zkEVM",
