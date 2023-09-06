@@ -53,10 +53,10 @@
 const route = useRoute();
 const { t } = useI18n();
 import { meta } from "@/data/meta";
-const seoTitle = `${t("developers.title")} | ${meta.siteName} - ${t(
+const seoTitle = `${t("techstack.title")} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;
-const seoDescription = t("developers.description");
+const seoDescription = t("techstack.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
 const seoImage = `${meta.image}developers.png`;
 
