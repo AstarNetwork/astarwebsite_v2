@@ -7,7 +7,7 @@
     },
     "welcome": {
       "title": "Astar Networkへようこそ！",
-      "description": "Astar Network（アスターネットワーク）は日本で最大のスマートコントラクト・プラットフォームです。Ethereum Virtual Machine（EVM）とWebAssembly（Wasm）の両環境をサポートし、Cross-Virtual Machineを用いることによって両環境間の相互運用を実現します。Astarの革新的なBuild2Earnプログラムは、開発者が分散型アプリケーション（dApp）を開発するためのインセンティブを提供します。"
+      "description": "日本を代表するブロックチェーンであるAstarは、EVMやSubstrate、WebAssembly（Wasm）、ink！での環境をサポートし、イノベーションと相互運用性の最先端を行くスケーラブルなクロスレイヤー＆クロスマシンプロトコルを提供します。私たち独自のBuild2Earnメカニズムは開発者をサポートし、分散型の未来を構築するためのインセンティブを得られます。"
     },
     "gateway": "マルチチェーン時代の\nゲートウェイ",
     "ecosystem": {
