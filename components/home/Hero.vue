@@ -16,12 +16,12 @@
         <Button
           color="secondary"
           size="lg"
-          href="#"
+          href="https://astarnetwork.deform.cc/astarzkevm/"
           target="_blank"
           class="w-[260px] !border-[#C09CFF] bg-gradient-to-r from-[#8A46FF] to-[#6E38CC] !text-white hover:brightness-125"
           style="box-shadow: 0px 2px 10px 0px rgba(255, 255, 255, 0.3)"
         >
-          Astar zkEVM
+          Build on Astar
           <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
         </Button>
         <!-- <Button
@@ -48,10 +48,10 @@
         <Button
           variant="outlined"
           size="lg"
-          :href="i18n + '/astar2'"
+          :href="i18n + '/developers/techstack'"
           class="w-[260px]"
         >
-          Astar 2.0 ->
+          Astar Tech Stack
         </Button>
       </div>
     </div>
@@ -60,7 +60,6 @@
 
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-
 const { locale } = useI18n();
 const i18n = locale.value === "ja" ? "/ja" : "";
 </script>
