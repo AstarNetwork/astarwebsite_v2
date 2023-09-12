@@ -49,7 +49,7 @@ const seoTitle = `${t("techstack.title")} | ${meta.siteName} - ${t(
 )}`;
 const seoDescription = t("techstack.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}developers.png`;
+const seoImage = `${meta.image}techstack.png`;
 
 useServerSeoMeta({
   title: () => seoTitle,
