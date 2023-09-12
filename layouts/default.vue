@@ -1,5 +1,5 @@
 <template>
-  <!-- <NotificationBanner /> -->
+  <NotificationBanner />
   <div class="overflow-hidden">
     <Header />
     <slot name="space" />

@@ -63,9 +63,24 @@
       <a
         :href="locale === 'ja' ? notification.ja.url : notification.en.url"
         :target="notification.en.url.includes('https') ? '_blank' : '_self'"
-        class="font-semibold flex items-center"
+        class="font-medium flex items-center flex-wrap"
       >
-        {{ locale === "ja" ? notification.ja.text : notification.en.text }}
+        <template v-if="locale === 'ja'">
+          AstarとPolygon Labsが共同で
+          <span class="hidden lg:inline">
+            Ethereumレイヤー2スケーリングソリューションである
+          </span>
+          <span class="text-[#7C3EE3] font-bold">Astar zkEVM</span
+          >の立ち上げを発表。<span class="hidden lg:inline">もっと見る</span>
+        </template>
+        <template v-else>
+          <span class="pr-1">Astar & Polygon Labs Join Forces to Launch</span>
+          <span class="text-[#7C3EE3] font-bold">Astar zkEVM</span>
+          <span class="hidden lg:inline">
+            , the Ethereum Layer 2 Scaling Solution. Read More
+          </span>
+        </template>
+        <!-- {{ locale === "ja" ? notification.ja.text : notification.en.text }} -->
         <ArrowTopRightOnSquareIcon
           v-if="notification.en.url.includes('https')"
           class="w-4 h-4 stroke-2 ml-1"
