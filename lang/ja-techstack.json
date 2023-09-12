@@ -16,7 +16,7 @@
         }
       },
       "zkevm": {
-        "description": "Astar zkEVMは、ユーザー体験を損うことなく、Ethereumの高いセキュリティとネットワークの効果を活用したい企業に最適なソリューションです。最先端のゼロ知識証明技術を利用するAstar zkEVMは、開発者に確立されたツールと馴染みのある環境を提供し、企業がWeb3を大規模に導入できるようにします。",
+        "description": "Astar zkEVMは、ユーザー体験を損うことなく、Ethereumの高いセキュリティとネットワークの効果を活用したい企業に最適なソリューションです。最先端のZKテクノロジーを利用するAstar zkEVMは、開発者に確立されたツールと馴染みのある環境を提供し、企業がWeb3を大規模に導入できるようにします。",
         "features": {
           "ethereum_security": "Ethereumの高い安全性を継承",
           "high_scalability": "高い拡張性",
