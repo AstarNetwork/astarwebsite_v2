@@ -5,7 +5,7 @@
     "solution": {
       "title": "ソリューション比較",
       "substrate": {
-        "description": "Astar Substrateは、Polkadotを代表するパラチェーンを支えるバックエンド技術です。仮想マシン間でシームレスに開発を行い、Substrateベースの全てのプロトコルとの相互運用を利用可能にします。ink!とRustスマートコントラクトによって安全性が確立され、革新的な報酬メカニズムが途切れることのない公共財を支えます。",
+        "description": "Astar Substrateは、Polkadotを代表するパラチェーンを支えるバックエンド技術です。Polkadot SDKとSubstrateベースのプロトコルによって、仮想マシン間でのシームレスな開発を可能にし、高い相互運用性を実現します。また、ink!とRustスマートコントラクトによって安全性が担保され、革新的な報酬メカニズムが途切れることのない公共財を支えます。",
         "features": {
           "multi_vm_support": "複数の仮想マシンをサポート：EVM と WASM",
           "rust_and_ink": "Rust と ink! スマートコントラクト",

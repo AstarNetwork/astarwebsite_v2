@@ -5,7 +5,7 @@
     "solution": {
       "title": "Solution Comparison",
       "substrate": {
-        "description": "Astar Substrate is the backend technology powering Polkadot’s leading parachain. Unlock access to build across virtual machines seamlessly and tap into interoperability with all substrate-based protocols. Ink! And rust smart contracts ensure safety and our innovative reward mechanism powers unstoppable public goods.",
+        "description": "Astar Substrate is the backend technology powering Polkadot’s leading parachain. Unlock access to build across virtual machines seamlessly and tap into interoperability with Polkadot SDK, substrate-based protocols. Ink! And rust smart contracts ensure safety and our innovative reward mechanism powers unstoppable public goods.",
         "features": {
           "multi_vm_support": "Multi VM Support: EVM and WASM",
           "rust_and_ink": "Rust and ink! smart contracts",
