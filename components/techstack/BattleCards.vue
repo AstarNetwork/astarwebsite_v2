@@ -40,12 +40,13 @@
           {{ feature }}
         </li>
       </ul>
-      <div class="text-center">
+      <div class="text-center" v-if="item.url !== ''">
         <Button
           variant="outlined"
           color="secondary"
           :href="item.url"
           class="w-60"
+          :target="item.url.includes('https') ? '_blank' : '_self'"
         >
           {{ item.lean_more }}
           <ArrowTopRightOnSquareIcon

@@ -18,16 +18,6 @@
           height="1281"
           data-not-lazy
         />
-
-        <!-- <img
-          class="absolute z-[2] right-0 portrait:max-h-[40vh] landscape:max-h-[65vh] landscape:xl:max-h-[80vh] w-auto"
-          src="/images/developers/hero.svg"
-          alt="Developers"
-          width="1106"
-          height="804"
-          data-not-lazy
-        /> -->
-
         <img
           class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
           src="/images/common/space-stars.svg"
@@ -40,7 +30,8 @@
       </div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <TechstackBattleCards />
-        <TechstackToolkit class="py-44" />
+        <TechstackFAQs class="py-44" />
+        <TechstackToolkit class="pb-44" />
       </div>
     </template>
     <template #earth>

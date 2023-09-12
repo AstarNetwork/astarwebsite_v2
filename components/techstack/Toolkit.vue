@@ -6,17 +6,14 @@
 
     <ul class="grid grid-cols-1 sm:grid-cols-3 gap-12 mb-20">
       <li class="text-center" v-for="item in toolkit">
+        <div class="coming-soon">
+          <span>{{ item.comingSoon ? "Coming Soon!" : " " }}</span>
+        </div>
         <img
           :src="item.logo"
           :alt="item.name"
           class="w-full max-w-[280px] sm:max-w-none mx-auto"
         />
-        <span
-          v-if="item.comingSoon"
-          class="inline-block mt-2 bg-white/20 rounded text-sm px-3 py-1"
-        >
-          Coming Soon!
-        </span>
       </li>
     </ul>
 
@@ -110,3 +107,20 @@ const toolkit = [
   },
 ];
 </script>
+
+<style lang="postcss" scoped>
+.coming-soon {
+  @apply text-base h-6 font-medium;
+  span {
+    background: linear-gradient(
+      90deg,
+      #bc50ff 0%,
+      #9a5eff 33.79%,
+      #36a3ff 67.06%,
+      #47d9ff 98.29%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+</style>
