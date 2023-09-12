@@ -64,14 +64,14 @@ const faqs = [
         <li>Trustless interoperability with Ethereum and making diverse integrations smoother</li>
         <li>Significantly reduced transaction costs compared to Ethereum, making it economically advantageous for users</li>
       </ul>`,
-      ja: `<p>Astar zkEVMは、グローバル企業にとって多目的なソリューションとして、日本だけでなく世界的な規模でブロックチェーン技術の採用を加速することを目的としています。特に、国際的なゲームやエンターテインメント企業が利益の高い日本市場に参入するためのゲートウェイとして位置付けられています。Astarのイノベーションの中心には、Ethereum Layer-2 Scalingソリューションの採用があります。</p>
+      ja: `<p>Astar zkEVMは、グローバルプロジェクト向けの多目的なソリューションとして、日本のみならず世界的な規模で、ブロックチェーン技術の導入を加速させることを目的としています。特に国際的なゲームやエンターテインメント企業にとって、利益率の高い日本市場に参入するためのゲートウェイとして位置付けられています。Astarのイノベーションの中心には、Ethereumレイヤー2ソリューションの実装があります。</p>
       <p>Astar zkEVMの主な特徴は以下の通りです：</p>
       <ul>
-        <li>ゼロ知識技術によるスケーラビリティにより、高い取引量でもスムーズな操作を保証</li>
-        <li>EVM相当性</li>
-        <li>Ethereumからのセキュリティメカニズムの派生により、堅牢で安全なフレームワークが実現</li>
-        <li>Ethereumとの信頼性のある相互運用性を確保し、多様な統合をスムーズに行う</li>
-        <li>Ethereumに比べて取引コストを大幅に削減し、ユーザーにとって経済的に有利</li>
+        <li>ZKテクノロジーによるスケーラビリティ拡張により、高い取引量でもスムーズな操作を保証</li>
+        <li>EVM等価性</li>
+        <li>Ethereumからのセキュリティメカニズムにより、堅牢で安全なフレームワークが実現</li>
+        <li>Ethereumとの信頼性のある相互運用性を確保し、多様な統合がスムーズに行える</li>
+        <li>Ethereumに比べて取引コストを大幅に削減し、ユーザーにとって経済的に有益</li>
       </ul>`,
     },
   },
@@ -94,8 +94,8 @@ const faqs = [
       <ul>
         <li>日本の市場とグローバルなプロジェクト、企業、開発者との連携</li>
         <li>Ethereumから受け継いだセキュリティ</li>
-        <li>高いEVM相当性</li>
-        <li>ゼロ知識テクノロジーを通じた高いスケーラビリティ</li>
+        <li>高いEVM等価性</li>
+        <li>ZKテクノロジーを通じた高いスケーラビリティ</li>
         <li>Ethereumとの信頼性のある相互運用性</li>
         <li>Ethereumメインネットと比較して大幅に低いトランザクションコスト</li>
       </ul>`,
@@ -108,7 +108,7 @@ const faqs = [
     },
     answer: {
       en: "sETH is the gas token option on Astar zkEVM testnet.",
-      ja: "sETHは、Astar zkEVMテストネット上のガストークンオプションです。",
+      ja: "sETHが、Astar zkEVMテストネット上のガストークンオプションとなります。",
     },
   },
   {
@@ -119,13 +119,13 @@ const faqs = [
     answer: {
       en: `Astar zkEVM distinguishes itself from the Ethereum mainnet primarily by offering a much lower transaction cost (gas fees) and a greater transaction throughput. <br />
       This enhanced throughput, combined with reduced transaction costs, provides developers with the ideal environment to create applications demanding high transaction speeds without the burden of high costs.`,
-      ja: `Astar zkEVMは、主にトランザクションコスト（ガス料金）がはるかに低く、トランザクションスループットが大きいことによって、Ethereumメインネットとは異なります。<br />この向上したスループットと低いトランザクションコストを組み合わせることで、高いトランザクション速度を必要とするアプリケーションを開発する開発者にとって、高いコストの負担がない理想的な環境を提供します。`,
+      ja: `Astar zkEVMは、主にトランザクションコスト（ガス料金）がはるかに低く、トランザクションスループットが大きいことによって、Ethereumメインネットとは異なります。<br />この向上したスループットと低いトランザクションコストを組み合わせることで、高いトランザクション速度を必要とするアプリケーションを構築する開発者にとって、高いコストの負担がない理想的な環境を提供します。`,
     },
   },
   {
     question: {
       en: "What is the benefit for the Astar ecosystem?",
-      ja: "Astarエコシステムにとっての利益は何ですか？",
+      ja: "Astarエコシステムにとって何が利益ですか？",
     },
     answer: {
       en: `<p>Launching a layer 2 on Ethereum offers several advantages for the Astar ecosystem:</p>
@@ -136,13 +136,13 @@ const faqs = [
         <li>The Astar ecosystem will benefit from increased growth in transactions, active users, and liquidity. All are key factors for network success.</li>
         <li>More Japanese enterprises and real-world use cases are coming to the Astar ecosystem</li>
       </ul>`,
-      ja: `<p>イーサリアム上でレイヤー2を展開することは、Astarエコシステムにいくつかの利点をもたらします：</p>
+      ja: `<p>Ethereum上でレイヤー2を展開することは、Astarエコシステムにいくつかの利点をもたらします：</p>
       <ul>
-        <li><strong>ビルダーにとってより多くの選択肢</strong>：Astar Substrate（レイヤー1）とAstar zkEVM（レイヤー2）があるため、開発者はより多くの場所とツールを使って作成/構築することができます。</li>
-        <li>より大きなコミュニティへの拡大！</li>
-        <li>Astarは、イーサリアムのTier 1プロジェクトとより密接に協力することができます。これは、Astarの独自の機能、たとえばAstarのdAppステーキングから利益を得ることができることを意味します。</li>
-        <li>Astarエコシステムは、取引の増加、アクティブユーザーの増加、流動性の増加から利益を得ることができます。すべてがネットワークの成功にとって重要な要因です。</li>
-        <li>より多くの日本の企業や実世界のユースケースがAstarエコシステムに参加する予定です。</li>
+        <li><strong>開発者にとって選択肢が多い</strong>：Astar Substrate（レイヤー1）とAstar zkEVM（レイヤー2）があるため、開発者はより多くの場所とツールを使って作成/構築することができます。</li>
+        <li>より大きなコミュニティへ拡大！</li>
+        <li>Astarは、EthereumのTier 1プロジェクトとより密接に協力することができます。これはAstarの独自の機能、たとえばAstarのdAppステーキングから利益を得ることができることを意味します。</li>
+        <li>Astarエコシステムは、取引の増加、アクティブユーザーの増加、流動性の増加から利益を得ることができます。これら全てがネットワークの成功にとって重要な要因です。</li>
+        <li>より多くの日本企業や実世界のユースケースがAstarエコシステムに参加する予定です。</li>
       </ul>`,
     },
   },
@@ -153,7 +153,7 @@ const faqs = [
     },
     answer: {
       en: "Though transactions on Astar zkEVM will be significantly cheaper than those on Ethereum mainnet, it is nonetheless going be more expensive compared to Astar Substrate on Polkadot. The reason is that as Astar zkEVM is a Layer 2 solution of Ethereum, the cost of the network is largely affected by the cost of Ethereum mainnet, which is significantly higher than Astar Substrate.",
-      ja: "Astar zkEVM上での取引は、Ethereumメインネット上の取引よりも大幅に安くなりますが、Astar Substrate on Polkadotと比較すると、それでもより高価になる可能性があります。その理由は、Astar zkEVMがEthereumのLayer 2ソリューションであるため、ネットワークのコストがEthereumメインネットのコストに大きく影響を受けるためです。Ethereumメインネットのコストは、Astar Substrateよりもはるかに高いためです。",
+      ja: "Astar zkEVM上での取引は、Ethereumメインネット上の取引よりも大幅に安くなりますが、Astar Substrate on Polkadotに比べると、まだ高価になる可能性があります。その理由は、Astar zkEVMがEthereumのレイヤー2ソリューションであるため、ネットワークのコストがEthereumメインネットのコストに大きく影響を受けるためです。Ethereumメインネットのコストは、Astar Substrateよりもはるかに高いのが現状です。",
     },
   },
 ];
