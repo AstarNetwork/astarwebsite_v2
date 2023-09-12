@@ -44,10 +44,15 @@
         <Button
           variant="outlined"
           color="secondary"
-          :href="item.lean_more"
+          :href="item.url"
           class="w-60"
         >
-          Learn more ->
+          {{ item.lean_more }}
+          <ArrowTopRightOnSquareIcon
+            v-if="item.url.includes('https')"
+            class="w-5 h-5 stroke-2 ml-1"
+          />
+          <span v-else class="pl-1">-></span>
         </Button>
       </div>
     </li>
@@ -56,11 +61,13 @@
 
 <script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/24/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 
 const { t } = useI18n();
 
 const battleCards = [
   {
+    slug: "substrate",
     title: "Astar Substrate",
     description: t("techstack.solution.substrate.description"),
     poweredBy: {
@@ -77,9 +84,11 @@ const battleCards = [
       t("techstack.solution.substrate.features.dapp_staking_rewards"),
       t("techstack.solution.substrate.features.low_fees"),
     ],
-    lean_more: "https://docs.astar.network/docs/build/",
+    lean_more: t("techstack.lean_more.docs"),
+    url: "https://docs.astar.network/docs/build/",
   },
   {
+    slug: "zkevm",
     title: "Astar zkEVM",
     description: t("techstack.solution.zkevm.description"),
     poweredBy: {
@@ -93,7 +102,8 @@ const battleCards = [
       t("techstack.solution.zkevm.features.access"),
       t("techstack.solution.zkevm.features.developer_experience"),
     ],
-    lean_more: "",
+    lean_more: t("techstack.lean_more.blog"),
+    url: "",
   },
 ];
 </script>

@@ -3,31 +3,35 @@
     "title": "Astar Tech Stack",
     "description": "As Astar 2.0 evolves, so does our tech. We are excited to offer our bleeding-edge, cross-layer tech stack that will allow developers to benefit from multiple VMs, layers and consensus protocols.",
     "solution": {
-      "title": "Solution Comparison",
+      "title": "ソリューション比較",
       "substrate": {
-        "description": "Astar Substrate is the backend technology powering Polkadot’s leading parachain. Unlock access to build across virtual machines seamlessly and tap into interoperability with all substrate-based protocols. Ink! And rust smart contracts ensure safety and our innovative reward mechanism powers unstoppable public goods.",
+        "description": "Astar Substrateは、Polkadotを代表するパラチェーンを支えるバックエンド技術です。仮想マシン間でシームレスに開発を行い、Substrateベースの全てのプロトコルとの相互運用を利用可能にします。ink!とRustスマートコントラクトによって安全性が確立され、革新的な報酬メカニズムが途切れることのない公共財を支えます。",
         "features": {
-          "multi_vm_support": "Multi VM Support: EVM and WASM",
-          "rust_and_ink": "Rust and !ink smart contracts",
-          "interoperability_and_composability": "Interoperability and Composability with Substrate chains",
-          "secured": "Secured by Polkadot validators",
-          "dapp_staking_rewards": "dApp staking rewards providing builder income",
-          "low_fees": "Low fees"
+          "multi_vm_support": "複数の仮想マシンをサポート：EVM と WASM",
+          "rust_and_ink": "Rust と ink! スマートコントラクト",
+          "interoperability_and_composability": "Substrateチェーンによる相互運用性と互換性",
+          "secured": "Polkadotバリデーターによる安全性",
+          "dapp_staking_rewards": "開発者をサポートするdAppステーキング報酬",
+          "low_fees": "低い手数料"
         }
       },
       "zkevm": {
-        "description": "Astar zkEVM is the perfect solution for enterprises looking to leverage the security  and network effects of Ethereum without sacrificing the user experience. Powered by cutting-edge zero knowledge technology, Astar zkEVM empowers businesses to embrace web3 at scale while offering developers a familiar environment with proven tooling.",
+        "description": "Astar zkEVMは、ユーザー体験を損うことなく、イーサリアムの高いセキュリティとネットワークの効果を活用したい企業に最適なソリューションです。最先端のゼロ知識証明技術を利用するAstar zkEVMは、開発者に確立されたツールと馴染みのある環境を提供し、企業がWeb3を大規模に導入できるようにします。",
         "features": {
-          "ethereum_security": "Inherits Ethereum’s security",
-          "high_scalability": "High scalability",
-          "low_fees": "Low fees even during high demand",
-          "access": "Access to a vibrant web3 ecosystem",
-          "developer_experience": "Familiar developer experience powered by Ethereum’s proven stack of tooling and infrastructure"
+          "ethereum_security": "イーサリアムの高い安全性を継承",
+          "high_scalability": "高い拡張性",
+          "low_fees": "混雑している時間でも手数料が低い",
+          "access": "活気あるWeb3エコシステムへ参加",
+          "developer_experience": "開発者は使い慣れたイーサリアムの実績あるツールやインフラなどの技術スタックを利用可能"
         }
       }
     },
     "toolkit": {
-      "title": "Reach into \nAstar Developer Toolkit"
+      "title": "Astarの開発者ツールキット"
+    },
+    "lean_more":{
+      "docs":"ドキュメントへ",
+      "blog":"記事を読む"
     }
   }
 }

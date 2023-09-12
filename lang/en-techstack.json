@@ -8,7 +8,7 @@
         "description": "Astar Substrate is the backend technology powering Polkadot’s leading parachain. Unlock access to build across virtual machines seamlessly and tap into interoperability with all substrate-based protocols. Ink! And rust smart contracts ensure safety and our innovative reward mechanism powers unstoppable public goods.",
         "features": {
           "multi_vm_support": "Multi VM Support: EVM and WASM",
-          "rust_and_ink": "Rust and !ink smart contracts",
+          "rust_and_ink": "Rust and ink! smart contracts",
           "interoperability_and_composability": "Interoperability and Composability with Substrate chains",
           "secured": "Secured by Polkadot validators",
           "dapp_staking_rewards": "dApp staking rewards providing builder income",
@@ -28,6 +28,10 @@
     },
     "toolkit": {
       "title": "Reach into \nAstar Developer Toolkit"
+    },
+    "lean_more":{
+      "docs":"Go to the docs",
+      "blog":"Read the article"
     }
   }
 }
