@@ -90,7 +90,15 @@ const faqs = [
       <li>Trustless interoperability with Ethereum</li>
       <li>Significantly reduced transaction cost compared to Ethereum mainnet</li>
     </ul>`,
-      ja: "Astar zkEVMは、ブリッジを介して既存のAstar VMとのトークン転送レベルで相互運用可能であり、クロスコントラクト相互運用レベルでも相互運用可能です！",
+      ja: `<p>Astar zkEVMにはいくつかの主要な特徴があります：</p>
+      <ul>
+        <li>日本の市場とグローバルなプロジェクト、企業、開発者との連携</li>
+        <li>Ethereumから受け継いだセキュリティ</li>
+        <li>高いEVM相当性</li>
+        <li>ゼロ知識テクノロジーを通じた高いスケーラビリティ</li>
+        <li>Ethereumとの信頼性のある相互運用性</li>
+        <li>Ethereumメインネットと比較して大幅に低いトランザクションコスト</li>
+      </ul>`,
     },
   },
   {
