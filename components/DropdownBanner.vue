@@ -59,7 +59,7 @@
         "
       />
     </div>
-    <p class="text-sm leading-6 text-space-gray-dark">
+    <p class="text-sm leading-5 text-space-gray-dark">
       <a
         :href="locale === 'ja' ? notification.ja.url : notification.en.url"
         :target="notification.en.url.includes('https') ? '_blank' : '_self'"
