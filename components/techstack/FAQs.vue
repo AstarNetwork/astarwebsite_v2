@@ -125,7 +125,7 @@ const faqs = [
   {
     question: {
       en: "What is the benefit for the Astar ecosystem?",
-      ja: "Astarエコシステムにとって何が利益ですか？",
+      ja: "Astarエコシステムにとって、どのような利益がありますか？",
     },
     answer: {
       en: `<p>Launching a layer 2 on Ethereum offers several advantages for the Astar ecosystem:</p>
@@ -138,11 +138,11 @@ const faqs = [
       </ul>`,
       ja: `<p>Ethereum上でレイヤー2を展開することは、Astarエコシステムにいくつかの利点をもたらします：</p>
       <ul>
-        <li><strong>開発者にとって選択肢が多い</strong>：Astar Substrate（レイヤー1）とAstar zkEVM（レイヤー2）があるため、開発者はより多くの場所とツールを使って作成/構築することができます。</li>
-        <li>より大きなコミュニティへ拡大！</li>
-        <li>Astarは、EthereumのTier 1プロジェクトとより密接に協力することができます。これはAstarの独自の機能、たとえばAstarのdAppステーキングから利益を得ることができることを意味します。</li>
-        <li>Astarエコシステムは、取引の増加、アクティブユーザーの増加、流動性の増加から利益を得ることができます。これら全てがネットワークの成功にとって重要な要因です。</li>
-        <li>より多くの日本企業や実世界のユースケースがAstarエコシステムに参加する予定です。</li>
+        <li><strong>豊富な開発環境</strong>：Astar Substrate（レイヤー1）とAstar zkEVM（レイヤー2）があるため、開発者はより多くの環境とツールを使って制作/構築することができます。</li>
+        <li>より大きなコミュニティへの拡大</li>
+        <li>Astarは、EthereumのTier 1プロジェクトとより密接に協力により、AstarのdAppステーキングから利益を得ることができるようになるなどAstar独自の機能を使用可能です。</li>
+        <li>ネットワークの成功にとって重要な要因である、取引の増加、アクティブユーザーの増加、流動性の増加などの恩恵を得ることができます。</li>
+        <li>より多くの日本企業などのユースケースがAstarエコシステムに参加する予定です。</li>
       </ul>`,
     },
   },
