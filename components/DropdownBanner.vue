@@ -60,9 +60,9 @@
       />
     </div>
     <p class="text-sm leading-5 text-space-gray-dark">
-      <a
-        :href="locale === 'ja' ? '#' : '#'"
-        :target="notification.en.url.includes('https') ? '_blank' : '_self'"
+      <NuxtLink
+        :to="locale === 'ja' ? '#' : '#'"
+        target="_blank"
         class="font-medium"
       >
         <template v-if="locale === 'ja'">
@@ -81,7 +81,7 @@
           class="w-4 h-4 stroke-2 inline-block"
         /> -->
         <!-- <span v-else>-></span> -->
-      </a>
+      </NuxtLink>
     </p>
     <div class="flex flex-1 justify-end">
       <button

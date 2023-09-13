@@ -107,7 +107,7 @@ const faqs = [
       ja: "Astar zkEVMのガス代としてのトークンの選択肢は？",
     },
     answer: {
-      en: "sETH is the gas token option on Astar zkEVM testnet.",
+      en: "We will use ETH as the gas token on Astar zkEVM testnet.",
       ja: "Astar zkEVMのガス代としてはsETHがその選択肢となります。",
     },
   },
