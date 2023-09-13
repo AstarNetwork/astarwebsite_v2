@@ -1,13 +1,13 @@
 {
   "home": {
     "hero": {
-      "description": "Astarは次世代のWeb3イノベーションへのスケーラブルな分散型ブロックチェーンです",
+      "description": "Astar Networkは、前例のないクロスレイヤースケーリングを実現し、Web3の社会実装・大衆化を目指します。",
       "doc": "ドキュメント",
       "app": "アプリへ"
     },
     "welcome": {
       "title": "Astar Networkへようこそ！",
-      "description": "Astar Network（アスターネットワーク）は日本で最大のスマートコントラクト・プラットフォームです。Ethereum Virtual Machine（EVM）とWebAssembly（Wasm）の両環境をサポートし、Cross-Virtual Machineを用いることによって両環境間の相互運用を実現します。Astarの革新的なBuild2Earnプログラムは、開発者が分散型アプリケーション（dApp）を開発するためのインセンティブを提供します。"
+      "description": "Astar Networkは、Web3のマスアダプションを目指すパブリックブロックチェーンであり、日本トップの時価総額とグローバルプレゼンスを有しています。私たちはEVMとWASMの両環境をサポートし、さらに高い水準のEVM等価性が実現できる「Astar zkEVM Powered by Polygon」を提供します。Build2Earnメカニズムは開発者にインセンティブを与える世界初の取り組みであり、分散型社会を構築する開発者をサポートします。"
     },
     "gateway": "マルチチェーン時代の\nゲートウェイ",
     "ecosystem": {

@@ -1,16 +1,6 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <!-- <div class="banner--hiring">
-        <NuxtLink
-          to="https://wellfound.com/company/astar-network"
-          target="_blank"
-          class="link--hiring"
-        >
-          {{ $t("home.hiring") }}
-          <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
-        </NuxtLink>
-      </div> -->
       <div class="bg-black relative">
         <div class="absolute z-0 w-full h-screen flex items-center">
           <ScrollParallax :speed="0.25" class="mx-auto">
@@ -26,7 +16,15 @@
             </video>
           </ScrollParallax>
         </div>
-        <div class="space-gradient mix-blend-screen">
+        <div class="mix-blend-screen">
+          <img
+            class="absolute z-[-1] w-full h-full"
+            src="/images/common/zkevm-bg.webp"
+            alt=""
+            width="1728"
+            height="1429"
+            data-not-lazy
+          />
           <img
             class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
             src="/images/common/space-cloud.webp"
@@ -44,7 +42,7 @@
             data-not-lazy
           />
           <HomeHero />
-          <div class="welcome-bg -mt-44 pt-44 pb-32 sm:pb-64">
+          <div class="welcome-bg -mt-44 pt-44 pb-32 sm:pb-64 relative z-[1]">
             <HomeWelcome />
           </div>
         </div>
@@ -123,34 +121,6 @@ definePageMeta({
 </script>
 
 <style lang="postcss" scoped>
-.banner--hiring {
-  background: rgba(255, 255, 255, 0.85);
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 220px;
-  height: 30px;
-  color: #fff;
-  z-index: 9999;
-  text-align: right;
-  border-bottom-left-radius: 10px;
-}
-.link--hiring {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    90deg,
-    #e6007a -5.88%,
-    #703ac2 15.42%,
-    #0070eb 40.77%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline;
-  font-weight: bold;
-  color: #0070eb;
-}
 .welcome-bg {
   background: linear-gradient(
     0deg,

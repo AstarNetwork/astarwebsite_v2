@@ -59,19 +59,33 @@
         "
       />
     </div>
-    <p class="text-sm leading-6 text-space-gray-dark">
-      <a
-        :href="locale === 'ja' ? notification.ja.url : notification.en.url"
-        :target="notification.en.url.includes('https') ? '_blank' : '_self'"
-        class="font-semibold flex items-center"
+    <p class="text-sm leading-5 text-space-gray-dark">
+      <NuxtLink
+        :to="
+          locale === 'ja'
+            ? 'https://astar.network/ja/blog/astar-networkpolygon-labsethereum2astar-39293'
+            : 'https://astar.network/blog/supernova-is-here!-39292'
+        "
+        target="_blank"
+        class="font-medium"
       >
-        {{ locale === "ja" ? notification.ja.text : notification.en.text }}
-        <ArrowTopRightOnSquareIcon
+        <template v-if="locale === 'ja'">
+          AstarとPolygon Labsが協業を開始。Ethereum Layer2
+          <span class="text-[#7C3EE3] font-bold">Astar zkEVM</span> powered by
+          Polygon Labsを立ち上げ
+        </template>
+        <template v-else>
+          <span class="pr-1">Astar & Polygon Labs Join Forces to Launch</span>
+          <span class="text-[#7C3EE3] font-bold inline">Astar zkEVM,</span>
+          the Ethereum Layer 2 Scaling Solution.
+        </template>
+        <!-- {{ locale === "ja" ? notification.ja.text : notification.en.text }} -->
+        <!-- <ArrowTopRightOnSquareIcon
           v-if="notification.en.url.includes('https')"
-          class="w-4 h-4 stroke-2 ml-1"
-        />
-        <span v-else>-></span>
-      </a>
+          class="w-4 h-4 stroke-2 inline-block"
+        /> -->
+        <!-- <span v-else>-></span> -->
+      </NuxtLink>
     </p>
     <div class="flex flex-1 justify-end">
       <button
