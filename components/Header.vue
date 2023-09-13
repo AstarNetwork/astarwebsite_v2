@@ -35,9 +35,14 @@
             <nav class="flex items-center space-x-4 xl:space-x-8">
               <NuxtLink
                 :to="localePath('/astar2')"
-                class="font-medium transition text-base xl:text-lg text-white hover:text-space-cyan-light pr-2"
+                class="text-space-teal group hover:text-space-teal-lighter font-medium transition text-tiny xl:text-base flex items-center"
               >
                 Astar 2.0
+                <span
+                  class="bg-space-teal group-hover:bg-space-teal-lighter text-space-gray-dark text-[0.7rem] block px-2 rounded-sm ml-1"
+                >
+                  New
+                </span>
               </NuxtLink>
 
               <template v-for="category in menus">
@@ -148,10 +153,7 @@ const menus = [
     nav: [
       {
         label: "",
-        nav: [
-          { label: "Get Started", href: i18n + "/developers" },
-          { label: "Astar Tech Stack", href: i18n + "/developers/techstack" },
-        ],
+        nav: [{ label: "Get Started", href: i18n + "/developers" }],
       },
       {
         label: "Developer Support",

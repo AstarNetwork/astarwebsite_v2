@@ -1,15 +1,7 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="sub-page-header relative overflow-hidden">
-        <img
-          class="absolute z-[-1] w-full h-full"
-          src="/images/common/zkevm-bg.webp"
-          alt=""
-          width="1728"
-          height="1429"
-          data-not-lazy
-        />
+      <div class="space-gradient relative">
         <img
           class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
           src="/images/common/space-cloud.webp"
@@ -139,4 +131,13 @@ definePageMeta({
 });
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.space-gradient::before {
+  @apply w-full h-full absolute content-[""] z-[0];
+  background: linear-gradient(
+    180deg,
+    rgba(8, 16, 41, 0) 30%,
+    rgba(8, 16, 41, 100) 100%
+  );
+}
+</style>
