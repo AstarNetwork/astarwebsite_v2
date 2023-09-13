@@ -52,7 +52,7 @@ const faqs = [
   {
     question: {
       en: "What is Astar zkEVM? What are the main features of Astar zkEVM?",
-      ja: "Astar zkEVMとは何ですか？ Astar zkEVMの主な特徴は何ですか？",
+      ja: "Astar zkEVMとは？Astar zkEVMの主な特徴は？",
     },
     answer: {
       en: `<p>Astar zkEVM serves as a versatile solution for global enterprises, accelerating the adoption of blockchain technology not just in Japan, but on a global scale. It particularly positions itself as a gateway for international gaming and entertainment ventures to tap into the lucrative Japanese market. Central to Astar's innovation is its adoption of Ethereum Layer-2 Scaling solution.</p>
@@ -64,21 +64,21 @@ const faqs = [
         <li>Trustless interoperability with Ethereum and making diverse integrations smoother</li>
         <li>Significantly reduced transaction costs compared to Ethereum, making it economically advantageous for users</li>
       </ul>`,
-      ja: `<p>Astar zkEVMは、グローバルプロジェクト向けの多目的なソリューションとして、日本のみならず世界的な規模で、ブロックチェーン技術の導入を加速させることを目的としています。特に国際的なゲームやエンターテインメント企業にとって、利益率の高い日本市場に参入するためのゲートウェイとして位置付けられています。Astarのイノベーションの中心には、Ethereumレイヤー2ソリューションの実装があります。</p>
+      ja: `<p>Astar zkEVMは、Web3の社会実装を実現するグローバル企業向けの汎用的なソリューションです。特に世界的なゲームやエンターテインメント事業が日本市場に参入するためのゲートウェイとして位置づけられています。Ethereumレイヤー2ソリューションの実装はAstarにとって革新的なアップデートであります。</p>
       <p>Astar zkEVMの主な特徴は以下の通りです：</p>
       <ul>
-        <li>ZKテクノロジーによるスケーラビリティ拡張により、高い取引量でもスムーズな操作を保証</li>
-        <li>EVM等価性</li>
-        <li>Ethereumからのセキュリティメカニズムにより、堅牢で安全なフレームワークが実現</li>
-        <li>Ethereumとの信頼性のある相互運用性を確保し、多様な統合がスムーズに行える</li>
-        <li>Ethereumに比べて取引コストを大幅に削減し、ユーザーにとって経済的に有益</li>
+        <li>ZKテクノロジーにより、大量のトランザクションが発生してもスムーズな運用を保証する拡張性</li>
+        <li>EVM等価性を備え、EthereumやPolygon等の既存のコントラクトをコードの変更なしに使用可能</li>
+        <li>Ethereumからセキュリティメカニズムを導入し、堅牢で安全なフレームワークを実現</li>
+        <li>Ethereumとの信頼性の高い相互運用性により、様々な統合をよりスムーズに実現可能</li>
+        <li>Ethereumと比較して取引コストが大幅に削減され、ユーザーにとって経済的なUXを実現</li>
       </ul>`,
     },
   },
   {
     question: {
       en: "What is unique about Astar zkEVM?",
-      ja: "Astar zkEVMのユニークな点は何ですか？",
+      ja: "Astar zkEVMのユニークな点は？",
     },
     answer: {
       en: `<p>Astar zkEVM has several key features:</p>
@@ -90,36 +90,36 @@ const faqs = [
       <li>Trustless interoperability with Ethereum</li>
       <li>Significantly reduced transaction cost compared to Ethereum mainnet</li>
     </ul>`,
-      ja: `<p>Astar zkEVMにはいくつかの主要な特徴があります：</p>
+      ja: `<p>Astar zkEVMにはいくつかのユニークな点があります：</p>
       <ul>
-        <li>日本の市場とグローバルなプロジェクト、企業、開発者との連携</li>
-        <li>Ethereumから受け継いだセキュリティ</li>
-        <li>高いEVM等価性</li>
-        <li>ZKテクノロジーを通じた高いスケーラビリティ</li>
-        <li>Ethereumとの信頼性のある相互運用性</li>
-        <li>Ethereumメインネットと比較して大幅に低いトランザクションコスト</li>
+        <li>グローバルプロジェクト、企業、開発者と日本市場との架け橋</li>
+        <li>Ethereumから継承した高いセキュリティ</li>
+        <li>高度なEVM等価性</li>
+        <li>ZKテクノロジーによる高い拡張性</li>
+        <li>Ethereumとのトラストレスな相互運用性</li>
+        <li>Ethereumメインネットと比較して格段に安いガス代</li>
       </ul>`,
     },
   },
   {
     question: {
       en: "What is Astar zkEVM’s gas option?",
-      ja: "Astar zkEVMのガスオプションとは何ですか？",
+      ja: "Astar zkEVMのガス代としてのトークンの選択肢は？",
     },
     answer: {
       en: "sETH is the gas token option on Astar zkEVM testnet.",
-      ja: "sETHが、Astar zkEVMテストネット上のガストークンオプションとなります。",
+      ja: "Astar zkEVMのガス代としてはsETHがその選択肢となります。",
     },
   },
   {
     question: {
       en: "What is the difference between Astar zkEVM and Ethereum mainnet?",
-      ja: "Astar zkEVMとEthereumメインネットの違いは何ですか？",
+      ja: "Astar zkEVMとEhereumメインネットの違いは？",
     },
     answer: {
       en: `Astar zkEVM distinguishes itself from the Ethereum mainnet primarily by offering a much lower transaction cost (gas fees) and a greater transaction throughput. <br />
       This enhanced throughput, combined with reduced transaction costs, provides developers with the ideal environment to create applications demanding high transaction speeds without the burden of high costs.`,
-      ja: `Astar zkEVMは、主にトランザクションコスト（ガス料金）がはるかに低く、トランザクションスループットが大きいことによって、Ethereumメインネットとは異なります。<br />この向上したスループットと低いトランザクションコストを組み合わせることで、高いトランザクション速度を必要とするアプリケーションを構築する開発者にとって、高いコストの負担がない理想的な環境を提供します。`,
+      ja: `Astar zkEVMは、安いガス代（トランザクションコスト）やより高い処理能力を提供することで、Ethereumのメインネットとの差別化を図っています。これにより、開発者はアプリをこれまで以上に理想的な環境で製作することができます。`,
     },
   },
   {
@@ -148,12 +148,12 @@ const faqs = [
   },
   {
     question: {
-      en: "How does gas pricing on Astar zkEVM compare to Ethereum and Polygon?",
-      ja: "Astar zkEVMのガス価格は、EthereumやPolygonと比べてどうですか？",
+      en: "How does gas pricing on Astar zkEVM compare to Ethereum?",
+      ja: "Astar zkEVMのガス代は、Ethereumと比較してどうなりますか？",
     },
     answer: {
       en: "Though transactions on Astar zkEVM will be significantly cheaper than those on Ethereum mainnet, it is nonetheless going be more expensive compared to Astar Substrate on Polkadot. The reason is that as Astar zkEVM is a Layer 2 solution of Ethereum, the cost of the network is largely affected by the cost of Ethereum mainnet, which is significantly higher than Astar Substrate.",
-      ja: "Astar zkEVM上での取引は、Ethereumメインネット上の取引よりも大幅に安くなりますが、Astar Substrate on Polkadotに比べると、まだ高価になる可能性があります。その理由は、Astar zkEVMがEthereumのレイヤー2ソリューションであるため、ネットワークのコストがEthereumメインネットのコストに大きく影響を受けるためです。Ethereumメインネットのコストは、Astar Substrateよりもはるかに高いのが現状です。",
+      ja: "Astar zkEVMはEthereumメインネットに比べて格段に安くになる一方で、Polkadot上のAstar Substrateに比べると高くになります。理由としては、Astar zkEVMはレイヤー2ソリューションであるため、Astar Subtrateより高く、また、Ethereumメインネットの影響を大きく受けるためです。",
     },
   },
 ];
