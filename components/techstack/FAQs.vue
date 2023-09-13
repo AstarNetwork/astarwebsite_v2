@@ -3,6 +3,9 @@
     <h2 class="title text-center mb-12">
       <span>FAQs</span>
     </h2>
+    <p v-if="locale === 'ja'" class="mb-4 sm:mb-6">
+      ※近日中に日本語版FAQにアップデートいたします
+    </p>
     <dl
       class="space-y-6 sm:space-y-10 divide-y divide-white/20 border-t border-b border-white/20 pb-6 sm:pb-10"
     >
