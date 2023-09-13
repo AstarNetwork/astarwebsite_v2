@@ -1,5 +1,10 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 10000
+    }
+  },
   app: {
     baseURL: "/",
     head: {
@@ -77,6 +82,7 @@ export default defineNuxtConfig({
           "en-starmap.json",
           "en-vision.json",
           "en-university.json",
+          "en-techstack.json",
         ],
       },
       {
@@ -97,6 +103,7 @@ export default defineNuxtConfig({
           "ja-starmap.json",
           "ja-vision.json",
           "ja-university.json",
+          "ja-techstack.json",
         ],
       },
     ],

@@ -95,14 +95,7 @@ const classes = computed(() => ({
   );
 }
 .btn.outlined.primary:hover {
-  background: linear-gradient(
-    120deg,
-    #e6007a -5.88%,
-    #703ac2 15.42%,
-    #0070eb 40.77%,
-    #0297fb 72.21%,
-    #0ae2ff 95.53%
-  );
+  background: linear-gradient(120deg, white 08%, white 100%);
 }
 .btn.outlined.primary::after {
   @apply rounded-xl;
@@ -135,10 +128,6 @@ const classes = computed(() => ({
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @apply text-space-sky;
-}
-.btn.outlined.primary:hover span {
-  color: white;
-  -webkit-text-fill-color: white;
 }
 .btn.contained.secondary {
   @apply border-2 border-white rounded-xl text-space-gray-dark bg-white bg-opacity-80 hover:bg-opacity-100;

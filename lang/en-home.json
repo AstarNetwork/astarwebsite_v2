@@ -1,13 +1,13 @@
 {
   "home": {
     "hero": {
-      "description": "Astar is a scalable decentralized blockchain for the next big Web3 innovations.",
+      "description": "Astar unlocks blockchain, enabling unparalleled cross-layer scaling & driving web3’s mass adoption.",
       "doc": "Documentation",
       "app": "Launch App"
     },
     "welcome": {
       "title": "Welcome to Astar Network!",
-      "description": "Astar is Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and interoperability between them using a Cross-Virtual Machine. Our innovative Build2Earn program allows developers to earn incentives for building decentralized apps."
+      "description": "Astar, Japan’s leading blockchain, supports EVM, Substrate, WebAssembly (Wasm) and ink! environments to provide a scalable, cross-layer & cross-machine protocol at the bleeding edge of innovation and interoperability. Our unique Build2Earn mechanism empowers developers, allowing them to earn incentives for building the decentralized future."
     },
     "gateway": "The Gateway \nin the Multichain Era",
     "ecosystem": {
