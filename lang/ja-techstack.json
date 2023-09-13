@@ -1,7 +1,7 @@
 {
   "techstack": {
     "title": "Astar Tech Stack",
-    "description": "As Astar 2.0 evolves, so does our tech. We are excited to offer our bleeding-edge, cross-layer tech stack that will allow developers to benefit from multiple VMs, layers and consensus protocols.",
+    "description": "Astar 2.0へと進化するにつれ、我々の技術も進化します。開発者が複数のVM、レイヤー、コンセンサス・プロトコルの恩恵を受けられるよう、最先端のクロスレイヤー技術スタックを提供します。",
     "solution": {
       "title": "ソリューション比較",
       "substrate": {

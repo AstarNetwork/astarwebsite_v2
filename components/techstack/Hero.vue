@@ -28,10 +28,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import {
-  DocumentTextIcon,
-  ArrowTopRightOnSquareIcon,
-} from "@heroicons/vue/24/outline";
-</script>
