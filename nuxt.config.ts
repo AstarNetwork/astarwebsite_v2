@@ -1,5 +1,10 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 1000
+    }
+  },
   app: {
     baseURL: "/",
     head: {
