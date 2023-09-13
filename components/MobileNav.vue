@@ -47,14 +47,9 @@
                 <li>
                   <NuxtLink
                     :to="localePath('/astar2')"
-                    class="text-space-teal group hover:text-space-teal-lighter flex items-center border-t border-gray-600 px-6 py-5"
+                    class="flex items-center border-t border-gray-600 px-6 py-5"
                   >
                     Astar 2.0
-                    <span
-                      class="bg-space-teal group-hover:bg-space-teal-lighter text-space-gray-dark text-[0.7rem] block px-2 rounded-sm ml-2"
-                    >
-                      New
-                    </span>
                   </NuxtLink>
                 </li>
                 <li v-for="menu in menus">
