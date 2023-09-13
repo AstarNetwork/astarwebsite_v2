@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   vite: {
     build: {
-      chunkSizeWarningLimit: 1000
+      chunkSizeWarningLimit: 10000
     }
   },
   app: {
