@@ -153,6 +153,22 @@ const faqs = [
   },
   {
     question: {
+      en: "What is the value of Astar zkEVM for ASTR token holders?",
+      ja: "",
+    },
+    answer: {
+      en: `<p>Astar zkEVM uses the ASTR token in three new ways: as the gas fee for tooling, in the burning mechanism with the sequencer, and burning incentivized tokens to the network aggregator. This model will be evaluated on our testnet to maximize the value for ASTR holders. The final design is subject to change based on analysis from testing the model.</p>
+      <img
+      class="w-full"
+              src="/images/techstack/astar-value.webp"
+              alt="Astar zkEVM Value"
+              data-not-lazy
+            />`,
+      ja: "",
+    },
+  },
+  {
+    question: {
       en: "How does gas pricing on Astar zkEVM compare to Ethereum?",
       ja: "Astar zkEVMのガス代は、Ethereumと比較してどうなりますか？",
     },
