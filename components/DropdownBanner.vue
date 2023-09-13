@@ -61,7 +61,11 @@
     </div>
     <p class="text-sm leading-5 text-space-gray-dark">
       <NuxtLink
-        :to="locale === 'ja' ? '#' : '#'"
+        :to="
+          locale === 'ja'
+            ? 'https://astar.network/ja/blog/astar-networkpolygon-labsethereum2astar-39293'
+            : 'https://astar.network/blog/supernova-is-here!-39292'
+        "
         target="_blank"
         class="font-medium"
       >
