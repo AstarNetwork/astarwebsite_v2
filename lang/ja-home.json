@@ -7,7 +7,7 @@
     },
     "welcome": {
       "title": "Astar Networkへようこそ！",
-      "description": "日本を代表するブロックチェーンであるAstarは、EVMやSubstrate、WebAssembly（Wasm）、ink!での環境をサポートし、イノベーションと相互運用性の最先端を行くスケーラブルなクロスレイヤー＆クロスマシンプロトコルを提供します。私たち独自のBuild2Earnメカニズムは開発者をサポートし、分散型の未来を構築するためのインセンティブを得られます。"
+      "description": "Astar Networkは、Web3のマスアダプションを目指すパブリックブロックチェーンであり、日本トップの時価総額とグローバルプレゼンスを有しています。私たちはEVMとWASMの両環境をサポートし、さらに高い水準のEVM等価性が実現できる「Astar zkEVM Powered by Polygon」を提供します。Build2Earnメカニズムは開発者にインセンティブを与える世界初の取り組みであり、分散型社会を構築する開発者をサポートします"
     },
     "gateway": "マルチチェーン時代の\nゲートウェイ",
     "ecosystem": {
