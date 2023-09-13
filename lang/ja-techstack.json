@@ -16,13 +16,13 @@
         }
       },
       "zkevm": {
-        "description": "Astar zkEVMは、ユーザー体験を損うことなく、Ethereumの高いセキュリティとネットワークの効果を活用したい企業に最適なソリューションです。最先端のZKテクノロジーを利用するAstar zkEVMは、開発者に確立されたツールと馴染みのある環境を提供し、企業がWeb3を大規模に導入できるようにします。",
+        "description": "Astar zkEVMは高いUXを保ちながらEthereumの高いセキュリティとネットワーク効果を活用したい事業者にとって最適なソリューションを提供します。最先端のZKテクノロジーを活用したAstar zkEVMでは、開発者に定評あるツールと開発環境を提供し、Web3の大衆化に貢献します。",
         "features": {
-          "ethereum_security": "Ethereumの高い安全性を継承",
+          "ethereum_security": "Ethereumから継承した高いセキュリティ",
           "high_scalability": "高い拡張性",
-          "low_fees": "混雑している時間でも手数料が低い",
-          "access": "活気あるWeb3エコシステムへ参加",
-          "developer_experience": "開発者は使い慣れたEthereumの実績あるツールやインフラなどの技術スタックを利用可能"
+          "low_fees": "いつでも安価なネットワーク手数料",
+          "access": "最も活発なWeb3エコシステムへのアクセス",
+          "developer_experience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
         }
       }
     },
