@@ -17,7 +17,8 @@
             class="flex w-full items-start justify-between text-left text-white"
           >
             <span class="text-base sm:text-xl font-medium">
-              {{ locale === "ja" ? faq.question.ja : faq.question.en }}
+              <!-- {{ locale === "ja" ? faq.question.ja : faq.question.en }} -->
+              {{ faq.question.en }}
             </span>
             <span class="ml-6 flex h-7 items-center">
               <PlusSmallIcon v-if="!open" class="h-6 w-6" aria-hidden="true" />
@@ -26,7 +27,8 @@
           </DisclosureButton>
         </dt>
         <DisclosurePanel as="dd" class="mt-6 pr-12 techstack-faqs__answer">
-          <div v-html="locale === 'ja' ? faq.answer.ja : faq.answer.en" />
+          <!-- <div v-html="locale === 'ja' ? faq.answer.ja : faq.answer.en" /> -->
+          <div v-html="faq.answer.en" />
         </DisclosurePanel>
       </Disclosure>
     </dl>
