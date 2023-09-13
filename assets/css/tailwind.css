@@ -44,20 +44,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .title-zkevm {
-    @apply font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight;
-    span {
-      background: linear-gradient(
-        90deg,
-        #bc50ff 0%,
-        #9a5eff 33.79%,
-        #36a3ff 67.06%,
-        #47d9ff 98.29%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
 
   .gradient-outlined-box {
     @apply bg-space-gray-dark relative;
@@ -145,13 +131,4 @@
   .entry-content h3 a {
     @apply text-white no-underline hover:text-white;
   }
-}
-
-.sub-page-header::before {
-  @apply w-full h-full absolute content-[""] z-[0] bottom-0;
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
 }
