@@ -16,7 +16,7 @@
         }
       },
       "zkevm": {
-        "description": "Astar zkEVM is the perfect solution for enterprises looking to leverage the security  and network effects of Ethereum without sacrificing the user experience. Powered by cutting-edge zero knowledge technology, Astar zkEVM empowers businesses to embrace web3 at scale while offering developers a familiar environment with proven tooling.",
+        "description": "Astar zkEVM is the perfect solution for enterprises looking to leverage the security and network effects of Ethereum without sacrificing the user experience. Powered by cutting-edge zero knowledge technology, Astar zkEVM empowers businesses to embrace web3 at scale while offering developers a familiar environment with proven tooling.",
         "features": {
           "ethereum_security": "Inherits Ethereum’s security",
           "high_scalability": "High scalability",
