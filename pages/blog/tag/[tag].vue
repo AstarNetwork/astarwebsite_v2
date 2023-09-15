@@ -41,7 +41,7 @@ import gql from "graphql-tag";
 const localePath = useLocalePath();
 
 const route = useRoute();
-const tag = route.params.tag;
+const tag = encodeURI(route.params.tag);
 
 // The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
 const { locale, t } = useI18n();
