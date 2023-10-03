@@ -19,7 +19,7 @@
       "title":"Learn the Basics",
       "university":"Hands-on training to put you on the fast track to a Web3 career. Solidity. Rust. And Polkadot.",
       "docs":{
-        "title":"Documentation",
+        "title":"Docs",
         "build":{
           "title":"Build",
           "description":"Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
