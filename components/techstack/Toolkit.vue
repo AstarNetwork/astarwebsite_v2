@@ -4,7 +4,7 @@
       <span>{{ $t("techstack.toolkit.title") }}</span>
     </h2>
 
-    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-12 mb-20">
+    <ul class="flex justify-center flex-col sm:flex-row gap-8 lg:gap-20 mb-20">
       <li class="text-center" v-for="item in toolkit">
         <div class="coming-soon">
           <span>{{ item.comingSoon ? "Coming Soon!" : " " }}</span>
@@ -12,7 +12,7 @@
         <img
           :src="item.logo"
           :alt="item.name"
-          class="w-full max-w-[280px] sm:max-w-none mx-auto"
+          class="w-auto h-16 lg:h-20 xl:h-24 sm:max-w-none mx-auto"
         />
       </li>
     </ul>
@@ -91,17 +91,17 @@ if (data.value !== null) {
 
 const toolkit = [
   {
-    logo: "/images/techstack/zkevm-logo.svg",
+    logo: "/images/techstack/zkevm-logo.webp",
     name: "Astar zkEVM",
     comingSoon: true,
   },
   {
-    logo: "/images/techstack/astar-link-logo.svg",
+    logo: "/images/techstack/astar-link-logo.webp",
     name: "Astar Link",
     comingSoon: true,
   },
   {
-    logo: "/images/techstack/astar-logo.svg",
+    logo: "/images/techstack/astar-logo.webp",
     name: "Astar 1.0",
     comingSoon: false,
   },
@@ -110,7 +110,7 @@ const toolkit = [
 
 <style lang="postcss" scoped>
 .coming-soon {
-  @apply text-base h-6 font-medium;
+  @apply text-base h-6 font-medium text-sm lg:text-base;
   span {
     background: linear-gradient(
       90deg,
