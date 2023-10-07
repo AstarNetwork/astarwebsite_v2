@@ -42,6 +42,14 @@
         "description": "Swankyハブでは、Swankyに関する全ての情報を取得できます。\n\nSwankyハブは、全てのチームと開発者がPolkadotエコシステムに貢献し、このink!のオールインワンツールであるSwankyをサポートし、活性化するための場所です！Swankyハブには下記の内容が含まれています：",
         "more":"など、他にもたくさん！",
         "welcome":"私たちが作ったツールや実例の他、ink！スマートコントラクトやdApps開発への情熱を共有するSwankyハブへようこそ！"
+      },
+      "startale": {
+        "title": "Startale Labs",
+        "description": "Startale Labs is a technology company building the tools necessary to enhance web3 adoption in the Japanese market and scale it to reach billions. By working closely with leading enterprises, Startale will play a pivotal role in onboarding new users to Astar and pave the way for them to expand beyond the borders of Japan."
+      },
+      "tech_stack": {
+        "title": "Astar Tech Stack",
+        "description": "Astar Network is the gateway for projects across enterprises, entertainment & gaming in Japan and beyond, driving global adoption and delivering web3 to billions. It leverages a cross-virtual machine powered by Polygon and Polkadot to offer customizable blockchain solutions that accelerate web3 adoption. With zk-powered Ethereum L2 Scaling (zkEVM), EVM, WASM, and a cutting-edge ecosystem, Astar delivers robust, secure, and interoperable web3 technology."
       }
     },
     "shine": {

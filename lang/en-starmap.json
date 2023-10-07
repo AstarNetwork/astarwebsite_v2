@@ -46,6 +46,14 @@
         "description": "Swanky Hub is the one-source of truth for everything related to Swanky.\n\nSwanky Hub is a space where all teams and developers can contribute in the Polkadot ecosystem and help support and boost this all-in-one ink! tool! The Swanky Hub contains:",
         "more":"and so much more!",
         "welcome":"We welcome you to our hub, where we share our work and our passion for ink! smart contracts and dApps development!"
+      },
+      "startale": {
+        "title": "Startale Labs",
+        "description": "Startale Labs is a technology company building the tools necessary to enhance web3 adoption in the Japanese market and scale it to reach billions. By working closely with leading enterprises, Startale will play a pivotal role in onboarding new users to Astar and pave the way for them to expand beyond the borders of Japan."
+      },
+      "tech_stack": {
+        "title": "Astar Tech Stack",
+        "description": "Astar Network is the gateway for projects across enterprises, entertainment & gaming in Japan and beyond, driving global adoption and delivering web3 to billions. It leverages a cross-virtual machine powered by Polygon and Polkadot to offer customizable blockchain solutions that accelerate web3 adoption. With zk-powered Ethereum L2 Scaling (zkEVM), EVM, WASM, and a cutting-edge ecosystem, Astar delivers robust, secure, and interoperable web3 technology."
       }
     },
     "shine": {
