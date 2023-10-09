@@ -45,11 +45,11 @@
       },
       "startale": {
         "title": "Startale Labs",
-        "description": "Startale Labs is a technology company building the tools necessary to enhance web3 adoption in the Japanese market and scale it to reach billions. By working closely with leading enterprises, Startale will play a pivotal role in onboarding new users to Astar and pave the way for them to expand beyond the borders of Japan."
+        "description": "Web3 for Billions - 数十億人が使うWeb3を構築するStartale Labsはマルチチェーン対応のアプリケーションやインフラを開発するWeb3テック企業です。また、これまでAstar Networkで培ってきた実績や経験を元に研究開発やインキュベーションを行っていきます。加えて、日本に子会社である Startale Labs Japanを1月31日に設立しており、日本発パブリックブロックチェーンという強みを活かして日本でのWeb3事業開発と事業コンサルティングを展開していきます。"
       },
       "tech_stack": {
         "title": "Astar Tech Stack",
-        "description": "Astar Network is the gateway for projects across enterprises, entertainment & gaming in Japan and beyond, driving global adoption and delivering web3 to billions. It leverages a cross-virtual machine powered by Polygon and Polkadot to offer customizable blockchain solutions that accelerate web3 adoption. With zk-powered Ethereum L2 Scaling (zkEVM), EVM, WASM, and a cutting-edge ecosystem, Astar delivers robust, secure, and interoperable web3 technology."
+        "description": "Astar Tech Stackは、PolygonとPolkadotを搭載した仮想マシンを活用し、カスタマイズ可能なブロックチェーンソリューションを提供します。また、zkEVM（ゼロ知識証明搭載のEthereum L2スケーリング）やEVM、WASM、そして最先端のエコシステムを用いることで、安全、堅牢で相互運用可能なweb3技術を可能にします。"
       }
     },
     "shine": {
