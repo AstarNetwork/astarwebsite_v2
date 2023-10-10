@@ -263,19 +263,15 @@
                     {{ $t("starmap.expansion.swanky.title") }}
                   </span>
                 </li>
-                <li>Ink!redible NFT</li>
                 <li>
-                  {{
-                    locale === "ja"
-                      ? "DAppステーキングアップデート"
-                      : "DApp Staking Update"
-                  }}
-                </li>
+                  <span @click="clickAction('startale')" class="popup-link">
+                    {{ $t("starmap.expansion.startale.title") }}
+                  </span>
+                  </li>
                 <li>
-                  {{ locale === "ja" ? "トークノミクス" : "Tokenomics" }}
-                </li>
-                <li>
-                  {{ locale === "ja" ? "XCMコントラクト" : "XCM Contracts" }}
+                  <span @click="clickAction('techStack')" class="popup-link">
+                    {{ $t("starmap.expansion.tech_stack.title") }}
+                  </span>
                 </li>
               </ul>
             </div>
@@ -308,7 +304,36 @@
                 {{ $t("starmap.shine.description") }}
               </p>
               <h3 class="font-bold text-xl">Q4</h3>
-              <p>{{ $t("starmap.shine.plan") }}</p>
+              <ul class="list-disc pl-4">
+                <li>
+                  {{
+                    locale === "ja"
+                      ? "WasmとEVMの手数料を調整"
+                      : "Wasm & EVM Fee alignment"
+                  }}
+                </li>
+                <li>
+                  {{
+                    locale === "ja"
+                      ? "Astar zkEVM テストネット"
+                      : "Astar zkEVM Testnet"
+                  }}
+                  </li>
+                <li>
+                  {{
+                    locale === "ja"
+                      ? "アカウントの統一機能"
+                      : "Account Unification"
+                  }}
+                </li>
+                <li>
+                  {{
+                    locale === "ja"
+                      ? "ハイブリッドインフレーションモデル"
+                      : "Hybrid Inflation Model"
+                  }}
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -389,6 +414,18 @@ const discoveries: { [index: string]: Discovery } = {
     description: `${t("starmap.expansion.swanky.description")}<ul class="list-disc pl-6 my-6"><li>Swanky node</li><li>Swanky CLI</li><li>Swanky dApps</li><li>ink! examples</li></ul>${t("starmap.expansion.swanky.more")}<br><br><strong>${t("starmap.expansion.swanky.welcome")}</strong>`,
     href: "https://github.com/swankyhub",
     image: "swanky.svg",
+  },
+  startale: {
+    title: t("starmap.expansion.startale.title"),
+    description: t("starmap.expansion.startale.description"),
+    href: "https://startale.org/",
+    image: "startale.webp",
+  },
+  techStack: {
+    title: t("starmap.expansion.tech_stack.title"),
+    description: t("starmap.expansion.tech_stack.description"),
+    href: "/developers/techstack/",
+    image: "tech-stack.webp",
   },
   comingSoon: {
     title: "Coming soon!",
