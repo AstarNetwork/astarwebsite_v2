@@ -428,7 +428,7 @@ const discoveries: { [index: string]: Discovery } = {
   zkEvmTestnet: {
     title: t("starmap.shine.zkevm_testnet.title"),
     description: t("starmap.shine.zkevm_testnet.description"),
-    href: "/developers/techstack/",
+    href: "https://astar.network/blog/astar-zkevm-testnet-is-now-live-39560",
     image: "zkevm-testnet.webp",
   },
   comingSoon: {
