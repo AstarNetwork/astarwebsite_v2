@@ -293,7 +293,7 @@
               煌閃
             </span>
           </div>
-          <div class="md:max-w-[400px] xl:max-w-[540px] order-1">
+          <div class="md:max-w-[400px] xl:max-w-[540px] order-1 relative z-10">
             <h2 class="title mb-4">
               <span class="text-3xl lg:text-4xl">
                 {{ $t("starmap.shine.title") }}
@@ -306,19 +306,17 @@
               <h3 class="font-bold text-xl">Q4</h3>
               <ul class="list-disc pl-4">
                 <li>
+                  <span @click="clickAction('zkEvmTestnet')" class="popup-link">
+                    {{ $t("starmap.shine.zkevm_testnet.title") }}
+                  </span>
+                </li>
+                <li>
                   {{
                     locale === "ja"
                       ? "WasmとEVMの手数料を調整"
                       : "Wasm & EVM Fee alignment"
                   }}
                 </li>
-                <li>
-                  {{
-                    locale === "ja"
-                      ? "Astar zkEVM テストネット"
-                      : "Astar zkEVM Testnet"
-                  }}
-                  </li>
                 <li>
                   {{
                     locale === "ja"
@@ -426,6 +424,12 @@ const discoveries: { [index: string]: Discovery } = {
     description: t("starmap.expansion.tech_stack.description"),
     href: "/developers/techstack/",
     image: "tech-stack.webp",
+  },
+  zkEvmTestnet: {
+    title: t("starmap.shine.zkevm_testnet.title"),
+    description: t("starmap.shine.zkevm_testnet.description"),
+    href: "https://astar.network/blog/astar-zkevm-testnet-is-now-live-39560",
+    image: "zkevm-testnet.webp",
   },
   comingSoon: {
     title: "Coming soon!",

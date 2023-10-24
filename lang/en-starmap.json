@@ -59,7 +59,11 @@
     "shine": {
       "title": "The Shine Nebula",
       "description": "We now approach the last nebula in 2023. By now we have made many great discoveries and grown to new heights - as Web3 technology, and as a team. But we are not done yet. We plan to shine like a star to close out the year and prepare for the 2024 journey ahead.",
-      "plan": "We're excited for this quarter. Stay tuned for more info."
+      "plan": "We're excited for this quarter. Stay tuned for more info.",
+      "zkevm_testnet": {
+        "title": "Astar zkEVM Testnet",
+        "description": "Astar zkEVM is a zero-knowledge scaling solution for Ethereum that offers an EVM-equivalent environment on which existing EVM smart contracts, developer tools, and wallets can work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum."
+      }
     }
   }
 }
