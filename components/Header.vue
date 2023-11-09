@@ -271,10 +271,10 @@ const menus = [
         nav: [
           { label: "2023 Starmap", href: i18n + "/starmap" },
           { label: "Astar Japan Lab", href: i18n + "/japan" },
-          // {
-          //   label: "Jobs",
-          //   href: "https://wellfound.com/company/astar-network",
-          // },
+          {
+            label: "Careers",
+            href: "https://wellfound.com/company/astar-network",
+          },
           { label: "Contact Us", href: i18n + "/contact" },
         ],
       },
