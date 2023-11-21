@@ -410,7 +410,7 @@ const discoveries: { [index: string]: Discovery } = {
   swanky: {
     title: t("starmap.expansion.swanky.title"),
     description: `${t("starmap.expansion.swanky.description")}<ul class="list-disc pl-6 my-6"><li>Swanky node</li><li>Swanky CLI</li><li>Swanky dApps</li><li>ink! examples</li></ul>${t("starmap.expansion.swanky.more")}<br><br><strong>${t("starmap.expansion.swanky.welcome")}</strong>`,
-    href: "https://github.com/swankyhub",
+    href: "https://github.com/inkdevhub",
     image: "swanky.svg",
   },
   startale: {
