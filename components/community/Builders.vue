@@ -3,9 +3,7 @@
     <h2 class="max-w-4xl mx-auto title text-center mb-8 sm:mb-12">
       <span>{{ $t("community.builders.title") }}</span>
     </h2>
-    <div
-      class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 pt-6 lg:pt-24"
-    >
+    <div class="max-w-2xl mx-auto pt-6 lg:pt-24">
       <div
         v-for="item in builders"
         class="border border-white/30 rounded-3xl p-6"
@@ -79,15 +77,6 @@ const builders = [
     text_link: {
       label: t("community.builders.ecosystem.go_to_docs"),
       href: "https://docs.astar.network/",
-    },
-  },
-  {
-    title: t("community.builders.space_labs.title"),
-    image: "builders-space-labs.svg",
-    description: t("community.builders.space_labs.description"),
-    button: {
-      label: t("community.builders.space_labs.title"),
-      href: "https://astarnetwork.notion.site/Astar-SpaceLabs-bee19d9d13ab41ba8d113347ae56448f",
     },
   },
 ];

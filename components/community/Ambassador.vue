@@ -22,7 +22,7 @@
           <Button
             variant="outlined"
             size="lg"
-            href="https://github.com/AstarNetwork/growth-program"
+            href="https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4"
             target="_blank"
           >
             {{ $t("community.ambassador.button") }}

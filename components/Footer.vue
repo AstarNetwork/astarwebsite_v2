@@ -110,12 +110,8 @@ const nav = [
         href: "https://wellfound.com/company/astar-network",
       },
       {
-        name: "Astar Space Lab",
-        href: "https://astarnetwork.notion.site/Astar-SpaceLabs-bee19d9d13ab41ba8d113347ae56448f",
-      },
-      {
         name: "Astar Ambassador Program",
-        href: "https://github.com/AstarNetwork/growth-program",
+        href: "https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4",
       },
       {
         name: "Bug Bounty Program",
