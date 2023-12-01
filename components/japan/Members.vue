@@ -3,9 +3,6 @@
     <h2 class="title text-center mb-4 sm:mb-8">
       <span>{{ $t("japan.members.title") }}</span>
     </h2>
-    <p class="mb-12 max-w-3xl mx-auto text-sm sm:text-base">
-      {{ $t("japan.members.description") }}
-    </p>
 
     <TabGroup>
       <TabList

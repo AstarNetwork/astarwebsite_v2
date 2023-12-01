@@ -13,8 +13,7 @@
       "connect": "Connect with the Astar community and ambassadors"
     },
     "members": {
-      "title": "Registered Members",
-      "description": "Companies and communities that wish to join our organization and have been approved by the participating companies in the organization."
+      "title": "Registered Members"
     },
     "use_cases": {
       "title": "Use Cases",
@@ -29,6 +28,9 @@
       "title": "Join Our Newsletter!",
       "description": "Subscribe to our newsletter to receive the latest update in Japanese.",
       "subscribe": "Subscribe"
+    },
+    "blog":{
+      "title":"Astar Japan Blog"
     }
   }
 }

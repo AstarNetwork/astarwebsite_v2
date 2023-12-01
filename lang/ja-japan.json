@@ -1,34 +1,36 @@
 {
   "japan": {
     "title": "Astar Japan Lab",
-    "description": "Astar Japan Lab fuels the growth of Japanese services and businesses by conducting research and development, gathering knowledge, and collaborating with exciting and established companies.",
-    "register": "今すぐ登録する",
-    "see_use_cases": "最新の導入事例を見る",
+    "description": "Astar Networkを利用したサービス開発やビジネス創出に関わる事業者を情報の調査・研究、知見の集約、意見交換を行い、Astar Network経済圏のさらなる発展を目指すために設立されたコンソーシアムです。",
+    "register": "加入申請はこちら",
+    "see_use_cases": "最新の活用事例",
     "features": {
-      "business_opportunities": "Astar Networkを活用して、日本におけるビジネス機会を創出",
-      "use_cases": "ブロックチェーンやNFT導入の提案",
-      "solution": "ソリューションプロバイダーとの連携",
-      "vc": "日本発のWeb3スタートアップ企業へ、海外のVCを紹介",
-      "group_study": "Astar先行導入事例のグループ勉強会",
-      "connect": "Astarのコミュニティやアンバサダーとの連携"
+      "business_opportunities": "日本国内でAstarを活用した事業の創出",
+      "use_cases": "最新のブロックチェーンの活用事例の共有",
+      "solution": "We3ソリューションプロバイダーとの協業",
+      "vc": "日本発Web3スタートアップへの海外VCの紹介",
+      "group_study": "オンラインWebinarやオフラインイベントへの招待",
+      "connect": "Astarのコミュニティ、エコシステムパートナーやアンバサダーとの交流"
     },
     "members": {
-      "title": "登録メンバー",
-      "description": "Astar Japan Labへの参加を希望し、参加企業によって承認された企業やコミュニティ"
+      "title": "会員企業一覧"
     },
     "use_cases": {
-      "title": "導入事例",
-      "sony": "Sony Network CommunicationsとAstar Networkは、19のWeb3スタートアップ企業の成長を促進するため、世界トップクラスのイノベーターを活用した共同インキュベーションプログラムを立ち上げました。",
-      "toyota": "トヨタはAstar Network上でDAOツールを開発する初のWeb3ハッカソンを開催し、イノベーションを推進するための企業内プロジェクトを支援しました。",
-      "calbee":"日本の大手スナック菓子メーカーであるカルビー株式会社は、「NFTチップス」の新しいプロモーションキャンペーンの一環として、Astar Networkを活用した「進化するポテトチップスNFT」キャンペーンを開催しました。",
-      "eren": "日本を代表するWebマンガ「左ききのエレン」が、Astar Networkを活用し、2つのストリートアート「黒い化物」と「チェルシーの夜」をNFTとして発行しました。",
-      "nikkei": "Astar Networkが日経新聞に広告を掲載し、NFTを配布しました。",
-      "candy": "ファイナルファンタジーのコンセプト・アーティストである天野喜孝氏が、初のデジタルコレクション「Candy Girl」にAstar Networkを採用しました。この世界的なプロジェクトは、ブロックチェーン技術を使い、アートやストーリーテリング、ファッションを複合的に掛け合わせています。"
+      "title": "活用事例",
+      "sony": "Astar NetworkはSony Network Communicationsさまと、世界トップのイノベーターと協力し、合計19社のWeb3スタートアップの成長を促進するための共同のインキュベーションプログラムを開催。",
+      "toyota": "トヨタさまのスポンサーの元、Astar Network上でDAOツールを開発するためのハッカソンを開催し、Web3エコシステムのイノベーションを促進。",
+      "calbee":"カルビー株式会社さまが「カルビーポテトチップスのNFTおまけ配布キャンペーンを開催。ポテトチップスを食べた分だけキャラクターが進化するポテトチップNFTをAstarブロックチェーン上に展開。",
+      "eren": "ウェブマンガシリーズ「左ききのエレン」が、Astar Networkで「The Black Monster」と「Night in Chelsea」という2つNFTをリリース。",
+      "nikkei": "Astar Networkが日経新聞に一面広告を掲載。",
+      "candy": "Final Fantasyのコンセプトアーティストである天野喜孝氏が、初のデジタルコレクション「Candy Girl」をAstar Networkにローンチ。"
     },
     "newsletter": {
-      "title": "ニュースレター",
-      "description": "Astarの最新情報を日本語でお届けします！",
-      "subscribe": "購読する"
+      "title": "Astar Japan Lab ニュースレター",
+      "description": "Astar Networkの最新の活用事例の紹介やオンライン/オフラインイベントのご招待をお送りいたします。",
+      "subscribe": "加入はこちら"
+    },
+    "blog":{
+      "title":"Astar Japan ブログ"
     }
   }
 }

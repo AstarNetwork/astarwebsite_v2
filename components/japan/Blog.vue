@@ -4,15 +4,13 @@
     class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10"
   >
     <h2 class="title text-center mb-12 sm:mb-16">
-      <span>Astar Japan Blog</span>
+      <span>{{ t("japan.blog.title") }}</span>
     </h2>
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
       <BlogArticleCard v-for="post in posts" :post="post" />
     </ul>
     <div class="text-center mt-12 sm:mt-20">
-      <Button size="lg" :href="localePath('/blog/japan')">
-        Astar Japan Blog ->
-      </Button>
+      <Button size="lg" :href="toBlog"> {{ t("japan.blog.title") }} -> </Button>
     </div>
   </div>
 </template>
@@ -21,11 +19,12 @@
 import gql from "graphql-tag";
 
 // The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 const astarSpace = locale.value === "ja" ? 11315 : 10802;
+const tag = locale.value === "ja" ? "" : "japan";
 const query = gql`
   query PostsBySpaceId {
-    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "japan", hidden_eq: false }, orderBy: id_DESC, limit: 3) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "${tag}", hidden_eq: false }, orderBy: id_DESC, limit: 3) {
       publishedDate: createdOnDay
       title
       href: canonical
@@ -58,4 +57,6 @@ const posts = data.value.posts.map(
 );
 
 const localePath = useLocalePath();
+
+const toBlog = locale.value === "ja" ? "/ja/blog" : "/blog/japan";
 </script>
