@@ -25,7 +25,7 @@
               v-if="item.href"
               class="text-space-cyan group-hover:underline transition"
             >
-              Learn more
+              {{ t("learn_more") }}
               <ArrowTopRightOnSquareIcon
                 class="w-4 h-4 inline-block stroke-2"
               />
