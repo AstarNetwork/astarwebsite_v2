@@ -311,11 +311,9 @@
                   </span>
                 </li>
                 <li>
-                  {{
-                    locale === "ja"
-                      ? "WasmとEVMの手数料を調整"
-                      : "Wasm & EVM Fee alignment"
-                  }}
+                  <span @click="clickAction('feeAlignment')" class="popup-link">
+                    {{ $t("starmap.shine.fee_alignment.title") }}
+                  </span>
                 </li>
                 <li>
                   {{
@@ -430,6 +428,12 @@ const discoveries: { [index: string]: Discovery } = {
     description: t("starmap.shine.zkevm_testnet.description"),
     href: "https://astar.network/blog/astar-zkevm-testnet-is-now-live-39560",
     image: "zkevm-testnet.webp",
+  },
+  feeAlignment: {
+    title: t("starmap.shine.fee_alignment.title"),
+    description: t("starmap.shine.fee_alignment.description"),
+    href: "https://forum.astar.network/t/astar-tokenomics-2-0-a-dynamically-adjusted-inflation/4924#native-ethereum-fee-alignment-11",
+    image: "fee-alignment.webp",
   },
   comingSoon: {
     title: "Coming soon!",

@@ -63,6 +63,10 @@
       "zkevm_testnet": {
         "title": "Astar zkEVM Testnet",
         "description": "Astar zkEVM is a zero-knowledge scaling solution for Ethereum that offers an EVM-equivalent environment on which existing EVM smart contracts, developer tools, and wallets can work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum."
+      },
+      "fee_alignment": {
+        "title": "Fee alignment",
+        "description": "Phased alignment of the Wasm and EVM virtual machine fees occurring during implementation of Tokenomics 2.0 means a practical reduction in the cost of storage for ink! smart contracts deployed on the Wasm virtual machine, significantly reducing costs for developers due to a reduction of rent by a factor of 100x. Users should notice lower fees, as well, when performing certain actions, such as minting NFTs."
       }
     }
   }
