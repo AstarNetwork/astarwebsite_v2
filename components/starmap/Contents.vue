@@ -316,18 +316,9 @@
                   </span>
                 </li>
                 <li>
-                  {{
-                    locale === "ja"
-                      ? "アカウントの統一機能"
-                      : "Account Unification"
-                  }}
-                </li>
-                <li>
-                  {{
-                    locale === "ja"
-                      ? "ハイブリッドインフレーションモデル"
-                      : "Hybrid Inflation Model"
-                  }}
+                  <span @click="clickAction('hybridInflationModel')" class="popup-link">
+                    {{ $t("starmap.shine.hybrid_inflation_model.title") }}
+                  </span>
                 </li>
               </ul>
             </div>
@@ -435,11 +426,11 @@ const discoveries: { [index: string]: Discovery } = {
     href: "https://forum.astar.network/t/astar-tokenomics-2-0-a-dynamically-adjusted-inflation/4924#native-ethereum-fee-alignment-11",
     image: "fee-alignment.webp",
   },
-  comingSoon: {
-    title: "Coming soon!",
-    description: "",
-    href: "",
-    image: "",
+  hybridInflationModel: {
+    title: t("starmap.shine.hybrid_inflation_model.title"),
+    description: t("starmap.shine.hybrid_inflation_model.description"),
+    href: "https://forum.astar.network/t/astar-tokenomics-2-0-a-dynamically-adjusted-inflation/4924",
+    image: "hybrid-inflation-model.webp",
   },
 };
 
