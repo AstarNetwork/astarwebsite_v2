@@ -67,6 +67,10 @@
       "fee_alignment": {
         "title": "Fee alignment",
         "description": "Phased alignment of the Wasm and EVM virtual machine fees occurring during implementation of Tokenomics 2.0 means a practical reduction in the cost of storage for ink! smart contracts deployed on the Wasm virtual machine, significantly reducing costs for developers due to a reduction of rent by a factor of 100x. Users should notice lower fees, as well, when performing certain actions, such as minting NFTs."
+      },
+      "hybrid_inflation_model": {
+        "title": "Hybrid Inflation Model",
+        "description": "The hybrid inflation model being rolled out as part of the Tokenomics 2.0 phased implementation facilitates the transition to dApp Staking v3. During this stage, Collator and Treasury rewards are being reduced as well as the overall rate of inflation, laying the groundwork for phase 3. Users and dApps participating in the current version of dApp staking are not affected by this update. "
       }
     }
   }
