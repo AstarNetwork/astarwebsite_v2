@@ -64,7 +64,7 @@ const reading = [
   {
     title: t("home.reading.tokenomics.title"),
     description: t("home.reading.tokenomics.description"),
-    href: "https://docs.astar.network/docs/learn/tokenomics/",
+    href: "https://docs.astar.network/docs/learn/tokenomics2/",
     image: "reading-token.svg",
   },
   {
