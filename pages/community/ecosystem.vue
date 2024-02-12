@@ -25,6 +25,14 @@
     </template>
     <template #earth>
       <div class="relative z-10 mb-40">
+        <!-- Pagination Controls -->
+        <div class="flex justify-center items-center space-x-2 text-black">
+          <button @click="prevPage" :disabled="currentPage <= 1">Prev</button>
+          <span>Page {{ currentPage }} of {{ totalPages }}</span>
+          <button @click="nextPage" :disabled="currentPage >= totalPages">
+            Next
+          </button>
+        </div>
         <TabGroup>
           <TabList
             class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-12 max-w-4xl mx-auto px-4 sm:px-6 text-sm sm:text-base"
@@ -75,16 +83,85 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, watch } from "vue";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 import gql from "graphql-tag";
 
-const query = gql`
+interface ProjectAttributes {
+  id: number;
+  attributes: {
+    name: string;
+    website?: string;
+    description?: string;
+    logo: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    project_categories: {
+      data: CategoryAttributes[];
+    };
+  };
+}
+
+interface CategoryAttributes {
+  id: number;
+  attributes: {
+    name: string;
+    projects: {
+      data: ProjectAttributes[];
+    };
+  };
+}
+
+interface QueryResponse {
+  projects: {
+    meta: {
+      pagination: {
+        total: number;
+      };
+    };
+    data: ProjectAttributes[];
+  };
+  projectCategories: {
+    data: CategoryAttributes[];
+  };
+}
+
+const pageSize = 16;
+let projects = ref<ProjectAttributes[]>([]);
+let categories = ref<CategoryAttributes[]>([]);
+let totalProjects = ref(0);
+let currentPage = ref(1);
+let totalPages = computed(() => Math.ceil(totalProjects.value / pageSize));
+
+function prevPage() {
+  if (currentPage.value > 1) {
+    currentPage.value--;
+  }
+}
+
+function nextPage() {
+  if (currentPage.value < totalPages.value) {
+    currentPage.value++;
+  }
+}
+
+async function fetchData() {
+  let query = gql`
   query getAllData {
     projects(
-      pagination: { page: 1, pageSize: 1000 }
+      pagination: { page: ${currentPage.value}, pageSize: ${pageSize} }
       sort: "name"
       filters: { id: { ne: 300 } }
     ) {
+      meta {
+        pagination {
+          total
+        }
+      }
       data {
         id
         attributes {
@@ -148,14 +225,26 @@ const query = gql`
     }
   }
 `;
-const { data } = await useAsyncQuery({ query, clientId: "community" });
 
-let projects = [];
-let categories = [];
-if (data.value !== null) {
-  projects = data.value.projects.data;
-  categories = data.value.projectCategories.data;
+  let { data } = await useAsyncQuery<QueryResponse>({
+    query,
+    clientId: "community",
+  });
+
+  if (data.value !== null) {
+    projects.value = [...data.value.projects.data];
+    categories.value = [...data.value.projectCategories.data];
+    totalProjects.value = data.value.projects.meta.pagination.total;
+  }
 }
+
+watch(
+  currentPage,
+  () => {
+    fetchData();
+  },
+  { immediate: true }
+);
 
 const route = useRoute();
 const { t } = useI18n();
