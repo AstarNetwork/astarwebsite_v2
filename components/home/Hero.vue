@@ -5,7 +5,7 @@
     <div class="max-w-4xl px-4 sm:px-6 pt-12">
       <!-- <p class="font-medium text-xl mb-2">Astar 2.0 is here.</p> -->
       <h1
-        class="text-3xl sm:text-6xl lg:text-9xl font-extrabold leading-none drop-shadow tracking-tight"
+        class="text-3xl sm:text-6xl lg:text-9xl font-bold leading-none drop-shadow tracking-tight"
       >
         The Frontier of Innovation.
       </h1>

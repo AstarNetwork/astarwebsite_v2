@@ -116,7 +116,7 @@
   </TransitionRoot>
 
   <div
-    class="relative z-10 bg-cover"
+    class="relative z-10 bg-cover text-gray-300"
     style="
       background-image: url(/images/starmap/nebula.webp);
       background-position: center top;
@@ -131,7 +131,7 @@
           <div
             class="whitespace-nowrap text-center text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q1
             </span>
             <span
@@ -141,7 +141,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] sm:ml-10 relative z-10">
-            <h2 class="title mb-4">
+            <h2 class="text-white font-bold leading-tight mb-4">
               <span class="text-3xl lg:text-4xl">
                 {{ $t("starmap.reborn.title") }}
               </span>
@@ -150,7 +150,7 @@
               <p class="mb-8">
                 {{ $t("starmap.reborn.description") }}
               </p>
-              <h3 class="font-bold text-xl">Q1</h3>
+              <h3 class="font-bold text-xl text-white">Q1</h3>
               <p>
                 {{ $t("starmap.reborn.plan") }}
               </p>
@@ -191,7 +191,7 @@
           <div
             class="whitespace-nowrap text-center order-2 text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q2
             </span>
             <span
@@ -201,7 +201,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] order-1 relative z-10">
-            <h2 class="title mb-4">
+            <h2 class="text-white font-bold leading-tight mb-4">
               <span class="text-3xl lg:text-4xl">
                 {{ $t("starmap.growth.title") }}
               </span>
@@ -210,7 +210,7 @@
               <p class="mb-8">
                 {{ $t("starmap.growth.description") }}
               </p>
-              <h3 class="font-bold text-xl">Q2</h3>
+              <h3 class="font-bold text-xl text-white">Q2</h3>
               <p>
                 {{ $t("starmap.growth.plan") }}
               </p>
@@ -234,7 +234,7 @@
           <div
             class="whitespace-nowrap text-center text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q3
             </span>
             <span
@@ -244,7 +244,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] sm:ml-10 relative z-10">
-            <h2 class="title mb-4">
+            <h2 class="text-white font-bold leading-tight mb-4">
               <span class="text-3xl lg:text-4xl">{{
                 $t("starmap.expansion.title")
               }}</span>
@@ -253,7 +253,7 @@
               <p class="mb-8">
                 {{ $t("starmap.expansion.description") }}
               </p>
-              <h3 class="font-bold text-xl">Q3</h3>
+              <h3 class="font-bold text-xl text-white">Q3</h3>
               <p>
                 {{ $t("starmap.expansion.plan") }}
               </p>
@@ -284,7 +284,7 @@
           <div
             class="whitespace-nowrap text-center order-2 text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q4
             </span>
             <span
@@ -294,7 +294,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] order-1 relative z-10">
-            <h2 class="title mb-4">
+            <h2 class="text-white font-bold leading-tight mb-4">
               <span class="text-3xl lg:text-4xl">
                 {{ $t("starmap.shine.title") }}
               </span>
@@ -303,7 +303,7 @@
               <p class="mb-8">
                 {{ $t("starmap.shine.description") }}
               </p>
-              <h3 class="font-bold text-xl">Q4</h3>
+              <h3 class="font-bold text-xl text-white">Q4</h3>
               <ul class="list-disc pl-4">
                 <li>
                   <span @click="clickAction('zkEvmTestnet')" class="popup-link">

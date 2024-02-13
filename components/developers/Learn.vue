@@ -10,7 +10,7 @@
       <DevelopersKey3Hackathon />
       <div class="lg:w-1/2">
         <h3
-          class="font-extrabold text-3xl lg:text-4xl mb-6 text-center sm:text-left"
+          class="font-bold text-3xl lg:text-4xl mb-6 text-center sm:text-left"
         >
           {{ $t("developers.learn.docs.title") }}
         </h3>

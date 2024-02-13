@@ -11,7 +11,7 @@
         <small class="block text-xl sm:text-2xl font-bold">
           {{ $t("community.grants.title") }}
         </small>
-        <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+        <span class="block text-4xl sm:text-5xl lg:text-6xl font-bold">
           ink!ubator
         </span>
       </h2>

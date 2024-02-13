@@ -14,7 +14,7 @@
           class="mx-auto max-w-[440px] mb-6 sm:mb-6 -mt-6 sm:-mt-16 w-full"
         />
         <h3
-          class="leading-tight mb-4 text-center text-3xl sm:text-4xl lg:text-4xl font-extrabold"
+          class="leading-tight mb-4 text-center text-3xl sm:text-4xl lg:text-4xl font-bold"
         >
           Build2Earn
         </h3>
@@ -39,7 +39,7 @@
           class="mx-auto max-w-[440px] mb-6 sm:mb-10 -mt-6 sm:-mt-16 w-full"
         />
         <h3
-          class="text-black leading-tight mb-4 text-center text-3xl sm:text-5xl lg:text-5xl font-extrabold"
+          class="text-black leading-tight mb-4 text-center text-3xl sm:text-5xl lg:text-5xl font-bold"
         >
           ink!ubator
         </h3>

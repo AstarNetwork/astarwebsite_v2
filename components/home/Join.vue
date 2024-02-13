@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
     <h2 class="text-center mb-20">
       <span
-        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight title"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight title"
       >
         <span class="whitespace-pre-wrap">
           {{ $t("home.ecosystem.title") }}

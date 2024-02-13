@@ -1,77 +1,72 @@
 <template>
   <NuxtLayout name="default">
-    <template #space>
-      <SubPageHeader>
-        <img
-          :src="post.image"
-          alt=""
-          class="object-cover w-full aspect-blog max-w-[1280px] shadow-xl -my-6 lg:-my-8"
-          data-not-lazy
-        />
-      </SubPageHeader>
+    <SubPageHeader>
+      <img
+        :src="post.image"
+        alt=""
+        class="object-cover w-full aspect-blog max-w-[1280px] shadow-xl -my-6 lg:-my-8"
+        data-not-lazy
+      />
+    </SubPageHeader>
 
-      <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
-        <header class="text-center mb-12">
-          <time class="text-gray-400">{{ post.publishedDate }}</time>
-          <h1
-            class="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-white"
-          >
-            {{ post.title }}
-          </h1>
-        </header>
-        <div class="entry-content leading-9" v-html="post.body" />
-        <footer class="mt-16">
-          <div class="flex mb-12 text-tiny lg:text-base">
-            <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
-            <div class="flex flex-wrap">
-              <NuxtLink
-                v-for="tag in post.tagsOriginal.split(',')"
-                :href="i18n + '/blog/tag/' + tag"
-                class="block text-white border border-gray-500 py-2 px-4 rounded-full hover:bg-white/10 mr-1 mb-2"
-              >
-                {{ tag }}
-              </NuxtLink>
-            </div>
-          </div>
-          <div class="flex border border-gray-500 rounded-3xl px-3 py-6 sm:p-8">
-            <div class="shrink-0 mr-3 sm:mr-4">
-              <img
-                :src="post.authorImg"
-                alt=""
-                class="object-cover w-12 sm:w-16 h-12 sm:h-16 rounded-full"
-              />
-            </div>
-            <div class="flex-1">
-              <h3 class="font-bold text-lg lg:text-xl mb-2">
-                {{ post.author.profileSpace.name }}
-              </h3>
-              <p class="text-tiny lg:text-base">
-                {{ post.author.profileSpace.about }}
-              </p>
-            </div>
-          </div>
-        </footer>
-      </article>
-
-      <HomeNewsletter class="mb-36" />
-
-      <div
-        v-if="posts.length > 0"
-        class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mt-36"
-      >
-        <h2 class="text-center text-3xl lg:text-4xl font-semibold mb-12">
-          {{ $t("blog.related") }}
-        </h2>
-        <ul
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
+      <header class="text-center mb-12">
+        <time>{{ post.publishedDate }}</time>
+        <h1
+          class="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight"
         >
-          <BlogArticleCard v-for="post in posts" :post="post" />
-        </ul>
-      </div>
-    </template>
-    <template #earth>
-      <Footer />
-    </template>
+          {{ post.title }}
+        </h1>
+      </header>
+      <div class="entry-content" v-html="post.body" />
+      <footer class="mt-16">
+        <div class="flex mb-12 text-tiny lg:text-base">
+          <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
+          <div class="flex flex-wrap">
+            <NuxtLink
+              v-for="tag in post.tagsOriginal.split(',')"
+              :href="i18n + '/blog/tag/' + tag"
+              class="block text-gray-500 border border-gray-500 py-2 px-4 rounded-full hover:bg-white/10 mr-1 mb-2"
+            >
+              {{ tag }}
+            </NuxtLink>
+          </div>
+        </div>
+        <div class="flex border border-gray-500 rounded-3xl px-3 py-6 sm:p-8">
+          <div class="shrink-0 mr-3 sm:mr-4">
+            <img
+              :src="post.authorImg"
+              alt=""
+              class="object-cover w-12 sm:w-16 h-12 sm:h-16 rounded-full"
+            />
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold text-lg lg:text-xl mb-2">
+              {{ post.author.profileSpace.name }}
+            </h3>
+            <p class="text-tiny lg:text-base">
+              {{ post.author.profileSpace.about }}
+            </p>
+          </div>
+        </div>
+      </footer>
+    </article>
+
+    <HomeNewsletter class="mb-36" />
+
+    <div
+      v-if="posts.length > 0"
+      class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mt-36"
+    >
+      <h2 class="text-center text-3xl lg:text-4xl font-semibold mb-12">
+        {{ $t("blog.related") }}
+      </h2>
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+      >
+        <BlogArticleCard v-for="post in posts" :post="post" />
+      </ul>
+    </div>
   </NuxtLayout>
 </template>
 

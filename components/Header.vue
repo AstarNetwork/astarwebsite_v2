@@ -9,7 +9,7 @@
       <div
         :class="[
           open ? 'bg-space-gray-dark shadow-lg bg-opacity-95' : '',
-          'transition absolute z-40 w-full',
+          'transition z-40 w-full',
         ]"
       >
         <div
@@ -35,7 +35,7 @@
             <nav class="flex items-center space-x-4 xl:space-x-8">
               <NuxtLink
                 :to="localePath('/astar2')"
-                class="font-medium transition text-base xl:text-lg text-white hover:text-space-cyan-light pr-2"
+                class="transition text-base xl:text-lg text-gray-950 hover:text-blue pr-2"
               >
                 Astar 2.0
               </NuxtLink>
@@ -44,19 +44,17 @@
                 <Popover v-slot="{ open }" class="relative">
                   <PopoverButton
                     :class="[
-                      open
-                        ? 'text-space-cyan-light'
-                        : 'text-white hover:text-space-cyan-light',
-                      'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 font-medium transition text-tiny xl:text-base',
+                      open ? 'text-blue' : 'text-gray-950 hover:text-blue',
+                      'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 transition text-tiny xl:text-base',
                     ]"
                   >
                     <span>{{ category.label }}</span>
                     <ChevronDownIcon
                       :class="[
                         open
-                          ? 'text-space-cyan-light rotate-180 transform'
-                          : 'text-gray-200',
-                        'ml-1 h-4 w-4 group-hover:text-space-cyan-light stroke-2',
+                          ? 'text-blue rotate-180 transform'
+                          : 'text-gray-950',
+                        'ml-1 h-4 w-4 group-hover:text-blue stroke-2',
                       ]"
                       aria-hidden="true"
                     />
@@ -70,7 +68,7 @@
                     leave-to-class="opacity-0 -translate-y-1"
                   >
                     <PopoverPanel
-                      :class="`bg-space-gray-dark shadow-lg bg-opacity-95 absolute left-1/2 z-10 mt-4 -translate-x-1/2 py-12 px-8 ${
+                      :class="`bg-white shadow-lg absolute left-1/2 z-10 mt-4 -translate-x-1/2 py-12 px-8 ${
                         category.label === 'Network'
                           ? 'w-[700px] grid grid-cols-3'
                           : 'w-72'
@@ -79,7 +77,7 @@
                       <div v-for="item in category.nav">
                         <p
                           v-if="item.label !== ''"
-                          :class="`text-xs uppercase text-gray-400 mb-1 ${
+                          :class="`text-xs uppercase text-gray-500 mb-1 ${
                             category.label !== 'Network' && 'mt-8'
                           }`"
                         >
@@ -87,7 +85,7 @@
                         </p>
                         <NuxtLink
                           v-for="menu in item.nav"
-                          class="flex items-center py-1 text-white transition hover:text-space-cyan-lighter whitespace-nowrap"
+                          class="flex items-center py-1 text-gray-950 transition hover:text-blue whitespace-nowrap"
                           :to="menu.href"
                           :target="
                             menu.href.includes('https') ? '_blank' : '_self'
@@ -111,13 +109,11 @@
                 href="https://portal.astar.network/"
                 target="_blank"
               >
-                {{ $t("home.hero.app") }}
+                Astar Portal
                 <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
               </Button>
             </div>
           </div>
-
-          <div class="hidden lg:block"><LangSwitcher /></div>
         </div>
       </div>
     </div>
@@ -148,10 +144,7 @@ const menus = [
     nav: [
       {
         label: "",
-        nav: [
-          { label: "Get Started", href: i18n + "/developers" },
-          { label: "Astar Tech Stack", href: i18n + "/developers/techstack" },
-        ],
+        nav: [{ label: "Get Started", href: i18n + "/developers" }],
       },
       {
         label: "Developer Support",

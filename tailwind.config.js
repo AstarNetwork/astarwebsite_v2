@@ -32,6 +32,15 @@ module.exports = {
         'blog': '191.04 / 100',
       },
       colors: {
+        'blue':{
+          DEFAULT:"#0075FF",
+        },
+        'pink':{
+          DEFAULT:"#E6007A",
+        },
+        'purple':{
+          DEFAULT:"#5928B1",
+        },
         'space-gray':{
           light:"#405FBA",
           lighter:"#112769",
@@ -70,8 +79,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        'sans': ['"Inter"', ...defaultTheme.fontFamily.sans],
-        'mono': ['"Roboto Mono"', ...defaultTheme.fontFamily.mono],
+        'sans': ['"Poppins"', ...defaultTheme.fontFamily.sans],
         'jp': ['"Noto Sans JP"', ...defaultTheme.fontFamily.sans],
         'roboto': ['"Roboto"', ...defaultTheme.fontFamily.sans],
       },

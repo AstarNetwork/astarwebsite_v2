@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
     <h2
-      class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-center title"
+      class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-center title"
     >
       <span>{{ $t("home.reading.title") }}</span>
     </h2>

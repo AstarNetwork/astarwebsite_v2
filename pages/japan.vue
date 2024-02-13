@@ -1,104 +1,56 @@
 <template>
   <NuxtLayout name="default">
-    <template #space>
-      <div class="sub-page-header relative overflow-hidden">
-        <img
-          class="absolute z-[-1] w-full h-full"
-          src="/images/common/zkevm-bg.webp"
-          alt=""
-          width="1728"
-          height="1429"
-          data-not-lazy
-        />
-        <img
-          class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-cloud.webp"
-          alt=""
-          width="1728"
-          height="1281"
-          data-not-lazy
-        />
-        <ScrollParallax :speed="0.2">
-          <img
-            class="absolute z-[3] w-screen h-screen object-scale-down portrait:hidden"
-            src="/images/japan/hero-landscape.svg"
-            :alt="$t('japan.title')"
-            width="1460"
-            height="808"
-            data-not-lazy
-          />
-        </ScrollParallax>
-        <img
-          class="fixed z-[2] portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-stars.svg"
-          alt=""
-          width="1728"
-          height="1728"
-          data-not-lazy
-        />
-        <JapanHero />
-      </div>
+    <div class="sub-page-header relative overflow-hidden">
+      <img
+        class="absolute z-[3] w-screen object-scale-down portrait:hidden"
+        src="/images/japan/hero-landscape.svg"
+        :alt="$t('japan.title')"
+        width="1460"
+        height="808"
+        data-not-lazy
+      />
+      <JapanHero />
+    </div>
 
-      <div
-        class="relative z-10 text-center sm:py-12 sm:flex justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+    <div
+      class="relative z-10 text-center sm:py-12 sm:flex justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+    >
+      <Button
+        class="w-[300px] sm:w-[350px]"
+        size="xl"
+        target="_blank"
+        :href="registerForm"
       >
-        <Button
-          class="w-[300px] sm:w-[350px]"
-          size="xl"
-          target="_blank"
-          :href="registerForm"
-        >
-          {{ $t("japan.register") }}
-          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
-        </Button>
-        <Button
-          class="w-[300px] sm:w-[350px]"
-          size="xl"
-          href="#useCases"
-          variant="outlined"
-        >
-          {{ $t("japan.see_use_cases") }} ->
-        </Button>
-      </div>
+        {{ $t("japan.register") }}
+        <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
+      </Button>
+      <Button
+        class="w-[300px] sm:w-[350px]"
+        size="xl"
+        href="#useCases"
+        variant="outlined"
+      >
+        {{ $t("japan.see_use_cases") }} ->
+      </Button>
+    </div>
 
-      <JapanAbout class="py-16 sm:py-32" />
-      <JapanUseCases class="py-16 sm:py-32" />
-      <JapanBlog class="py-16 sm:py-32" />
-    </template>
+    <JapanAbout class="py-16 sm:py-32" />
+    <JapanUseCases class="py-16 sm:py-32" />
+    <JapanBlog class="py-16 sm:py-32" />
 
-    <template #earth>
-      <div class="sky-gradient text-gray-700">
-        <div class="sky-gradient-inner">
-          <JapanMembers class="py-12" />
+    <div class="text-gray-700">
+      <div class="">
+        <JapanMembers class="py-12" />
 
-          <div class="relative z-10 text-center pt-4 sm:pt-12">
-            <Button
-              class="mb-12"
-              size="xxl"
-              target="_blank"
-              :href="registerForm"
-            >
-              {{ $t("japan.register") }}
-            </Button>
-          </div>
-
-          <JapanNewsletter class="py-8 sm:py-16 lg:py-28" />
-
-          <img
-            class="w-full"
-            src="/images/japan/footer-landscape.svg"
-            alt=""
-            width="1728"
-            height="220"
-          />
+        <div class="relative z-10 text-center pt-4 sm:pt-12">
+          <Button class="mb-12" size="xxl" target="_blank" :href="registerForm">
+            {{ $t("japan.register") }}
+          </Button>
         </div>
-        <div class="footer">
-          <div class="pt-12 sm:pt-28 bg-black">
-            <Footer color="light" />
-          </div>
-        </div>
+
+        <JapanNewsletter class="py-8 sm:py-16 lg:py-28" />
       </div>
-    </template>
+    </div>
   </NuxtLayout>
 </template>
 

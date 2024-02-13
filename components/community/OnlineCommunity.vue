@@ -7,7 +7,7 @@
       <p class="mb-36">
         {{ $t("community.online_community.description") }}
       </p>
-      <h3 class="text-white font-bold text-3xl sm:text-4xl mb-6 leading-tight">
+      <h3 class="font-bold text-3xl sm:text-4xl mb-6 leading-tight">
         {{ $t("community.online_community.social.title") }}
       </h3>
       <p class="mb-16">
@@ -29,7 +29,9 @@
             :class="item.color"
             aria-hidden="true"
           />
-          <h3 class="font-medium mt-1 sm:mt-2 text-tiny sm:text-base">
+          <h3
+            class="font-medium mt-1 sm:mt-2 text-tiny sm:text-base text-white"
+          >
             {{ item.name }}
           </h3>
         </NuxtLink>

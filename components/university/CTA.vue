@@ -1,15 +1,13 @@
 <template>
-  <div class="space-gradient">
-    <div
-      class="text-center py-24 sm:py-36 bg-[url(/images/common/space-stars.svg)]"
-    >
+  <div class="bg-blue">
+    <div class="text-center py-24 sm:py-36">
       <div class="px-4 sm:px-6">
         <h2
-          class="max-w-4xl mx-auto text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-4"
+          class="max-w-4xl mx-auto text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-4 text-white"
         >
           {{ $t("university.cta.title") }}
         </h2>
-        <p class="text-base sm:text-xl max-w-2xl mx-auto mb-12">
+        <p class="max-w-2xl mx-auto mb-12 text-gray-300">
           {{ $t("university.cta.description") }}
         </p>
         <Button

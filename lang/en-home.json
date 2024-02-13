@@ -1,65 +1,30 @@
 {
   "home": {
-    "hero": {
-      "description": "Astar unlocks blockchain, enabling unparalleled cross-layer scaling & driving web3’s mass adoption.",
-      "doc": "Documentation",
-      "app": "Launch App"
-    },
-    "welcome": {
-      "title": "Welcome to Astar Network!",
-      "description": "Astar, Japan’s leading blockchain, supports EVM, Substrate, WebAssembly (Wasm) and ink! environments to provide a scalable, cross-layer & cross-machine protocol at the bleeding edge of innovation and interoperability. Our unique Build2Earn mechanism empowers developers, allowing them to earn incentives for building the decentralized future."
-    },
-    "gateway": "The Gateway \nin the Multichain Era",
-    "ecosystem": {
-      "title": "Join Our \nFast-Growing Ecosystem",
-      "developer": {
-        "title": "Developer",
-        "description": "Create a dApp or infrastructure on our blockchain."
+    "developer": {
+      "title": "Developer",
+      "description": "As Astar 2.0 evolves, so does our tech. We are excited to offer our bleeding-edge, cross-layer tech stack that will allow developers to benefit from multiple VMs, layers and consensus protocols.",
+      "substrate": {
+        "description": "Astar Substrate is the backend technology powering Polkadot’s leading parachain. Unlock access to build across virtual machines seamlessly and tap into interoperability with Polkadot SDK, substrate-based protocols. Ink! and Rust smart contracts ensure safety and our innovative reward mechanism powers unstoppable public goods.",
+        "features": {
+          "multi_vm_support": "Multi VM Support: EVM and WASM",
+          "rust_and_ink": "Rust and ink! smart contracts",
+          "interoperability_and_composability": "Interoperability and Composability with Substrate chains",
+          "secured": "Secured by Polkadot validators",
+          "dapp_staking_rewards": "dApp staking rewards providing builder income",
+          "low_fees": "Low fees"
+        }
       },
-      "collator": {
-        "title": "Collator",
-        "description": "Run a node to support the blockchain."
-      },
-      "staker": {
-        "title": "Staker",
-        "description": "Stake ASTR and earn staking rewards."
-      },
-      "users": {
-        "title": "Users",
-        "description": "Use ASTR tokens and be a part of the Web3 movement."
+      "zkevm": {
+        "description": "Astar zkEVM is the perfect solution for enterprises looking to leverage the security and network effects of Ethereum without sacrificing the user experience. Powered by cutting-edge zero knowledge technology, Astar zkEVM empowers businesses to embrace web3 at scale while offering developers a familiar environment with proven tooling.",
+        "features": {
+          "ethereum_security": "Inherits Ethereum’s security",
+          "high_scalability": "High scalability",
+          "low_fees": "Low fees even during high demand",
+          "access": "Access to a vibrant web3 ecosystem",
+          "developer_experience": "Familiar developer experience powered by Ethereum’s proven stack of tooling and infrastructure"
+        }
       }
     },
-    "reading": {
-      "title": "Recommended Reading",
-      "description": "Learn more about where and how Astar was born.",
-      "vision": {
-        "title": "Welcome to Astar",
-        "description": "Vision of Astar and the powerful blockchain technology that makes it possible."
-      },
-      "tokenomics": {
-        "title": "ASTR Tokenomics",
-        "description": "ASTR governance, incentives and features that unlock Web3."
-      },
-      "ecosystem": {
-        "title": "Explore the ecosystem",
-        "description": "Join our ecosystem and understand the power of Astar Network."
-      }
-    },
-    "features": {
-      "multichain": {
-        "title": "Multichain Smart Contracts",
-        "description": "Astar runs in concert with Ethereum, Polkadot, Cosmos, and more; allowing for the free flow of assets and communications between multiple ecosystems."
-      },
-      "build2earn": {
-        "title": "Build2Earn",
-        "description": "The basic income for developers! Astar pioneered Build2Earn to support builders and expand the developer community. Start building our ecosystem to receive ASTR rewards through our dApp staking mechanism."
-      },
-      "web2_web3": {
-        "title": "Web2 + Web3",
-        "description": "Astar Network supports tools and languages that software developers often work with already, and our multichain-native Wasm + EVM runtime environments provide ultimate freedom and flexibility to build uniquely innovative solutions that simply can't be replicated on any other platform."
-      }
-    },
-    "backers": "Backed By",
     "newsletter": {
       "global": {
         "title": "Don't miss a beat.",
@@ -72,6 +37,5 @@
         "signup": "Subscribe"
       }
     },
-    "hiring": "We are Hiring!"
   }
 }

@@ -3,7 +3,7 @@
     <template #space>
       <SubPageHeader>
         <h1
-          class="text-3xl sm:text-4xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
+          class="text-3xl sm:text-4xl lg:text-7xl font-bold tracking-tight drop-shadow"
         >
           Astar Japan Blog
         </h1>
