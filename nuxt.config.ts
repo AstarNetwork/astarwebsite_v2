@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
   vite: {
     build: {
-      chunkSizeWarningLimit: 10000,
-    },
+      chunkSizeWarningLimit: 10000
+    }
   },
   app: {
     baseURL: "/",
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/strapi",
     "@nuxtjs/apollo",
-    "@nuxtjs/sitemap",
+    "nuxt-simple-sitemap",
     "nuxt-schema-org",
     "@nuxt/content",
     [
@@ -112,7 +112,8 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
   },
   plugins: [{ src: "~/plugins/aos" }],
-  site: {
-    url: "https://astar.network",
+  sitemap: {
+    siteUrl: "https://astar.network",
+    discoverImages: false,
   },
 });
