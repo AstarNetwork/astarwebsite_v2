@@ -52,5 +52,4 @@ const switchLocalePath = useSwitchLocalePath();
 const currentLocale = computed(() => {
   return locales.value.find((i) => i.code === locale.value);
 });
-console.log(currentLocale.value);
 </script>
