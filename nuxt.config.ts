@@ -5,6 +5,11 @@ export default defineNuxtConfig({
       chunkSizeWarningLimit: 10000,
     },
   },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
   app: {
     baseURL: "/",
     head: {
