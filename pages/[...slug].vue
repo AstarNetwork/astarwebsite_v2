@@ -8,9 +8,7 @@
       </SubPageHeader>
 
       <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
-        <div class="entry-content">
-          <ContentRendererMarkdown :value="data" />
-        </div>
+        <ContentRendererMarkdown class="entry-content" :value="data" />
       </article>
     </ContentRenderer>
   </NuxtLayout>

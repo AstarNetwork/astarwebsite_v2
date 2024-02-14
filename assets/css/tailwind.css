@@ -118,6 +118,10 @@
   .entry-content {
     @apply prose lg:prose-lg mx-auto prose-a:text-blue hover:prose-a:text-blue prose-headings:text-gray-950 prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-gray-50 prose-strong:font-medium prose-em:text-gray-950 prose-img:mx-auto;
   }
+  .entry-content h2:first-child,
+  .entry-content p:first-child{
+    @apply mt-0;
+  }
   .entry-content p code {
     font-size: 0.85em;
     @apply bg-white/20 font-normal rounded py-1 px-2;

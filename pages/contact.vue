@@ -162,24 +162,6 @@ const options = [
 
 <style lang="postcss" scoped>
 .btn {
-  @apply shadow font-medium transition-all inline-block hover:cursor-pointer text-white rounded-xl px-4 py-2;
-  background: linear-gradient(
-    120deg,
-    #e6007a -5.88%,
-    #703ac2 15.42%,
-    #0070eb 40.77%,
-    #0297fb 72.21%,
-    #0ae2ff 95.53%
-  );
-}
-.btn:hover {
-  background: linear-gradient(
-    120deg,
-    #ff1994 -5.88%,
-    #8e4fee 15.42%,
-    #3091f9 40.77%,
-    #3db1ff 72.21%,
-    #3fe9ff 95.53%
-  );
+  @apply font-medium transition-all inline-block hover:cursor-pointer text-white rounded-full px-4 py-2 bg-gradient-to-r from-[#0047FF] to-[#00D1FF];
 }
 </style>

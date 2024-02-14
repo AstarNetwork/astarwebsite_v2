@@ -2,7 +2,7 @@
   <NuxtLayout name="default">
     <SubPageHeader>
       <h1
-        class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow leading-none mb-6 pt-6 sm:pt-12"
+        class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-none mb-6 pt-6 sm:pt-12"
       >
         Astar University
       </h1>
