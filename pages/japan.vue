@@ -54,7 +54,6 @@
 </template>
 
 <script setup lang="ts">
-import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 
 const registerForm =

@@ -12,7 +12,6 @@
 
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 
 import { meta } from "@/data/meta";
 const { t } = useI18n();
