@@ -1,0 +1,88 @@
+{
+  "university": {
+    "join": "Join the University",
+    "intro": {
+      "title": "From zero to your first dApp:",
+      "description": "Start your career and learn to code web3 with industry leaders. Build smart contracts and work with cutting-edge blockchain technologies."
+    },
+    "overview": {
+      "title": "Overview",
+      "build": {
+        "title": "Learn to Build",
+        "description": "Boost your skills with amazing mentors and interactive modules."
+      },
+      "self_paced": {
+        "title": "Self-Paced Study",
+        "description": "Complete your course with flexible study, over for 8 weeks."
+      },
+      "potential": {
+        "title": "Unlock Your Potential",
+        "description": "We'll celebrate your blockchain mastery on Graduation Day!"
+      }
+    },
+    "curriculum": {
+      "title": "Curriculum Overview",
+      "module": "Module",
+      "module1": {
+        "title": "Astar and Polkadot",
+        "description": "Learn about the pillars of Astar Network, its capabilities understand how blockchain supports developer activity. We will overview the complex relationship between Polkadot and Astar Network."
+      },
+      "module2": {
+        "title": "WebAssembly and Wasm Smart Contracts",
+        "description": "Discover why WebAssembly (Wasm) has changed how developers build a blockchain. Understand how to build a contract with Solidity and Rust programming for Wasm format. You'll learn through coding assignments and hands-on projects."
+      },
+      "module3": {
+        "title": "Interoperability and Infrastructure",
+        "description": "Astar projects and smart contracts communicate by exchanging messages across networks and environments. Learn how Astar securely communicates with XCM and enables multilingual smart contracts through XVM messaging. You'll build a smart contract from scratch."
+      },
+      "bonus": {
+        "title": "Infrastructure and Tooling",
+        "description": "Learn about indexers, block explorers, node providers, oracles and SDKs to build your smart contracts and dApps such as Alchemy, Thirdweb, Privy and more!"
+      }
+    },
+    "reason": "Why learn about Astar?",
+    "faq": {
+      "title": "FAQs",
+      "astar": {
+        "q": "What is Astar Network?",
+        "a": "Astar is Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and interoperability between them using a Cross-Virtual Machine. Our innovative Build2Earn program allows developers to earn incentives for building decentralized apps."
+      },
+      "goal": {
+        "q": "What is the goal of Astar University?",
+        "a": "By educating developers through hands-on training, we open the path for software programmers to quickly become web3 developers. You'll learn how to build your own decentralized project and get ready for the high-growth field of blockchain development."
+      },
+      "start": {
+        "q": "How do I start?",
+        "a1": "Start your career in web3 by completing this ",
+        "a2": "application form",
+        "a3": "."
+      },
+      "apply": {
+        "q": "Who can apply?",
+        "a1": "Software developers who have some experience programming in any language. When you fill out the ",
+        "a2": "application form",
+        "a3": " we will assess your experience and stay in contact."
+      },
+      "programming": {
+        "q": "Do I need to know Rust or Solidity programming?",
+        "a": "No. All that is required is experience with any programming language, such as Python, C++, JavaScript, or any other popular language. We love both Rust and Solidity programming. Throughout our course you'll gain the skills to begin building with both languages."
+      },
+      "length": {
+        "q": "How long is the program?",
+        "a": "The program runs 8 weeks, beginning July 10. Modules are flexible and self-paced. Deadline to apply is July 9."
+      },
+      "cost": {
+        "q": "How much does it cost?",
+        "a": "Our courses are totally free."
+      },
+      "place": {
+        "q": "Where does it take place?",
+        "a": "This course is online only. You will complete challenging modules at your own pace and always have access to coaching with our developer team. At the end of the course we'll have a group graduation ceremony to celebrate your achievement and meet the Astar team."
+      }
+    },
+    "cta": {
+      "title": "Start your web3 career through hands-on learning!",
+      "description": "Join the first group of builders and quickly find new opportunities in blockchain with Astar University."
+    }
+  }
+}

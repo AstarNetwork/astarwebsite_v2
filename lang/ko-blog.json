@@ -1,0 +1,12 @@
+{
+  "blog": {
+    "title": "Astar Blog",
+    "description": "The latest posts about all things Astar Network, major news, ecosystem announcements, engineering updates, and more.",
+    "latest": "Latest Posts",
+    "tags": "Tags",
+    "tag": "Tag",
+    "related": "Related Posts",
+    "no_articles": "There are no English articles for this tag",
+    "back": "Back to Astar Blog"
+  }
+}

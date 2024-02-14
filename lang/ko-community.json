@@ -1,0 +1,34 @@
+{
+  "community": {
+    "title": "Community",
+    "description": "The true stars of our ecosystem.",
+    "online_community": {
+      "description": "Excited for the future of Astar Network? We are too. Together, we can bring Web3 to the masses and help create an innovation future for all. Join the Astar community to build without limits and unlock the blockchain frontier, today.",
+      "social": {
+        "title": "Join our online community",
+        "description": "Find your tribe and participate and grow our community with other Astar enthusiasts."
+      }
+    },
+    "builders": {
+      "title": "Build dApps on the Astar Network",
+      "ecosystem": {
+        "title": "Ecosystem",
+        "description": "Take a look at who's already building on Astar Network, or visit the documentation to dive in yourself.",
+        "go_to_docs": "Go to documentation"
+      },
+      "space_labs": {
+        "title": "Astar Space Labs",
+        "description": "Get started building on Astar and become a part of our vibrant ecosystem. Our community leaders will support you along your building journey."
+      }
+    },
+    "grants": {
+      "title": "Grants Program",
+      "description": "ink!ubator, A game-changing program funded by Polkadot's Treasury Bounty Program. ink!ubator fosters developer growth, ensures security audits, enhances tooling, & launches high-impact products. The perfect platform for innovation; pioneered by Astar - this initiative will enable & empower projects looking to dive deeper into ink! and its capabilities."
+    },
+    "ambassador": {
+      "title": "Become an Official Ambassador",
+      "description": "We have created an open community program where every community member can join and support the Astar ecosystem. You can collect points and receive rewards through dApp staking with valid and useful contributions.",
+      "button": "Ambassador Program"
+    }
+  }
+}

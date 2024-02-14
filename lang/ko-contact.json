@@ -1,0 +1,26 @@
+{
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with the Astar Network team",
+    "marketing": {
+      "title": "Marketing Request",
+      "description": "Interested in working together on your creative ideas?",
+      "button": "Let's Connect"
+    },
+    "partnerships": {
+      "title": "Partnerships",
+      "description": "dApp staking and integrations support.",
+      "button": "Get support"
+    },
+    "technical": {
+      "title": "Technical Support",
+      "description": "If you have any technical problems or questions, please ask in Discord",
+      "button": "Discord Channel"
+    },
+    "other": {
+      "title": "For all other Inquiries",
+      "description": "Partnership request, listing, business services, events, etc.",
+      "button": "Contact Us"
+    }
+  }
+}
