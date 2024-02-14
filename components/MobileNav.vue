@@ -20,7 +20,7 @@
           focus
           class="absolute inset-x-0 top-0 z-50 origin-top-right transform transition"
         >
-          <div class="bg-space-gray-dark shadow-lg min-h-screen pb-96">
+          <div class="bg-white shadow-lg min-h-screen pb-96">
             <div
               class="flex items-center justify-between px-4 py-5 sm:px-6 sm:py-8"
             >
@@ -35,7 +35,7 @@
               </NuxtLink>
               <div class="-mr-2 sm:mr-0">
                 <PopoverButton
-                  class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
+                  class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
                 >
                   <span class="sr-only">Close menu</span>
                   <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -43,11 +43,11 @@
               </div>
             </div>
             <nav class="">
-              <ul class="border-b border-gray-600">
+              <ul class="border-b border-gray-300">
                 <li>
                   <NuxtLink
                     :to="localePath('/astar2')"
-                    class="flex items-center border-t border-gray-600 px-6 py-5"
+                    class="flex items-center border-t border-gray-300 px-6 py-5 text-gray-950"
                   >
                     Astar 2.0
                   </NuxtLink>
@@ -55,7 +55,7 @@
                 <li v-for="menu in menus">
                   <Disclosure as="div" v-slot="{ open }">
                     <DisclosureButton
-                      class="text-white border-t border-gray-600 px-6 py-5 w-full flex justify-between items-center"
+                      class="text-gray-950 border-t border-gray-300 px-6 py-5 w-full flex justify-between items-center"
                     >
                       <span>{{ menu.label }}</span>
                       <ChevronDownIcon
@@ -71,14 +71,14 @@
                         <li v-for="category in menu.nav">
                           <span
                             v-if="category.label !== ''"
-                            class="uppercase block text-gray-400 mb-2 text-xs"
+                            class="uppercase block text-gray-500 mb-2 text-xs"
                           >
                             {{ category.label }}
                           </span>
                           <ul class="space-y-2">
                             <li v-for="menu in category.nav">
                               <NuxtLink
-                                class="flex items-center"
+                                class="flex items-center text-gray-700"
                                 :to="menu.href"
                                 :target="
                                   menu.href.includes('https')
@@ -107,7 +107,7 @@
                   size="lg"
                   class="w-full"
                 >
-                  {{ $t("home.hero.app") }}
+                  Astar Portal
                   <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
                 </Button>
               </div>

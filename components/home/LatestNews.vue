@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <h2>What's on</h2>
+  <div class="container py-20">
+    <h2 class="text-xl mb-4">What's on</h2>
     <Swiper
       class="swiper--latest-news"
       :modules="[SwiperNavigation]"
@@ -74,8 +74,13 @@ const posts = data.value.posts.map(
 </script>
 
 <style lang="postcss" scoped>
-.swiper--latest-news,
-.swiper--latest-news .swiper-wrapper {
+.swiper--latest-news {
   @apply overflow-visible;
+  .swiper-wrapper {
+    @apply overflow-visible;
+  }
+  .swiper-slide {
+    @apply h-auto;
+  }
 }
 </style>

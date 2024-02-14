@@ -14,8 +14,6 @@
               ? `text-space-gray-dark ${item.color}`
               : `text-white ${item.color}`
           "
-          data-aos="flip-left"
-          :data-aos-delay="index * 100"
         >
           <NuxtLink
             :to="item.href"

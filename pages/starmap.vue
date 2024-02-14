@@ -2,7 +2,7 @@
   <NuxtLayout name="default">
     <SubPageHeader>
       <h1
-        class="text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tight drop-shadow"
+        class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-10"
       >
         {{ $t("starmap.title") }}
       </h1>

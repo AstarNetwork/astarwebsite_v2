@@ -1,10 +1,8 @@
 <template>
   <NuxtLayout name="default">
     <SubPageHeader>
-      <p class="text-lg sm:text-2xl -mb-2">{{ $t("blog.tag") }}:</p>
-      <h1
-        class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow"
-      >
+      <p class="text-lg sm:text-2xl mb-2">{{ $t("blog.tag") }}:</p>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
         {{ tag }}
       </h1>
     </SubPageHeader>

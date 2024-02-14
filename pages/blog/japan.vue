@@ -1,9 +1,7 @@
 <template>
   <NuxtLayout name="default">
     <SubPageHeader>
-      <h1
-        class="text-3xl sm:text-4xl lg:text-7xl font-bold tracking-tight drop-shadow"
-      >
+      <h1 class="text-3xl sm:text-4xl lg:text-7xl font-bold tracking-tight">
         Astar Japan Blog
       </h1>
     </SubPageHeader>

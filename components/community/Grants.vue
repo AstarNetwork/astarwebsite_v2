@@ -22,7 +22,7 @@
         <NuxtLink
           to="https://use.ink/ubator/"
           target="_blank"
-          class="bg-black rounded-xl p-4 w-72 inline-flex justify-center items-center text-lg hover:bg-gray-900"
+          class="bg-black text-white rounded-xl p-4 w-72 inline-flex justify-center items-center text-lg hover:bg-gray-900"
         >
           ink!ubator
           <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />

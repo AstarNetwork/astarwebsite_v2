@@ -2,11 +2,11 @@
   <NuxtLayout name="default">
     <SubPageHeader>
       <h1
-        class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow"
+        class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-10"
       >
         {{ $t("contact.title") }}
       </h1>
-      <p class="sm:text-xl lg:text-2xl">
+      <p class="sm:text-lg lg:text-xl">
         {{ $t("contact.description") }}
       </p>
     </SubPageHeader>

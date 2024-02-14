@@ -3,9 +3,9 @@
     <HomeHero />
     <HomeFeatured />
     <HomeLatestNews />
-    <div class="text-center p-40">new home content</div>
+    <HomeSolutions />
     <div class="bg-black text-gray-300">
-      <HomeDevelopers />
+      <HomeDeveloper />
     </div>
   </NuxtLayout>
 </template>

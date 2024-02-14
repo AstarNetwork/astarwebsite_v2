@@ -2,25 +2,13 @@
   <NuxtLayout name="default">
     <SubPageHeader>
       <h1
-        class="text-4xl sm:text-6xl lg:text-7xl font-bold drop-shadow text-center leading-none pt-12"
+        class="text-4xl sm:text-6xl lg:text-7xl font-bold text-center leading-none mb-10"
       >
         {{ $t("ecosystem.title") }}
       </h1>
+      <p>{{ $t("ecosystem.description") }}</p>
     </SubPageHeader>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-      <h2 class="title text-center mb-6">
-        <span class="whitespace-pre-wrap">{{ $t("ecosystem.who") }}</span>
-      </h2>
-    </div>
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-      <p class="sm:text-xl mb-6 text-center">
-        {{ $t("ecosystem.description") }}
-      </p>
-      <p class="text-sm">
-        {{ $t("ecosystem.note") }}
-      </p>
-    </div>
     <div class="relative z-10 mb-40">
       <TabGroup>
         <TabList

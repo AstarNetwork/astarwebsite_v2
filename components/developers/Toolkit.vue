@@ -6,10 +6,7 @@
       </h2>
       <p class="text-center mb-12 sm:mb-28">
         {{ $t("developers.toolkit.description") }}<br />
-        <NuxtLink
-          to="/community/ecosystem"
-          class="text-space-cyan transition hover:text-space-cyan-light hover:underline"
-        >
+        <NuxtLink to="/community/ecosystem" class="transition hover:underline">
           {{ $t("developers.toolkit.ecosystem") }}
           <ArrowRightIcon class="inline-block w-5 h-5 stroke-2" />
         </NuxtLink>

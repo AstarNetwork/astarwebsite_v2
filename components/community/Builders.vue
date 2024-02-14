@@ -43,7 +43,7 @@
             <NuxtLink
               :to="item.text_link.href"
               target="_blank"
-              class="text-space-cyan hover:underline hover:text-space-cyan-lighter"
+              class="hover:underline"
             >
               {{ item.text_link.label }}
               <ArrowTopRightOnSquareIcon

@@ -1,13 +1,14 @@
 <template>
-  <div class="max-w-7xl p-4 mx-auto">
+  <div class="container py-20">
     <h2 class="text-white text-6xl tracking-tight text-center">
       <span>{{ $t("home.developer.title") }}</span>
     </h2>
     <p class="mx-auto max-w-3xl text-center my-12">
       {{ $t("home.developer.description") }}
     </p>
-    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-4 lg:gap-x-12">
-      <li
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-4 lg:gap-x-12">
+      <div
         v-for="(item, index) in battleCards"
         class="border border-[#263668] bg-space-gray rounded-3xl p-6 sm:p-8 lg:p-12"
       >
@@ -37,8 +38,12 @@
             {{ feature }}
           </li>
         </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <Button>Start Building</Button>
+    </div>
   </div>
 </template>
 

@@ -20,7 +20,7 @@
               <NuxtLink
                 :to="item.href"
                 target="_blank"
-                class="text-space-cyan hover:underline hover:text-space-cyan-lighter font-semibold text-lg lg:text-xl"
+                class="hover:underline font-semibold text-lg lg:text-xl"
               >
                 {{ item.title }} <span class="whitespace-nowrap">-></span>
               </NuxtLink>

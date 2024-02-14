@@ -4,7 +4,7 @@
       <h1>
         <span class="sr-only">Astar 2.0 Building the Unstoppable</span>
         <img
-          class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
+          class="mx-auto w-full mb-12 max-w-[800px]"
           src="/images/vision/title.svg"
           alt="Astar 2.0 Building the Unstoppable"
         />
