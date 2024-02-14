@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
   vite: {
     build: {
-      chunkSizeWarningLimit: 10000
-    }
+      chunkSizeWarningLimit: 10000,
+    },
   },
   app: {
     baseURL: "/",
@@ -30,12 +30,6 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
     "@nuxt/content",
     "nuxt-swiper",
-    [
-      "nuxt3-lazy-load",
-      {
-        defaultImage: "/images/placeholder.png",
-      },
-    ],
   ],
   runtimeConfig: {
     public: {

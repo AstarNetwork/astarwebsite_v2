@@ -31,7 +31,6 @@
     "vue3-parallax": "^0.1.4"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1",
-    "nuxt3-lazy-load": "^1.0.4"
+    "markdown-it": "^13.0.1"
   }
 }
