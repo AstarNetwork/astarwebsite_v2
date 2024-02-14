@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-7xl p-4 mx-auto">
-    <h2 class="text-white text-6xl font-bold tracking-tight text-center">
+    <h2 class="text-white text-6xl tracking-tight text-center">
       <span>{{ $t("home.developer.title") }}</span>
     </h2>
     <p class="mx-auto max-w-3xl text-center my-12">
@@ -22,16 +22,13 @@
             class="h-5 sm:h-6"
             :src="item.poweredBy.image"
             :alt="item.poweredBy.text"
-            data-not-lazy
           />
         </p>
-        <h3
-          class="font-bold text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug text-white"
-        >
+        <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug text-white">
           {{ item.title }}
         </h3>
-        <p class="text-tiny sm:text-base">{{ item.description }}</p>
-        <ul class="space-y-2 my-10 text-tiny sm:text-base">
+        <p>{{ item.description }}</p>
+        <ul class="space-y-2 my-10">
           <li v-for="feature in item.features" class="flex">
             <CheckCircleIcon
               :class="index === 0 ? 'text-pink' : 'text-blue'"

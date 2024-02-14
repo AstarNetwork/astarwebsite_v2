@@ -5,7 +5,6 @@
         :src="post.image"
         alt=""
         class="object-cover w-full aspect-blog max-w-[1280px] shadow-xl -my-6 lg:-my-8"
-        data-not-lazy
       />
     </SubPageHeader>
 
@@ -20,7 +19,7 @@
       </header>
       <div class="entry-content" v-html="post.body" />
       <footer class="mt-16">
-        <div class="flex mb-12 text-tiny lg:text-base">
+        <div class="flex mb-12">
           <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
           <div class="flex flex-wrap">
             <NuxtLink
@@ -44,7 +43,7 @@
             <h3 class="font-bold text-lg lg:text-xl mb-2">
               {{ post.author.profileSpace.name }}
             </h3>
-            <p class="text-tiny lg:text-base">
+            <p>
               {{ post.author.profileSpace.about }}
             </p>
           </div>

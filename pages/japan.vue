@@ -7,7 +7,6 @@
         :alt="$t('japan.title')"
         width="1460"
         height="808"
-        data-not-lazy
       />
       <JapanHero />
     </div>

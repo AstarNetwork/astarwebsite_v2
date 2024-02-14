@@ -15,7 +15,7 @@
               <NuxtLink
                 :to="item.href"
                 :target="item.href.includes('https') ? '_blank' : '_self'"
-                class="text-tiny hover:underline transition text-gray-200 hover:text-gray-50"
+                class="hover:underline transition text-gray-200 hover:text-gray-50"
               >
                 {{ item.name }}
                 <ArrowTopRightOnSquareIcon

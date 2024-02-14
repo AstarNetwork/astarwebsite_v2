@@ -29,9 +29,7 @@
             :class="item.color"
             aria-hidden="true"
           />
-          <h3
-            class="font-medium mt-1 sm:mt-2 text-tiny sm:text-base text-white"
-          >
+          <h3 class="font-medium mt-1 sm:mt-2 text-white">
             {{ item.name }}
           </h3>
         </NuxtLink>

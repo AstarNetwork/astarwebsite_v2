@@ -10,9 +10,7 @@
         >
           <div class="relative">
             <blockquote class="pt-6 pb-4">
-              <div
-                class="mx-auto text-center text-tiny sm:text-xl sm:leading-9"
-              >
+              <div class="mx-auto text-center sm:leading-9">
                 <p>{{ item.text }}</p>
               </div>
               <footer class="mt-2 sm:mt-8">

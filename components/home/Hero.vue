@@ -1,60 +1,14 @@
 <template>
-  <div
-    class="text-center h-screen flex items-center justify-center z-10 relative"
-  >
-    <div class="max-w-4xl px-4 sm:px-6 pt-12">
-      <!-- <p class="font-medium text-xl mb-2">Astar 2.0 is here.</p> -->
-      <h1
-        class="text-3xl sm:text-6xl lg:text-9xl font-bold leading-none drop-shadow tracking-tight"
-      >
-        The Frontier of Innovation.
-      </h1>
-      <p class="sm:text-xl mt-6 sm:mt-10 mb-8 sm:mb-14">
-        {{ $t("home.hero.description") }}
-      </p>
-      <div class="sm:flex justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-        <Button
-          color="secondary"
-          size="lg"
-          href="https://astarnetwork.deform.cc/astarzkevm/"
-          target="_blank"
-          class="w-[260px] !border-[#C09CFF] bg-gradient-to-r from-[#8A46FF] to-[#6E38CC] !text-white hover:brightness-125"
-          style="box-shadow: 0px 2px 10px 0px rgba(255, 255, 255, 0.3)"
-        >
-          Build on Astar
-          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
-        </Button>
-        <!-- <Button
-          color="secondary"
-          variant="outlined"
-          size="lg"
-          href="https://docs.astar.network/"
-          target="_blank"
-          class="w-[260px]"
-        >
-          {{ $t("home.hero.doc") }}
-          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
-        </Button> -->
-        <!-- <Button
-          variant="outlined"
-          size="lg"
-          href="https://portal.astar.network/"
-          target="_blank"
-          class="w-[280px] sm:w-auto"
-        >
-          {{ $t("home.hero.app") }}
-          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
-        </Button> -->
-        <Button
-          variant="outlined"
-          size="lg"
-          :href="i18n + '/developers/techstack'"
-          class="w-[260px]"
-        >
-          Astar Tech Stack
-        </Button>
-      </div>
-    </div>
+  <div class="container py-10">
+    <h1 class="text-center tracking-[-0.2rem] mb-6">
+      <span class="font-bold text-[9rem] block leading-none">Connecting</span>
+      <span class="text-8xl block leading-none">Web3 to You</span>
+    </h1>
+    <p class="text-center max-w-3xl mx-auto text-lg">
+      Creating opportunities for individuals to use web3 technology. We connect
+      people to web3—through entertainment, blockchain development, business
+      development, and community events.
+    </p>
   </div>
 </template>
 

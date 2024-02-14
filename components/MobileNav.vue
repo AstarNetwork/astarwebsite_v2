@@ -78,7 +78,7 @@
                           <ul class="space-y-2">
                             <li v-for="menu in category.nav">
                               <NuxtLink
-                                class="flex items-center text-tiny"
+                                class="flex items-center"
                                 :to="menu.href"
                                 :target="
                                   menu.href.includes('https')

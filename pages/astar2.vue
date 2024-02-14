@@ -7,7 +7,6 @@
           class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
           src="/images/vision/title.svg"
           alt="Astar 2.0 Building the Unstoppable"
-          data-not-lazy
         />
       </h1>
       <h2 class="sm:text-xl lg:text-xl">
@@ -38,7 +37,6 @@
             class="w-full max-w-[1600px] mx-auto"
             src="/images/vision/supernova.webp"
             alt=""
-            data-not-lazy
           />
         </div>
       </div>

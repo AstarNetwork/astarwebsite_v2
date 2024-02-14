@@ -20,7 +20,6 @@
             :data-aos-delay="index * 200"
             width="240"
             height="210"
-            data-not-lazy
           />
         </div>
         <h3

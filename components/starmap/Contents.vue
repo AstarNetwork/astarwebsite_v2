@@ -129,7 +129,7 @@
       >
         <div class="sm:flex items-center min-h-[600px] lg:min-h-[800px]">
           <div
-            class="whitespace-nowrap text-center text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
           >
             <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q1
@@ -189,7 +189,7 @@
           class="sm:flex items-center justify-end min-h-[600px] lg:min-h-[800px]"
         >
           <div
-            class="whitespace-nowrap text-center order-2 text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center order-2 text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
           >
             <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q2
@@ -232,7 +232,7 @@
 
         <div class="sm:flex items-center min-h-[600px] lg:min-h-[800px]">
           <div
-            class="whitespace-nowrap text-center text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
           >
             <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q3
@@ -282,7 +282,7 @@
           class="sm:flex items-center justify-end min-h-[600px] lg:min-h-[800px]"
         >
           <div
-            class="whitespace-nowrap text-center order-2 text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center order-2 text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
           >
             <span class="text-white font-bold tracking-tight sm:block mr-1 sm:mr-0">
               Q4

@@ -29,12 +29,7 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
     "@nuxt/content",
-    [
-      "nuxt3-lazy-load",
-      {
-        defaultImage: "/images/placeholder.png",
-      },
-    ],
+    "nuxt-swiper",
   ],
   runtimeConfig: {
     public: {

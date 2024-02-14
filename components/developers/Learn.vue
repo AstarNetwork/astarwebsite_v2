@@ -25,7 +25,7 @@
                 {{ item.title }} <span class="whitespace-nowrap">-></span>
               </NuxtLink>
             </h4>
-            <p class="text-tiny lg:text-base">{{ item.description }}</p>
+            <p>{{ item.description }}</p>
           </li>
         </ul>
       </div>

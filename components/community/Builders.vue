@@ -14,7 +14,6 @@
           class="mx-auto -mt-12 lg:-mt-24"
           width="600"
           height="300"
-          data-not-lazy
         />
         <div class="sm:p-12 pt-4">
           <h3

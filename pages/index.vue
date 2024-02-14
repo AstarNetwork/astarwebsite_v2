@@ -1,8 +1,11 @@
 <template>
   <NuxtLayout name="default">
+    <HomeHero />
+    <HomeFeatured />
+    <HomeLatestNews />
     <div class="text-center p-40">new home content</div>
     <div class="bg-black text-gray-300">
-      <HomeBattleCards />
+      <HomeDevelopers />
     </div>
   </NuxtLayout>
 </template>

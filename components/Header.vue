@@ -12,9 +12,7 @@
           'transition z-40 w-full',
         ]"
       >
-        <div
-          class="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 sm:py-8 lg:px-8"
-        >
+        <div class="container flex items-center justify-between py-5 sm:py-8">
           <NuxtLink :to="localePath('/')" class="flex">
             <span class="sr-only">Astar Network</span>
             <img
@@ -23,7 +21,6 @@
               alt="Astar Network"
               width="188"
               height="60"
-              data-not-lazy
             />
           </NuxtLink>
 
@@ -45,7 +42,7 @@
                   <PopoverButton
                     :class="[
                       open ? 'text-blue' : 'text-gray-950 hover:text-blue',
-                      'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 transition text-tiny xl:text-base',
+                      'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 transition',
                     ]"
                   >
                     <span>{{ category.label }}</span>
