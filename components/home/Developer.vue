@@ -59,7 +59,7 @@ const battleCards = [
     title: "Astar Substrate",
     description: t("home.developer.substrate.description"),
     poweredBy: {
-      image: "/images/techstack/polkadot-logo.svg",
+      image: "/images/home/polkadot-logo.svg",
       text: "Polkadot",
     },
     features: [
@@ -76,7 +76,7 @@ const battleCards = [
     title: "Astar zkEVM",
     description: t("home.developer.zkevm.description"),
     poweredBy: {
-      image: "/images/techstack/polygon-logo.svg",
+      image: "/images/home/polygon-logo.svg",
       text: "Polygon",
     },
     features: [

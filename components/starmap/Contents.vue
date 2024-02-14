@@ -411,7 +411,7 @@ const discoveries: { [index: string]: Discovery } = {
   techStack: {
     title: t("starmap.expansion.tech_stack.title"),
     description: t("starmap.expansion.tech_stack.description"),
-    href: "/developers/techstack/",
+    href: "/developers/",
     image: "tech-stack.webp",
   },
   zkEvmTestnet: {
