@@ -1,7 +1,7 @@
 <template>
   <section class="px-4 sm:px-6 relative z-10">
     <div
-      class="space-gradient rounded-3xl max-w-7xl mx-auto px-6 sm:px-12 pt-1 pb-10 sm:pb-20 lg:py-20 lg:flex justify-center items-center lg:space-x-6"
+      class="bg-blue rounded-3xl max-w-7xl mx-auto px-6 sm:px-12 pt-1 pb-10 sm:pb-20 lg:py-20 lg:flex justify-center items-center lg:space-x-6"
     >
       <div class="lg:w-2/5">
         <img
@@ -11,7 +11,7 @@
       </div>
       <div class="lg:w-3/5">
         <h2
-          class="text-white leading-tight mb-4 text-2xl sm:text-4xl lg:text-4xl font-extrabold text-center lg:text-left"
+          class="text-white leading-tight mb-4 text-2xl sm:text-4xl lg:text-4xl font-bold text-center lg:text-left"
         >
           {{ $t("community.ambassador.title") }}
         </h2>

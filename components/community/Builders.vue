@@ -14,7 +14,6 @@
           class="mx-auto -mt-12 lg:-mt-24"
           width="600"
           height="300"
-          data-not-lazy
         />
         <div class="sm:p-12 pt-4">
           <h3
@@ -44,7 +43,7 @@
             <NuxtLink
               :to="item.text_link.href"
               target="_blank"
-              class="text-space-cyan hover:underline hover:text-space-cyan-lighter"
+              class="hover:underline"
             >
               {{ item.text_link.label }}
               <ArrowTopRightOnSquareIcon

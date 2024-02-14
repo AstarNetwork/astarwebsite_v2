@@ -1,75 +1,54 @@
 <template>
-  <footer
-    class="mx-auto max-w-6xl pb-12 px-4 sm:px-6 lg:pb-16"
-    :class="color === 'light' ? 'text-white' : 'text-gray-500'"
-  >
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      <div v-for="category in nav">
-        <h3
-          class="font-medium uppercase"
-          :class="color === 'light' ? 'text-white' : 'text-space-gray-dark'"
-        >
-          {{ category.name }}
-        </h3>
-        <ul role="list" class="mt-4 space-y-4">
-          <li
-            v-for="item in category.nav"
-            :key="item.name"
-            class="leading-snug"
-          >
-            <NuxtLink
-              :to="item.href"
-              :target="item.href.includes('https') ? '_blank' : '_self'"
-              class="text-tiny hover:underline transition"
-              :class="
-                color === 'light'
-                  ? 'text-gray-200 hover:text-gray-50'
-                  : 'text-gray-500 hover:text-space-gray-dark'
-              "
+  <footer class="bg-blue">
+    <div class="mx-auto max-w-6xl pb-12 px-4 sm:px-6 lg:pb-16">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div v-for="category in nav">
+          <h3 class="font-medium uppercase text-white">
+            {{ category.name }}
+          </h3>
+          <ul role="list" class="mt-4 space-y-4">
+            <li
+              v-for="item in category.nav"
+              :key="item.name"
+              class="leading-snug"
             >
-              {{ item.name }}
-              <ArrowTopRightOnSquareIcon
-                v-if="item.href.includes('https')"
-                class="w-4 h-4 inline-block stroke-2"
-              />
-            </NuxtLink>
-          </li>
-        </ul>
+              <NuxtLink
+                :to="item.href"
+                :target="item.href.includes('https') ? '_blank' : '_self'"
+                class="hover:underline transition text-gray-200 hover:text-gray-50"
+              >
+                {{ item.name }}
+                <ArrowTopRightOnSquareIcon
+                  v-if="item.href.includes('https')"
+                  class="w-4 h-4 inline-block stroke-2"
+                />
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+        <LangSwitcher />
       </div>
-    </div>
 
-    <div
-      class="mt-16 border-t pt-8 lg:flex items-center justify-between"
-      :class="
-        color === 'light'
-          ? 'text-white border-white border-opacity-30'
-          : 'border-gray-200'
-      "
-    >
-      <div class="flex space-x-6 order-2 justify-center">
-        <NuxtLink
-          v-for="item in social"
-          target="_blank"
-          :key="item.name"
-          :to="item.href"
-          class="transition"
-          :class="
-            color === 'light'
-              ? 'text-gray-200 hover:text-gray-50'
-              : 'text-gray-400 hover:text-gray-500'
-          "
-        >
-          <span class="sr-only">{{ item.name }}</span>
-          <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-        </NuxtLink>
-      </div>
-      <p
-        class="mt-8 order-1 text-sm lg:mt-0 text-center"
-        :class="color === 'light' ? 'text-gray-200' : 'text-gray-400'"
+      <div
+        class="mt-16 border-t pt-8 lg:flex items-center justify-between text-white border-white border-opacity-30"
       >
-        &copy; {{ new Date().getFullYear() }} Astar Network. All Rights
-        Reserved.
-      </p>
+        <div class="flex space-x-6 order-2 justify-center">
+          <NuxtLink
+            v-for="item in social"
+            target="_blank"
+            :key="item.name"
+            :to="item.href"
+            class="transition text-gray-200 hover:text-gray-50"
+          >
+            <span class="sr-only">{{ item.name }}</span>
+            <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+          </NuxtLink>
+        </div>
+        <p class="mt-8 order-1 text-sm lg:mt-0 text-center text-gray-200">
+          &copy; {{ new Date().getFullYear() }} Astar Network. All Rights
+          Reserved.
+        </p>
+      </div>
     </div>
   </footer>
 </template>

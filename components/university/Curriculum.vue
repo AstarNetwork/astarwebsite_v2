@@ -4,7 +4,7 @@
       <span>{{ $t("university.curriculum.title") }}</span>
     </h2>
     <ol
-      class="space-y-6 relative before:content-[''] before:w-[1px] before:bg-white/20 before:h-full before:block before:left-1.5 before:absolute before:-z-10"
+      class="space-y-6 relative before:content-[''] before:w-[1px] before:bg-gray-300 before:h-full before:block before:left-1.5 before:absolute before:-z-10"
     >
       <li
         v-for="(item, index) in curriculum"
@@ -19,7 +19,9 @@
               {{ $t("university.curriculum.module") }} {{ index + 1 }}
             </span>
           </p>
-          <h3 class="font-bold text-xl sm:text-2xl mb-2 leading-tight">
+          <h3
+            class="font-bold text-xl sm:text-2xl mb-2 leading-tight text-white"
+          >
             {{ item.title }}
           </h3>
           <p class="text-gray-300">{{ item.description }}</p>

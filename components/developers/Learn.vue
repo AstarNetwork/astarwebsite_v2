@@ -10,7 +10,7 @@
       <DevelopersKey3Hackathon />
       <div class="lg:w-1/2">
         <h3
-          class="font-extrabold text-3xl lg:text-4xl mb-6 text-center sm:text-left"
+          class="font-bold text-3xl lg:text-4xl mb-6 text-center sm:text-left"
         >
           {{ $t("developers.learn.docs.title") }}
         </h3>
@@ -20,12 +20,12 @@
               <NuxtLink
                 :to="item.href"
                 target="_blank"
-                class="text-space-cyan hover:underline hover:text-space-cyan-lighter font-semibold text-lg lg:text-xl"
+                class="hover:underline font-semibold text-lg lg:text-xl"
               >
                 {{ item.title }} <span class="whitespace-nowrap">-></span>
               </NuxtLink>
             </h4>
-            <p class="text-tiny lg:text-base">{{ item.description }}</p>
+            <p>{{ item.description }}</p>
           </li>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl w-full mx-auto px-4 sm:px-6 relative z-10">
+  <div class="max-w-4xl w-full mx-auto px-4 sm:px-6">
     <div class="gradient-outlined-box">
       <div
         class="py-8 px-4 sm:p-12 sm:flex items-center space-y-6 sm:space-y-0 sm:space-x-8"

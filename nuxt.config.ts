@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
     "@nuxt/content",
+    "nuxt-swiper",
     [
       "nuxt3-lazy-load",
       {
@@ -82,7 +83,6 @@ export default defineNuxtConfig({
           "en-starmap.json",
           "en-vision.json",
           "en-university.json",
-          "en-techstack.json",
         ],
       },
       {
@@ -103,7 +103,6 @@ export default defineNuxtConfig({
           "ja-starmap.json",
           "ja-vision.json",
           "ja-university.json",
-          "ja-techstack.json",
         ],
       },
     ],

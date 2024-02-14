@@ -1,65 +1,30 @@
 {
   "home": {
-    "hero": {
-      "description": "Astar Networkは、前例のないクロスレイヤースケーリングを実現し、Web3の社会実装・大衆化を目指します。",
-      "doc": "ドキュメント",
-      "app": "アプリへ"
-    },
-    "welcome": {
-      "title": "Astar Networkへようこそ！",
-      "description": "Astar Networkは、Web3のマスアダプションを目指すパブリックブロックチェーンであり、日本トップの時価総額とグローバルプレゼンスを有しています。私たちはEVMとWASMの両環境をサポートし、さらに高い水準のEVM等価性が実現できる「Astar zkEVM Powered by Polygon」を提供します。Build2Earnメカニズムは開発者にインセンティブを与える世界初の取り組みであり、分散型社会を構築する開発者をサポートします。"
-    },
-    "gateway": "マルチチェーン時代の\nゲートウェイ",
-    "ecosystem": {
-      "title": "急成長中のエコシステムに\n参加しよう",
-      "developer": {
-        "title": "開発者",
-        "description": "Astarのチェーン上にdAppやインフラを構築"
+    "developer": {
+      "title": "デベロッパー",
+      "description": "Astar 2.0へと進化するにつれ、我々の技術も進化します。開発者が複数のVM、レイヤー、コンセンサス・プロトコルの恩恵を受けられるよう、最先端のクロスレイヤー技術スタックを提供します。",
+      "substrate": {
+        "description": "Astar Substrateは、Polkadotを牽引するパラチェーンであるAstar Networkを支えるバックエンドテクノロジーです。仮想マシンの構築へのシームレスなアクセスと、Polkadot SDK、Substrateベースのプロトコルへの相互運用性を実現します。Ink!とRustスマートコントラクトにより確保された安全性と、革新的な報酬メカニズムがブロックチェーンの成長を後押しします。",
+        "features": {
+          "multi_vm_support": "複数のVMをサポート：EVMとWASM",
+          "rust_and_ink": "Rustとink!で記述されたスマートコントラクト",
+          "interoperability_and_composability": "Substrateで構築されたチェーンとの相互運用性と互換性",
+          "secured": "Polkadotのバリデータが担保する安全性",
+          "dapp_staking_rewards": "開発者をサポートするdAppステーキング報酬",
+          "low_fees": "低いネットワーク手数料"
+        }
       },
-      "collator": {
-        "title": "コレーター",
-        "description": "ブロックチェーンをサポートするノードを実行"
-      },
-      "staker": {
-        "title": "ステーカー",
-        "description": "ASTRをステーキングして報酬を獲得"
-      },
-      "users": {
-        "title": "ユーザー",
-        "description": "ASTRトークンを使い、Web3ムーブメントに参加"
+      "zkevm": {
+        "description": "Astar zkEVMは高いUXを保ちながらEthereumの高いセキュリティとネットワーク効果を活用したい事業者にとって最適なソリューションを提供します。最先端のZKテクノロジーを活用したAstar zkEVMでは、開発者に定評あるツールと開発環境を提供し、Web3の大衆化に貢献します。",
+        "features": {
+          "ethereum_security": "Ethereumから継承した高いセキュリティ",
+          "high_scalability": "高い拡張性",
+          "low_fees": "いつでも安価なネットワーク手数料",
+          "access": "最も活発なWeb3エコシステムへのアクセス",
+          "developer_experience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
+        }
       }
     },
-    "reading": {
-      "title": "Astarについて",
-      "description": "Astarが誕生した経緯や過程を詳しくご紹介します",
-      "vision": {
-        "title": "Astarへようこそ",
-        "description": "Astarのビジョンと、それを実現する強力なブロックチェーン技術"
-      },
-      "tokenomics": {
-        "title": "ASTRのトークノミクス",
-        "description": "Web3を解き放つASTRのガバナンス、インセンティブ、及びその機能"
-      },
-      "ecosystem": {
-        "title": "エコシステムを探る",
-        "description": "Astarのエコシステムに参加し、そのパワーを実感"
-      }
-    },
-    "features": {
-      "multichain": {
-        "title": "マルチチェーンスマートコントラクト",
-        "description": "Astarは、Ethereum、Polkadot、Cosmos等のチェーンと接続し、複数のエコシステム間での自由な資産移動やコミュニケーションを可能にします。"
-      },
-      "build2earn": {
-        "title": "Build2Earn",
-        "description": "Astarは、Build2Earnプログラムを先駆けて導入することで、開発者を支援し、エコシステムを成長させています。開発者は分散型アプリケーション（dApp）を開発・運用すると、ステーキングメカニズムを通してインセンティブを得ることができます。"
-      },
-      "web2_web3": {
-        "title": "Web2 + Web3",
-        "description": "Astar Networkは、ソフトウェア開発者が既によく使用しているツールや言語をサポートしています。また、マルチチェーンネイティブのWasm + EVMランタイム環境は、他のプラットフォームにはない独自の革新的なソリューションを構築することができ、究極の自由度と柔軟性を提供しています。"
-      }
-    },
-    "backers": "後援",
     "newsletter": {
       "global": {
         "title": "Newsletter",
@@ -72,6 +37,5 @@
         "signup": "登録する"
       }
     },
-    "hiring": "採用中です！"
   }
 }

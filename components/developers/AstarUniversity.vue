@@ -5,7 +5,7 @@
       class="mx-auto max-w-[440px] mb-6 sm:mb-6 -mt-6 sm:-mt-16 w-full"
     />
     <h3 class="leading-tight mb-4 text-center">
-      <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold block">
+      <span class="text-3xl sm:text-4xl lg:text-5xl font-bold block">
         Astar University
       </span>
       <small class="block text-lg sm:text-2xl">

@@ -1,76 +1,58 @@
 <template>
   <NuxtLayout name="default">
-    <template #space>
-      <SubPageHeader>
-        <h1
-          class="text-4xl sm:text-6xl lg:text-7xl font-extrabold drop-shadow text-center leading-none pt-12"
-        >
-          {{ $t("ecosystem.title") }}
-        </h1>
-      </SubPageHeader>
+    <SubPageHeader>
+      <h1
+        class="text-4xl sm:text-6xl lg:text-7xl font-bold text-center leading-none mb-10"
+      >
+        {{ $t("ecosystem.title") }}
+      </h1>
+      <p>{{ $t("ecosystem.description") }}</p>
+    </SubPageHeader>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-        <h2 class="title text-center mb-6">
-          <span class="whitespace-pre-wrap">{{ $t("ecosystem.who") }}</span>
-        </h2>
-      </div>
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-        <p class="sm:text-xl mb-6 text-center">
-          {{ $t("ecosystem.description") }}
-        </p>
-        <p class="text-sm">
-          {{ $t("ecosystem.note") }}
-        </p>
-      </div>
-    </template>
-    <template #earth>
-      <div class="relative z-10 mb-40">
-        <TabGroup>
-          <TabList
-            class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-12 max-w-4xl mx-auto px-4 sm:px-6 text-sm sm:text-base"
-          >
-            <Tab as="template" v-slot="{ selected }">
-              <button
-                :class="{
-                  'tab current': selected,
-                  tab: !selected,
-                }"
-              >
-                All
-                <span class="text-xs">({{ projects.length }})</span>
-              </button>
-            </Tab>
-            <Tab
-              as="template"
-              v-slot="{ selected }"
-              v-for="category in categories"
+    <div class="relative z-10 mb-40">
+      <TabGroup>
+        <TabList
+          class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-12 max-w-4xl mx-auto px-4 sm:px-6 text-sm sm:text-base"
+        >
+          <Tab as="template" v-slot="{ selected }">
+            <button
+              :class="{
+                'tab current': selected,
+                tab: !selected,
+              }"
             >
-              <button
-                :class="{
-                  'tab current': selected,
-                  tab: !selected,
-                }"
-              >
-                {{ category.attributes.name }}
-                <span class="text-xs">
-                  ({{ category.attributes.projects.data.length }})
-                </span>
-              </button>
-            </Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel class="tab-panel">
-              <EcosystemLogoList :projects="projects" />
-            </TabPanel>
-            <TabPanel class="tab-panel" v-for="item in categories">
-              <EcosystemLogoList :projects="item.attributes.projects.data" />
-            </TabPanel>
-          </TabPanels>
-        </TabGroup>
-      </div>
-      <hr class="mb-20" />
-      <Footer />
-    </template>
+              All
+              <span class="text-xs">({{ projects.length }})</span>
+            </button>
+          </Tab>
+          <Tab
+            as="template"
+            v-slot="{ selected }"
+            v-for="category in categories"
+          >
+            <button
+              :class="{
+                'tab current': selected,
+                tab: !selected,
+              }"
+            >
+              {{ category.attributes.name }}
+              <span class="text-xs">
+                ({{ category.attributes.projects.data.length }})
+              </span>
+            </button>
+          </Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel class="tab-panel">
+            <EcosystemLogoList :projects="projects" />
+          </TabPanel>
+          <TabPanel class="tab-panel" v-for="item in categories">
+            <EcosystemLogoList :projects="item.attributes.projects.data" />
+          </TabPanel>
+        </TabPanels>
+      </TabGroup>
+    </div>
   </NuxtLayout>
 </template>
 
