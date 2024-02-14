@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "tagline": "The Future of Multichain Smart Contracts",
+    "description": "Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and the tools and languages developers already know.",
+    "twitter": "AstarNetwork"
+  },
+  "learn_more": "Learn more",
+  "footer": {
+    "build": "Build",
+    "docs": "Docs",
+    "apply": "Apply",
+    "careers": "Careers",
+    "learn": "Learn",
+    "blog": "Astar Blog",
+    "videos": "Videos",
+    "forum": "Forum",
+    "other": "Other",
+    "brand_assets": "Brand Assets",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use",
+    "contact": "Contact Us"
+  }
+}

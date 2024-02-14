@@ -1,0 +1,82 @@
+{
+  "incubation": {
+    "meta": {
+      "title": "Web3 Incubation Program by Sony Network Communications and Astar Network",
+      "description": "This incubation program is a joint program between Sony Network Communications and Astar, and aims to foster cutting-edge Web3 use cases using the knowledge and resources of Sony and Astar. The program is online and open to participants worldwide and runs for three months, from March to June.",
+      "program": {
+        "title": "Program",
+        "description": "Provide large scale and comprehensive support for Web3 builders"
+      },
+      "partners": {
+        "title": "Partners",
+        "description": "Provide all the support necessary for web3 companies to grow"
+      },
+      "mentors": {
+        "title": "Mentors",
+        "description": "Providing constructive advice and feedback by utilizing their technical and financial knowledge"
+      }
+    },
+    "nav": {
+      "tac": "Terms & Conditions",
+      "privacy": "Privacy Policy"
+    },
+    "cta": {
+      "apply": "Apply Now",
+      "lead": "Interested In Joining Us?",
+      "contact": "Any questions? Contact:"
+    },
+    "learn_more": "Learn More",
+    "program": {
+      "about": {
+        "heading": "Developing Web3 projects which leverage the knowledge and resources of Sony Network Communications and Astar",
+        "description": "This incubation program is a joint program between Sony Network Communications and Astar, and aims to foster cutting-edge Web3 use cases using the knowledge and resources of Sony and Astar. The program is online and open to participants worldwide and runs for three months, from March to June."
+      },
+      "offer": {
+        "connection": {
+          "lead": "Direct connection to the world's top Web3 innovators",
+          "text": "You will be able to make direct connections, receive feedback, and attend valuable sessions for no-cost with top-level Web3 innovators such as Web3 Foundation and Alchemy."
+        },
+        "support": {
+          "lead": "Access to Sony and Astar resources, tech and financial support",
+          "text": "Not only you will be able to utilize resources from Sony and Astar, but you will also receive technical and financial support. Good products may also be considered for investment from Sony."
+        },
+        "grow": {
+          "lead": "Grow your Web3 startup together with Sony and Astar",
+          "text": "After the incubation program, some successful graduated projects are moved to the next phase and will conduct a proof of concept experiment together with Sony."
+        }
+      },
+      "timeline": {
+        "subheading": "Timeline",
+        "heading": "A one-month application period, a three-month incubation period, and demo day",
+        "learn_more": "Learn more about timeline",
+        "application": {
+          "title": "Application",
+          "duration": "1 month",
+          "dates": "Feb 17th to March 6th",
+          "description": "During this phase, participants fill out an application form and provide basic information about their team and product. Both Sony Network Communications and Astar Foundation will review all applications and decide 10 to 15 cohorts. Selected applicants will be notified  by e-mail.",
+          "description_short": "This program is open to participants from all over the world, regardless of the status of their Web3 startups."
+        },
+        "incubation": {
+          "title": "Incubation",
+          "duration": "3 months",
+          "dates": "Mid March to June 18th",
+          "description": "This phase includes sessions from the world's best innovators, mentoring and feedback on strategies and development assistance from Sony Network Communications and Astar Foundation. We will match Sony's resources with Web3 startup technologies to create use cases.",
+          "description_short": "During the incubation program, we will provide sessions with global VCs and Web3 companies, mentoring on business and technology strategies, and matching with resources from the Sony group."
+        },
+        "demo": {
+          "title": "Demo Day",
+          "duration": "",
+          "dates": "June 18th",
+          "description": "Demo Day will be held in June at Sony Group Corporation Headquarters in Tokyo during Japan Blockchain. About 200 people, including companies and investors participating in the incubation program, will attend.",
+          "description_short": "Demo day will be held in June at Sony Group Corporation Headquarters in Tokyo."
+        }
+      }
+    },
+    "partners": {
+      "learn_more": "See all partners"
+    },
+    "mentors": {
+      "learn_more": "See all mentors"
+    }
+  }
+}

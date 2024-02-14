@@ -1,0 +1,36 @@
+{
+  "japan": {
+    "title": "Astar Japan Lab",
+    "description": "Astar Japan Lab fuels the growth of Japanese services and businesses by conducting research and development, gathering knowledge, and collaborating with exciting and established companies.",
+    "register": "Register now",
+    "see_use_cases": "See latest use cases",
+    "features": {
+      "business_opportunities": "Creating business opportunities in Japan with Astar Network",
+      "use_cases": "Proposed blockchain and NFT use cases",
+      "solution": "Engaging Solution Providers",
+      "vc": "Introduction of overseas VC for web startups from Japan",
+      "group_study": "Group study sessions to advance use cases for Astar",
+      "connect": "Connect with the Astar community and ambassadors"
+    },
+    "members": {
+      "title": "Registered Members"
+    },
+    "use_cases": {
+      "title": "Use Cases",
+      "sony": "Sony Network Communications and Astar Network created a joint incubation program that leveraged some of the world's top innovators to help drive growth for 19 Web3 startups.",
+      "toyota": "Toyota sponsored their first Web3 hackathon to develop DAO tooling on the Astar Network that supported intra-company projects designed to drive innovation.",
+      "calbee":"Leading Japanese snack food maker Calbee Inc. deploys its Evolving Potato Chip NFTs on the Astar blockchain as part of a new \"NFT Chips\" promotional campaign.",
+      "eren": "Iconic Japanese web manga series \"Eren The Southpaw\" used Astar to mint 2 street art masterpieces, \"The Black Monster\" and \"Night in Chelsea\" as NFTs.",
+      "nikkei": "Astar Network advertised in Nikkei Newspaper and distributed NFT",
+      "candy": "Final Fantasy concept artist Yoshitaka Amano brought his first \"Candy Girl\" digital collection to Astar Network. This global project brings together art, storytelling, and fashion using blockchain technologies."
+    },
+    "newsletter": {
+      "title": "Join Our Newsletter!",
+      "description": "Subscribe to our newsletter to receive the latest update in Japanese.",
+      "subscribe": "Subscribe"
+    },
+    "blog":{
+      "title":"Astar Japan Blog"
+    }
+  }
+}

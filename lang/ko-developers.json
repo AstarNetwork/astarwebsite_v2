@@ -1,0 +1,100 @@
+{
+  "developers": {
+    "title": "Developers",
+    "description": "Be part of the exciting world of multichain innovation by building EVM and WASM dApps on Astar Network. Astar XVM SDK is the foundation of our multichain smart contracts.",
+    "start": {
+      "title": "Start Building on Astar",
+      "evm": "Launch your EVM dApps",
+      "wasm": "Launch your WASM dApps",
+      "collator": "Run a Collator",
+      "exchange": "Integrate an Exchange",
+      "templates": "DApps Templates"
+    },
+    "support": {
+      "title": "Developer Support",
+      "build2earn": "#Build2Earn is our financial incentive program whose aim is to provide a basic income to developers for building useful dApps on Astar/Shiden.",
+      "inkubator": "ink!ubator connects you with core developers and extensive resources. Get funding and technical support for your next ink! project."
+    },
+    "learn":{
+      "title":"Learn the Basics",
+      "university":"Hands-on training to put you on the fast track to a Web3 career. Solidity. Rust. And Polkadot.",
+      "docs":{
+        "title":"Docs",
+        "build":{
+          "title":"Build",
+          "description":"Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
+        },
+        "node":{
+          "title":"Run A Node",
+          "description":"Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure."
+        },
+        "xcm":{
+          "title":"Learn Cross-Chain Message (XCM)",
+          "description":"Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network."
+        },
+        "tool":{
+          "title":"Integrate Toolings",
+          "description":"Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network."
+        }
+      }
+    },
+    "why": {
+      "title": "Why Astar?",
+      "evm": {
+        "title": "EVM compatible",
+        "description": "Easily launch EVM dApps written in Solidity or Vyper."
+      },
+      "wasm": {
+        "title": "WASM dApps",
+        "description": "Launch next generation Polkadot native dApps"
+      },
+      "scalable": {
+        "title": "Scalable",
+        "description": "Astar is future-proof and built for scalability."
+      },
+      "secure": {
+        "title": "Secure",
+        "description": "Astar Network uses the shared security of the Polkadot Relay Chain."
+      },
+      "xcm": {
+        "title": "XCM",
+        "description": "Interact with other blockchains with trustless bridges."
+      },
+      "build2earn": {
+        "title": "Build2Earn",
+        "description": "Use our dApp staking mechanism to support your development on Astar Network."
+      }
+    },
+    "multichain": {
+      "title": "Multichain Future",
+      "description": "Astar Network will be the go-to blockchain for Web3 and beyond by focusing on the key aspect of interoperability.",
+      "defi": {
+        "title": "DeFi",
+        "description": "The quantity and quality of options available for our user base boost our decentralized finance sector. In addition to very low fees and quick transaction speed, our XCM compatibility with other parachains allow for more secure transfers and swaps within our ecosystem."
+      },
+      "nft": {
+        "title": "NFT",
+        "description": "Astar's NFT environment is inviting for small and large communities alike. From personal collections to full-scale projects by renowned Japanese IPs, we have all the tools necessary to help connect the team with the interested communities."
+      },
+      "infra": {
+        "title": "Leading Infra Providers",
+        "description": "Our goal is to provide the most secure and efficient connections to other leading blockchains. Considering the high level of importance this has, we take a rigorous approach when integrating bridges and other infra."
+      },
+      "dao": {
+        "title": "DAO",
+        "description": "Decentralized autonomous organizations are the future. Our community will help mold the shape of the network through means which are transparent and accessible."
+      }
+    },
+    "toolkit": {
+      "title": "Reach into \nAstar Developer Toolkit",
+      "description": "All your favorite tools and integrations work natively with Astar.",
+      "ecosystem": "Explore all projects building on Astar"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "ben": "Astar is a layer 1 blockchain built on Substrate. Through Polkadot's shared security and XCMP, Astar's progress on WASM support can enable very unique use-cases to the Polkadot ecosystem.",
+      "miko": "One of the most significant problems left unsolved by Satoshi Nakamoto has been to optimize developer incentives for contributing to projects. Astar has shown incredible innovation in this.",
+      "michael": "It's rare that we find teams and products as obssesed with improving Web3 developer experience as we are at Alchemy, but Astar is exactly that. Features like dApp Staking and XCMP are gamechangers for developers, which is why we're so excited to be a part of the Astar ecosystem."
+    }
+  }
+}

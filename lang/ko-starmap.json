@@ -1,0 +1,77 @@
+{
+  "starmap": {
+    "title": "2023 Starmap",
+    "description": "Embarking on a new journey to reach our full potential",
+    "learn_more": "Learn more about this discovery",
+    "reborn": {
+      "title": "The Reborn Nebula",
+      "description": "Our journey begins in the Reborn Nebula where we aim to make the first discoveries of the year. Each one will upgrade our network with innovative features, pushing us further to our goal of becoming a powerful layer 1. Follow along and join us in celebrating each discovery throughout the year.",
+      "plan": "In this quarter we can look forward to discoveries that relate to the following:",
+      "xvm": {
+        "title": "Cross-Virtual Machine (XVM): The Portal to the Future",
+        "description": "As we are well-aware, WASM is the future. Currently, WASM smart contracts have a large limitation when pushing the technology for mass adoption in the EVM-dominated space. Teams are inclined to choose one or the other when developing their project. This is why we created XVM. \n\nCross-Virtual Machine (XVM) is a custom pallet and a set of interfaces that allow a smart contract in one virtual machine to communicate with another, as if they are in the same environment. In other words, with XVM, you can create an ink! smart contract and access any assets or contracts available on the EVM side. You can enjoy the best of both worlds!"
+      },
+      "astarjs": {
+        "title": "Astar.js",
+        "description": "Astar.js is an essential tool for anyone looking to build a dApp on the Astar network. Its modular design and comprehensive feature set make it easy for developers to create powerful and scalable decentralised applications. In addition to the many packages it contains, it also supports EVM and substrate native structures. Whether you're a seasoned blockchain developer or just starting out, Astar.js is a valuable tool to have in your toolkit."
+      },
+      "mesh": {
+        "title": "Mesh Networks",
+        "description": "Connect to any dApp from anywhere! Our mesh network distributes the infrastructure that allows you to access the blockchain. Astar mesh network is a peer-to-peer (P2P) model to create a secure, shared environment of RPC nodes for you to interact with the network. The nodes send traffic between themselves rather than through a central server."
+      },
+      "ink": {
+        "title": "Zero to ink! Hero",
+        "description": "Mint your ink! NFT, build a Uniswap V2 DEX, or create a simple flipper contract! \n\nBecoming a robust Layer 1 requires us to jumpstart Astar’s Wasm environment with the development of ink! smart contracts. For that reason, we created From Zero to ink! Hero guide to help you build your ink! dApp."
+      }
+    },
+    "growth": {
+      "title": "The Growth Nebula",
+      "description": "We continue to grow at a steady pace while bringing true innovation to our users and builders alike. In this quarter we focus on growing out some some of our key features as well as introducing new ones.",
+      "plan": "We can look forward to discoveries that relate to the following:",
+      "wasm": {
+        "title": "Wasm on Astar!",
+        "description": "We have enabled ink! smart contracts on Astar Network, making us the first parachain to support a stable Wasm environment. Software developers can now use Rust programming to build their projects and ideas on Astar. \n\nWebAssembly is important for our blockchain because it provides a portable and developer-friendly environment for running code, which improves the performance, security, and interoperability of the applications built on Astar."
+      },
+      "vision": {
+        "title": "Astar 2.0",
+        "description": "Astar Network has established itself as the leading smart contract hub on Polkadot, with a strong presence in the Japanese market. Now, we are proud to present Astar 2.0, the next big milestone in our journey.\n\nAstar 2.0 is built upon a clear long-term direction. We have defined our mission to empower billions of individuals and enterprises by harnessing the potential of Web3. Guided by our core values and technology pillars, we aim to create a world where decentralized systems empower users to take control of their data, and privacy, and empower local communities, on and offline, to come together. Astar 2.0 gives developers the tools to build toward a better future web for all."
+      }
+    },
+    "expansion": {
+      "title": "The Expansion Nebula",
+      "description": "At Astar we plan to expand our reach even further. By creating high quality tools and projects, we can further attract top talent. We will focus on improving not only the user experience, but also the developer experience.",
+      "plan": "We can look forward to discoveries that relate to the following:",
+      "swanky": {
+        "title": "Swanky Hub",
+        "description": "Swanky Hub is the one-source of truth for everything related to Swanky.\n\nSwanky Hub is a space where all teams and developers can contribute in the Polkadot ecosystem and help support and boost this all-in-one ink! tool! The Swanky Hub contains:",
+        "more":"and so much more!",
+        "welcome":"We welcome you to our hub, where we share our work and our passion for ink! smart contracts and dApps development!"
+      },
+      "startale": {
+        "title": "Startale Labs",
+        "description": "Web3 for Billions - Startale Labs, building Web3 for billions of users, is a Web3 tech company that develops multi-chain compatible applications and infrastructure. Drawing from the expertise and experience cultivated with Astar Network, we continue our research, development, and incubation efforts. Additionally, we established a subsidiary, Startale Labs Japan, on January 31st. Leveraging our strength as a public blockchain originating from Japan, we will expand our Web3 business development and consulting services in Japan."
+      },
+      "tech_stack": {
+        "title": "Astar Tech Stack",
+        "description": "The Astar Tech Stack leverages cross-virtual machines powered by Polygon and Polkadot to offer customizable blockchain solutions that accelerate web3 adoption. With zk-powered Ethereum L2 Scaling (zkEVM), EVM, WASM, and a cutting-edge ecosystem, Astar delivers robust, secure, and interoperable web3 technology."
+      }
+    },
+    "shine": {
+      "title": "The Shine Nebula",
+      "description": "We now approach the last nebula in 2023. By now we have made many great discoveries and grown to new heights - as Web3 technology, and as a team. But we are not done yet. We plan to shine like a star to close out the year and prepare for the 2024 journey ahead.",
+      "plan": "We're excited for this quarter. Stay tuned for more info.",
+      "zkevm_testnet": {
+        "title": "Astar zkEVM Testnet",
+        "description": "Astar zkEVM is a zero-knowledge scaling solution for Ethereum that offers an EVM-equivalent environment on which existing EVM smart contracts, developer tools, and wallets can work seamlessly. Astar zkEVM harnesses the power of zero-knowledge proofs to reduce transaction costs and increase throughput, while inheriting the security of Ethereum."
+      },
+      "fee_alignment": {
+        "title": "Fee alignment",
+        "description": "Phased alignment of the Wasm and EVM virtual machine fees occurring during implementation of Tokenomics 2.0 means a practical reduction in the cost of storage for ink! smart contracts deployed on the Wasm virtual machine, significantly reducing costs for developers due to a reduction of rent by a factor of 100x. Users should notice lower fees, as well, when performing certain actions, such as minting NFTs."
+      },
+      "hybrid_inflation_model": {
+        "title": "Hybrid Inflation Model",
+        "description": "The hybrid inflation model being rolled out as part of the Tokenomics 2.0 phased implementation facilitates the transition to dApp Staking v3. During this stage, Collator and Treasury rewards are being reduced as well as the overall rate of inflation, laying the groundwork for phase 3. Users and dApps participating in the current version of dApp staking are not affected by this update. "
+      }
+    }
+  }
+}
