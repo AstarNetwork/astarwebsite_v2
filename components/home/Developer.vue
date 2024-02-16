@@ -1,59 +1,69 @@
 <template>
-  <div class="container py-20">
-    <h2 class="text-white text-6xl tracking-tight text-center">
-      <span>{{ $t("home.developer.title") }}</span>
+  <div class="container-md py-20">
+    <h2 class="text-white text-6xl tracking-tight text-center mb-12">
+      {{ $t("home.developer.title") }}
     </h2>
-    <p class="mx-auto max-w-3xl text-center my-12">
+    <p class="mx-auto max-w-3xl text-center mb-20">
       {{ $t("home.developer.description") }}
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-4 lg:gap-x-12">
       <div
-        v-for="(item, index) in battleCards"
-        class="border border-[#263668] bg-space-gray rounded-3xl p-6 sm:p-8 lg:p-12"
+        v-for="(item, index) in data"
+        class="border border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 relative"
       >
-        <p
-          class="flex justify-end items-center space-x-2 uppercase text-gray-300 text-xs sm:text-sm mb-6"
-        >
-          <span>
-            Powered by
-            <span class="sr-only">{{ item.poweredBy.text }}</span>
-          </span>
-          <img
-            class="h-5 sm:h-6"
-            :src="item.poweredBy.image"
-            :alt="item.poweredBy.text"
-          />
-        </p>
-        <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug text-white">
-          {{ item.title }}
-        </h3>
-        <p>{{ item.description }}</p>
-        <ul class="space-y-2 my-10">
-          <li v-for="feature in item.features" class="flex">
-            <CheckCircleIcon
-              :class="index === 0 ? 'text-pink' : 'text-blue'"
-              class="w-5 sm:w-6 h-5 sm:h-6 mr-2 shrink-0"
+        <img
+          :src="`/images/home/developer-bg-${
+            index === 0 ? 'pink' : 'blue'
+          }.svg`"
+          class="w-full object-cover absolute left-0 top-0 opacity-20"
+        />
+        <div class="relative z-10">
+          <p
+            class="flex justify-end items-center space-x-2 uppercase text-gray-300 text-xs sm:text-sm mb-6"
+          >
+            <span>
+              Powered by
+              <span class="sr-only">{{ item.poweredBy.text }}</span>
+            </span>
+            <img
+              class="h-5 sm:h-6"
+              :src="item.poweredBy.image"
+              :alt="item.poweredBy.text"
             />
-            {{ feature }}
-          </li>
-        </ul>
+          </p>
+          <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug text-white">
+            {{ item.title }}
+          </h3>
+          <p>{{ item.description }}</p>
+          <ul class="space-y-2 my-10">
+            <li v-for="feature in item.features" class="flex">
+              <CheckCircleIcon
+                :class="index === 0 ? 'text-pink' : 'text-blue'"
+                class="w-5 sm:w-6 h-5 sm:h-6 mr-2 shrink-0"
+              />
+              {{ feature }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="text-center">
-      <Button>Start Building</Button>
+    <div class="text-center mt-12">
+      <Button :href="localePath('/developers/')" color="whiteGray">
+        Start Building
+      </Button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath();
 import { CheckCircleIcon } from "@heroicons/vue/24/solid";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 
 const { t } = useI18n();
 
-const battleCards = [
+const data = [
   {
     slug: "substrate",
     title: "Astar Substrate",

@@ -1,48 +1,67 @@
 <template>
-  <div class="flex gap-6 container">
-    <div class="box">
+  <div class="flex gap-6 container-lg">
+    <div
+      v-for="item in data"
+      class="flex-1 border-2 border-white rounded-2xl shadow-lg bg-white/50 p-12 space-y-8"
+    >
       <div>img</div>
-      <h2 class="title">Bridge & Ecosystem</h2>
+      <h2 class="text-center text-5xl">{{ item.title }}</h2>
       <p>
-        Astar zkEVM is an Ethereum Layer-2 scaling solution that leverages
-        Polygon's CDK and AggLayer technology. Astar zkEVM inherits Ethereum's
-        security while maintaining EVM equivalence.
+        {{ item.description }}
       </p>
-      <div class="buttons">
-        <Button href="#">Bridge to Astar</Button>
-        <Button href="#" color="outlinedGray">Explore ecosystem</Button>
-      </div>
-    </div>
-    <div class="box">
-      <div>img</div>
-      <h2 class="title">Yoki Origin</h2>
-      <p>
-        Yoki Origins is a journey to discover original Yoki characters inspired
-        by supernatural creatures from Japan. Collect and upgrade your Yoki in
-        this exciting and friendly web3 experience for everyone.
-      </p>
-      <div class="buttons">
-        <Button href="#">Yoki Origin website</Button>
+      <div class="flex justify-center">
+        <Button
+          :href="
+            button.url.includes('https') ? button.url : localePath(button.url)
+          "
+          :color="button.color"
+          v-for="button in item.links"
+        >
+          {{ button.label }}
+        </Button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 const { locale } = useI18n();
+const localePath = useLocalePath();
 const i18n = locale.value === "ja" ? "/ja" : "";
+
+const data = [
+  {
+    title: "Bridge & Ecosystem",
+    image: "",
+    description:
+      "Astar zkEVM is an Ethereum Layer-2 scaling solution that leverages Polygon's CDK and AggLayer technology. Astar zkEVM inherits Ethereum's security while maintaining EVM equivalence.",
+    links: [
+      {
+        label: "Bridge to Astar",
+        url: "https://portal.astar.network/astar/bridge",
+        color: "blue",
+      },
+      {
+        label: "Explore ecosystem",
+        url: "/community/ecosystem/",
+        color: "outlinedGray",
+      },
+    ],
+  },
+  {
+    title: "Yoki Origins",
+    image: "",
+    description:
+      "Yoki Origins is a journey to discover original Yoki characters inspired by supernatural creatures from Japan. Collect and upgrade your Yoki in this exciting and friendly web3 experience for everyone.",
+    links: [
+      {
+        label: "Yoki Origins website",
+        url: "https://yoki.astar.network/",
+        color: "blue",
+      },
+    ],
+  },
+];
 </script>
 
-<style lang="postcss" scoped>
-.box {
-  @apply flex-1 border-2 border-white rounded-2xl shadow-lg bg-white/50;
-}
-.title {
-  @apply text-center text-5xl;
-}
-
-.buttons {
-  @apply flex justify-center;
-}
-</style>
+<style lang="postcss" scoped></style>

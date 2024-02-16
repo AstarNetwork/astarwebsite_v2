@@ -4,8 +4,10 @@
     <HomeFeatured />
     <HomeLatestNews />
     <HomeSolutions />
-    <div class="bg-black text-gray-300">
+    <div class="bg-black text-gray-300 py-20">
       <HomeDeveloper />
+      <HomeDappsOnAstar />
+      <HomeFunding />
     </div>
   </NuxtLayout>
 </template>

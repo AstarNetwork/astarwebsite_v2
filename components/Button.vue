@@ -3,6 +3,7 @@
     v-if="href !== ''"
     :class="button({ size: size, color: color })"
     :to="href"
+    :target="href.includes('https') ? '_blank' : '_self'"
   >
     <span class="relative z-10 inline-flex items-center justify-center gap-3">
       <slot>Button</slot>
@@ -44,9 +45,8 @@ const button = tv({
       blue: "text-white bg-gradient-to-r from-[#0047FF] to-[#00D1FF] before:bg-blue before:mix-blend-screen before:opacity-30",
       whiteBlue:
         "bg-white text-blue border border-blue before:bg-blue before:opacity-10",
-      whiteGray: "",
-      outlinedGray:
-        "border border-gray-500 text-gray-700 before:bg-gray-400 before:opacity-10",
+      whiteGray: "bg-white text-gray-950 before:bg-gray-200",
+      outlinedGray: "border border-gray-500 text-gray-700 before:bg-gray-50",
     },
     size: {
       sm: "text-sm",
@@ -66,7 +66,7 @@ const circle = tv({
     color: {
       blue: "bg-white/40",
       whiteBlue: "bg-blue/30",
-      whiteGray: "",
+      whiteGray: "bg-gray-700/25",
       outlinedGray: "bg-gray-500/25",
     },
     size: {
@@ -87,7 +87,7 @@ const innerCircle = tv({
     color: {
       blue: "bg-white",
       whiteBlue: "bg-blue",
-      whiteGray: "",
+      whiteGray: "bg-gray-700",
       outlinedGray: "bg-gray-500",
     },
     size: {
@@ -108,7 +108,7 @@ const arrow = tv({
     color: {
       blue: "text-blue",
       whiteBlue: "text-white",
-      whiteGray: "",
+      whiteGray: "text-white",
       outlinedGray: "text-white",
     },
     size: {

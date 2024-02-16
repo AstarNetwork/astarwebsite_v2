@@ -22,6 +22,9 @@
   a {
     @apply text-blue;
   }
+  ::selection{
+    @apply bg-blue text-white;
+  }
 }
 
 @layer components {
@@ -158,6 +161,10 @@
 }
 
 
-.container{
+.container-lg{
   @apply mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8;
+}
+
+.container-md{
+  @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
 }

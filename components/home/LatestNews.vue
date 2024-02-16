@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-20">
+  <div class="container-lg py-20">
     <h2 class="text-xl mb-4">What's on</h2>
     <Swiper
       class="swiper--latest-news"

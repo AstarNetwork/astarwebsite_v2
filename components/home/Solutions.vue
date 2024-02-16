@@ -1,7 +1,7 @@
 <template>
-  <div class="container py-20">
-    <h2 class="text-center text-6xl tracking-tight mb-8">Our Solutions</h2>
-    <p class="text-center max-w-3xl mx-auto text-lg mb-16">
+  <div class="container-lg py-20">
+    <h2 class="text-center text-6xl tracking-tight mb-12">Our Solutions</h2>
+    <p class="text-center max-w-3xl mx-auto text-lg mb-20">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam,
@@ -19,29 +19,40 @@
           </div>
           <p class="flex-1">{{ partner.description }}</p>
           <div>
-            <NuxtLink :to="partner.link.url">{{ partner.link.label }}</NuxtLink>
+            <TextLink :href="partner.link.url">
+              {{ partner.link.label }}
+            </TextLink>
           </div>
         </div>
-        <div
-          class="w-2/3 divide-y divide-gray-300 border-t border-b border-gray-300"
-        >
-          <NuxtLink
-            v-for="item in partner.useCases"
-            class="flex items-center gap-4"
-            :to="item.link"
-          >
-            <div class="shrink-0">
-              <img
-                :src="'/images/home/solutions/' + item.image"
-                :alt="item.name"
-                class="aspect-4/3 w-full max-w-[240px]"
-                width="240"
-                height="180"
-              />
-            </div>
-            <p class="text-gray-950">{{ item.description }}</p>
-            <ChevronRightIcon class="w-5 h-5 shrink-0" />
-          </NuxtLink>
+        <div class="w-2/3 border-t border-gray-300">
+          <div v-for="item in partner.useCases">
+            <NuxtLink
+              class="transition flex items-center justify-center bg-white group"
+              :class="
+                item.link !== '' &&
+                'overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-500 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] hover:before:bg-gray-50 relative hover:shadow-lg'
+              "
+              :to="item.link"
+            >
+              <div class="flex items-center gap-4 relative z-10 w-full">
+                <div class="shrink-0">
+                  <img
+                    :src="'/images/home/solutions/' + item.image"
+                    :alt="item.name"
+                    class="aspect-4/3 w-full max-w-[240px]"
+                    width="240"
+                    height="180"
+                  />
+                </div>
+                <p class="text-gray-950 flex-1">{{ item.description }}</p>
+                <ArrowRightIcon
+                  v-if="item.link !== ''"
+                  class="w-6 h-6 shrink-0 mr-4 text-gray-500 group-hover:text-blue"
+                />
+              </div>
+            </NuxtLink>
+            <hr class="border-t border-gray-300" />
+          </div>
         </div>
       </div>
     </div>
@@ -49,7 +60,7 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronRightIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon } from "@heroicons/vue/24/outline";
 const { locale } = useI18n();
 const i18n = locale.value === "ja" ? "/ja" : "";
 
@@ -122,3 +133,5 @@ const data = {
   },
 };
 </script>
+
+<style lang="postcss" scoped></style>
