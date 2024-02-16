@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       aspectRatio: {
         'blog': '191.04 / 100',
+        '4/3': '4 / 3',
       },
       colors: {
         'blue':{
