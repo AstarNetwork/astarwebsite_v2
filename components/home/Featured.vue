@@ -9,8 +9,8 @@
         security while maintaining EVM equivalence.
       </p>
       <div class="buttons">
-        <Button>Bridge to Astar</Button>
-        <Button>Explore ecosystem</Button>
+        <Button href="#">Bridge to Astar</Button>
+        <Button href="#" color="outlinedGray">Explore ecosystem</Button>
       </div>
     </div>
     <div class="box">
@@ -22,7 +22,7 @@
         this exciting and friendly web3 experience for everyone.
       </p>
       <div class="buttons">
-        <Button>Yoki Origin website</Button>
+        <Button href="#">Yoki Origin website</Button>
       </div>
     </div>
   </div>

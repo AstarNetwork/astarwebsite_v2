@@ -96,12 +96,11 @@
           </nav>
 
           <Button
-            variant="outlined"
+            color="whiteBlue"
             href="https://portal.astar.network/"
             target="_blank"
           >
             Astar Portal
-            <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
           </Button>
         </div>
       </div>
