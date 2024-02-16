@@ -27,6 +27,13 @@
         <div class="hidden lg:flex lg:items-center lg:justify-between flex-1">
           <nav class="flex items-center space-x-4 xl:space-x-8">
             <NuxtLink
+              :to="localePath('/solutions')"
+              class="transition text-gray-950 hover:text-blue pr-2"
+            >
+              Solutions
+            </NuxtLink>
+
+            <NuxtLink
               :to="localePath('/astar2')"
               class="transition text-gray-950 hover:text-blue pr-2"
             >

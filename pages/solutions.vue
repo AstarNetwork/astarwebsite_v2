@@ -1,22 +1,19 @@
 <template>
   <NuxtLayout name="default">
-    <HomeHero />
-    <HomeFeatured />
-    <HomeLatestNews />
-    <HomeSolutions />
-    <div class="bg-black text-gray-300">
-      <HomeDeveloper />
-    </div>
+    <h1 class="p-44 text-3xl text-center">Our Solutions</h1>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+const route = useRoute();
 import { meta } from "@/data/meta";
 const { t } = useI18n();
-const seoTitle = `${meta.siteName} - ${t("meta.tagline")}`;
-const seoDescription = t("meta.description");
-const seoUrl = meta.url;
-const seoImage = `${meta.image}common.png`;
+const seoTitle = `${t("solutions.title")} | ${meta.siteName} - ${t(
+  "meta.tagline"
+)}`;
+const seoDescription = t("solutions.description");
+const seoUrl = `${meta.url}${route.fullPath}`;
+const seoImage = `${meta.image}solutions.png`;
 
 useServerSeoMeta({
   title: () => seoTitle,
