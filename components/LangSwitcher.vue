@@ -2,7 +2,7 @@
   <Menu as="div" class="relative inline-block text-left">
     <div>
       <MenuButton
-        class="inline-flex justify-center items-center gap-x-1.5 rounded-md border border-white px-3 py-2 text-white"
+        class="inline-flex justify-center items-center gap-x-1.5 rounded-md border border-white px-3 py-2 text-white hover:bg-white/10 transition"
       >
         <GlobeAltIcon class="w-6 h-6 inline-block" />
         {{ currentLocale.name }}

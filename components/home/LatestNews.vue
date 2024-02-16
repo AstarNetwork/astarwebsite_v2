@@ -1,35 +1,41 @@
 <template>
-  <div class="container-lg py-20">
-    <h2 class="text-xl mb-4">What's on</h2>
-    <Swiper
-      class="swiper--latest-news"
-      :modules="[SwiperNavigation]"
-      :navigation="true"
-      :slides-per-view="1.25"
-      :slides-per-group="1"
-      :breakpoints="{
-        768: {
-          slidesPerView: 2.25,
-          slidesPerGroup: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3.25,
-          slidesPerGroup: 3,
-          spaceBetween: 20,
-        },
-        1280: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
-          spaceBetween: 20,
-        },
-      }"
-    >
-      <SwiperSlide v-for="post in posts">
-        <BlogArticleCard :post="post" :key="post" />
-      </SwiperSlide>
-    </Swiper>
-  </div>
+  <section class="overflow-hidden">
+    <div class="container-lg py-20">
+      <h2 class="text-xl mb-4">What's on</h2>
+      <Swiper
+        class="swiper--latest-news"
+        :modules="[SwiperNavigation]"
+        :navigation="true"
+        :slides-per-view="1.25"
+        :slides-per-group="1"
+        :breakpoints="{
+          768: {
+            slidesPerView: 2.25,
+            slidesPerGroup: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3.25,
+            slidesPerGroup: 3,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 20,
+          },
+        }"
+      >
+        <SwiperSlide
+          v-for="(post, index) in posts"
+          data-aos="fade-up"
+          :data-aos-delay="index * 100"
+        >
+          <BlogArticleCard :post="post" :key="post" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">

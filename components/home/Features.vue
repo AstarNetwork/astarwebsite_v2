@@ -1,8 +1,10 @@
 <template>
   <div class="flex gap-6 container-lg">
     <div
-      v-for="item in data"
+      v-for="(item, index) in data"
       class="flex-1 border-2 border-white rounded-xl shadow-lg bg-white/50 p-12 space-y-8"
+      data-aos="fade-up"
+      :data-aos-delay="index * 100"
     >
       <div>img</div>
       <h2 class="text-center text-5xl">{{ item.title }}</h2>

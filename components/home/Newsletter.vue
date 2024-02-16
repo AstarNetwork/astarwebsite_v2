@@ -33,7 +33,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-gray-900 bg-opacity-90 transition-opacity"
+          class="fixed inset-0 bg-gray-950 bg-opacity-90 transition-opacity"
         />
       </TransitionChild>
 
@@ -51,7 +51,7 @@
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel
-              class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark shadow-xl transition-all w-full sm:max-w-2xl"
+              class="relative transform overflow-hidden rounded-2xl bg-white shadow-xl transition-all w-full sm:max-w-2xl"
             >
               <iframe class="w-full h-[600px]" :src="newsletter.iframe" />
               <button

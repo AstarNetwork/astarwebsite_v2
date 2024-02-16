@@ -1,62 +1,185 @@
 <template>
-  <footer class="bg-blue">
-    <div class="mx-auto max-w-6xl pb-12 px-4 sm:px-6 lg:pb-16">
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        <div v-for="category in nav">
-          <h3 class="font-medium uppercase text-white">
-            {{ category.name }}
-          </h3>
-          <ul role="list" class="mt-4 space-y-4">
-            <li
-              v-for="item in category.nav"
-              :key="item.name"
-              class="leading-snug"
-            >
-              <NuxtLink
-                :to="item.href"
-                :target="item.href.includes('https') ? '_blank' : '_self'"
-                class="hover:underline transition text-gray-200 hover:text-gray-50"
-              >
-                {{ item.name }}
-                <ArrowTopRightOnSquareIcon
-                  v-if="item.href.includes('https')"
-                  class="w-4 h-4 inline-block stroke-2"
-                />
-              </NuxtLink>
-            </li>
-          </ul>
+  <footer>
+    <div class="flex border-t border-gray-300 divide-x divide-gray-300">
+      <NuxtLink :to="localePath('/contact/')" class="cta group">
+        <div>
+          <h3>Get in touch</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+          <span
+            class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative mx-auto"
+          >
+            <span
+              class="w-0 h-0 group-hover:bg-blue group-hover:w-12 group-hover:h-12 absolute duration-300 ease-out rounded-full"
+            />
+            <ArrowRightIcon
+              class="w-5 h-5 group-hover:text-white transition relative z-10 text-blue"
+            />
+          </span>
         </div>
-        <LangSwitcher />
+      </NuxtLink>
+      <div @click="newsletterOpen = true" class="cta group">
+        <div>
+          <h3>Newsletter</h3>
+          <p>
+            Sign-up for our newsletter to stay up-to-date and learn about the
+            latest developments.
+          </p>
+          <span
+            class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative mx-auto"
+          >
+            <span
+              class="w-0 h-0 group-hover:bg-blue group-hover:w-12 group-hover:h-12 absolute duration-300 ease-out rounded-full"
+            />
+            <ArrowRightIcon
+              class="w-5 h-5 group-hover:text-white transition relative z-10 text-blue"
+            />
+          </span>
+        </div>
       </div>
+    </div>
 
-      <div
-        class="mt-16 border-t pt-8 lg:flex items-center justify-between text-white border-white border-opacity-30"
-      >
-        <div class="flex space-x-6 order-2 justify-center">
+    <div class="bg-blue">
+      <div class="container-lg py-12 space-y-12">
+        <div>
+          <img
+            src="/images/common/logo-white.svg"
+            :alt="meta.siteName"
+            class="mx-auto w-full max-w-[144px]"
+          />
+        </div>
+
+        <div class="flex justify-center items-center gap-2">
           <NuxtLink
             v-for="item in social"
             target="_blank"
             :key="item.name"
             :to="item.href"
-            class="transition text-gray-200 hover:text-gray-50"
+            class="flex items-center justify-center rounded-full w-16 h-16 relative group"
           >
+            <span
+              class="w-0 h-0 group-hover:bg-white/20 group-hover:w-16 group-hover:h-16 absolute duration-200 ease-out rounded-full"
+            />
             <span class="sr-only">{{ item.name }}</span>
-            <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+            <component
+              :is="item.icon"
+              class="h-6 w-6 text-white"
+              aria-hidden="true"
+            />
           </NuxtLink>
         </div>
-        <p class="mt-8 order-1 text-sm lg:mt-0 text-center text-gray-200">
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div v-for="category in nav">
+            <h3 class="font-medium uppercase text-white">
+              {{ category.name }}
+            </h3>
+            <ul role="list" class="mt-4 space-y-4">
+              <li
+                v-for="item in category.nav"
+                :key="item.name"
+                class="leading-snug"
+              >
+                <NuxtLink
+                  :to="item.href"
+                  :target="item.href.includes('https') ? '_blank' : '_self'"
+                  class="hover:underline transition text-gray-200 hover:text-gray-50"
+                >
+                  {{ item.name }}
+                  <ArrowTopRightOnSquareIcon
+                    v-if="item.href.includes('https')"
+                    class="w-4 h-4 inline-block stroke-2"
+                  />
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+          <LangSwitcher />
+        </div>
+
+        <p class="text-center text-white text-sm">
           &copy; {{ new Date().getFullYear() }} Astar Network. All Rights
           Reserved.
         </p>
       </div>
     </div>
   </footer>
+
+  <TransitionRoot as="template" :show="newsletterOpen">
+    <Dialog as="div" class="relative z-50" @close="newsletterOpen = false">
+      <TransitionChild
+        as="template"
+        enter="ease-out duration-300"
+        enter-from="opacity-0"
+        enter-to="opacity-100"
+        leave="ease-in duration-200"
+        leave-from="opacity-100"
+        leave-to="opacity-0"
+      >
+        <div
+          class="fixed inset-0 bg-gray-950 bg-opacity-90 transition-opacity"
+        />
+      </TransitionChild>
+
+      <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div
+          class="flex min-h-full items-center justify-center p-2 sm:p-4 text-center"
+        >
+          <TransitionChild
+            as="template"
+            enter="ease-out duration-300"
+            enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            enter-to="opacity-100 translate-y-0 sm:scale-100"
+            leave="ease-in duration-200"
+            leave-from="opacity-100 translate-y-0 sm:scale-100"
+            leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          >
+            <DialogPanel
+              class="relative transform overflow-hidden rounded-xl bg-white shadow-xl transition-all w-full sm:max-w-2xl"
+            >
+              <iframe class="w-full h-[600px]" :src="newsletterUrl.global" />
+              <button
+                type="button"
+                class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
+                @click="newsletterOpen = false"
+              >
+                <XMarkIcon class="w-8 h-8 sm:w-12 sm:h-12" />
+              </button>
+            </DialogPanel>
+          </TransitionChild>
+        </div>
+      </div>
+    </Dialog>
+  </TransitionRoot>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
+import { ref } from "vue";
+import {
+  Dialog,
+  DialogPanel,
+  TransitionChild,
+  TransitionRoot,
+} from "@headlessui/vue";
+import { meta } from "@/data/meta";
+import {
+  newsletterUrl,
+  socialUrl,
+  ambassadorProgramUrl,
+  bugBountyProgramUrl,
+  forumUrl,
+  brandAssetsUrl,
+} from "@/data/links";
+import {
+  ArrowTopRightOnSquareIcon,
+  ArrowRightIcon,
+} from "@heroicons/vue/24/outline";
 
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+const newsletterOpen = ref(false);
+
+const localePath = useLocalePath();
 
 const Twitter = resolveComponent("IconTwitter");
 const Discord = resolveComponent("IconDiscord");
@@ -64,6 +187,7 @@ const Telegram = resolveComponent("IconTelegram");
 const Medium = resolveComponent("IconMedium");
 const Github = resolveComponent("IconGithub");
 const Youtube = resolveComponent("IconYoutube");
+const X = resolveComponent("IconX");
 
 interface Props {
   color?: string;
@@ -77,8 +201,8 @@ const nav = [
     name: t("footer.build"),
     nav: [
       { name: t("footer.docs"), href: "https://docs.astar.network/" },
-      { name: "GitHub", href: "https://github.com/AstarNetwork" },
-      { name: "Discord", href: "https://discord.gg/astarnetwork" },
+      { name: "GitHub", href: socialUrl.github },
+      { name: "Discord", href: socialUrl.discord },
     ],
   },
   {
@@ -86,15 +210,15 @@ const nav = [
     nav: [
       {
         name: t("footer.careers"),
-        href: "https://wellfound.com/company/astar-network",
+        href: socialUrl.wellfound,
       },
       {
         name: "Astar Ambassador Program",
-        href: "https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4",
+        href: ambassadorProgramUrl,
       },
       {
         name: "Bug Bounty Program",
-        href: "https://immunefi.com/bounty/astarnetwork",
+        href: bugBountyProgramUrl,
       },
     ],
   },
@@ -104,9 +228,9 @@ const nav = [
       { name: t("footer.blog"), href: localePath("/blog") },
       {
         name: t("footer.videos"),
-        href: "https://www.youtube.com/c/AstarNetwork",
+        href: socialUrl.youtube,
       },
-      { name: t("footer.forum"), href: "https://forum.astar.network/" },
+      { name: t("footer.forum"), href: forumUrl },
     ],
   },
   {
@@ -114,7 +238,7 @@ const nav = [
     nav: [
       {
         name: t("footer.brand_assets"),
-        href: "https://github.com/AstarNetwork/brand-assets",
+        href: brandAssetsUrl,
       },
       {
         name: t("footer.privacy_policy"),
@@ -134,34 +258,49 @@ const nav = [
 
 const social = [
   {
-    name: "Twitter",
-    href: "https://twitter.com/astarNetwork",
-    icon: Twitter,
+    name: "X(Twitter)",
+    href: socialUrl.twitter,
+    icon: X,
   },
   {
     name: "Discord",
-    href: "https://discord.gg/astarnetwork",
+    href: socialUrl.discord,
     icon: Discord,
   },
   {
     name: "Telegram",
-    href: "https://t.me/PlasmOfficial",
+    href: socialUrl.telegram,
     icon: Telegram,
   },
   {
     name: "Medium",
-    href: "https://medium.com/astar-network",
+    href: socialUrl.medium,
     icon: Medium,
   },
   {
     name: "GitHub",
-    href: "https://github.com/AstarNetwork",
+    href: socialUrl.github,
     icon: Github,
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/c/AstarNetwork",
+    href: socialUrl.youtube,
     icon: Youtube,
   },
 ];
 </script>
+
+<style lang="postcss" scoped>
+.cta {
+  @apply flex-1 py-24 px-12 bg-white cursor-pointer overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] before:bg-blue/10 flex items-center justify-center relative;
+  div {
+    @apply text-center max-w-md mx-auto space-y-6;
+  }
+  h3 {
+    @apply text-4xl;
+  }
+  p {
+    @apply text-gray-500;
+  }
+}
+</style>
