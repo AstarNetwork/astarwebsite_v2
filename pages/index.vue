@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="default">
     <HomeHero />
-    <HomeFeatured />
+    <HomeFeatures />
     <HomeLatestNews />
     <HomeSolutions />
     <div class="bg-black text-gray-300 py-20">
@@ -9,6 +9,7 @@
       <HomeDappsOnAstar />
       <HomeFunding />
     </div>
+    <HomeLinks />
   </NuxtLayout>
 </template>
 

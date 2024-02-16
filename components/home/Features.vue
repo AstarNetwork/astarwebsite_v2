@@ -2,7 +2,7 @@
   <div class="flex gap-6 container-lg">
     <div
       v-for="item in data"
-      class="flex-1 border-2 border-white rounded-2xl shadow-lg bg-white/50 p-12 space-y-8"
+      class="flex-1 border-2 border-white rounded-xl shadow-lg bg-white/50 p-12 space-y-8"
     >
       <div>img</div>
       <h2 class="text-center text-5xl">{{ item.title }}</h2>
