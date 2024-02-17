@@ -77,6 +77,7 @@ export default defineNuxtConfig({
           "en-starmap.json",
           "en-vision.json",
           "en-university.json",
+          "en-solutions.json",
         ],
       },
       {
@@ -97,6 +98,7 @@ export default defineNuxtConfig({
           "ja-starmap.json",
           "ja-vision.json",
           "ja-university.json",
+          "ja-solutions.json",
         ],
       },
       {
@@ -117,6 +119,7 @@ export default defineNuxtConfig({
           "ko-starmap.json",
           "ko-vision.json",
           "ko-university.json",
+          "ko-solutions.json",
         ],
       },
     ],

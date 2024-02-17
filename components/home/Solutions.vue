@@ -2,9 +2,8 @@
   <div class="container-lg py-20">
     <h2 class="text-center text-6xl tracking-tight mb-12">Our Solutions</h2>
     <p class="text-center max-w-3xl mx-auto text-lg mb-20">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam,
+      There’s a solution for everyone with Astar. Companies, developers, and
+      individuals are connecting to web3.
     </p>
 
     <div class="space-y-40">

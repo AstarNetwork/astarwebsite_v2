@@ -41,7 +41,7 @@ const data = [
   {
     title: "dApp Staking",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ",
+      "dApp Staking is Astar’s unique mechanism to financially incentivise developers and is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.",
     image: "links-dapp-staking.svg",
     link: {
       label: "Start Staking",
@@ -51,7 +51,7 @@ const data = [
   {
     title: "Community",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ",
+      "Find your tribe and connect with with other Astar enthusiasts.",
     image: "links-community.svg",
     link: {
       label: "Join our community",

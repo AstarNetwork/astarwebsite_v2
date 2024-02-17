@@ -26,12 +26,8 @@
           },
         }"
       >
-        <SwiperSlide
-          v-for="(post, index) in posts"
-          data-aos="fade-up"
-          :data-aos-delay="index * 100"
-        >
-          <BlogArticleCard :post="post" :key="post" />
+        <SwiperSlide v-for="(post, index) in posts">
+          <BlogArticleCard :post="post" :key="post" :blog="true" />
         </SwiperSlide>
       </Swiper>
     </div>

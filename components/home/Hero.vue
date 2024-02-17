@@ -2,7 +2,7 @@
   <section class="container-lg pt-20 pb-12">
     <h1 class="text-center mb-12 space-y-6">
       <span>Connecting</span>
-      <span>Web3 to You</span>
+      <span>you to web3</span>
     </h1>
     <p class="text-center max-w-2xl mx-auto text-lg">
       Creating opportunities for individuals to use web3 technology. We connect

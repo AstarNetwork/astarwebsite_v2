@@ -1,6 +1,14 @@
 <template>
   <NuxtLayout name="default">
-    <h1 class="p-44 text-3xl text-center">Our Solutions</h1>
+    <SubPageHeader
+      :title="$t('solutions.title')"
+      :description="$t('solutions.description')"
+      :button="{ label: $t('solutions.cta'), to: '/contact/' }"
+    />
+    <SolutionsOurMission />
+    <SolutionsUsecases />
+    <SolutionsPartners />
+    <SolutionsJapanAndAsia />
   </NuxtLayout>
 </template>
 

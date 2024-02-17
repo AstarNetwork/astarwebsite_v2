@@ -7,7 +7,7 @@
       ]"
     >
       <div
-        class="container-lg flex items-center justify-between py-5 sm:py-6 gap-12"
+        class="container-lg flex items-center justify-between py-4 sm:py-5 gap-12"
       >
         <NuxtLink :to="localePath('/')" class="flex">
           <span class="sr-only">Astar Network</span>
