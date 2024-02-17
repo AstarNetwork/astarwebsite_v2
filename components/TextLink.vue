@@ -6,7 +6,7 @@
     :target="href.includes('https') ? '_blank' : '_self'"
   >
     <span
-      class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative group-hover:translate-x-2 transition"
+      class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative group-hover:translate-x-2 transition shrink-0"
     >
       <span
         class="w-0 h-0 group-hover:bg-blue group-hover:w-12 group-hover:h-12 absolute duration-300 ease-out rounded-full"

@@ -5,7 +5,7 @@
     :to="href"
     :target="href.includes('https') ? '_blank' : '_self'"
   >
-    <span class="relative z-10 inline-flex items-center justify-center gap-3">
+    <span :class="innerButton({ size: size })">
       <slot>Button</slot>
       <span :class="circle({ size: size, color: color })">
         <span :class="innerCircle({ size: size, color: color })">
@@ -16,7 +16,7 @@
   </NuxtLink>
 
   <button v-else :class="button({ size: size, color: color })" type="button">
-    <span class="relative z-10 inline-flex items-center justify-center gap-3">
+    <span :class="innerButton({ size: size })">
       <slot>Button</slot>
       <span :class="circle({ size: size, color: color })">
         <span :class="innerCircle({ size: size, color: color })">
@@ -57,9 +57,9 @@ const button = tv({
       outlinedGray: "border border-gray-500 text-gray-700 before:bg-gray-50",
     },
     size: {
-      sm: "text-sm",
+      sm: "pl-6 pr-3 py-3 text-sm",
       md: "pl-8 pr-4 py-4",
-      lg: "px-4 py-3 text-lg",
+      lg: "",
     },
   },
   defaultVariants: {
@@ -68,8 +68,22 @@ const button = tv({
   },
 });
 
+const innerButton = tv({
+  base: "relative z-10 inline-flex items-center justify-center",
+  variants: {
+    size: {
+      sm: "gap-2",
+      md: "gap-3",
+      lg: "",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
+});
+
 const circle = tv({
-  base: "rounded-full w-6 h-6 flex items-center justify-center",
+  base: "rounded-full flex items-center justify-center",
   variants: {
     color: {
       blue: "bg-white/40",
@@ -78,8 +92,8 @@ const circle = tv({
       outlinedGray: "bg-gray-500/25",
     },
     size: {
-      sm: "",
-      md: "",
+      sm: "w-5 h-5",
+      md: "w-6 h-6",
       lg: "",
     },
   },
@@ -90,7 +104,7 @@ const circle = tv({
 });
 
 const innerCircle = tv({
-  base: "rounded-full w-2 group-hover:w-6 h-2 group-hover:h-6 flex items-center justify-center transition-all",
+  base: "rounded-full w-2 h-2 flex items-center justify-center transition-all",
   variants: {
     color: {
       blue: "bg-white",
@@ -99,8 +113,8 @@ const innerCircle = tv({
       outlinedGray: "bg-gray-500",
     },
     size: {
-      sm: "",
-      md: "",
+      sm: "group-hover:w-5 group-hover:h-5",
+      md: "group-hover:w-6 group-hover:h-6",
       lg: "",
     },
   },
@@ -111,7 +125,7 @@ const innerCircle = tv({
 });
 
 const arrow = tv({
-  base: "w-0 h-0 transition-all group-hover:w-4 group-hover:h-4",
+  base: "w-0 h-0 transition-all",
   variants: {
     color: {
       blue: "text-blue",
@@ -120,8 +134,8 @@ const arrow = tv({
       outlinedGray: "text-white",
     },
     size: {
-      sm: "",
-      md: "",
+      sm: "group-hover:w-3 group-hover:h-3",
+      md: "group-hover:w-4 group-hover:h-4",
       lg: "",
     },
   },

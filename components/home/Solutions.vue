@@ -11,8 +11,8 @@
     </p>
 
     <div class="space-y-20 sm:space-y-40">
-      <div v-for="partner in data" class="flex flex-col sm:flex-row gap-12">
-        <div class="sm:w-1/3 space-y-8">
+      <div v-for="partner in data" class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/3 space-y-8">
           <div>
             <img
               :src="'/images/home/' + partner.image"
@@ -27,7 +27,7 @@
             </TextLink>
           </div>
         </div>
-        <div class="sm:w-2/3 border-t border-gray-300">
+        <div class="lg:w-2/3 border-t border-gray-300">
           <div v-for="item in partner.useCases">
             <NuxtLink
               class="transition flex items-center justify-center bg-white group py-8 sm:py-0"

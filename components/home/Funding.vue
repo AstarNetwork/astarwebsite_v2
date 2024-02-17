@@ -26,21 +26,27 @@
           />
         </div>
         <div
-          class="flex-1 pb-12 sm:py-24 px-6"
-          :class="index === 1 ? 'sm:pr-16 sm:pl-0' : 'sm:pl-16 sm:pr-0'"
+          class="flex-1 pb-12 sm:py-16 lg:py-24 px-6"
+          :class="
+            index === 1
+              ? 'sm:pr-8 lg:pr-16 sm:pl-0'
+              : 'sm:pl-8 lg:pl-16 sm:pr-0'
+          "
         >
           <h3
-            class="text-white text-3xl sm:text-5xl tracking-tight mb-6 text-center sm:text-left"
+            class="text-white text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-6 text-center sm:text-left"
           >
             {{ item.title }}
           </h3>
-          <p class="mb-6 sm:mb-12 leading-relaxed">{{ item.description }}</p>
+          <p class="mb-6 lg:mb-12 leading-relaxed">{{ item.description }}</p>
           <div class="flex gap-6 sm:gap-12 justify-center sm:justify-start">
             <div v-for="stat in item.stats" class="text-center">
-              <div class="text-blue font-semibold text-4xl sm:text-6xl mb-1">
+              <div
+                class="text-blue font-semibold text-4xl sm:text-5xl lg:text-6xl mb-1"
+              >
                 {{ stat.number }}{{ stat.unitModifier }}
               </div>
-              <div class="text-sm sm:text-base">{{ stat.name }}</div>
+              <div class="text-sm lg:text-base">{{ stat.name }}</div>
               <div v-if="stat.caption" class="text-xs">{{ stat.caption }}</div>
             </div>
           </div>

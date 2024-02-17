@@ -3,7 +3,9 @@
     class="container-md py-12 sm:py-20 flex items-center flex-col sm:flex-row gap-12"
   >
     <div class="space-y-8 sm:space-y-12 flex-1">
-      <h2 class="text-white text-4xl sm:text-6xl tracking-tight">
+      <h2
+        class="text-white text-4xl sm:text-6xl tracking-tight text-center sm:text-left"
+      >
         dApps on Astar
       </h2>
       <p class="sm:text-lg leading-relaxed">

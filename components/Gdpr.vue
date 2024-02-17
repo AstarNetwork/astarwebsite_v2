@@ -1,7 +1,7 @@
 <template>
   <div class="pointer-events-none inset-x-0 mt-3" v-if="!gdpr_accept">
     <div
-      class="pointer-events-auto max-w-xl rounded-xl bg-white/95 p-6 shadow-lg ring-1 ring-gray-900/5"
+      class="pointer-events-auto max-w-xl rounded-lg bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
     >
       <p class="text-sm leading-6 text-gray-900">
         Our website uses cookies to enhance site navigation and analyze site
@@ -16,13 +16,9 @@
         page.
       </p>
       <div class="mt-4 flex items-center gap-x-5">
-        <button
-          @click="acceptCookies"
-          type="button"
-          class="rounded-md bg-space-gray px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-space-gray"
-        >
+        <Button @click="acceptCookies" type="button" size="sm">
           Accept Cookies
-        </button>
+        </Button>
       </div>
     </div>
   </div>

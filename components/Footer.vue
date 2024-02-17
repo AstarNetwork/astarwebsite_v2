@@ -53,7 +53,7 @@
           <img
             src="/images/common/logo-white.svg"
             :alt="meta.siteName"
-            class="mx-auto w-full max-w-[144px]"
+            class="mx-auto w-full max-w-[100px] sm:max-w-[144px]"
           />
         </div>
 
@@ -63,7 +63,7 @@
             target="_blank"
             :key="item.name"
             :to="item.href"
-            class="flex items-center justify-center rounded-full w-16 h-16 relative group"
+            class="flex items-center justify-center rounded-full w-12 sm:w-16 h-12 sm:h-16 relative group"
           >
             <span
               class="w-0 h-0 group-hover:bg-white/20 group-hover:w-16 group-hover:h-16 absolute duration-200 ease-out rounded-full"
@@ -77,7 +77,7 @@
           </NuxtLink>
         </div>
 
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div class="grid gap-8 sm:grid-cols-3 lg:grid-cols-5">
           <LangSwitcher />
           <div v-for="category in nav">
             <h3 class="font-medium uppercase text-white">
@@ -188,7 +188,6 @@ const newsletterOpen = ref(false);
 
 const localePath = useLocalePath();
 
-const Twitter = resolveComponent("IconTwitter");
 const Discord = resolveComponent("IconDiscord");
 const Telegram = resolveComponent("IconTelegram");
 const Medium = resolveComponent("IconMedium");
@@ -299,15 +298,15 @@ const social = [
 
 <style lang="postcss" scoped>
 .cta {
-  @apply flex-1 p-6 sm:py-24 sm:px-12 bg-white cursor-pointer overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] before:bg-blue/10 flex items-center justify-center relative;
+  @apply flex-1 p-6 sm:py-12 lg:py-24 lg:px-12 bg-white cursor-pointer overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] before:bg-blue/10 flex items-center justify-center relative;
   .cta-inner {
     @apply sm:text-center max-w-md mx-auto flex items-center flex-row sm:flex-col gap-4 sm:gap-6;
   }
   h3 {
-    @apply text-xl sm:text-4xl mb-1 sm:mb-6;
+    @apply text-xl sm:text-3xl lg:text-4xl mb-1 sm:mb-6;
   }
   p {
-    @apply text-gray-500 text-sm sm:text-base;
+    @apply text-gray-500 text-sm lg:text-base;
   }
 }
 </style>
