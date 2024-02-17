@@ -1,22 +1,16 @@
 <template>
   <NuxtLayout name="default">
-    <SubPageHeader>
-      <h1
-        class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-10"
-      >
-        {{ $t("contact.title") }}
-      </h1>
-      <p class="sm:text-lg lg:text-xl">
-        {{ $t("contact.description") }}
-      </p>
-    </SubPageHeader>
+    <SubPageHeader
+      :title="$t('contact.title')"
+      :description="$t('contact.description')"
+    />
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10 pb-32">
       <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <li
           v-for="item in options"
           :class="item.slug === 'other' && 'md:col-span-3'"
-          class="border border-gray-400 px-4 py-8 rounded-3xl flex flex-col justify-between items-center"
+          class="border border-gray-300 px-4 py-8 rounded-lg flex flex-col justify-between items-center"
         >
           <div>
             <component
@@ -24,7 +18,7 @@
               class="h-16 w-16 mx-auto"
               aria-hidden="true"
             />
-            <h2 class="font-bold text-2xl sm:my-2">{{ item.title }}</h2>
+            <h2 class="text-2xl sm:my-2">{{ item.title }}</h2>
             <p class="mb-6">{{ item.description }}</p>
           </div>
 
@@ -43,14 +37,9 @@
           </template>
 
           <template v-else-if="item.slug === 'technical'">
-            <Button href="https://discord.gg/astarnetwork">
-              <component
-                :is="Discord"
-                class="h-5 w-5 mr-1.5"
-                aria-hidden="true"
-              />
+            <Button :href="socialUrl.discord">
+              <component :is="Discord" class="h-5 w-5" aria-hidden="true" />
               {{ item.buttonLabel }}
-              <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
             </Button>
           </template>
 
@@ -88,7 +77,7 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+import { socialUrl } from "@/data/links";
 
 useHead({
   script: [{ src: "//embed.typeform.com/next/embed.js" }],
@@ -162,6 +151,6 @@ const options = [
 
 <style lang="postcss" scoped>
 .btn {
-  @apply font-medium transition-all inline-block hover:cursor-pointer text-white rounded-full px-4 py-2 bg-gradient-to-r from-[#0047FF] to-[#00D1FF];
+  @apply font-medium transition-all inline-block hover:cursor-pointer text-white rounded-full px-8 py-4 bg-gradient-to-r from-[#0047FF] to-[#00D1FF];
 }
 </style>

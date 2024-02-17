@@ -14,9 +14,11 @@
         />
       </div>
       <div class="p-4 sm:p-5 pb-8 flex-1">
-        <time v-if="blog" class="text-gray-500">{{ post.publishedDate }}</time>
+        <time v-if="blog" class="text-gray-500 text-sm sm:text-base">{{
+          post.publishedDate
+        }}</time>
         <h3
-          class="text-gray-950 text-lg line-clamp-3 leading-7 mt-1"
+          class="text-gray-950 sm:text-lg line-clamp-3 leading-7 mt-1"
           :class="blog ? 'font-normal' : 'font-semibold mb-2'"
         >
           {{ post.title }}

@@ -1,23 +1,32 @@
 <template>
-  <div class="flex gap-6 container-lg">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-6 container-lg mt-8"
+  >
     <div
       v-for="(item, index) in data"
-      class="flex-1 border-2 border-white rounded-xl shadow-lg bg-white/50 p-12 space-y-8"
-      data-aos="fade-up"
-      :data-aos-delay="index * 100"
+      class="border-2 border-white rounded-xl shadow-lg bg-white/50 px-6 py-12 sm:p-12"
     >
-      <div>img</div>
-      <h2 class="text-center text-5xl">{{ item.title }}</h2>
-      <p>
+      <div class="-mt-24 mb-4">
+        <img
+          :src="`/images/home/${item.image}`"
+          class="mx-auto w-full max-w-[460px]"
+        />
+      </div>
+      <h2
+        class="text-center text-3xl sm:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0047FF] to-[#00D1FF] leading-tight sm:leading-tight font-bold mb-4"
+      >
+        {{ item.title }}
+      </h2>
+      <p class="leading-relaxed mb-8">
         {{ item.description }}
       </p>
-      <div class="flex justify-center">
+      <div class="flex justify-center flex-col sm:flex-row gap-3">
         <Button
+          v-for="button in item.links"
           :href="
             button.url.includes('https') ? button.url : localePath(button.url)
           "
           :color="button.color"
-          v-for="button in item.links"
         >
           {{ button.label }}
         </Button>
@@ -34,7 +43,7 @@ const i18n = locale.value === "ja" ? "/ja" : "";
 const data = [
   {
     title: "Bridge & Ecosystem",
-    image: "",
+    image: "bridge-and-ecosystem.svg",
     description:
       "Astar zkEVM is an Ethereum Layer-2 scaling solution that leverages Polygon's CDK and AggLayer technology. Astar zkEVM inherits Ethereum's security while maintaining EVM equivalence.",
     links: [
@@ -52,7 +61,7 @@ const data = [
   },
   {
     title: "Yoki Origins",
-    image: "",
+    image: "yoki-origins.webp",
     description:
       "Yoki Origins is a journey to discover original Yoki characters inspired by supernatural creatures from Japan. Collect and upgrade your Yoki in this exciting and friendly web3 experience for everyone.",
     links: [

@@ -1,17 +1,23 @@
 <template>
-  <div class="container-md py-20 flex items-center gap-12">
-    <div class="space-y-12 w-1/2">
-      <h2 class="text-white text-6xl tracking-tight">dApps on Astar</h2>
-      <p>
+  <div
+    class="container-md py-12 sm:py-20 flex items-center flex-col sm:flex-row gap-12"
+  >
+    <div class="space-y-8 sm:space-y-12 flex-1">
+      <h2 class="text-white text-4xl sm:text-6xl tracking-tight">
+        dApps on Astar
+      </h2>
+      <p class="sm:text-lg leading-relaxed">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam,
       </p>
-      <Button :href="localePath('/community/ecosystem/')" color="whiteGray">
-        Start Building
-      </Button>
+      <div class="text-center sm:text-left">
+        <Button :href="localePath('/community/ecosystem/')" color="whiteGray">
+          Explore ecosystem
+        </Button>
+      </div>
     </div>
-    <div class="w-1/2">
+    <div class="flex-1">
       <img src="/images/home/dapps-on-astar.svg" class="w-full" />
     </div>
   </div>

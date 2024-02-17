@@ -1,13 +1,15 @@
 <template>
   <section class="overflow-hidden">
-    <div class="container-lg py-20">
+    <div class="container-lg my-16 sm:my-24">
       <h2 class="text-xl mb-4">What's on</h2>
+
       <Swiper
         class="swiper--latest-news"
         :modules="[SwiperNavigation]"
         :navigation="true"
         :slides-per-view="1.25"
         :slides-per-group="1"
+        :spaceBetween="12"
         :breakpoints="{
           768: {
             slidesPerView: 2.25,
@@ -75,7 +77,7 @@ const posts = data.value.posts.map(
 );
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .swiper--latest-news {
   @apply overflow-visible;
   .swiper-wrapper {
@@ -83,6 +85,19 @@ const posts = data.value.posts.map(
   }
   .swiper-slide {
     @apply h-auto;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply -top-10 left-auto border border-gray-950 rounded-full w-12 h-12 before:content-[''] before:block before:w-0 before:h-0 before:absolute before:duration-200 before:ease-out before:rounded-full hover:before:w-12 hover:before:h-12 before:bg-blue text-gray-950 hover:text-white;
+    &::after {
+      @apply text-sm z-10;
+    }
+  }
+  .swiper-button-prev {
+    @apply right-16;
+  }
+  .swiper-button-next {
+    @apply right-0;
   }
 }
 </style>

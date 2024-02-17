@@ -1,13 +1,17 @@
 <template>
   <footer>
-    <div class="flex border-t border-gray-300 divide-x divide-gray-300">
+    <div
+      class="flex flex-col sm:flex-row border-t border-gray-300 divide-x divide-y divide-gray-300"
+    >
       <NuxtLink :to="localePath('/contact/')" class="cta group">
-        <div>
-          <h3>Get in touch</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore.
-          </p>
+        <div class="cta-inner">
+          <div class="flex-1">
+            <h3>Get in touch</h3>
+            <p class="leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.
+            </p>
+          </div>
           <span
             class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative mx-auto"
           >
@@ -21,12 +25,14 @@
         </div>
       </NuxtLink>
       <div @click="newsletterOpen = true" class="cta group">
-        <div>
-          <h3>Newsletter</h3>
-          <p>
-            Sign-up for our newsletter to stay up-to-date and learn about the
-            latest developments.
-          </p>
+        <div class="cta-inner">
+          <div class="flex-1">
+            <h3>Newsletter</h3>
+            <p class="leading-relaxed">
+              Sign-up for our newsletter to stay up-to-date and learn about the
+              latest developments.
+            </p>
+          </div>
           <span
             class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative mx-auto"
           >
@@ -72,6 +78,7 @@
         </div>
 
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <LangSwitcher />
           <div v-for="category in nav">
             <h3 class="font-medium uppercase text-white">
               {{ category.name }}
@@ -96,7 +103,6 @@
               </li>
             </ul>
           </div>
-          <LangSwitcher />
         </div>
 
         <p class="text-center text-white text-sm">
@@ -293,15 +299,15 @@ const social = [
 
 <style lang="postcss" scoped>
 .cta {
-  @apply flex-1 py-24 px-12 bg-white cursor-pointer overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] before:bg-blue/10 flex items-center justify-center relative;
-  div {
-    @apply text-center max-w-md mx-auto space-y-6;
+  @apply flex-1 p-6 sm:py-24 sm:px-12 bg-white cursor-pointer overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] before:bg-blue/10 flex items-center justify-center relative;
+  .cta-inner {
+    @apply sm:text-center max-w-md mx-auto flex items-center flex-row sm:flex-col gap-4 sm:gap-6;
   }
   h3 {
-    @apply text-4xl;
+    @apply text-xl sm:text-4xl mb-1 sm:mb-6;
   }
   p {
-    @apply text-gray-500;
+    @apply text-gray-500 text-sm sm:text-base;
   }
 }
 </style>

@@ -1,19 +1,23 @@
 <template>
-  <div class="container-lg py-20">
-    <h2 class="text-center text-6xl tracking-tight mb-12">Our Solutions</h2>
-    <p class="text-center max-w-3xl mx-auto text-lg mb-20">
+  <div class="container-lg mt-12 sm:mt-20 mb-20 sm:mb-40">
+    <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
+      Our Solutions
+    </h2>
+    <p
+      class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 s:text-lg leading-relaxed"
+    >
       There’s a solution for everyone with Astar. Companies, developers, and
       individuals are connecting to web3.
     </p>
 
-    <div class="space-y-40">
-      <div v-for="partner in data" class="flex gap-12">
-        <div class="w-1/3 space-y-8">
+    <div class="space-y-20 sm:space-y-40">
+      <div v-for="partner in data" class="flex flex-col sm:flex-row gap-12">
+        <div class="sm:w-1/3 space-y-8">
           <div>
             <img
               :src="'/images/home/' + partner.image"
               :alt="partner.name"
-              class=""
+              class="w-full max-w-[280px] sm:max-w-[420px] mx-auto sm:mx-0"
             />
           </div>
           <p class="flex-1">{{ partner.description }}</p>
@@ -23,22 +27,25 @@
             </TextLink>
           </div>
         </div>
-        <div class="w-2/3 border-t border-gray-300">
+        <div class="sm:w-2/3 border-t border-gray-300">
           <div v-for="item in partner.useCases">
             <NuxtLink
-              class="transition flex items-center justify-center bg-white group"
+              class="transition flex items-center justify-center bg-white group py-8 sm:py-0"
               :class="
                 item.link !== '' &&
                 'overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-500 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] hover:before:bg-gray-50 relative hover:shadow-lg'
               "
               :to="item.link"
+              :target="item.link.includes('https') ? '_blank' : '_self'"
             >
-              <div class="flex items-center gap-4 relative z-10 w-full">
+              <div
+                class="flex items-center flex-col sm:flex-row sm:gap-4 relative z-10 w-full"
+              >
                 <div class="shrink-0">
                   <img
                     :src="'/images/home/solutions/' + item.image"
                     :alt="item.name"
-                    class="aspect-4/3 w-full max-w-[240px]"
+                    class="aspect-4/3 max-w-[200px] sm:max-w-[240px] w-full"
                     width="240"
                     height="180"
                   />
@@ -46,7 +53,7 @@
                 <p class="text-gray-950 flex-1">{{ item.description }}</p>
                 <ArrowRightIcon
                   v-if="item.link !== ''"
-                  class="w-6 h-6 shrink-0 mr-4 text-gray-500 group-hover:text-blue"
+                  class="w-6 h-6 shrink-0 mr-4 text-gray-500 group-hover:text-blue hidden sm:block"
                 />
               </div>
             </NuxtLink>

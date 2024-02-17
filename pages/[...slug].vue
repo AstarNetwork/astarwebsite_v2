@@ -1,13 +1,9 @@
 <template>
   <NuxtLayout name="default">
     <ContentRenderer :value="data">
-      <SubPageHeader>
-        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
-          {{ data.title }}
-        </h1>
-      </SubPageHeader>
+      <SubPageHeader :title="data.title" />
 
-      <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
+      <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-32">
         <ContentRendererMarkdown class="entry-content" :value="data" />
       </article>
     </ContentRenderer>

@@ -4,7 +4,7 @@
       <span>Connecting</span>
       <span>you to web3</span>
     </h1>
-    <p class="text-center max-w-2xl mx-auto text-lg">
+    <p class="text-center max-w-2xl mx-auto sm:text-lg">
       Creating opportunities for individuals to use web3 technology. We connect
       people to web3—through entertainment, blockchain development, business
       development, and community events.

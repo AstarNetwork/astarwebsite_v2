@@ -1,13 +1,17 @@
 <template>
-  <div class="container-md py-20">
-    <h2 class="text-white text-6xl tracking-tight text-center mb-12">
+  <div class="container-md py-12 sm:py-20">
+    <h2
+      class="text-white text-4xl sm:text-6xl tracking-tight text-center mb-8 sm:mb-12"
+    >
       {{ $t("home.developer.title") }}
     </h2>
-    <p class="mx-auto max-w-3xl text-center mb-20">
+    <p
+      class="mx-auto max-w-3xl text-center mb-16 sm:mb-20 sm:text-lg leading-relaxed"
+    >
       {{ $t("home.developer.description") }}
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-4 lg:gap-x-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 lg:gap-x-12">
       <div
         v-for="(item, index) in data"
         class="border border-gray-800 rounded-xl p-6 sm:p-8 lg:p-12 relative"
@@ -35,7 +39,7 @@
           <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug text-white">
             {{ item.title }}
           </h3>
-          <p>{{ item.description }}</p>
+          <p class="leading-relaxed">{{ item.description }}</p>
           <ul class="space-y-2 my-10">
             <li v-for="feature in item.features" class="flex">
               <CheckCircleIcon
@@ -49,7 +53,7 @@
       </div>
     </div>
 
-    <div class="text-center mt-12">
+    <div class="text-center mt-8 sm:mt-12">
       <Button :href="localePath('/developers/')" color="whiteGray">
         Start Building
       </Button>
