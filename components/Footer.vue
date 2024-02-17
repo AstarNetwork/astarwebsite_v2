@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div
-      class="flex flex-col sm:flex-row border-t border-gray-300 divide-x divide-y divide-gray-300"
+      class="flex flex-col sm:flex-row border-t border-gray-300 sm:divide-x divide-y sm:divide-y-0 divide-gray-300"
     >
       <NuxtLink :to="localePath('/contact/')" class="cta group">
         <div class="cta-inner">

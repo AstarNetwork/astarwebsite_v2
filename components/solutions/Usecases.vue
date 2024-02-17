@@ -1,8 +1,12 @@
 <template>
   <section class="overflow-hidden">
     <div class="container-lg py-20">
-      <h2 class="text-center text-6xl tracking-tight mb-12">Usecases</h2>
-      <p class="text-center max-w-3xl mx-auto text-lg mb-20">
+      <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
+        Usecases
+      </h2>
+      <p
+        class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-16 sm:mb-20"
+      >
         Enterprises and governments trust Astar, from Japan Airlines creating
         new tourist experiences to Shibuya City supporting it’s entrepreneurs.
         70% of the web3 market in Japan build with Astar’s high speed, low fees,
@@ -15,6 +19,7 @@
         :navigation="true"
         :slides-per-view="1.25"
         :slides-per-group="1"
+        :spaceBetween="12"
         :breakpoints="{
           768: {
             slidesPerView: 2.25,
@@ -22,8 +27,8 @@
             spaceBetween: 24,
           },
           1024: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
+            slidesPerView: 2.5,
+            slidesPerGroup: 2,
             spaceBetween: 24,
           },
           1280: {
@@ -34,7 +39,7 @@
         }"
       >
         <SwiperSlide v-for="(post, index) in posts">
-          <BlogArticleCard :post="post" :key="post" />
+          <BlogArticleCard :post="post" :key="post.title" />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -75,14 +80,22 @@ const posts = [
 ];
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .swiper--usecases {
-  @apply overflow-visible;
+  @apply overflow-visible flex justify-center flex-wrap gap-4;
   .swiper-wrapper {
     @apply overflow-visible;
   }
   .swiper-slide {
     @apply h-auto;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply relative;
+    @apply top-auto left-auto right-auto border border-gray-950 rounded-full w-12 h-12 before:content-[''] before:block before:w-0 before:h-0 before:absolute before:duration-200 before:ease-out before:rounded-full hover:before:w-12 hover:before:h-12 before:bg-blue text-gray-950 hover:text-white mt-4 sm:mt-6;
+    &::after {
+      @apply text-sm z-10;
+    }
   }
 }
 </style>

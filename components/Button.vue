@@ -57,8 +57,8 @@ const button = tv({
       outlinedGray: "border border-gray-500 text-gray-700 before:bg-gray-50",
     },
     size: {
-      sm: "pl-6 pr-3 py-3 text-sm",
-      md: "pl-8 pr-4 py-4",
+      sm: "pl-5 pr-3 py-3 text-sm",
+      md: "pl-7 pr-4 py-4",
       lg: "",
     },
   },

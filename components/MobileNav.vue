@@ -46,6 +46,14 @@
               <ul class="border-b border-gray-300">
                 <li>
                   <NuxtLink
+                    :to="localePath('/solutions')"
+                    class="flex items-center border-t border-gray-300 px-6 py-5 text-gray-950"
+                  >
+                    Solutions
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink
                     :to="localePath('/astar2')"
                     class="flex items-center border-t border-gray-300 px-6 py-5 text-gray-950"
                   >

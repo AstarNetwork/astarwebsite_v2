@@ -1,20 +1,24 @@
 <template>
   <section class="overflow-hidden">
     <div class="container-md py-20">
-      <h2 class="text-center text-6xl tracking-tight mb-12">Partners</h2>
-      <p class="text-center max-w-3xl mx-auto text-lg mb-20">
+      <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
+        Partners
+      </h2>
+      <p
+        class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-8 sm:mb-20"
+      >
         Our important partners to achieve our mission
       </p>
 
-      <div class="flex gap-20">
+      <div class="flex flex-col sm:flex-row gap-4 lg:gap-10 2xl:gap-20">
         <div
           v-for="item in data"
-          class="flex-1 rounded-lg bg-white/50 transition shadow-lg p-12 space-y-8"
+          class="flex-1 rounded-lg bg-white/50 transition shadow-lg px-6 py-10 sm:px-8 sm:py-12 lg:p-12 space-y-6 sm:space-y-8"
         >
           <img
             :src="`/images/solutions/partners/${item.image}`"
             :alt="item.name"
-            class="h-20 mx-auto"
+            class="h-16 sm:h-20 mx-auto"
           />
           <p>{{ item.description }}</p>
           <TextLink :href="item.link.url">{{ item.link.label }}</TextLink>

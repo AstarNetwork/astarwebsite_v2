@@ -1,9 +1,11 @@
 <template>
   <div class="border-t border-gray-300">
     <div
-      class="pt-8 sm:pt-12 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 flex items-center justify-start sub-page-header"
+      class="pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 flex items-center justify-start sub-page-header"
     >
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full text-center space-y-10">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 w-full text-center space-y-6 sm:space-y-10"
+      >
         <h1
           v-if="title"
           class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight"
