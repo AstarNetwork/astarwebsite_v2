@@ -15,7 +15,7 @@
         />
       </div>
       <h2
-        class="text-center text-3xl sm:text-4xl lg:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0047FF] to-[#00D1FF] leading-tight sm:leading-tight font-bold mb-4"
+        class="text-center text-3xl sm:text-4xl lg:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0047FF] to-[#00D1FF] leading-tight sm:leading-tight lg:leading-tight font-bold mb-4"
       >
         {{ item.title }}
       </h2>

@@ -8,8 +8,6 @@
         <img
           :src="'/images/developers/' + item.image"
           :alt="item.name"
-          data-aos="fade-up"
-          :data-aos-delay="index * 100"
           width="150"
           height="130"
         />

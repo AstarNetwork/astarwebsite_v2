@@ -40,15 +40,17 @@
           </h3>
           <p class="mb-6 lg:mb-12 leading-relaxed">{{ item.description }}</p>
           <div class="flex gap-6 sm:gap-12 justify-center sm:justify-start">
-            <div v-for="stat in item.stats" class="text-center">
+            <HomeStat v-for="stat in item.stats" :stat="stat" />
+            <!-- <div v-for="stat in item.stats" class="text-center">
               <div
                 class="text-blue font-semibold text-4xl sm:text-5xl lg:text-6xl mb-1"
               >
-                {{ stat.number }}{{ stat.unitModifier }}
+                <count-up :end-val="stat.number" class="inline" />
+                <span>{{ stat.unitModifier }}</span>
               </div>
               <div class="text-sm lg:text-base">{{ stat.name }}</div>
               <div v-if="stat.caption" class="text-xs">{{ stat.caption }}</div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

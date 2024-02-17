@@ -28,6 +28,7 @@
     "nuxt-swiper": "^1.2.2",
     "swiper": "^11.0.6",
     "tailwind-variants": "^0.2.0",
+    "vue-countup-v3": "^1.4.1",
     "vue3-carousel": "^0.2.9",
     "vue3-parallax": "^0.1.4"
   },
