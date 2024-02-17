@@ -1,15 +1,9 @@
 <template>
   <NuxtLayout name="default">
-    <SubPageHeader>
-      <h1
-        class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-12"
-      >
-        {{ $t("community.title") }}
-      </h1>
-      <p class="sm:text-lg lg:text-xl max-w-3xl mx-auto">
-        {{ $t("community.description") }}
-      </p>
-    </SubPageHeader>
+    <SubPageHeader
+      :title="$t('community.title')"
+      :description="$t('community.description')"
+    />
     <CommunityOnlineCommunity class="pb-28 sm:pb-64 pt-12" />
     <CommunityBuilders class="pb-28 sm:pb-64" />
     <CommunityGrants class="pb-28 sm:pb-40" />

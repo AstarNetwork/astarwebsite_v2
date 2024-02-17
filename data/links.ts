@@ -9,6 +9,7 @@ export const brandAssetsUrl = "https://github.com/AstarNetwork/brand-assets";
 
 export const docsUrl = {
   index: "https://docs.astar.network/",
+  dappStaking: "https://docs.astar.network/docs/learn/dapp-staking/",
 };
 
 export const newsletterUrl = {
@@ -29,3 +30,9 @@ export const socialUrl = {
     global: "https://twitter.com/astarNetwork",
   },
 };
+
+export const grantsUrl = {
+  inkubator: "https://use.ink/ubator/",
+};
+
+

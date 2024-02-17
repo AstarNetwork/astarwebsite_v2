@@ -1,19 +1,19 @@
 <template>
   <div class="max-w-4xl w-full mx-auto px-4 sm:px-6">
-    <div class="gradient-outlined-box">
+    <div class="bg-gradient-to-r from-[#0047FF] to-[#00D1FF] rounded-lg">
       <div
         class="py-8 px-4 sm:p-12 sm:flex items-center space-y-6 sm:space-y-0 sm:space-x-8"
       >
         <div class="flex-1">
           <h2
-            class="font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight mb-3 text-center sm:text-left"
+            class="text-2xl sm:text-3xl lg:text-4xl leading-tight mb-3 text-center sm:text-left text-white"
           >
-            <span>{{ newsletter.title }}</span>
+            {{ newsletter.title }}
           </h2>
-          <p>{{ newsletter.description }}</p>
+          <p class="text-white">{{ newsletter.description }}</p>
         </div>
         <div class="shrink-0 text-center">
-          <Button size="lg" @click="newsletterOpen = true">
+          <Button @click="newsletterOpen = true" color="whiteBlue">
             {{ newsletter.button }}
           </Button>
         </div>
@@ -71,6 +71,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { newsletterUrl } from "@/data/links";
 import {
   Dialog,
   DialogPanel,
@@ -90,15 +91,13 @@ const props = defineProps({
 
 const newsletters = {
   global: {
-    iframe:
-      "https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380",
+    iframe: newsletterUrl.global,
     title: t("home.newsletter.global.title"),
     description: t("home.newsletter.global.description"),
     button: t("home.newsletter.global.signup"),
   },
   japan: {
-    iframe:
-      "https://cdn.forms-content.sg-form.com/14380152-3085-11ee-8b23-becd142e98bb",
+    iframe: newsletterUrl.japan,
     title: t("home.newsletter.japan.title"),
     description: t("home.newsletter.japan.description"),
     button: t("home.newsletter.japan.signup"),

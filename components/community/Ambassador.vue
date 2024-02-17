@@ -20,13 +20,10 @@
         </p>
         <div class="text-center lg:text-left">
           <Button
-            variant="outlined"
-            size="lg"
+            color="whiteBlue"
             href="https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4"
-            target="_blank"
           >
             {{ $t("community.ambassador.button") }}
-            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
           </Button>
         </div>
       </div>
@@ -34,6 +31,4 @@
   </section>
 </template>
 
-<script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-</script>
+<script setup lang="ts"></script>

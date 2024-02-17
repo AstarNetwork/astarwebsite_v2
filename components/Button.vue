@@ -14,8 +14,16 @@
       </span>
     </span>
   </NuxtLink>
+
   <button v-else :class="button({ size: size, color: color })" type="button">
-    <span><slot>Button</slot></span>
+    <span class="relative z-10 inline-flex items-center justify-center gap-3">
+      <slot>Button</slot>
+      <span :class="circle({ size: size, color: color })">
+        <span :class="innerCircle({ size: size, color: color })">
+          <ArrowRightIcon :class="arrow({ size: size, color: color })" />
+        </span>
+      </span>
+    </span>
   </button>
 </template>
 

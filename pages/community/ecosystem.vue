@@ -1,13 +1,9 @@
 <template>
   <NuxtLayout name="default">
-    <SubPageHeader>
-      <h1
-        class="text-4xl sm:text-6xl lg:text-7xl font-bold text-center leading-none mb-10"
-      >
-        {{ $t("ecosystem.title") }}
-      </h1>
-      <p>{{ $t("ecosystem.description") }}</p>
-    </SubPageHeader>
+    <SubPageHeader
+      :title="$t('ecosystem.title')"
+      :description="$t('ecosystem.description')"
+    />
 
     <div class="relative z-10 mb-40">
       <TabGroup>

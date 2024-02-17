@@ -156,6 +156,7 @@
 </template>
 
 <script setup lang="ts">
+import { XMarkIcon } from "@heroicons/vue/20/solid";
 import { ref } from "vue";
 import {
   Dialog,

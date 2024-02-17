@@ -116,10 +116,13 @@
 </template>
 
 <script setup>
-const localePath = useLocalePath();
-const { locale } = useI18n();
-const i18n = locale.value === "ja" ? "/ja" : "";
-
+import {
+  docsUrl,
+  socialUrl,
+  ambassadorProgramUrl,
+  forumUrl,
+  grantsUrl,
+} from "@/data/links";
 import {
   Popover,
   PopoverButton,
@@ -130,6 +133,10 @@ import {
   ChevronDownIcon,
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/vue/24/outline";
+
+const localePath = useLocalePath();
+const { locale } = useI18n();
+const i18n = locale.value === "ja" ? "/ja" : "";
 
 let open = false;
 
@@ -145,10 +152,10 @@ const menus = [
         label: "Developer Support",
         nav: [
           {
-            label: "Build2Earn",
-            href: "https://docs.astar.network/docs/build/dapp-staking/",
+            label: "Build & Earn",
+            href: docsUrl.dappStaking,
           },
-          { label: "ink!ubator", href: "https://use.ink/ubator/" },
+          { label: "ink!ubator", href: grantsUrl.inkubator },
         ],
       },
       {
@@ -156,7 +163,7 @@ const menus = [
         nav: [
           {
             label: "Documentation",
-            href: "https://docs.astar.network/",
+            href: docsUrl.index,
           },
           {
             label: "Astar University",
@@ -240,9 +247,9 @@ const menus = [
         nav: [
           {
             label: "Ambassador Program",
-            href: "https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4",
+            href: ambassadorProgramUrl,
           },
-          { label: "Community Forum", href: "https://forum.astar.network/" },
+          { label: "Community Forum", href: forumUrl },
         ],
       },
     ],
@@ -257,7 +264,7 @@ const menus = [
           { label: "Astar Japan Lab", href: i18n + "/japan" },
           {
             label: "Careers",
-            href: "https://wellfound.com/company/astar-network",
+            href: socialUrl.wellfound,
           },
           { label: "Contact Us", href: i18n + "/contact" },
         ],

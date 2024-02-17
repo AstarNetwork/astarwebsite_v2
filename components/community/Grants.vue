@@ -19,19 +19,14 @@
         {{ $t("community.grants.description") }}
       </p>
       <div class="text-center">
-        <NuxtLink
-          to="https://use.ink/ubator/"
-          target="_blank"
-          class="bg-black text-white rounded-full p-4 w-72 inline-flex justify-center items-center text-lg hover:bg-gray-900"
-        >
+        <Button :href="grantsUrl.inkubator" color="whiteGray">
           ink!ubator
-          <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
-        </NuxtLink>
+        </Button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+import { grantsUrl } from "@/data/links";
 </script>

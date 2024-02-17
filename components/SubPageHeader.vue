@@ -4,13 +4,19 @@
       class="pt-8 sm:pt-12 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 flex items-center justify-start sub-page-header"
     >
       <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full text-center space-y-10">
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+        <h1
+          v-if="title"
+          class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight"
+        >
           {{ title }}
         </h1>
-        <p class="sm:text-lg sm:leading-relaxed max-w-screen-sm mx-auto">
+        <p
+          v-if="description"
+          class="sm:text-lg sm:leading-relaxed max-w-screen-sm mx-auto"
+        >
           {{ description }}
         </p>
-        <Button v-if="button.to !== ''" :href="button.to">
+        <Button v-if="button.to" :href="button.to">
           {{ button.label }}
         </Button>
         <slot />

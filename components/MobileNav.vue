@@ -101,14 +101,8 @@
                 </li>
               </ul>
               <div class="py-12 px-6">
-                <Button
-                  href="https://portal.astar.network/"
-                  target="_blank"
-                  size="lg"
-                  class="w-full"
-                >
+                <Button href="https://portal.astar.network/" class="w-full">
                   Astar Portal
-                  <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
                 </Button>
               </div>
 

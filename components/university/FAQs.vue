@@ -93,8 +93,4 @@ const faqs = [
 ];
 </script>
 
-<style lang="postcss">
-.university-faqs__answer a {
-  @apply text-space-cyan hover:underline hover:text-space-cyan-lighter;
-}
-</style>
+<style lang="postcss"></style>

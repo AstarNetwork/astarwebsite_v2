@@ -43,7 +43,7 @@
           </template>
 
           <template v-else-if="item.slug === 'technical'">
-            <Button href="https://discord.gg/astarnetwork" target="_blank">
+            <Button href="https://discord.gg/astarnetwork">
               <component
                 :is="Discord"
                 class="h-5 w-5 mr-1.5"

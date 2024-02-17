@@ -1,15 +1,9 @@
 <template>
   <NuxtLayout name="default">
-    <SubPageHeader>
-      <h1
-        class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-12"
-      >
-        {{ $t("developers.title") }}
-      </h1>
-      <p class="sm:text-lg lg:text-xl max-w-3xl mx-auto">
-        {{ $t("developers.description") }}
-      </p>
-    </SubPageHeader>
+    <SubPageHeader
+      :title="$t('developers.title')"
+      :description="$t('developers.description')"
+    />
     <DevelopersBuild class="pb-20 sm:pb-64" />
     <DevelopersSupport class="pb-20 sm:pb-64" />
     <DevelopersLearn class="pb-20 sm:pb-64" />

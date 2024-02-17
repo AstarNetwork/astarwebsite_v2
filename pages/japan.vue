@@ -14,23 +14,10 @@
     <div
       class="relative z-10 text-center sm:py-12 sm:flex justify-center space-y-4 sm:space-y-0 sm:space-x-6"
     >
-      <Button
-        class="w-[300px] sm:w-[350px]"
-        size="xl"
-        target="_blank"
-        :href="registerForm"
-      >
-        {{ $t("japan.register") }}
-        <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
-      </Button>
-      <Button
-        class="w-[300px] sm:w-[350px]"
-        size="xl"
-        href="#useCases"
-        variant="outlined"
-      >
-        {{ $t("japan.see_use_cases") }} ->
-      </Button>
+      <Button :href="registerForm">{{ $t("japan.register") }}</Button>
+      <Button href="#useCases" color="outlinedGray">{{
+        $t("japan.see_use_cases")
+      }}</Button>
     </div>
 
     <JapanAbout class="py-16 sm:py-32" />
@@ -42,7 +29,7 @@
         <JapanMembers class="py-12" />
 
         <div class="relative z-10 text-center pt-4 sm:pt-12">
-          <Button class="mb-12" size="xxl" target="_blank" :href="registerForm">
+          <Button :href="registerForm">
             {{ $t("japan.register") }}
           </Button>
         </div>

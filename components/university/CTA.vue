@@ -10,9 +10,8 @@
         <p class="max-w-2xl mx-auto mb-12 text-gray-300">
           {{ $t("university.cta.description") }}
         </p>
-        <Button :href="application" target="_blank" color="secondary" size="xl">
+        <Button :href="application" color="whiteBlue">
           {{ $t("university.join") }}
-          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
         </Button>
       </div>
     </div>
@@ -20,8 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-
 const props = defineProps({
   application: {
     type: String,

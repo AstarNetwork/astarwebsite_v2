@@ -39,7 +39,7 @@
     );
   }
   .title {
-    @apply font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight;
+    @apply font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight;
   }
   .gradient-text span {
     background: linear-gradient(

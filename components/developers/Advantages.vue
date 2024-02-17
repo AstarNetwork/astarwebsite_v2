@@ -52,8 +52,8 @@ const advantages = [
     image: "advantages-xcm.svg",
   },
   {
-    name: t("developers.why.build2earn.title"),
-    description: t("developers.why.build2earn.description"),
+    name: t("developers.why.buildAndEarn.title"),
+    description: t("developers.why.buildAndEarn.description"),
     image: "advantages-income.svg",
   },
 ];

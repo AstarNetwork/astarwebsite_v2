@@ -55,7 +55,7 @@
 
     <div
       v-if="posts.length > 0"
-      class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mt-36"
+      class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 my-36"
     >
       <h2 class="text-center text-3xl lg:text-4xl font-semibold mb-12">
         {{ $t("blog.related") }}
@@ -63,7 +63,7 @@
       <ul
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
       >
-        <BlogArticleCard v-for="post in posts" :post="post" />
+        <BlogArticleCard v-for="post in posts" :post="post" :blog="true" />
       </ul>
     </div>
   </NuxtLayout>

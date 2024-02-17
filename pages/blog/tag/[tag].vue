@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="default">
     <SubPageHeader>
-      <p class="text-lg sm:text-2xl mb-2">{{ $t("blog.tag") }}:</p>
+      <p class="text-lg sm:text-2xl">{{ $t("blog.tag") }}:</p>
       <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
         {{ tag }}
       </h1>
@@ -12,7 +12,7 @@
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
         v-if="posts.length > 0"
       >
-        <BlogArticleCard v-for="post in posts" :post="post" />
+        <BlogArticleCard v-for="post in posts" :post="post" :blog="true" />
       </ul>
       <div v-else class="text-center">
         <p class="mb-6">{{ $t("blog.no_articles") }}</p>

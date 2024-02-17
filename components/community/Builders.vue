@@ -25,33 +25,14 @@
             {{ item.description }}
           </p>
           <div class="text-center">
-            <Button
-              :href="item.button.href"
-              :target="item.button.href.includes('https') ? '_blank' : '_self'"
-              class="w-72"
-              size="lg"
-            >
+            <Button :href="item.button.href">
               {{ item.button.label }}
-              <ArrowTopRightOnSquareIcon
-                v-if="item.button.href.includes('https')"
-                class="w-5 h-5 inline-block stroke-2 ml-1"
-              />
-              <span v-else class="ml-1">-></span>
             </Button>
           </div>
           <div v-if="item.text_link" class="text-center mt-3">
-            <NuxtLink
-              :to="item.text_link.href"
-              target="_blank"
-              class="hover:underline"
-            >
+            <TextLink :href="item.text_link.href">
               {{ item.text_link.label }}
-              <ArrowTopRightOnSquareIcon
-                v-if="item.text_link.href.includes('https')"
-                class="w-4 h-4 inline-block stroke-2"
-              />
-              <span v-else>-></span>
-            </NuxtLink>
+            </TextLink>
           </div>
         </div>
       </div>
@@ -60,8 +41,6 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-
 const { t } = useI18n();
 
 const builders = [
