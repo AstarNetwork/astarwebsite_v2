@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div
-      class="flex flex-col sm:flex-row border-t border-gray-300 sm:divide-x divide-y sm:divide-y-0 divide-gray-300"
+      class="flex flex-col sm:flex-row border-t border-slate-300 sm:divide-x divide-y sm:divide-y-0 divide-slate-300"
     >
       <NuxtLink :to="localePath('/contact/')" class="cta group">
         <div class="cta-inner">
@@ -92,7 +92,7 @@
                 <NuxtLink
                   :to="item.href"
                   :target="item.href.includes('https') ? '_blank' : '_self'"
-                  class="hover:underline transition text-gray-200 hover:text-gray-50"
+                  class="hover:underline transition text-slate-200 hover:text-slate-50"
                 >
                   {{ item.name }}
                   <ArrowTopRightOnSquareIcon
@@ -125,7 +125,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-gray-950 bg-opacity-90 transition-opacity"
+          class="fixed inset-0 bg-slate-950 bg-opacity-90 transition-opacity"
         />
       </TransitionChild>
 
@@ -148,7 +148,7 @@
               <iframe class="w-full h-[600px]" :src="newsletterUrl.global" />
               <button
                 type="button"
-                class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
+                class="text-slate-500 transition cursor-pointer p-3 hover:bg-gray-100 hover:text-slate-950 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
                 @click="newsletterOpen = false"
               >
                 <XMarkIcon class="w-8 h-8 sm:w-12 sm:h-12" />
@@ -306,7 +306,7 @@ const social = [
     @apply text-xl sm:text-3xl lg:text-4xl mb-1 sm:mb-6;
   }
   p {
-    @apply text-gray-500 text-sm lg:text-base;
+    @apply text-slate-500 text-sm lg:text-base;
   }
 }
 </style>

@@ -21,7 +21,7 @@
         <NuxtLink
           :to="item.href"
           target="_blank"
-          class="bg-space-gray block rounded-3xl text-center py-6 sm:py-8 px-2 hover:bg-space-gray-lighter transition"
+          class="bg-white block rounded-md border border-slate-300 text-center py-6 sm:py-8 px-2 hover:bg-gray-50 transition hover:shadow-xl"
         >
           <component
             :is="item.icon"
@@ -29,7 +29,7 @@
             :class="item.color"
             aria-hidden="true"
           />
-          <h3 class="font-medium mt-1 sm:mt-2 text-white">
+          <h3 class="font-medium mt-1 sm:mt-2 text-slate-950">
             {{ item.name }}
           </h3>
         </NuxtLink>
@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-const Twitter = resolveComponent("IconTwitter");
+const X = resolveComponent("IconX");
 const Discord = resolveComponent("IconDiscord");
 const Telegram = resolveComponent("IconTelegram");
 const Reddit = resolveComponent("IconReddit");
@@ -52,13 +52,13 @@ const social = [
     name: "GitHub",
     href: "https://github.com/AstarNetwork/Astar",
     icon: Github,
-    color: "text-[#FAFAFA]",
+    color: "text-black",
   },
   {
-    name: "Twitter",
+    name: "X(Twitter)",
     href: "https://twitter.com/astarNetwork",
-    icon: Twitter,
-    color: "text-[#1DA1F2]",
+    icon: X,
+    color: "text-black",
   },
   {
     name: "Telegram",
@@ -88,7 +88,7 @@ const social = [
     name: "Forum",
     href: "https://forum.astar.network/",
     icon: Comments,
-    color: "text-gray-200",
+    color: "text-slate-950",
   },
 ];
 </script>

@@ -24,7 +24,7 @@
     <JapanUseCases class="py-16 sm:py-32" />
     <JapanBlog class="py-16 sm:py-32" />
 
-    <div class="text-gray-700">
+    <div class="text-slate-700">
       <div class="">
         <JapanMembers class="py-12" />
 

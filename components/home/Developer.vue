@@ -14,7 +14,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 lg:gap-x-12">
       <div
         v-for="(item, index) in data"
-        class="border border-gray-800 rounded-xl p-6 sm:p-8 lg:p-12 relative"
+        class="border border-slate-800 rounded-xl p-6 sm:p-8 lg:p-12 relative"
       >
         <img
           :src="`/images/home/developer-bg-${
@@ -24,7 +24,7 @@
         />
         <div class="relative z-10">
           <p
-            class="flex justify-end items-center space-x-2 uppercase text-gray-300 text-xs sm:text-sm mb-6"
+            class="flex justify-end items-center space-x-2 uppercase text-slate-300 text-xs sm:text-sm mb-6"
           >
             <span>
               Powered by

@@ -90,7 +90,7 @@ const posts = [
   .swiper-button-prev,
   .swiper-button-next {
     @apply relative;
-    @apply top-auto left-auto right-auto border border-gray-950 rounded-full w-12 h-12 before:content-[''] before:block before:w-0 before:h-0 before:absolute before:duration-200 before:ease-out before:rounded-full hover:before:w-12 hover:before:h-12 before:bg-blue text-gray-950 hover:text-white mt-4 sm:mt-6;
+    @apply top-auto left-auto right-auto border border-slate-950 rounded-full w-12 h-12 before:content-[''] before:block before:w-0 before:h-0 before:absolute before:duration-200 before:ease-out before:rounded-full hover:before:w-12 hover:before:h-12 before:bg-blue text-slate-950 hover:text-white mt-4 sm:mt-6;
     &::after {
       @apply text-sm z-10;
     }

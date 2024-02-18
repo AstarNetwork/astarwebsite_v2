@@ -15,7 +15,7 @@
           <source src="/videos/astar_uni_teaser_v2.mp4" type="video/mp4" />
         </video>
         <div class="text-center text-xl mt-6 sm:mt-12">
-          <p class="gradient-text font-semibold text-xl sm:text-2xl">
+          <p class="text-blue font-semibold text-xl sm:text-2xl">
             <span>{{ $t("university.intro.title") }}</span>
           </p>
           <p class="text-lg sm:text-xl">

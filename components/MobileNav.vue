@@ -1,7 +1,7 @@
 <template>
   <Popover>
     <PopoverButton
-      class="inline-flex items-center justify-center rounded-md p-2 text-gray-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
+      class="inline-flex items-center justify-center rounded-md p-2 text-slate-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
     >
       <span class="sr-only">Open menu</span>
       <Bars3Icon class="h-6 w-6" aria-hidden="true" />
@@ -35,7 +35,7 @@
               </NuxtLink>
               <div class="-mr-2 sm:mr-0">
                 <PopoverButton
-                  class="inline-flex items-center justify-center rounded-md p-2 text-gray-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
+                  class="inline-flex items-center justify-center rounded-md p-2 text-slate-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
                 >
                   <span class="sr-only">Close menu</span>
                   <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -43,11 +43,11 @@
               </div>
             </div>
             <nav class="">
-              <ul class="border-b border-gray-300">
+              <ul class="border-b border-slate-300">
                 <li>
                   <NuxtLink
                     :to="localePath('/solutions')"
-                    class="flex items-center border-t border-gray-300 px-6 py-5 text-gray-950"
+                    class="flex items-center border-t border-slate-300 px-6 py-5 text-slate-950"
                   >
                     Solutions
                   </NuxtLink>
@@ -55,7 +55,7 @@
                 <li>
                   <NuxtLink
                     :to="localePath('/astar2')"
-                    class="flex items-center border-t border-gray-300 px-6 py-5 text-gray-950"
+                    class="flex items-center border-t border-slate-300 px-6 py-5 text-slate-950"
                   >
                     Astar 2.0
                   </NuxtLink>
@@ -63,7 +63,7 @@
                 <li v-for="menu in menus">
                   <Disclosure as="div" v-slot="{ open }">
                     <DisclosureButton
-                      class="text-gray-950 border-t border-gray-300 px-6 py-5 w-full flex justify-between items-center"
+                      class="text-slate-950 border-t border-slate-300 px-6 py-5 w-full flex justify-between items-center"
                     >
                       <span>{{ menu.label }}</span>
                       <ChevronDownIcon
@@ -79,14 +79,14 @@
                         <li v-for="category in menu.nav">
                           <span
                             v-if="category.label !== ''"
-                            class="uppercase block text-gray-500 mb-2 text-xs"
+                            class="uppercase block text-slate-500 mb-2 text-xs"
                           >
                             {{ category.label }}
                           </span>
                           <ul class="space-y-2">
                             <li v-for="menu in category.nav">
                               <NuxtLink
-                                class="flex items-center text-gray-700"
+                                class="flex items-center text-slate-700"
                                 :to="menu.href"
                                 :target="
                                   menu.href.includes('https')

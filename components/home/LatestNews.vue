@@ -88,7 +88,7 @@ const posts = data.value.posts.map(
   }
   .swiper-button-prev,
   .swiper-button-next {
-    @apply -top-10 left-auto border border-gray-950 rounded-full w-12 h-12 before:content-[''] before:block before:w-0 before:h-0 before:absolute before:duration-200 before:ease-out before:rounded-full hover:before:w-12 hover:before:h-12 before:bg-blue text-gray-950 hover:text-white;
+    @apply -top-10 left-auto border border-slate-950 rounded-full w-12 h-12 before:content-[''] before:block before:w-0 before:h-0 before:absolute before:duration-200 before:ease-out before:rounded-full hover:before:w-12 hover:before:h-12 before:bg-blue text-slate-950 hover:text-white;
     &::after {
       @apply text-sm z-10;
     }

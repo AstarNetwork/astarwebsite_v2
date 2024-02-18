@@ -25,13 +25,13 @@
             <NuxtLink
               v-for="tag in post.tagsOriginal.split(',')"
               :href="i18n + '/blog/tag/' + tag"
-              class="block text-gray-500 border border-gray-500 py-2 px-4 rounded-full hover:bg-white/10 mr-1 mb-2"
+              class="block text-slate-500 border border-slate-500 py-2 px-4 rounded-full hover:bg-white/10 mr-1 mb-2"
             >
               {{ tag }}
             </NuxtLink>
           </div>
         </div>
-        <div class="flex border border-gray-500 rounded-3xl px-3 py-6 sm:p-8">
+        <div class="flex border border-slate-500 rounded-3xl px-3 py-6 sm:p-8">
           <div class="shrink-0 mr-3 sm:mr-4">
             <img
               :src="post.authorImg"

@@ -50,11 +50,13 @@ const button = tv({
   base: "transition-all inline-flex items-center justify-center relative rounded-full group overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-64 hover:before:w-64",
   variants: {
     color: {
-      blue: "text-white bg-gradient-to-r from-[#0047FF] to-[#00D1FF] before:bg-blue before:mix-blend-screen before:opacity-30",
+      blue: "text-white hover:text-white bg-gradient-to-r from-[#0047FF] to-[#00D1FF] before:bg-blue before:mix-blend-screen before:opacity-30",
       whiteBlue:
-        "bg-white text-blue border border-blue before:bg-blue before:opacity-10",
-      whiteGray: "bg-white text-gray-950 before:bg-gray-200",
-      outlinedGray: "border border-gray-500 text-gray-700 before:bg-gray-50",
+        "bg-white text-blue hover:text-blue border border-blue before:bg-blue before:opacity-10",
+      whiteGray:
+        "bg-white text-slate-950 hover:text-slate-950 before:bg-slate-200",
+      outlinedGray:
+        "border border-slate-500 text-slate-700 hover:text-slate-700 before:bg-slate-50",
     },
     size: {
       sm: "pl-5 pr-3 py-3 text-sm",
@@ -88,8 +90,8 @@ const circle = tv({
     color: {
       blue: "bg-white/40",
       whiteBlue: "bg-blue/30",
-      whiteGray: "bg-gray-700/25",
-      outlinedGray: "bg-gray-500/25",
+      whiteGray: "bg-slate-700/25",
+      outlinedGray: "bg-slate-500/25",
     },
     size: {
       sm: "w-5 h-5",
@@ -109,8 +111,8 @@ const innerCircle = tv({
     color: {
       blue: "bg-white",
       whiteBlue: "bg-blue",
-      whiteGray: "bg-gray-700",
-      outlinedGray: "bg-gray-500",
+      whiteGray: "bg-slate-700",
+      outlinedGray: "bg-slate-500",
     },
     size: {
       sm: "group-hover:w-5 group-hover:h-5",

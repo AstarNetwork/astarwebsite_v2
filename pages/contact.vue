@@ -10,7 +10,7 @@
         <li
           v-for="item in options"
           :class="item.slug === 'other' && 'md:col-span-3'"
-          class="border border-gray-300 px-4 py-8 rounded-lg flex flex-col justify-between items-center"
+          class="border border-slate-300 px-4 py-8 rounded-lg flex flex-col justify-between items-center"
         >
           <div>
             <component

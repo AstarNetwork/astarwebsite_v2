@@ -16,7 +16,7 @@
     <div class="space-y-6 sm:space-y-12">
       <div
         v-for="(item, index) in data"
-        class="border border-gray-700 flex items-center flex-col sm:flex-row rounded-xl"
+        class="border border-slate-700 flex items-center flex-col sm:flex-row rounded-xl"
       >
         <div class="flex-1" :class="index === 1 ? '' : 'sm:order-2'">
           <img

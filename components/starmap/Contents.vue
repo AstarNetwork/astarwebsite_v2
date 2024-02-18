@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-gray-900 bg-opacity-90 transition-opacity"
+          class="fixed inset-0 bg-slate-900 bg-opacity-90 transition-opacity"
         />
       </TransitionChild>
 
@@ -52,7 +52,7 @@
                   >
                     <div class="my-6">
                       <p
-                        class="text-gray-200 whitespace-pre-wrap"
+                        class="text-slate-200 whitespace-pre-wrap"
                         :class="
                           discoveries[discoveryId]['image'] === '' &&
                           'text-center'
@@ -103,7 +103,7 @@
 
               <button
                 type="button"
-                class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
+                class="text-slate-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-slate-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
                 @click="open = false"
               >
                 <XMarkIcon class="w-8 h-8 sm:w-12 sm:h-12" />
@@ -116,7 +116,7 @@
   </TransitionRoot>
 
   <div
-    class="relative z-10 bg-cover text-gray-300 bg-space-gray-dark"
+    class="relative z-10 bg-cover text-slate-300 bg-space-gray-dark"
     style="
       background-image: url(/images/starmap/nebula.webp);
       background-position: center top;

@@ -27,13 +27,13 @@
             </TextLink>
           </div>
         </div>
-        <div class="lg:w-2/3 border-t border-gray-300">
+        <div class="lg:w-2/3 border-t border-slate-300">
           <div v-for="item in partner.useCases">
             <NuxtLink
               class="transition flex items-center justify-center bg-white group py-8 sm:py-0"
               :class="
                 item.link !== '' &&
-                'overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-500 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] hover:before:bg-gray-50 relative hover:shadow-lg'
+                'overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-500 before:ease-out hover:before:h-[60vw] hover:before:w-[60vw] hover:before:bg-slate-50 relative hover:shadow-lg'
               "
               :to="item.link"
               :target="item.link.includes('https') ? '_blank' : '_self'"
@@ -50,14 +50,14 @@
                     height="180"
                   />
                 </div>
-                <p class="text-gray-950 flex-1">{{ item.description }}</p>
+                <p class="text-slate-950 flex-1">{{ item.description }}</p>
                 <ArrowRightIcon
                   v-if="item.link !== ''"
-                  class="w-6 h-6 shrink-0 mr-4 text-gray-500 group-hover:text-blue hidden sm:block"
+                  class="w-6 h-6 shrink-0 mr-4 text-slate-500 group-hover:text-blue hidden sm:block"
                 />
               </div>
             </NuxtLink>
-            <hr class="border-t border-gray-300" />
+            <hr class="border-t border-slate-300" />
           </div>
         </div>
       </div>

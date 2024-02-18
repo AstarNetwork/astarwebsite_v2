@@ -3,8 +3,8 @@
     v-for="item in sortedProjects"
     :to="item.attributes.website"
     target="_blank"
-    class="border border-gray-200 bg-white rounded-lg transition p-4 sm:p-6"
-    :class="item.attributes.website && 'hover:shadow-lg'"
+    class="border border-slate-200 bg-white rounded-md transition p-4 sm:p-6"
+    :class="item.attributes.website && 'hover:shadow-xl'"
   >
     <span class="block py-4 mb-2 lg:mb-4">
       <img
@@ -15,21 +15,21 @@
     </span>
     <span class="space-y-2">
       <span
-        class="text-center block text-gray-950 font-medium my-1 text-sm lg:text-base"
+        class="text-center block text-slate-950 font-medium my-1 text-sm lg:text-base"
       >
         {{ item.attributes.name }}
       </span>
       <ul class="flex justify-center flex-wrap">
         <li
           v-for="category in item.attributes.project_categories.data"
-          class="text-xs bg-gray-200 text-gray-500 py-0.5 px-2 rounded-sm m-0.5 whitespace-nowrap"
+          class="text-xs bg-slate-200 text-slate-500 py-0.5 px-2 rounded-sm m-0.5 whitespace-nowrap"
         >
           {{ category.attributes.name }}
         </li>
       </ul>
       <span
         v-if="item.attributes.description"
-        class="text-center block text-gray-500 text-xs lg:text-sm"
+        class="text-center block text-slate-500 text-xs lg:text-sm"
       >
         {{ item.attributes.description }}
       </span>

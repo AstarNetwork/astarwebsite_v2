@@ -17,7 +17,7 @@
                 :alt="item.title"
               />
             </div>
-            <p class="mb-2 text-gray-950">
+            <p class="mb-2 text-slate-950">
               {{ item.title }}
             </p>
 

@@ -6,7 +6,7 @@
     <carousel :items-to-show="1.2">
       <slide v-for="item in testimonials" class="px-2 sm:px-8">
         <div
-          class="bg-gradient w-full rounded-3xl text-white p-2 sm:px-12 sm:py-12 h-full flex items-center"
+          class="bg-gradient-to-r from-[#0047FF] to-[#00D1FF] w-full rounded-3xl text-white p-2 sm:px-12 sm:py-12 h-full flex items-center"
         >
           <div class="relative">
             <blockquote class="pt-6 pb-4">
@@ -87,20 +87,10 @@ const props = defineProps({
   @apply bg-white shadow rounded-full;
 }
 .carousel__pagination-button::after {
-  @apply bg-space-pink-light;
+  @apply bg-blue/30;
 }
 .carousel__pagination-button:hover::after,
 .carousel__pagination-button--active::after {
-  @apply bg-space-pink;
-}
-.bg-gradient {
-  background: linear-gradient(
-    120deg,
-    #e6007a -5.88%,
-    #703ac2 15.42%,
-    #0070eb 40.77%,
-    #0297fb 72.21%,
-    #0ae2ff 95.53%
-  );
+  @apply bg-blue;
 }
 </style>

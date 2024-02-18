@@ -1,5 +1,5 @@
 <template>
-  <div class="border-t border-gray-300">
+  <div class="border-t border-slate-300">
     <div
       class="pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 flex items-center justify-start sub-page-header"
     >

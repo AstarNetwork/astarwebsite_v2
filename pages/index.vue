@@ -4,7 +4,7 @@
     <HomeFeatures />
     <HomeLatestNews />
     <HomeSolutions />
-    <div class="bg-black text-gray-300 py-12 sm:py-20">
+    <div class="bg-black text-slate-300 py-12 sm:py-20">
       <HomeDeveloper />
       <HomeDappsOnAstar />
       <HomeFunding />

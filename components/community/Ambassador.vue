@@ -1,7 +1,7 @@
 <template>
   <section class="px-4 sm:px-6 relative z-10">
     <div
-      class="bg-blue rounded-3xl max-w-7xl mx-auto px-6 sm:px-12 pt-1 pb-10 sm:pb-20 lg:py-20 lg:flex justify-center items-center lg:space-x-6"
+      class="bg-gradient-to-r from-[#0047FF] to-[#00D1FF] rounded-3xl max-w-7xl mx-auto px-6 sm:px-12 pt-1 pb-10 sm:pb-20 lg:py-20 lg:flex justify-center items-center lg:space-x-6"
     >
       <div class="lg:w-2/5">
         <img

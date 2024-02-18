@@ -28,10 +28,10 @@
         class="backdrop-blur bg-white/70 mx-auto w-screen h-screen flex items-center justify-center"
       >
         <div class="text-center text-4xl leading-[200%] space-y-20 max-w-lg">
-          <p class="text-gray-950 font-semibold">
+          <p class="text-slate-950 font-semibold">
             Create new opportunities for you to use web3.
           </p>
-          <p class="text-gray-950">
+          <p class="text-slate-950">
             Astar Foundation creates the tools and community necessary to build
             a more inclusive and empowered web for you.
           </p>

@@ -11,7 +11,7 @@
           class="transition rounded-3xl mb-16 sm:mb-0 group"
           :class="
             index === 4
-              ? `text-space-gray-dark ${item.color}`
+              ? `text-slate-950 ${item.color}`
               : `text-white ${item.color}`
           "
         >

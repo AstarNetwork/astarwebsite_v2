@@ -66,7 +66,7 @@
           leave-to="opacity-0"
         >
           <div
-            class="fixed inset-0 bg-gray-900 bg-opacity-90 transition-opacity"
+            class="fixed inset-0 bg-slate-900 bg-opacity-90 transition-opacity"
           />
         </TransitionChild>
 
@@ -89,7 +89,7 @@
                 <div class="">
                   <DialogTitle
                     as="h3"
-                    class="text-2xl sm:text-4xl font-bold text-gray-950 leading-tight mb-4 sm:mb-6 pb-4 sm:pb-6 text-center border-b border-space-cyan"
+                    class="text-2xl sm:text-4xl font-bold text-slate-950 leading-tight mb-4 sm:mb-6 pb-4 sm:pb-6 text-center border-b border-space-cyan"
                   >
                     {{ visions[visionId]["title"] }}
                   </DialogTitle>
@@ -100,7 +100,7 @@
 
                 <button
                   type="button"
-                  class="text-gray-500 transition cursor-pointer p-3 hover:bg-gray-100 hover:text-gray-700 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
+                  class="text-slate-500 transition cursor-pointer p-3 hover:bg-slate-100 hover:text-slate-700 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
                   @click="open = false"
                 >
                   <XMarkIcon class="w-8 h-8 sm:w-12 sm:h-12" />

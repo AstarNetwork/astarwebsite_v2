@@ -7,7 +7,7 @@
         >
           {{ $t("university.cta.title") }}
         </h2>
-        <p class="max-w-2xl mx-auto mb-12 text-gray-300">
+        <p class="max-w-2xl mx-auto mb-12 text-slate-300">
           {{ $t("university.cta.description") }}
         </p>
         <Button :href="application" color="whiteBlue">

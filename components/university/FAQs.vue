@@ -4,7 +4,7 @@
       <span>{{ $t("university.faq.title") }}</span>
     </h2>
     <dl
-      class="space-y-6 sm:space-y-10 divide-y divide-gray-300 border-t border-b border-gray-300 pb-6 sm:pb-10"
+      class="space-y-6 sm:space-y-10 divide-y divide-slate-300 border-t border-b border-slate-300 pb-6 sm:pb-10"
     >
       <Disclosure
         as="div"
@@ -14,7 +14,7 @@
       >
         <dt class="pt-6 sm:pt-10">
           <DisclosureButton
-            class="flex w-full items-start justify-between text-left text-gray-950"
+            class="flex w-full items-start justify-between text-left text-slate-950"
           >
             <span class="text-base sm:text-xl font-medium">
               {{ faq.question }}

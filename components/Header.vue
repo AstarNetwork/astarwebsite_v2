@@ -2,7 +2,7 @@
   <PopoverGroup>
     <div
       :class="[
-        open ? 'bg-space-gray-dark shadow-lg bg-opacity-95' : '',
+        open ? 'bg-gray-950 shadow-lg bg-opacity-95' : '',
         'transition z-40 w-full',
       ]"
     >
@@ -28,14 +28,14 @@
           <nav class="flex items-center space-x-4 xl:space-x-8">
             <NuxtLink
               :to="localePath('/solutions')"
-              class="transition text-gray-950 hover:text-blue pr-2"
+              class="transition text-slate-950 hover:text-blue pr-2"
             >
               Solutions
             </NuxtLink>
 
             <NuxtLink
               :to="localePath('/astar2')"
-              class="transition text-gray-950 hover:text-blue pr-2"
+              class="transition text-slate-950 hover:text-blue pr-2"
             >
               Astar 2.0
             </NuxtLink>
@@ -44,14 +44,16 @@
               <Popover v-slot="{ open }" class="relative">
                 <PopoverButton
                   :class="[
-                    open ? 'text-blue' : 'text-gray-950 hover:text-blue',
+                    open ? 'text-blue' : 'text-slate-950 hover:text-blue',
                     'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 transition',
                   ]"
                 >
                   <span>{{ category.label }}</span>
                   <ChevronDownIcon
                     :class="[
-                      open ? 'text-blue rotate-180 transform' : 'text-gray-950',
+                      open
+                        ? 'text-blue rotate-180 transform'
+                        : 'text-slate-950',
                       'ml-1 h-3 w-3 group-hover:text-blue stroke-2',
                     ]"
                     aria-hidden="true"
@@ -75,7 +77,7 @@
                     <div v-for="item in category.nav">
                       <p
                         v-if="item.label !== ''"
-                        :class="`text-xs uppercase text-gray-500 mb-1 ${
+                        :class="`text-xs uppercase text-slate-500 mb-1 ${
                           category.label !== 'Network' && 'mt-8'
                         }`"
                       >
@@ -83,7 +85,7 @@
                       </p>
                       <NuxtLink
                         v-for="menu in item.nav"
-                        class="flex items-center py-1 text-gray-950 transition hover:text-blue whitespace-nowrap"
+                        class="flex items-center py-1 text-slate-950 transition hover:text-blue whitespace-nowrap"
                         :to="menu.href"
                         :target="
                           menu.href.includes('https') ? '_blank' : '_self'
