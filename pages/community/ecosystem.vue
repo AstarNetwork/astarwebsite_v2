@@ -5,11 +5,18 @@
       :description="$t('ecosystem.description')"
     />
 
-    <div class="relative z-10 mb-40">
+    <div
+      class="container-lg mb-40 flex flex-col sm:flex-row gap-4 lg:gap-8 shrink-0"
+    >
       <TabGroup>
         <TabList
-          class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-12 max-w-4xl mx-auto px-4 sm:px-6 text-sm sm:text-base"
+          class="sm:w-36 lg:w-56 flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-1"
         >
+          <p
+            class="text-gray-950 font-semibold inline sm:block pr-2 py-2 lg:py-3 text-xs sm:text-sm lg:text-base"
+          >
+            {{ $t("ecosystem.categories") }}
+          </p>
           <Tab as="template" v-slot="{ selected }">
             <button
               :class="{
@@ -39,7 +46,7 @@
             </button>
           </Tab>
         </TabList>
-        <TabPanels>
+        <TabPanels class="flex-1">
           <TabPanel class="tab-panel">
             <EcosystemLogoList :projects="projects" />
           </TabPanel>
