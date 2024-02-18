@@ -9,43 +9,53 @@
       class="container-lg mb-40 flex flex-col sm:flex-row gap-4 lg:gap-8 shrink-0"
     >
       <TabGroup>
-        <TabList
-          class="sm:w-36 lg:w-56 flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-1"
-        >
-          <p
-            class="text-gray-950 font-semibold inline sm:block pr-2 py-2 lg:py-3 text-xs sm:text-sm lg:text-base"
+        <div class="sm:w-36 lg:w-56">
+          <div
+            class="flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-1 mb-2 sm:mb-8"
           >
-            {{ $t("ecosystem.categories") }}
-          </p>
-          <Tab as="template" v-slot="{ selected }">
-            <button
-              :class="{
-                'tab current': selected,
-                tab: !selected,
-              }"
+            <p
+              class="text-gray-950 font-semibold inline sm:block pr-2 py-2 lg:py-3 text-xs sm:text-sm lg:text-base"
             >
-              All
-              <span class="text-xs">({{ projects.length }})</span>
-            </button>
-          </Tab>
-          <Tab
-            as="template"
-            v-slot="{ selected }"
-            v-for="category in categories"
-          >
-            <button
-              :class="{
-                'tab current': selected,
-                tab: !selected,
-              }"
+              {{ $t("ecosystem.chain") }}
+            </p>
+            <div>chain list</div>
+          </div>
+          <TabList class="flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-1">
+            <p
+              class="text-gray-950 font-semibold inline sm:block pr-2 py-2 lg:py-3 text-xs sm:text-sm lg:text-base"
             >
-              {{ category.attributes.name }}
-              <span class="text-xs">
-                ({{ category.attributes.projects.data.length }})
-              </span>
-            </button>
-          </Tab>
-        </TabList>
+              {{ $t("ecosystem.categories") }}
+            </p>
+            <Tab as="template" v-slot="{ selected }">
+              <button
+                :class="{
+                  'tab current': selected,
+                  tab: !selected,
+                }"
+              >
+                All
+                <span class="text-xs">({{ projects.length }})</span>
+              </button>
+            </Tab>
+            <Tab
+              as="template"
+              v-slot="{ selected }"
+              v-for="category in categories"
+            >
+              <button
+                :class="{
+                  'tab current': selected,
+                  tab: !selected,
+                }"
+              >
+                {{ category.attributes.name }}
+                <span class="text-xs">
+                  ({{ category.attributes.projects.data.length }})
+                </span>
+              </button>
+            </Tab>
+          </TabList>
+        </div>
         <TabPanels class="flex-1">
           <TabPanel class="tab-panel">
             <EcosystemLogoList :projects="projects" />
@@ -55,6 +65,10 @@
           </TabPanel>
         </TabPanels>
       </TabGroup>
+    </div>
+
+    <div class="absolute -z-10 left-0 top-0">
+      <img src="/images/common/gradient-bg.svg" />
     </div>
   </NuxtLayout>
 </template>

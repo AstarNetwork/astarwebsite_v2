@@ -3,7 +3,7 @@
     v-for="item in sortedProjects"
     :to="item.attributes.website"
     target="_blank"
-    class="border border-gray-300 bg-white rounded-lg transition p-4 sm:p-6 hover:bg-gray-50"
+    class="border border-gray-200 bg-white rounded-lg transition p-4 sm:p-6"
     :class="item.attributes.website && 'hover:shadow-lg'"
   >
     <span class="block py-4 mb-2 lg:mb-4">
