@@ -1,7 +1,7 @@
 <template>
   <Popover>
     <PopoverButton
-      class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
+      class="inline-flex items-center justify-center rounded-md p-2 text-gray-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
     >
       <span class="sr-only">Open menu</span>
       <Bars3Icon class="h-6 w-6" aria-hidden="true" />
@@ -35,7 +35,7 @@
               </NuxtLink>
               <div class="-mr-2 sm:mr-0">
                 <PopoverButton
-                  class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
+                  class="inline-flex items-center justify-center rounded-md p-2 text-gray-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
                 >
                   <span class="sr-only">Close menu</span>
                   <XMarkIcon class="h-6 w-6" aria-hidden="true" />

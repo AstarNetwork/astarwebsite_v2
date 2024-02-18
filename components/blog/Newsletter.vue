@@ -56,7 +56,7 @@
               <iframe class="w-full h-[600px]" :src="newsletter.iframe" />
               <button
                 type="button"
-                class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
+                class="text-gray-500 transition cursor-pointer p-3 hover:bg-gray-100 hover:text-gray-700 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
                 @click="newsletterOpen = false"
               >
                 <XMarkIcon class="w-8 h-8 sm:w-12 sm:h-12" />
