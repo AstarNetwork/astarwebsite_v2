@@ -77,6 +77,47 @@
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 import gql from "graphql-tag";
 
+interface ProjectAttributes {
+  id: number;
+  attributes: {
+    name: string;
+    website?: string;
+    description?: string;
+    logo: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    project_categories: {
+      data: CategoryAttributes[];
+    };
+  };
+}
+interface CategoryAttributes {
+  id: number;
+  attributes: {
+    name: string;
+    projects: {
+      data: ProjectAttributes[];
+    };
+  };
+}
+interface QueryResponse {
+  projects: {
+    meta: {
+      pagination: {
+        total: number;
+      };
+    };
+    data: ProjectAttributes[];
+  };
+  projectCategories: {
+    data: CategoryAttributes[];
+  };
+}
+
 const query = gql`
   query getAllData {
     projects(
@@ -147,13 +188,16 @@ const query = gql`
     }
   }
 `;
-const { data } = await useAsyncQuery({ query, clientId: "community" });
+const { data } = await useAsyncQuery<QueryResponse>({
+  query,
+  clientId: "community",
+});
 
-let projects = [];
-let categories = [];
+let projects = ref<ProjectAttributes[]>([]);
+let categories = ref<CategoryAttributes[]>([]);
 if (data.value !== null) {
-  projects = data.value.projects.data;
-  categories = data.value.projectCategories.data;
+  projects.value = data.value.projects.data;
+  categories.value = data.value.projectCategories.data;
 }
 
 const route = useRoute();
