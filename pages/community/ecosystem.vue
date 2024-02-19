@@ -192,7 +192,7 @@ async function fetchData() {
         attributes {
           name
           projects(
-            pagination: { page: 1, pageSize: 1000 }
+            pagination: { page: ${currentPage.value}, pageSize: ${pageSize} }
             sort: "name"
             filters: { id: { ne: 300 } }
           ) {
@@ -232,8 +232,8 @@ async function fetchData() {
   });
 
   if (data.value !== null) {
-    projects.value = [...data.value.projects.data];
-    categories.value = [...data.value.projectCategories.data];
+    projects.value = data.value.projects.data;
+    categories.value = data.value.projectCategories.data;
     totalProjects.value = data.value.projects.meta.pagination.total;
   }
 }
