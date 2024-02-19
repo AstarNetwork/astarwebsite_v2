@@ -7,6 +7,18 @@
     "tag": "Tag",
     "related": "Related Posts",
     "no_articles": "There are no English articles for this tag",
-    "back": "Back to Astar Blog"
+    "back": "Back to Astar Blog",
+    "newsletter": {
+      "global": {
+        "title": "Don't miss a beat.",
+        "description": "Sign-up for our newsletter to stay up-to-date and learn about the latest developments.",
+        "signup": "E-mail Sign-up"
+      },
+      "japan": {
+        "title": "Our Japan Newsletter",
+        "description": "The most important blockchain news from Japan to your inbox.",
+        "signup": "Subscribe"
+      }
+    }
   }
 }

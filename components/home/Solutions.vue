@@ -1,13 +1,12 @@
 <template>
   <div class="container-lg mt-12 sm:mt-20 mb-20 sm:mb-40">
     <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
-      Our Solutions
+      {{ $t("home.solutions.title") }}
     </h2>
     <p
       class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 s:text-lg leading-relaxed"
     >
-      There’s a solution for everyone with Astar. Companies, developers, and
-      individuals are connecting to web3.
+      {{ $t("home.solutions.description") }}
     </p>
 
     <div class="space-y-20 sm:space-y-40">
@@ -67,73 +66,71 @@
 
 <script setup lang="ts">
 import { ArrowRightIcon } from "@heroicons/vue/24/outline";
-const { locale } = useI18n();
-const i18n = locale.value === "ja" ? "/ja" : "";
+
+const { t } = useI18n();
 
 const data = {
   startale: {
-    name: "Startale Labs",
+    name: t("home.solutions.startale.name"),
     image: "startale-logo.svg",
-    description:
-      "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
+    description: t("home.solutions.startale.description"),
     link: {
-      label: "Startale labs website",
+      label: t("home.solutions.startale.cta"),
       url: "https://startale.org/",
     },
     useCases: [
       {
-        name: "Sony Network Communications",
+        name: t("home.solutions.startale.useCases.sony.name"),
         image: "sony.webp",
-        description:
-          "Sony Network Communications and Startale Labs are thrilled to announce that they have entered into a joint venture agreement dedicated to developing a blockchain that can become the backbone of global web3 infrastructure.",
+        description: t("home.solutions.startale.useCases.sony.description"),
         link: "https://startale.org/blog/39274",
       },
       {
-        name: "BOBG",
+        name: t("home.solutions.startale.useCases.bobg.name"),
         image: "bobg.webp",
-        description:
-          "BOBG is a company that provides comprehensive services to Japanese blockchain businesses, ranging from token issuance, operation, and management to cryptocurrency listing.",
-        link: "",
+        description: t("home.solutions.startale.useCases.bobg.description"),
+        link: "https://startale.org/blog/38915",
       },
       {
-        name: "UOB Venture Management and Samsung Next",
+        name: t("home.solutions.startale.useCases.uobAndSamsung.name"),
         image: "uob-samsung.webp",
-        description:
-          "Startale Labs secured a total of $3.5m in funding from UOB Venture Management, a wholly-owned subsidiary of one of Singapore's top three banks, United Overseas Bank, and Samsung Next, the CVC arm of Samsung.",
+        description: t(
+          "home.solutions.startale.useCases.uobAndSamsung.description"
+        ),
         link: "",
       },
     ],
   },
   japanLab: {
-    name: "Astar Japan Lab",
+    name: t("home.solutions.japanLab.name"),
     image: "astar-japan-lab-logo.svg",
-    description:
-      "Astar Japan Lab fuels the growth of Japanese services and businesses by conducting research and development, gathering knowledge, and collaborating with exciting and established companies.",
+    description: t("home.solutions.japanLab.description"),
     link: {
       label: "Astar Japan Lab",
       url: "/japan/",
     },
     useCases: [
       {
-        name: "Shibuya City",
+        name: t("home.solutions.japanLab.useCases.shibuyaCity.name"),
         image: "shibuya.webp",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
-        link: "",
+        description: t(
+          "home.solutions.japanLab.useCases.shibuyaCity.description"
+        ),
+        link: "https://medium.com/astar-network/astar-partners-with-shibuya-city-6824712020da",
       },
       {
-        name: "FUJITSU",
+        name: t("home.solutions.japanLab.useCases.fujitsu.name"),
         image: "fujitsu.webp",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+        description: t("home.solutions.japanLab.useCases.fujitsu.description"),
         link: "",
       },
       {
-        name: "Deloitte Tohmatsu",
+        name: t("home.solutions.japanLab.useCases.deloitteTohmatsu.name"),
         image: "deloitte.webp",
-        description:
-          "Deloitte Tohmatsu Group transforms the sports industry with Astar zkEVM",
-        link: "",
+        description: t(
+          "home.solutions.japanLab.useCases.deloitteTohmatsu.description"
+        ),
+        link: "https://astar.network/blog/deloitte-tohmatsu-group-transforms-the-sports-industry-with-56669",
       },
     ],
   },

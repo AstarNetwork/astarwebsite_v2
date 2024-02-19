@@ -1,7 +1,7 @@
 <template>
   <section class="overflow-hidden">
     <div class="container-lg my-16 sm:my-24">
-      <h2 class="text-xl mb-4">What's on</h2>
+      <h2 class="text-xl mb-4">{{ $t("home.latestNews.title") }}</h2>
 
       <Swiper
         class="swiper--latest-news"

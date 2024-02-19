@@ -171,6 +171,15 @@ const seoTitle = `${post.title} | ${meta.siteName}`;
 const seoDescription = post.summary;
 const seoUrl = `${meta.url}${route.fullPath}`;
 
+import { socialUrl } from "@/data/links";
+
+let twitterId = socialUrl.twitter.global.id;
+if (locale.value === "ja") {
+  twitterId = socialUrl.twitter.japan.id;
+} else if (locale.value === "ko") {
+  twitterId = socialUrl.twitter.korea.id;
+}
+
 useServerSeoMeta({
   title: () => seoTitle,
   description: () => seoDescription,
@@ -183,7 +192,7 @@ useServerSeoMeta({
   ogImageUrl: () => post.image,
   ogType: () => "article",
   ogUrl: () => seoUrl,
-  twitterSite: () => `@${t("meta.twitter")}`,
+  twitterSite: () => twitterId,
   twitterCard: () => "summary_large_image",
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,

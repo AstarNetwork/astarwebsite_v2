@@ -39,6 +39,8 @@
 </template>
 
 <script setup lang="ts">
+import { socialUrl, forumUrl } from "@/data/links";
+
 const X = resolveComponent("IconX");
 const Discord = resolveComponent("IconDiscord");
 const Telegram = resolveComponent("IconTelegram");
@@ -47,46 +49,57 @@ const Github = resolveComponent("IconGithub");
 const Youtube = resolveComponent("IconYoutube");
 const Comments = resolveComponent("IconComments");
 
+const { locale } = useI18n();
+
+let twitterUrl = socialUrl.twitter.global.url;
+if (locale.value === "ja") {
+  twitterUrl = socialUrl.twitter.japan.url;
+} else if (locale.value === "ko") {
+  twitterUrl = socialUrl.twitter.korea.url;
+}
+
+const i18n = locale.value === "ja" ? "/ja" : "";
+
 const social = [
   {
     name: "GitHub",
-    href: "https://github.com/AstarNetwork/Astar",
+    href: socialUrl.github,
     icon: Github,
     color: "text-black",
   },
   {
     name: "X(Twitter)",
-    href: "https://twitter.com/astarNetwork",
+    href: twitterUrl,
     icon: X,
     color: "text-black",
   },
   {
     name: "Telegram",
-    href: "https://t.me/PlasmOfficial",
+    href: socialUrl.telegram,
     icon: Telegram,
     color: "text-[#0088CC]",
   },
   {
     name: "Discord",
-    href: "https://discord.gg/astarnetwork",
+    href: socialUrl.discord,
     icon: Discord,
     color: "text-[#5865F2]",
   },
   {
     name: "Reddit",
-    href: "https://www.reddit.com/r/AstarNetwork/",
+    href: socialUrl.reddit,
     icon: Reddit,
     color: "text-[#FF4500]",
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/c/AstarNetwork",
+    href: socialUrl.youtube,
     icon: Youtube,
     color: "text-[#FF0000]",
   },
   {
     name: "Forum",
-    href: "https://forum.astar.network/",
+    href: forumUrl,
     icon: Comments,
     color: "text-slate-950",
   },

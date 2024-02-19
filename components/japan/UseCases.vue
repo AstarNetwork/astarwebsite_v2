@@ -22,7 +22,7 @@
             </p>
 
             <p v-if="item.href" class="group-hover:underline transition">
-              {{ t("learn_more") }}
+              {{ t("japan.use_cases.learnMore") }}
               <ArrowTopRightOnSquareIcon
                 class="w-4 h-4 inline-block stroke-2"
               />

@@ -6,16 +6,14 @@
       <h2
         class="text-white text-4xl sm:text-6xl tracking-tight text-center sm:text-left"
       >
-        dApps on Astar
+        {{ $t("home.dAppsOnAstar.title") }}
       </h2>
       <p class="sm:text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam,
+        {{ $t("home.dAppsOnAstar.description") }}
       </p>
       <div class="text-center sm:text-left">
         <Button :href="localePath('/community/ecosystem/')" color="whiteGray">
-          Explore ecosystem
+          {{ $t("home.dAppsOnAstar.cta") }}
         </Button>
       </div>
     </div>
@@ -27,8 +25,6 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath();
-const { locale } = useI18n();
-const i18n = locale.value === "ja" ? "/ja" : "";
 </script>
 
 <style lang="postcss" scoped></style>

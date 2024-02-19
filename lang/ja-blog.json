@@ -7,6 +7,18 @@
     "tag": "タグ",
     "related": "関連記事",
     "no_articles": "このタグの日本語記事はありません",
-    "back": "ブログトップへ戻る"
+    "back": "ブログトップへ戻る",
+    "newsletter": {
+      "global": {
+        "title": "Newsletter",
+        "description": "Astarに関する最新情報をお届けします",
+        "signup": "登録する"
+      },
+      "japan": {
+        "title": "Japan Newsletter",
+        "description": "日本からブロックチェーンに関する最新情報をお届けします",
+        "signup": "登録する"
+      }
+    }
   }
 }

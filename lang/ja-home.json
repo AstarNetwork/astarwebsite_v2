@@ -1,41 +1,144 @@
 {
   "home": {
+    "hero": {
+      "title": {
+        "connecting": "Connecting",
+        "youToWeb3": "you to web3"
+      },
+      "description": "Creating opportunities for individuals to use web3 technology. We connect people to web3—through entertainment, blockchain development, business development, and community events."
+    },
+    "features": {
+      "bridgeAndEcosystem": {
+        "title": "Bridge & Ecosystem",
+        "description": "Astar zkEVM is an Ethereum Layer-2 scaling solution that leverages Polygon's CDK and AggLayer technology. Astar zkEVM inherits Ethereum's security while maintaining EVM equivalence.",
+        "cta": {
+          "bridgeToAstar": "Bridge to Astar",
+          "exploreEcosystem": "Explore ecosystem"
+        }
+      },
+      "yokiOrigins": {
+        "title": "Yoki Origins",
+        "description": "Yoki Origins is a journey to discover original Yoki characters inspired by supernatural creatures from Japan. Collect and upgrade your Yoki in this exciting and friendly web3 experience for everyone.",
+        "cta": {
+          "yokiOriginsWebsite": "Yoki Origins website"
+        }
+      }
+    },
+    "latestNews": {
+      "title": "Latest News"
+    },
+    "solutions": {
+      "title": "Our Solutions",
+      "description": "There’s a solution for everyone with Astar. Companies, developers, and individuals are connecting to web3.",
+      "startale": {
+        "name": "Startale Labs",
+        "description": "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
+        "cta": "Startale labs website",
+        "useCases": {
+          "sony": {
+            "name": "Sony Network Communications",
+            "description": "Sony Network Communications and Startale Labs are thrilled to announce that they have entered into a joint venture agreement dedicated to developing a blockchain that can become the backbone of global web3 infrastructure."
+          },
+          "bobg": {
+            "name": "BOBG",
+            "description": "BOBG is a company that provides comprehensive services to Japanese blockchain businesses, ranging from token issuance, operation, and management to cryptocurrency listing."
+          },
+          "uobAndSamsung": {
+            "name": "UOB Venture Management and Samsung Next",
+            "description": "Startale Labs secured a total of $3.5m in funding from UOB Venture Management, a wholly-owned subsidiary of one of Singapore's top three banks, United Overseas Bank, and Samsung Next, the CVC arm of Samsung."
+          }
+        }
+      },
+      "japanLab": {
+        "name": "Astar Japan Lab",
+        "description": "Astar Japan Lab fuels the growth of Japanese services and businesses by conducting research and development, gathering knowledge, and collaborating with exciting and established companies.",
+        "cta": "Astar Japan Lab",
+        "useCases": {
+          "shibuyaCity": {
+            "name": "Shibuya City",
+            "description": "Astar is now partnering with the Shibuya to support the ward’s web3 initiatives. Shibuya prides itself on being the modern city of Tokyo. A hot spot for young entrepreneurs, high fashion, and miles of shopping outlets all centred around the Shibuya station."
+          },
+          "fujitsu": {
+            "name": "FUJITSU",
+            "description": "(placeholder)"
+          },
+          "deloitteTohmatsu": {
+            "name": "Deloitte Tohmatsu",
+            "description": "Deloitte Tohmatsu Group transforms the sports industry with Astar zkEVM"
+          }
+        }
+      }
+    },
     "developer": {
       "title": "デベロッパー",
       "description": "Astar 2.0へと進化するにつれ、我々の技術も進化します。開発者が複数のVM、レイヤー、コンセンサス・プロトコルの恩恵を受けられるよう、最先端のクロスレイヤー技術スタックを提供します。",
+      "poweredBy": "Powered by",
       "substrate": {
         "description": "Astar Substrateは、Polkadotを牽引するパラチェーンであるAstar Networkを支えるバックエンドテクノロジーです。仮想マシンの構築へのシームレスなアクセスと、Polkadot SDK、Substrateベースのプロトコルへの相互運用性を実現します。Ink!とRustスマートコントラクトにより確保された安全性と、革新的な報酬メカニズムがブロックチェーンの成長を後押しします。",
         "features": {
-          "multi_vm_support": "複数のVMをサポート：EVMとWASM",
-          "rust_and_ink": "Rustとink!で記述されたスマートコントラクト",
-          "interoperability_and_composability": "Substrateで構築されたチェーンとの相互運用性と互換性",
+          "multiVmSupport": "複数のVMをサポート：EVMとWASM",
+          "rustAndInk": "Rustとink!で記述されたスマートコントラクト",
+          "interoperabilityAndComposability": "Substrateで構築されたチェーンとの相互運用性と互換性",
           "secured": "Polkadotのバリデータが担保する安全性",
-          "dapp_staking_rewards": "開発者をサポートするdAppステーキング報酬",
-          "low_fees": "低いネットワーク手数料"
+          "dappStakingRewards": "開発者をサポートするdAppステーキング報酬",
+          "lowFees": "低いネットワーク手数料"
         }
       },
       "zkevm": {
         "description": "Astar zkEVMは高いUXを保ちながらEthereumの高いセキュリティとネットワーク効果を活用したい事業者にとって最適なソリューションを提供します。最先端のZKテクノロジーを活用したAstar zkEVMでは、開発者に定評あるツールと開発環境を提供し、Web3の大衆化に貢献します。",
         "features": {
-          "ethereum_security": "Ethereumから継承した高いセキュリティ",
-          "high_scalability": "高い拡張性",
-          "low_fees": "いつでも安価なネットワーク手数料",
+          "ethereumSecurity": "Ethereumから継承した高いセキュリティ",
+          "highScalability": "高い拡張性",
+          "lowFees": "いつでも安価なネットワーク手数料",
           "access": "最も活発なWeb3エコシステムへのアクセス",
-          "developer_experience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
+          "developerExperience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
         }
-      }
-    },
-    "newsletter": {
-      "global": {
-        "title": "Newsletter",
-        "description": "Astarに関する最新情報をお届けします",
-        "signup": "登録する"
       },
-      "japan": {
-        "title": "Japan Newsletter",
-        "description": "日本からブロックチェーンに関する最新情報をお届けします",
-        "signup": "登録する"
-      }
+      "cta": "Start building"
     },
+    "dAppsOnAstar": {
+      "title": "dApps on Astar",
+      "description": "(placeholder)",
+      "cta": "Explore ecosystem"
+    },
+    "funding": {
+      "title": "Funding",
+      "description": "(placeholder)",
+      "globalHackathons": {
+        "title": "Global Hackathons",
+        "description": "A collection of funding to connect you to web3.",
+        "stats": {
+          "prize": "Prize (USD)",
+          "applications": "Applications"
+        }
+      },
+      "dAppStaking": {
+        "title": "dApp Staking",
+        "description": "An incentivized program to connect developers to the Astar community, where everyone is rewarded.",
+        "stats": {
+          "tier1Rewards": "Tier 1 Rewards (USD)",
+          "totalStakers": "Total stakers",
+          "subjectToMarket": "(subject to market)"
+        }
+      },
+      "cta": "Developer support"
+    },
+    "links": {
+      "astrAndItsUtility": {
+        "title": "ASTR and its utility",
+        "description": "ASTR is the native token driving Astar Network, having ultimate utility by serving various functions such as staking rewards, gas, and grants.",
+        "cta": "Check Tokenomics 2.0"
+      },
+      "dAppStaking": {
+        "title": "dApp Staking",
+        "description": "dApp Staking is Astar’s unique mechanism to financially incentivise developers and is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.",
+        "cta": "Start staking"
+      },
+      "community": {
+        "title": "Community",
+        "description": "Find your tribe and connect with with other Astar enthusiasts.",
+        "cta": "Join our community"
+      }
+    }
   }
 }

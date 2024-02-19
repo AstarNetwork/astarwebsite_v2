@@ -6,10 +6,9 @@
       <NuxtLink :to="localePath('/contact/')" class="cta group">
         <div class="cta-inner">
           <div class="flex-1">
-            <h3>Get in touch</h3>
+            <h3>{{ $t("footer.contactUs.title") }}</h3>
             <p class="leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.
+              {{ $t("footer.contactUs.description") }}
             </p>
           </div>
           <span
@@ -27,10 +26,9 @@
       <div @click="newsletterOpen = true" class="cta group">
         <div class="cta-inner">
           <div class="flex-1">
-            <h3>Newsletter</h3>
+            <h3>{{ $t("footer.newsletter.title") }}</h3>
             <p class="leading-relaxed">
-              Sign-up for our newsletter to stay up-to-date and learn about the
-              latest developments.
+              {{ $t("footer.newsletter.description") }}
             </p>
           </div>
           <span
@@ -178,6 +176,7 @@ import {
   bugBountyProgramUrl,
   forumUrl,
   brandAssetsUrl,
+  docsUrl,
 } from "@/data/links";
 import {
   ArrowTopRightOnSquareIcon,
@@ -204,68 +203,77 @@ const { t } = useI18n();
 
 const nav = [
   {
-    name: t("footer.build"),
+    name: t("footer.nav.build"),
     nav: [
-      { name: t("footer.docs"), href: "https://docs.astar.network/" },
+      { name: t("footer.nav.docs"), href: docsUrl.index },
       { name: "GitHub", href: socialUrl.github },
       { name: "Discord", href: socialUrl.discord },
     ],
   },
   {
-    name: t("footer.apply"),
+    name: t("footer.nav.apply"),
     nav: [
       {
-        name: t("footer.careers"),
+        name: t("footer.nav.careers"),
         href: socialUrl.wellfound,
       },
       {
-        name: "Astar Ambassador Program",
+        name: t("footer.nav.ambassadorProgram"),
         href: ambassadorProgramUrl,
       },
       {
-        name: "Bug Bounty Program",
+        name: t("footer.nav.bugBountyProgram"),
         href: bugBountyProgramUrl,
       },
     ],
   },
   {
-    name: t("footer.learn"),
+    name: t("footer.nav.learn"),
     nav: [
-      { name: t("footer.blog"), href: localePath("/blog") },
+      { name: t("footer.nav.blog"), href: localePath("/blog") },
       {
-        name: t("footer.videos"),
+        name: t("footer.nav.videos"),
         href: socialUrl.youtube,
       },
-      { name: t("footer.forum"), href: forumUrl },
+      { name: t("footer.nav.forum"), href: forumUrl },
     ],
   },
   {
-    name: t("footer.other"),
+    name: t("footer.nav.other"),
     nav: [
       {
-        name: t("footer.brand_assets"),
+        name: t("footer.nav.brandAssets"),
         href: brandAssetsUrl,
       },
       {
-        name: t("footer.privacy_policy"),
+        name: t("footer.nav.privacyPolicy"),
         href: localePath("/privacy-policy"),
       },
       {
-        name: t("footer.terms_of_use"),
+        name: t("footer.nav.termsOfUse"),
         href: localePath("/term-of-use"),
       },
       {
-        name: t("footer.contact"),
+        name: t("footer.nav.contactUs"),
         href: localePath("/contact"),
       },
     ],
   },
 ];
 
+const { locale } = useI18n();
+
+let twitterUrl = socialUrl.twitter.global.url;
+if (locale.value === "ja") {
+  twitterUrl = socialUrl.twitter.japan.url;
+} else if (locale.value === "ko") {
+  twitterUrl = socialUrl.twitter.korea.url;
+}
+
 const social = [
   {
     name: "X(Twitter)",
-    href: socialUrl.twitter,
+    href: twitterUrl,
     icon: X,
   },
   {

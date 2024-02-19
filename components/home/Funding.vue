@@ -3,14 +3,12 @@
     <h2
       class="text-white text-4xl sm:text-6xl tracking-tight text-center mb-8 sm:mb-12"
     >
-      Funding
+      {{ $t("home.funding.title") }}
     </h2>
     <p
       class="mx-auto max-w-3xl text-center mb-16 sm:mb-20 sm:text-lg leading-relaxed"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam,
+      {{ $t("home.funding.description") }}
     </p>
 
     <div class="space-y-6 sm:space-y-12">
@@ -41,16 +39,6 @@
           <p class="mb-6 lg:mb-12 leading-relaxed">{{ item.description }}</p>
           <div class="flex gap-6 sm:gap-12 justify-center sm:justify-start">
             <HomeStat v-for="stat in item.stats" :stat="stat" />
-            <!-- <div v-for="stat in item.stats" class="text-center">
-              <div
-                class="text-blue font-semibold text-4xl sm:text-5xl lg:text-6xl mb-1"
-              >
-                <count-up :end-val="stat.number" class="inline" />
-                <span>{{ stat.unitModifier }}</span>
-              </div>
-              <div class="text-sm lg:text-base">{{ stat.name }}</div>
-              <div v-if="stat.caption" class="text-xs">{{ stat.caption }}</div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -58,7 +46,7 @@
 
     <div class="text-center mt-8 sm:mt-12">
       <Button :href="localePath('/developers/')" color="whiteGray">
-        Developer support
+        {{ $t("home.funding.cta") }}
       </Button>
     </div>
   </div>
@@ -70,26 +58,37 @@ const { t } = useI18n();
 
 const data = [
   {
-    title: "Global Hackathons",
-    description: "A collection of funding to connect you to web3.",
+    title: t("home.funding.globalHackathons.title"),
+    description: t("home.funding.globalHackathons.description"),
     image: "funding-hackathons.svg",
     stats: [
-      { name: "Prize (USD)", number: 100, unitModifier: "k+" },
-      { name: "Applications", number: 5000, unitModifier: "+" },
+      {
+        name: t("home.funding.globalHackathons.stats.prize"),
+        number: 100,
+        unitModifier: "k+",
+      },
+      {
+        name: t("home.funding.globalHackathons.stats.applications"),
+        number: 5000,
+        unitModifier: "+",
+      },
     ],
   },
   {
-    title: "dApp Staking",
-    description:
-      "An incentivized program to connect developers to the Astar community, where everyone is rewarded.",
+    title: t("home.funding.dAppStaking.title"),
+    description: t("home.funding.dAppStaking.description"),
     image: "funding-dapp-staking.svg",
     stats: [
-      { name: "Tier 1 Rewards (USD)", number: 40, unitModifier: "k" },
       {
-        name: "Total stakers",
+        name: t("home.funding.dAppStaking.stats.tier1Rewards"),
+        number: 40,
+        unitModifier: "k",
+      },
+      {
+        name: t("home.funding.dAppStaking.stats.totalStakers"),
         number: 20,
         unitModifier: "k+",
-        caption: "(subject to market)",
+        caption: t("home.funding.dAppStaking.stats.subjectToMarket"),
       },
     ],
   },

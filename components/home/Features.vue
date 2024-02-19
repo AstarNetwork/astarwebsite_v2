@@ -38,37 +38,34 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n();
 const localePath = useLocalePath();
-const i18n = locale.value === "ja" ? "/ja" : "";
+const { t } = useI18n();
 
 const data = [
   {
-    title: "Bridge & Ecosystem",
+    title: t("home.features.bridgeAndEcosystem.title"),
     image: "bridge-and-ecosystem.svg",
-    description:
-      "Astar zkEVM is an Ethereum Layer-2 scaling solution that leverages Polygon's CDK and AggLayer technology. Astar zkEVM inherits Ethereum's security while maintaining EVM equivalence.",
+    description: t("home.features.bridgeAndEcosystem.description"),
     links: [
       {
-        label: "Bridge to Astar",
+        label: t("home.features.bridgeAndEcosystem.cta.bridgeToAstar"),
         url: "https://portal.astar.network/astar/bridge",
         color: "blue",
       },
       {
-        label: "Explore ecosystem",
+        label: t("home.features.bridgeAndEcosystem.cta.exploreEcosystem"),
         url: "/community/ecosystem/",
         color: "outlinedGray",
       },
     ],
   },
   {
-    title: "Yoki Origins",
+    title: t("home.features.yokiOrigins.title"),
     image: "yoki-origins.webp",
-    description:
-      "Yoki Origins is a journey to discover original Yoki characters inspired by supernatural creatures from Japan. Collect and upgrade your Yoki in this exciting and friendly web3 experience for everyone.",
+    description: t("home.features.yokiOrigins.description"),
     links: [
       {
-        label: "Yoki Origins website",
+        label: t("home.features.yokiOrigins.cta.yokiOriginsWebsite"),
         url: "https://yoki.astar.network/",
         color: "blue",
       },

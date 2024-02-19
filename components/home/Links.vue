@@ -34,32 +34,29 @@ const { t } = useI18n();
 
 const data = [
   {
-    title: "ASTR and its utility",
-    description:
-      "ASTR is the native token driving Astar Network, having ultimate utility by serving various functions such as staking rewards, gas, and grants.",
+    title: t("home.links.astrAndItsUtility.title"),
+    description: t("home.links.astrAndItsUtility.description"),
     image: "links-astr-utility.svg",
     link: {
-      label: "Check Tokenomics 2.0",
+      label: t("home.links.astrAndItsUtility.cta"),
       url: "/blog/how-the-astr-token-brings-utility-and-value-to-the-astar-39387/",
     },
   },
   {
-    title: "dApp Staking",
-    description:
-      "dApp Staking is Astar’s unique mechanism to financially incentivise developers and is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.",
+    title: t("home.links.dAppStaking.title"),
+    description: t("home.links.dAppStaking.description"),
     image: "links-dapp-staking.svg",
     link: {
-      label: "Start Staking",
+      label: t("home.links.dAppStaking.cta"),
       url: "https://portal.astar.network/",
     },
   },
   {
-    title: "Community",
-    description:
-      "Find your tribe and connect with with other Astar enthusiasts.",
+    title: t("home.links.community.title"),
+    description: t("home.links.community.description"),
     image: "links-community.svg",
     link: {
-      label: "Join our community",
+      label: t("home.links.community.cta"),
       url: "/community/",
     },
   },

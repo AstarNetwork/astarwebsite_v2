@@ -92,15 +92,15 @@ const props = defineProps({
 const newsletters = {
   global: {
     iframe: newsletterUrl.global,
-    title: t("home.newsletter.global.title"),
-    description: t("home.newsletter.global.description"),
-    button: t("home.newsletter.global.signup"),
+    title: t("blog.newsletter.global.title"),
+    description: t("blog.newsletter.global.description"),
+    button: t("blog.newsletter.global.signup"),
   },
   japan: {
     iframe: newsletterUrl.japan,
-    title: t("home.newsletter.japan.title"),
-    description: t("home.newsletter.japan.description"),
-    button: t("home.newsletter.japan.signup"),
+    title: t("blog.newsletter.japan.title"),
+    description: t("blog.newsletter.japan.description"),
+    button: t("blog.newsletter.japan.signup"),
   },
 };
 

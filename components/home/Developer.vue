@@ -27,7 +27,7 @@
             class="flex justify-end items-center space-x-2 uppercase text-slate-300 text-xs sm:text-sm mb-6"
           >
             <span>
-              Powered by
+              {{ $t("home.developer.poweredBy") }}
               <span class="sr-only">{{ item.poweredBy.text }}</span>
             </span>
             <img
@@ -37,7 +37,7 @@
             />
           </p>
           <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug text-white">
-            {{ item.title }}
+            {{ item.name }}
           </h3>
           <p class="leading-relaxed">{{ item.description }}</p>
           <ul class="space-y-2 my-10">
@@ -55,7 +55,7 @@
 
     <div class="text-center mt-8 sm:mt-12">
       <Button :href="localePath('/developers/')" color="whiteGray">
-        Start Building
+        {{ $t("home.developer.cta") }}
       </Button>
     </div>
   </div>
@@ -70,35 +70,35 @@ const { t } = useI18n();
 const data = [
   {
     slug: "substrate",
-    title: "Astar Substrate",
+    name: "Astar Substrate",
     description: t("home.developer.substrate.description"),
     poweredBy: {
       image: "/images/home/polkadot-logo.svg",
       text: "Polkadot",
     },
     features: [
-      t("home.developer.substrate.features.multi_vm_support"),
-      t("home.developer.substrate.features.rust_and_ink"),
-      t("home.developer.substrate.features.interoperability_and_composability"),
+      t("home.developer.substrate.features.multiVmSupport"),
+      t("home.developer.substrate.features.rustAndInk"),
+      t("home.developer.substrate.features.interoperabilityAndComposability"),
       t("home.developer.substrate.features.secured"),
-      t("home.developer.substrate.features.dapp_staking_rewards"),
-      t("home.developer.substrate.features.low_fees"),
+      t("home.developer.substrate.features.dappStakingRewards"),
+      t("home.developer.substrate.features.lowFees"),
     ],
   },
   {
     slug: "zkevm",
-    title: "Astar zkEVM",
+    name: "Astar zkEVM",
     description: t("home.developer.zkevm.description"),
     poweredBy: {
       image: "/images/home/polygon-logo.svg",
       text: "Polygon",
     },
     features: [
-      t("home.developer.zkevm.features.ethereum_security"),
-      t("home.developer.zkevm.features.high_scalability"),
-      t("home.developer.zkevm.features.low_fees"),
+      t("home.developer.zkevm.features.ethereumSecurity"),
+      t("home.developer.zkevm.features.highScalability"),
+      t("home.developer.zkevm.features.lowFees"),
       t("home.developer.zkevm.features.access"),
-      t("home.developer.zkevm.features.developer_experience"),
+      t("home.developer.zkevm.features.developerExperience"),
     ],
   },
 ];

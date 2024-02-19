@@ -27,12 +27,22 @@ export const socialUrl = {
   telegram: "https://t.me/PlasmOfficial",
   medium: "https://medium.com/astar-network",
   twitter: {
-    global: "https://twitter.com/astarNetwork",
+    global: {
+      url: "https://twitter.com/AstarNetwork",
+      id: "@AstarNetwork",
+    },
+    japan: {
+      url: "https://twitter.com/AstarNetwork_JP",
+      id: "AstarNetwork_JP",
+    },
+    korea: {
+      url: "https://twitter.com/AstarNetwork_KR",
+      id: "AstarNetwork_KR",
+    },
   },
+  reddit: "https://www.reddit.com/r/AstarNetwork/",
 };
 
 export const grantsUrl = {
   inkubator: "https://use.ink/ubator/",
 };
-
-

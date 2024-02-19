@@ -2,12 +2,12 @@
   <section class="overflow-hidden">
     <div class="container-md py-20">
       <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
-        Partners
+        {{ $t("solutions.partners.title") }}
       </h2>
       <p
         class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-8 sm:mb-20"
       >
-        Our important partners to achieve our mission
+        {{ $t("solutions.partners.description") }}
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 lg:gap-10 2xl:gap-20">
@@ -29,24 +29,24 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const data = [
   {
-    name: "Startale Labs",
+    name: t("solutions.partners.startale.name"),
     image: "startale-logo.svg",
-    description:
-      "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
+    description: t("solutions.partners.startale.description"),
     link: {
-      label: "Startale labs website",
+      label: t("solutions.partners.startale.cta"),
       url: "https://startale.org/",
     },
   },
   {
-    name: "Sony Network Communications",
+    name: t("solutions.partners.sony.name"),
     image: "sony-logo.svg",
-    description:
-      "Sony Network Communications and Astar Network created a joint incubation program that leveraged the world’s top innovators to drive growth for 19 web3 startups, receiving over 200 applications.",
+    description: t("solutions.partners.sony.description"),
     link: {
-      label: "Web3 Incubation Program",
+      label: t("solutions.partners.sony.cta"),
       url: "https://astar.network/incubation",
     },
   },

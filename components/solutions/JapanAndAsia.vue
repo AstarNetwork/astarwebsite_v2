@@ -2,14 +2,12 @@
   <section class="overflow-hidden">
     <div class="container-lg pt-20 pb-40">
       <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
-        Japan and Asia
+        {{ $t("solutions.japanAndAsia.title") }}
       </h2>
       <p
         class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-16 sm:mb-20"
       >
-        Our strong community includes over ## Japanese members and growing. We
-        work closely with industry-leading enterprises, local/national
-        government initiatives, and leaders to bring web3 to Asia and beyond.
+        {{ $t("solutions.japanAndAsia.description") }}
       </p>
 
       <Swiper
@@ -38,7 +36,7 @@
         }"
       >
         <SwiperSlide v-for="(post, index) in posts">
-          <BlogArticleCard :post="post" :key="post" />
+          <BlogArticleCard :post="post" :key="post.title" />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -46,33 +44,33 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const posts = [
   {
-    title: "Expand big community in Asia (Korea)",
+    title: t("solutions.japanAndAsia.korea.title"),
     image: "/images/solutions/japan-and-asia/korea.webp",
-    description:
-      "We’re bridging different local markets in Asia to realize our shared vision of global mass adoption, including the expansion of Korean web3 companies to Japan.",
+    description: t("solutions.japanAndAsia.korea.description"),
     link: "",
   },
   {
-    title: "Sota influence to Japan taxation and government",
+    title: t("solutions.japanAndAsia.japanTaxationAndGovernment.title"),
     image: "/images/solutions/japan-and-asia/japanese-government-web3.webp",
-    description:
-      "Sota Watanabe, the founder of Astar Network and a member of the Japanese Government's web3 task force, advises the Japanese government on developing web3 as part of its national strategy.",
+    description: t(
+      "solutions.japanAndAsia.japanTaxationAndGovernment.description"
+    ),
     link: "https://www.youtube.com/watch?v=EAe67yxlsOM",
   },
   {
-    title: "Something that can tell that mass adaption is not too far",
+    title: t("solutions.japanAndAsia.yoake.title"),
     image: "/images/solutions/japan-and-asia/yasushi-akimoto.webp",
-    description:
-      "YOAKE entertainment Co, Ltd. starts an ambitious project on Astar to create global entertainment content and an idol economy through blockchain technology.",
+    description: t("solutions.japanAndAsia.yoake.description"),
     link: "/blog/yasushi-akimoto-japan's-legendary-idol-producer-starts-54961/",
   },
   {
-    title: "Astar Japan Lab",
+    title: t("solutions.japanAndAsia.japanLab.title"),
     image: "/images/solutions/japan-and-asia/astar-japan-lab.webp",
-    description:
-      "394 companies work together to fuel the growth of web3 in Japan. Learn more and register your company.",
+    description: t("solutions.japanAndAsia.japanLab.description"),
     link: "/japan/",
   },
 ];

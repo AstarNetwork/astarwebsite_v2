@@ -1,21 +1,16 @@
 <template>
   <section class="container-lg pt-20 pb-12">
     <h1 class="text-center mb-12 space-y-6">
-      <span>Connecting</span>
-      <span>you to web3</span>
+      <span>{{ $t("home.hero.title.connecting") }}</span>
+      <span>{{ $t("home.hero.title.youToWeb3") }}</span>
     </h1>
     <p class="text-center max-w-2xl mx-auto sm:text-lg">
-      Creating opportunities for individuals to use web3 technology. We connect
-      people to web3—through entertainment, blockchain development, business
-      development, and community events.
+      {{ $t("home.hero.description") }}
     </p>
   </section>
 </template>
 
-<script setup lang="ts">
-const { locale } = useI18n();
-const i18n = locale.value === "ja" ? "/ja" : "";
-</script>
+<script setup lang="ts"></script>
 
 <style lang="postcss" scoped>
 section {
