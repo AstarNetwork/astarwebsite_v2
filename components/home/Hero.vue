@@ -28,7 +28,7 @@ h1 span:first-of-type {
   letter-spacing: -0.075rem;
   line-height: 1.25;
   animation: scale-up1 both, fade-away both linear;
-  animation-timeline: --section;
+  animation-timeline: --section !important;
   animation-range: entry-crossing 50% exit 60%, exit 0% exit 70%;
   @media (min-width: 640px) {
     font-size: 4.25rem;
@@ -49,7 +49,7 @@ h1 span:last-of-type {
   letter-spacing: -0.05rem;
   line-height: 1.25;
   animation: scale-up2 both, fade-away both linear;
-  animation-timeline: --section;
+  animation-timeline: --section !important;
   animation-range: entry-crossing 70% exit 100%, exit 30% exit 100%;
   @media (min-width: 640px) {
     font-size: 2.25rem;
