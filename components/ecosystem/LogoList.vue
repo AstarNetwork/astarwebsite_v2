@@ -50,17 +50,32 @@ import { ProjectType } from "@/types";
 
 interface Props {
   projects: ProjectType[];
+  chain: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   projects: () => [] as ProjectType[],
+  chain: () => "",
 });
 
-const sortedProjects = props.projects.sort((a, b) => {
-  if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
-    return 1;
-  } else {
-    return -1;
-  }
+// Use computed to ensure reactivity
+const sortedProjects = computed(() => {
+  return props.projects
+    .filter((project) => {
+      if (props.chain === "All" || !props.chain) {
+        return true;
+      } else {
+        return project.attributes.project_chains.data.some(
+          (chain) => chain.attributes.name === props.chain
+        );
+      }
+    })
+    .sort((a, b) => {
+      if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
 });
 </script>

@@ -10,37 +10,23 @@
     >
       <TabGroup>
         <div class="sm:w-36 lg:w-56">
-          <TabList class="flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-1">
-            <p
+          <RadioGroup
+            v-model="chain"
+            class="flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-7"
+          >
+            <RadioGroupLabel
               class="text-slate-950 font-semibold inline sm:block pr-2 py-2 lg:py-3 text-xs sm:text-sm lg:text-base"
+              >{{ $t("ecosystem.chain") }}</RadioGroupLabel
             >
-              {{ $t("ecosystem.chain") }}
-            </p>
-            <Tab as="template" v-slot="{ selected }">
-              <button
-                :class="{
-                  'tab current': selected,
-                  tab: !selected,
-                }"
-              >
-                All
-                <span class="text-xs">({{ projects.length }})</span>
-              </button>
-            </Tab>
-            <Tab as="template" v-slot="{ selected }" v-for="chain in chains">
-              <button
-                :class="{
-                  'tab current': selected,
-                  tab: !selected,
-                }"
-              >
-                {{ chain.attributes.name }}
-                <span class="text-xs">
-                  ({{ chain.attributes.projects.data.length }})
-                </span>
-              </button>
-            </Tab>
-          </TabList>
+            <RadioGroupOption
+              v-slot="{ checked }"
+              :value="chain"
+              v-for="chain in chains"
+            >
+              <span :class="checked ? 'tab current' : 'tab'">{{ chain }}</span>
+            </RadioGroupOption>
+          </RadioGroup>
+          <br />
           <TabList class="flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-1">
             <p
               class="text-slate-950 font-semibold inline sm:block pr-2 py-2 lg:py-3 text-xs sm:text-sm lg:text-base"
@@ -79,13 +65,13 @@
         </div>
         <TabPanels class="flex-1">
           <TabPanel class="tab-panel">
-            <EcosystemLogoList :projects="projects" />
+            <EcosystemLogoList :projects="projects" :chain="chain" />
           </TabPanel>
           <TabPanel class="tab-panel" v-for="item in categories">
-            <EcosystemLogoList :projects="item.attributes.projects.data" />
-          </TabPanel>
-          <TabPanel class="tab-panel" v-for="item in chains">
-            <EcosystemLogoList :projects="item.attributes.projects.data" />
+            <EcosystemLogoList
+              :projects="item.attributes.projects.data"
+              :chain="chain"
+            />
           </TabPanel>
         </TabPanels>
       </TabGroup>
@@ -98,7 +84,16 @@
 </template>
 
 <script setup lang="ts">
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
+import {
+  TabGroup,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+  RadioGroup,
+  RadioGroupLabel,
+  RadioGroupOption,
+} from "@headlessui/vue";
 import gql from "graphql-tag";
 import { ProjectType, RelationType, QueryResponse } from "@/types";
 
@@ -191,43 +186,6 @@ const query = gql`
         id
         attributes {
           name
-          projects(
-            pagination: { page: 1, pageSize: 1000 }
-            sort: "name"
-            filters: { id: { ne: 300 } }
-          ) {
-            data {
-              id
-              attributes {
-                name
-                website
-                description
-                logo {
-                  data {
-                    attributes {
-                      url
-                    }
-                  }
-                }
-                project_categories(sort: "name") {
-                  data {
-                    id
-                    attributes {
-                      name
-                    }
-                  }
-                }
-                project_chains(sort: "name") {
-                  data {
-                    id
-                    attributes {
-                      name
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       }
     }
@@ -240,11 +198,15 @@ const { data } = await useAsyncQuery<QueryResponse>({
 
 let projects = ref<ProjectType[]>([]);
 let categories = ref<RelationType[]>([]);
-let chains = ref<RelationType[]>([]);
+let chains = ref<string[]>(["All"]);
+let chain = ref<string>(chains.value[0]);
+
 if (data.value !== null) {
   projects.value = data.value.projects.data;
   categories.value = data.value.projectCategories.data;
-  chains.value = data.value.projectChains.data;
+  chains.value = ["All"].concat(
+    data.value.projectChains.data.map((chain) => chain.attributes.name)
+  );
 }
 
 const route = useRoute();
