@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-6 container-lg mt-8"
+    class="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-6 container-lg mt-8 relative"
   >
     <div
       v-for="(item, index) in data"
@@ -33,6 +33,10 @@
           {{ button.label }}
         </Button>
       </div>
+    </div>
+
+    <div class="absolute -z-10 top-0">
+      <img src="/images/common/gradient-bg.svg" alt="" />
     </div>
   </div>
 </template>

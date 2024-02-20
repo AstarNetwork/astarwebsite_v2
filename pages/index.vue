@@ -1,12 +1,8 @@
 <template>
   <NuxtLayout name="default">
+    <HomeCircles />
     <HomeHero />
-    <div class="relative">
-      <HomeFeatures />
-      <div class="absolute -z-10 top-0">
-        <img src="/images/common/gradient-bg.svg" alt="" />
-      </div>
-    </div>
+    <HomeFeatures />
     <HomeLatestNews />
     <HomeSolutions />
     <div class="bg-black text-slate-300 py-12 sm:py-20">
