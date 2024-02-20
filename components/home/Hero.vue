@@ -1,5 +1,5 @@
 <template>
-  <section class="container-lg pt-20 pb-12 test">
+  <section class="container-lg pt-20 pb-12">
     <h1 class="text-center mb-12">
       <span
         class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight md:tracking-tighter"
@@ -27,7 +27,7 @@ onMounted(() => {
     opacity: 0.5,
     scrollTrigger: {
       toggleActions: "play none none reverse",
-      trigger: ".test",
+      trigger: "section",
       start: "bottom center",
       // markers: true,
       scrub: true,
@@ -39,7 +39,7 @@ onMounted(() => {
     opacity: 0.5,
     scrollTrigger: {
       toggleActions: "play none none reverse",
-      trigger: ".test",
+      trigger: "section",
       start: "bottom center",
       // markers: true,
       scrub: true,
