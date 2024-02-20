@@ -4,13 +4,15 @@
       <h2 class="title text-center mb-8 sm:mb-12 whitespace-pre-wrap">
         <span>{{ $t("developers.toolkit.title") }}</span>
       </h2>
-      <p class="text-center mb-12 sm:mb-28">
-        {{ $t("developers.toolkit.description") }}<br />
-        <NuxtLink to="/community/ecosystem" class="transition hover:underline">
+      <div class="mb-12 sm:mb-28 text-center">
+        <p>
+          {{ $t("developers.toolkit.description") }}
+        </p>
+        <TextLink href="/community/ecosystem">
           {{ $t("developers.toolkit.ecosystem") }}
-          <ArrowRightIcon class="inline-block w-5 h-5 stroke-2" />
-        </NuxtLink>
-      </p>
+        </TextLink>
+      </div>
+
       <div class="px-4 sm:px-6">
         <div
           class="grid grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-12 sm:gap-y-20 sm:grid-cols-4 lg:grid-cols-5"
