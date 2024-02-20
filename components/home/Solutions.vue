@@ -91,14 +91,14 @@ const data = {
         description: t("home.solutions.startale.useCases.bobg.description"),
         link: "https://startale.org/blog/38915",
       },
-      {
-        name: t("home.solutions.startale.useCases.uobAndSamsung.name"),
-        image: "uob-samsung.webp",
-        description: t(
-          "home.solutions.startale.useCases.uobAndSamsung.description"
-        ),
-        link: "",
-      },
+      // {
+      //   name: t("home.solutions.startale.useCases.uobAndSamsung.name"),
+      //   image: "uob-samsung.webp",
+      //   description: t(
+      //     "home.solutions.startale.useCases.uobAndSamsung.description"
+      //   ),
+      //   link: "",
+      // },
     ],
   },
   japanLab: {

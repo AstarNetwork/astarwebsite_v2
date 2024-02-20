@@ -2,8 +2,10 @@
   <div class="container-lg py-20 sm:py-40">
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8">
       <div
-        v-for="item in data"
+        v-for="(item, index) in data"
         class="space-y-4 sm:space-y-6 border-2 border-white rounded-lg shadow-lg bg-white/50 p-6 lg:p-12"
+        data-aos="fade-up"
+        :data-aos-delay="index * 100"
       >
         <div class="-mt-8 sm:-mt-28">
           <img

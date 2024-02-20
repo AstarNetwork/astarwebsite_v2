@@ -15,6 +15,8 @@
       <div
         v-for="(item, index) in data"
         class="border border-slate-800 rounded-xl p-6 sm:p-8 lg:p-12 relative"
+        data-aos="fade-up"
+        :data-aos-delay="index * 100"
       >
         <img
           :src="`/images/home/developer-bg-${

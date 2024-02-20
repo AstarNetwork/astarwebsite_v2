@@ -1,39 +1,54 @@
 <template>
-  <div class="relative h-[200vh]">
-    <img
-      src="/images/common/gradient-bg.svg"
-      alt=""
-      class="fixed -z-20 top-0"
-    />
-    <div class="mission-1 h-screen sticky top-0">
-      <div class="h-screen flex items-center justify-center">
-        <h2>
-          <img
-            src="/images/solutions/our-mission-title.svg"
-            alt="Our Mission"
-            class="mx-auto w-full max-w-[600px]"
-          />
-        </h2>
-      </div>
-      <div class="absolute -top-40 w-full -z-10">
-        <img
-          src="/images/solutions/our-mission-image.svg"
-          alt=""
-          class="mx-auto mission-image"
-        />
-      </div>
-    </div>
-    <div class="z-10 relative">
-      <div
-        class="backdrop-blur bg-white/70 mx-auto w-screen h-screen flex items-center justify-center"
+  <div class="relative -mt-12 lg:-mt-32">
+    <div class="-z-10 sm:-ml-12 w-full text-center sm:text-left">
+      <span
+        class="border border-blue/30 rounded-full p-7 sm:p-12 lg:p-16 xl:p-20 inline-block"
       >
-        <div class="text-center text-4xl leading-[200%] space-y-20 max-w-lg">
-          <p class="text-slate-950 font-semibold">
-            Create new opportunities for you to use web3.
+        <span
+          class="border border-blue/30 rounded-full p-7 sm:p-12 lg:p-16 xl:p-20 inline-block"
+        >
+          <span
+            class="border border-blue/30 rounded-full p-7 sm:p-12 lg:p-16 xl:p-20 inline-block"
+          >
+            <span
+              class="border border-blue/30 rounded-full p-7 sm:p-12 lg:p-16 xl:p-20 inline-block"
+            >
+              <img
+                src="/images/solutions/astar-logo.svg"
+                alt=""
+                class="mission-image w-24 sm:w-36 lg:w-48 xl:w-60"
+              />
+            </span>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div class="sm:absolute h-full w-full top-0">
+      <div
+        class="container-md h-full flex justify-end items-center -mt-36 sm:mt-0"
+      >
+        <div
+          class="sm:w-3/5 border-2 border-white rounded-xl shadow-lg bg-white/50 px-6 py-12 sm:p-16 lg:p-24 space-y-4 sm:space-y-6 lg:space-y-8"
+        >
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0047FF] to-[#00D1FF] leading-tight sm:leading-tight lg:leading-tight font-bold mb-4"
+          >
+            {{ $t("solutions.mission.title") }}
+          </h2>
+
+          <p
+            class="text-slate-950 text-lg sm:text-xl lg:text-2xl leading-loose sm:leading-loose lg:leading-loose"
+          >
+            {{ $t("solutions.mission.createNewOpportunities") }}
           </p>
-          <p class="text-slate-950">
-            Astar Foundation creates the tools and community necessary to build
-            a more inclusive and empowered web for you.
+          <p
+            class="text-slate-950 text-lg sm:text-xl lg:text-2xl leading-loose sm:leading-loose lg:leading-loose"
+          >
+            {{
+              $t(
+                "solutions.mission.astarFoundationCreatesTheToolsAndCommunityNecessary"
+              )
+            }}
           </p>
         </div>
       </div>
@@ -44,39 +59,17 @@
 <script setup lang="ts"></script>
 
 <style lang="postcss" scoped>
-.mission-1 {
-  view-timeline-name: --mission1;
-}
-
-h2 {
-  animation: scale-up both, fade-away both linear;
-  animation-timeline: --mission1;
-  animation-range: entry-crossing 50% exit 60%, exit 0% exit 70%;
-}
-
 .mission-image {
-  animation: rotate both linear, fade-away both linear;
-  animation-timeline: --mission1;
-  animation-range: entry-crossing 50% exit 60%, exit 50% exit 100%;
+  animation: rotate linear;
+  animation-timeline: scroll() !important;
 }
 
-@keyframes scale-up {
-  to {
-    scale: 1.5;
-  }
-}
-
-@keyframes fade-away {
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes rotate {
   0% {
     transform: rotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1000deg);
   }
 }
 </style>

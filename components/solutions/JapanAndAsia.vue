@@ -47,12 +47,12 @@
 const { t } = useI18n();
 
 const posts = [
-  {
-    title: t("solutions.japanAndAsia.korea.title"),
-    image: "/images/solutions/japan-and-asia/korea.webp",
-    description: t("solutions.japanAndAsia.korea.description"),
-    link: "",
-  },
+  // {
+  //   title: t("solutions.japanAndAsia.korea.title"),
+  //   image: "/images/solutions/japan-and-asia/korea.webp",
+  //   description: t("solutions.japanAndAsia.korea.description"),
+  //   link: "",
+  // },
   {
     title: t("solutions.japanAndAsia.japanTaxationAndGovernment.title"),
     image: "/images/solutions/japan-and-asia/japanese-government-web3.webp",

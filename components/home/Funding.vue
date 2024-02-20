@@ -16,7 +16,11 @@
         v-for="(item, index) in data"
         class="border border-slate-700 flex items-center flex-col sm:flex-row rounded-xl"
       >
-        <div class="flex-1" :class="index === 1 ? '' : 'sm:order-2'">
+        <div
+          class="flex-1"
+          :class="index === 1 ? '' : 'sm:order-2'"
+          data-aos="fade-up"
+        >
           <img
             :src="`/images/home/${item.image}`"
             :alt="item.title"

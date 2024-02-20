@@ -17,7 +17,7 @@
         </Button>
       </div>
     </div>
-    <div class="flex-1">
+    <div class="flex-1" data-aos="fade-up">
       <img src="/images/home/dapps-on-astar.svg" class="w-full" />
     </div>
   </div>
