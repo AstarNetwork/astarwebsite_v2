@@ -1,5 +1,5 @@
 <template>
-  <section class="container-lg pt-20 pb-12">
+  <section class="container-lg pt-20 pb-12 test">
     <h1 class="text-center mb-12">
       <span
         class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight md:tracking-tighter"
@@ -19,29 +19,27 @@
 </template>
 
 <script setup lang="ts">
-import gsap from "gsap";
-import { ScrollTrigger, ScrollToPlugin } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+const { $gsap, $ScrollTrigger } = useNuxtApp();
 
 onMounted(() => {
-  gsap.to("h1 span:first-of-type", {
+  $gsap.to("h1 span:first-of-type", {
     scale: 1.2,
     opacity: 0.5,
     scrollTrigger: {
       toggleActions: "play none none reverse",
-      trigger: "section",
+      trigger: ".test",
       start: "bottom center",
       // markers: true,
       scrub: true,
     },
   });
 
-  gsap.to("h1 span:last-of-type", {
+  $gsap.to("h1 span:last-of-type", {
     scale: 1.6,
     opacity: 0.5,
     scrollTrigger: {
       toggleActions: "play none none reverse",
-      trigger: "section",
+      trigger: ".test",
       start: "bottom center",
       // markers: true,
       scrub: true,
