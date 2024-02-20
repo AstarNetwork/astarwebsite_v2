@@ -1,6 +1,7 @@
 <template>
   <NuxtLink
-    v-for="item in sortedProjects"
+    v-for="item in paginatedProjects"
+    :key="item.id"
     :to="item.attributes.website"
     target="_blank"
     class="border border-slate-200 bg-white rounded-md transition p-4 sm:p-6"
@@ -43,6 +44,22 @@
       </span>
     </span>
   </NuxtLink>
+  <!-- Pagination Controls -->
+  <div v-if="totalPages > 1" class="flex justify-center space-x-4 my-4 w-full">
+    <button class="tab" @click="prevPage" :disabled="currentPage === 1">
+      Previous
+    </button>
+    <span class="min-w-max py-3 vertical-align"
+      >Page {{ currentPage }} of {{ totalPages }}</span
+    >
+    <button
+      class="tab"
+      @click="nextPage"
+      :disabled="currentPage === totalPages"
+    >
+      Next
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -77,5 +94,35 @@ const sortedProjects = computed(() => {
         return -1;
       }
     });
+});
+
+const currentPage = ref(1);
+const projectsPerPage = ref(16);
+
+// Watcher that resets currentPage to 1 whenever sortedProjects changes
+watch(sortedProjects, () => {
+  currentPage.value = 1;
+}, { deep: true });
+
+const totalPages = computed(() =>
+  Math.ceil(sortedProjects.value.length / projectsPerPage.value)
+);
+
+function nextPage() {
+  if (currentPage.value < totalPages.value) {
+    currentPage.value++;
+  }
+}
+
+function prevPage() {
+  if (currentPage.value > 1) {
+    currentPage.value--;
+  }
+}
+
+const paginatedProjects = computed(() => {
+  const start = (currentPage.value - 1) * projectsPerPage.value;
+  const end = start + projectsPerPage.value;
+  return sortedProjects.value.slice(start, end);
 });
 </script>
