@@ -27,6 +27,14 @@
           {{ category.attributes.name }}
         </li>
       </ul>
+      <ul class="flex justify-center flex-wrap">
+        <li
+          v-for="chain in item.attributes.project_chains.data"
+          class="text-xs bg-red-200 text-red-500 py-0.5 px-2 rounded-sm m-0.5 whitespace-nowrap"
+        >
+          {{ chain.attributes.name }}
+        </li>
+      </ul>
       <span
         v-if="item.attributes.description"
         class="text-center block text-slate-500 text-xs lg:text-sm"
@@ -38,11 +46,14 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  projects: {
-    type: Array,
-    default: [],
-  },
+import { ProjectType } from "@/types";
+
+interface Props {
+  projects: ProjectType[];
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  projects: () => [] as ProjectType[],
 });
 
 const sortedProjects = props.projects.sort((a, b) => {
