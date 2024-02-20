@@ -1,23 +1,14 @@
 <template>
   <NuxtLayout name="default">
-    <div class="sub-page-header relative overflow-hidden">
-      <img
-        class="absolute z-[3] w-screen object-scale-down portrait:hidden"
-        src="/images/japan/hero-landscape.svg"
-        :alt="$t('japan.title')"
-        width="1460"
-        height="808"
-      />
-      <JapanHero />
-    </div>
+    <JapanHero />
 
     <div
-      class="relative z-10 text-center sm:py-12 sm:flex justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+      class="container-md py-12 flex flex-col sm:flex-row justify-center gap-4"
     >
       <Button :href="registerForm">{{ $t("japan.register") }}</Button>
-      <Button href="#useCases" color="outlinedGray">{{
-        $t("japan.see_use_cases")
-      }}</Button>
+      <Button href="#useCases" color="outlinedGray">
+        {{ $t("japan.see_use_cases") }}
+      </Button>
     </div>
 
     <JapanAbout class="py-16 sm:py-32" />
