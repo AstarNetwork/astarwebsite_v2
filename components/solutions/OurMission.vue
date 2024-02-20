@@ -29,6 +29,7 @@
       >
         <div
           class="sm:w-3/5 border-2 border-white rounded-xl shadow-lg bg-white/50 px-6 py-12 sm:p-16 lg:p-24 space-y-4 sm:space-y-6 lg:space-y-8"
+          data-aos="fade-up"
         >
           <h2
             class="text-3xl sm:text-4xl lg:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0047FF] to-[#00D1FF] leading-tight sm:leading-tight lg:leading-tight"

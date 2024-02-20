@@ -12,8 +12,10 @@
 
       <div class="flex flex-col sm:flex-row gap-4 lg:gap-10 2xl:gap-20">
         <div
-          v-for="item in data"
+          v-for="(item, index) in data"
           class="flex-1 rounded-lg bg-white/50 transition shadow-lg px-6 py-10 sm:px-8 sm:py-12 lg:p-12 space-y-6 sm:space-y-8"
+          data-aos="fade-up"
+          :data-aos-delay="index * 100"
         >
           <img
             :src="`/images/solutions/partners/${item.image}`"
