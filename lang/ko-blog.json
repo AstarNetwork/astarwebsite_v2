@@ -1,23 +1,23 @@
 {
   "blog": {
-    "title": "Astar Blog",
-    "description": "The latest posts about all things Astar Network, major news, ecosystem announcements, engineering updates, and more.",
-    "latest": "Latest Posts",
-    "tags": "Tags",
-    "tag": "Tag",
-    "related": "Related Posts",
-    "no_articles": "There are no English articles for this tag",
-    "back": "Back to Astar Blog",
+    "title": "아스타 블로그",
+    "description": "아스타 네트워크의 생태계 소식, 개발자 업데이트 등 최신 소식들을 확인하세요.",
+    "latest": "최신 게시물",
+    "tags": "태그",
+    "tag": "태그",
+    "related": "관련 게시물",
+    "no_articles": "해당 키워드로 태그된 영문 게시물이 존재하지 않습니다.",
+    "back": "메인으로 돌아가기",
     "newsletter": {
       "global": {
-        "title": "Don't miss a beat.",
-        "description": "Sign-up for our newsletter to stay up-to-date and learn about the latest developments.",
-        "signup": "E-mail Sign-up"
+        "title": "최신 소식들을 놓지지마세요",
+        "description": "개발 현황에 관한 가장 최신 소식들을 구독하고 함께 배워보아요.",
+        "signup": "이메일 구독하기"
       },
       "japan": {
-        "title": "Our Japan Newsletter",
-        "description": "The most important blockchain news from Japan to your inbox.",
-        "signup": "Subscribe"
+        "title": "아스타 일본 뉴스레터",
+        "description": "일본 블록체인 관련 가장 눈여겨볼만한 소식들을 이메일로 전해드립니다.",
+        "signup": "구독하기"
       }
     }
   }
