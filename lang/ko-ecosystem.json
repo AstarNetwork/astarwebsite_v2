@@ -1,8 +1,8 @@
 {
   "ecosystem": {
-    "title": "Ecosystem",
-    "description": "Discover all the apps and projects in the Astar ecosystem.",
-    "chain":"Chain:",
-    "categories":"Categories:"
+    "title": "생태계",
+    "description": "아스타 생태계에 존재하는 모든 어플리케이션과 프로젝트들을 만나보세요.",
+    "chain":"체인:",
+    "categories":"카타고리:"
   }
 }
