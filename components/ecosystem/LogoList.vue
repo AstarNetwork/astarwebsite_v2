@@ -1,13 +1,24 @@
 <template>
   <!-- Search Box -->
-  <div class="flex justify-center items-center gap-4 my-4 w-full">
-    <input
-      v-model="searchTerm"
-      type="text"
-      placeholder="Search the ecosystem..."
-      class="border border-slate-300 rounded-md p-2 w-full"
-    />
+  <div class="mb-4 sm:mb-6">
+    <label for="search" class="sr-only">
+      {{ $t("ecosystem.searchTheEcosystem") }}
+    </label>
+    <div class="relative text-slate-950">
+      <div
+        class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
+      >
+        <MagnifyingGlassIcon class="h-5 w-5" aria-hidden="true" />
+      </div>
+      <input
+        v-model="searchTerm"
+        type="text"
+        :placeholder="`${$t('ecosystem.searchTheEcosystem')}...`"
+        class="block border border-slate-300 bg-white rounded-full p-3 lg:p-4 pl-10 lg:pl-10 w-full focus:ring-1 focus:ring-blue/50 placeholder:text-slate-400 text-slate-950"
+      />
+    </div>
   </div>
+
   <div class="tab-panel">
     <NuxtLink
       v-for="item in paginatedProjects"
@@ -20,8 +31,12 @@
       <ul class="flex gap-1 mb-2">
         <li
           v-for="chain in item.attributes.project_chains.data"
-          class="text-xs py-1 px-2 rounded-sm whitespace-nowrap text-white"
-          :class="chain.id == 1 ? 'bg-pink' : 'bg-blue'"
+          class="text-xs py-1 px-2 rounded-sm whitespace-nowrap border"
+          :class="
+            chain.id == 1
+              ? 'bg-pink/10 text-pink border-pink/50'
+              : 'bg-blue/10 text-blue border-blue/50'
+          "
         >
           {{ chain.attributes.name }}
         </li>
@@ -60,7 +75,7 @@
   <!-- Pagination Controls -->
   <div
     v-if="totalPages > 1"
-    class="flex justify-center items-center gap-4 my-4 w-full"
+    class="flex justify-center items-center gap-4 my-4 w-full mt-6 lg:mt-12"
   >
     <button
       @click="prevPage"
@@ -79,7 +94,7 @@
     <button
       @click="nextPage"
       :disabled="currentPage === totalPages"
-      class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative group disabled:border-gray-300 disabled:text-gray-300 disabled:pointer-events-none"
+      class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative group text-blue disabled:border-gray-300 disabled:text-gray-300 disabled:pointer-events-none"
     >
       <span class="sr-only">Next</span>
       <span
@@ -93,7 +108,11 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/vue/24/outline";
+import {
+  ArrowRightIcon,
+  ArrowLeftIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/vue/24/outline";
 import { ProjectType } from "@/types";
 
 interface Props {

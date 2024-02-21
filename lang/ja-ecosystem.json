@@ -2,7 +2,8 @@
   "ecosystem": {
     "title": "Ecosystem",
     "description": "Discover all the apps and projects in the Astar ecosystem.",
-    "chain":"チェーン:",
-    "categories":"カテゴリー:"
+    "chain": "チェーン:",
+    "categories": "カテゴリー:",
+    "searchTheEcosystem": "Search the ecosystem"
   }
 }
