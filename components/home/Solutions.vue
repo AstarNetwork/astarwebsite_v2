@@ -1,5 +1,5 @@
 <template>
-  <div class="container-lg mt-12 sm:mt-20 mb-20 sm:mb-40">
+  <div class="container-lg my-20 sm:my-40">
     <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
       {{ $t("home.solutions.title") }}
     </h2>

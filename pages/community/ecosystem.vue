@@ -12,12 +12,13 @@
         <div class="sm:w-36 lg:w-56">
           <RadioGroup
             v-model="chain"
-            class="flex flex-row sm:flex-col flex-wrap gap-0.5 sm:gap-7"
+            class="flex flex-row sm:flex-col flex-wrap gap-0.5"
           >
             <RadioGroupLabel
               class="text-slate-950 font-semibold inline sm:block pr-2 py-2 lg:py-3 text-xs sm:text-sm lg:text-base"
-              >{{ $t("ecosystem.chain") }}</RadioGroupLabel
             >
+              {{ $t("ecosystem.chain") }}
+            </RadioGroupLabel>
             <RadioGroupOption
               v-slot="{ checked }"
               :value="chain"
@@ -64,10 +65,10 @@
           </TabList>
         </div>
         <TabPanels class="flex-1">
-          <TabPanel class="tab-panel">
+          <TabPanel>
             <EcosystemLogoList :projects="projects" :chain="chain" />
           </TabPanel>
-          <TabPanel class="tab-panel" v-for="item in categories">
+          <TabPanel v-for="item in categories">
             <EcosystemLogoList
               :projects="item.attributes.projects.data"
               :chain="chain"
