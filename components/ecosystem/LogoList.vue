@@ -1,4 +1,13 @@
 <template>
+  <!-- Search Box -->
+  <div class="flex justify-center items-center gap-4 my-4 w-full">
+    <input
+      v-model="searchTerm"
+      type="text"
+      placeholder="Search the ecosystem..."
+      class="border border-slate-300 rounded-md p-2 w-full"
+    />
+  </div>
   <div class="tab-panel">
     <NuxtLink
       v-for="item in paginatedProjects"
@@ -12,7 +21,7 @@
         <li
           v-for="chain in item.attributes.project_chains.data"
           class="text-xs py-1 px-2 rounded-sm whitespace-nowrap text-white"
-          :class="chain.id === '1' ? 'bg-pink' : 'bg-blue'"
+          :class="chain.id == 1 ? 'bg-pink' : 'bg-blue'"
         >
           {{ chain.attributes.name }}
         </li>
@@ -97,27 +106,32 @@ const props = withDefaults(defineProps<Props>(), {
   chain: () => "",
 });
 
-// Use computed to ensure reactivity
+// Updated computed property to filter by chain and search term
 const sortedProjects = computed(() => {
   return props.projects
     .filter((project) => {
-      if (props.chain === "All" || !props.chain) {
-        return true;
-      } else {
-        return project.attributes.project_chains.data.some(
-          (chain) => chain.attributes.name === props.chain
-        );
-      }
+      // Filter by chain if specified
+      const chainMatch =
+        props.chain === "All" || !props.chain
+          ? true
+          : project.attributes.project_chains.data.some(
+              (chain) => chain.attributes.name === props.chain
+            );
+
+      // Filter by search term if specified
+      const searchMatch = project.attributes.name
+        .toLowerCase()
+        .includes(searchTerm.value.toLowerCase());
+
+      return chainMatch && searchMatch;
     })
-    .sort((a, b) => {
-      if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
+    .sort((a, b) =>
+      a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase() ? 1 : -1
+    );
 });
 
+// Reactive property for search term
+const searchTerm = ref("");
 const currentPage = ref(1);
 const projectsPerPage = ref(16);
 
