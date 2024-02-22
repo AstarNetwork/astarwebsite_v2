@@ -50,7 +50,7 @@
               v-slot="{ selected }"
               v-if="
                 category.attributes.projects.data.length > 0 &&
-                category.id !== 15
+                category.id !== '15'
               "
             >
               <button
@@ -62,7 +62,6 @@
                 {{ category.attributes.name }}
                 <span class="text-xs">
                   ({{ category.attributes.projects.data.length }})
-                  {{ category.id }}
                 </span>
               </button>
             </Tab>
@@ -75,7 +74,7 @@
         </TabPanel>
         <template v-for="item in categories">
           <TabPanel
-            v-if="item.attributes.projects.data.length > 0 && item.id !== 15"
+            v-if="item.attributes.projects.data.length > 0 && item.id !== '15'"
           >
             <EcosystemLogoList
               :projects="item.attributes.projects.data"
