@@ -3,9 +3,7 @@
     <span>{{ $t("japan.members.title") }}</span>
   </h2>
 
-  <div
-    class="container-lg mb-40 flex flex-col sm:flex-row gap-4 lg:gap-8 shrink-0"
-  >
+  <div class="container-lg flex flex-col sm:flex-row gap-4 lg:gap-8 shrink-0">
     <div class="sm:w-36 lg:w-56">
       <RadioGroup
         v-if="false"
@@ -35,26 +33,26 @@
         >
           {{ $t("ecosystem.categories") }}
         </RadioGroupLabel>
-        <template v-for="category in categories">
-          <RadioGroupOption
-            v-slot="{ checked }"
-            :value="category.name"
-            v-if="category.projects.length > 0 && category.id !== '15'"
-          >
-            <span :class="checked ? 'tab current' : 'tab'">
-              {{ category.name }}
-              <span class="text-xs">({{ category.projects.length }})</span>
-            </span>
-          </RadioGroupOption>
-        </template>
+        <RadioGroupOption
+          v-slot="{ checked }"
+          :value="category.name"
+          v-for="category in categories"
+        >
+          <span :class="checked ? 'tab current' : 'tab'">
+            {{ category.name }}
+            <span class="text-xs">({{ category.projects.length }})</span>
+          </span>
+        </RadioGroupOption>
       </RadioGroup>
     </div>
     <div class="flex-1">
       <EcosystemLogoList
+        v-if="isLoading"
         :projects="projects"
         :category="category.name"
         :chain="chain"
       />
+      <EcosystemLoading v-else />
     </div>
   </div>
 </template>
@@ -130,36 +128,53 @@ const query = gql`
     }
   }
 `;
-const { data } = await useAsyncQuery<QueryResponse>({
+const { data } = await useLazyAsyncQuery<QueryResponse>({
   query,
   clientId: "community",
 });
 
-interface Category {
+interface CategoryType {
   name: string;
   id: number;
   projects: ProjectType[];
 }
 
 let projects = ref<ProjectType[]>([]);
-let categories = ref<Category[]>([{ name: "All", id: 0, projects: [] }]);
-let category = ref<Category>(categories.value[0]);
+let categories = ref<CategoryType[]>([{ name: "All", id: 0, projects: [] }]);
+let category = ref<CategoryType>(categories.value[0]);
 let chains = ref<string[]>(["All"]);
 let chain = ref<string>(chains.value[0]);
+let isLoading = ref<Boolean>(false);
 
-if (data.value !== null) {
-  projects.value = data.value.projects.data;
-  categories.value = [{ name: "All", id: 0, projects: projects.value }].concat(
-    data.value.projectCategories.data.map((category) => {
-      return {
-        name: category.attributes.name,
-        id: category.id,
-        projects: category.attributes.projects.data,
-      };
-    })
-  );
-  chains.value = ["All"].concat(
-    data.value.projectChains.data.map((chain) => chain.attributes.name)
-  );
-}
+isLoading = computed(() => (data.value !== null ? true : false));
+
+projects = computed(() =>
+  data.value !== null ? data.value.projects.data : []
+);
+
+categories = computed(() => {
+  if (data.value !== null) {
+    return [{ name: "All", id: 0, projects: projects.value }]
+      .concat(
+        data.value.projectCategories.data.map((category) => {
+          return {
+            name: category.attributes.name,
+            id: Number(category.id),
+            projects: category.attributes.projects.data,
+          };
+        })
+      )
+      .filter((category) => category.projects.length > 0 && category.id !== 15);
+  } else {
+    return [{ name: "All", id: 0, projects: projects.value }];
+  }
+});
+
+chains = computed(() =>
+  data.value !== null
+    ? ["All"].concat(
+        data.value.projectChains.data.map((chain) => chain.attributes.name)
+      )
+    : ["All"]
+);
 </script>

@@ -50,10 +50,12 @@
       </div>
       <div class="flex-1">
         <EcosystemLogoList
+          v-if="isLoading"
           :projects="projects"
           :category="category.name"
           :chain="chain"
         />
+        <EcosystemLoading v-else />
       </div>
     </div>
 
@@ -126,37 +128,51 @@ const query = gql`
     }
   }
 `;
-const { data } = await useAsyncQuery<QueryResponse>({
+const { data } = await useLazyAsyncQuery<QueryResponse>({
   query,
   clientId: "community",
 });
 
-interface Category {
+interface CategoryType {
   name: string;
   projects: ProjectType[];
 }
 
 let projects = ref<ProjectType[]>([]);
-let categories = ref<Category[]>([{ name: "All", projects: [] }]);
-let category = ref<Category>(categories.value[0]);
+let categories = ref<CategoryType[]>([{ name: "All", projects: [] }]);
+let category = ref<CategoryType>(categories.value[0]);
 let chains = ref<string[]>(["All"]);
-let chain = ref<string>(chains.value[0]);
+let chain = ref<string>("zkEVM");
+let isLoading = ref<Boolean>(false);
 
-if (data.value !== null) {
-  projects.value = data.value.projects.data;
-  categories.value = [{ name: "All", projects: projects.value }].concat(
-    data.value.projectCategories.data.map((category) => {
-      return {
-        name: category.attributes.name,
-        projects: category.attributes.projects.data,
-      };
-    })
-  );
-  chains.value = ["All"].concat(
-    data.value.projectChains.data.map((chain) => chain.attributes.name)
-  );
-  chain.value = chains.value[2];
-}
+isLoading = computed(() => (data.value !== null ? true : false));
+
+projects = computed(() =>
+  data.value !== null ? data.value.projects.data : []
+);
+
+categories = computed(() => {
+  if (data.value !== null) {
+    return [{ name: "All", projects: projects.value }].concat(
+      data.value.projectCategories.data.map((category) => {
+        return {
+          name: category.attributes.name,
+          projects: category.attributes.projects.data,
+        };
+      })
+    );
+  } else {
+    return [{ name: "All", projects: projects.value }];
+  }
+});
+
+chains = computed(() =>
+  data.value !== null
+    ? ["All"].concat(
+        data.value.projectChains.data.map((chain) => chain.attributes.name)
+      )
+    : ["All"]
+);
 
 const route = useRoute();
 const { t } = useI18n();
