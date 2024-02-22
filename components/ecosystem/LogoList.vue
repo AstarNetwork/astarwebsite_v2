@@ -117,11 +117,13 @@ import { ProjectType } from "@/types";
 
 interface Props {
   projects: ProjectType[];
+  category: string;
   chain: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   projects: () => [] as ProjectType[],
+  category: () => "",
   chain: () => "",
 });
 
@@ -129,6 +131,14 @@ const props = withDefaults(defineProps<Props>(), {
 const sortedProjects = computed(() => {
   return props.projects
     .filter((project) => {
+      // Filter by category if specified
+      const categoryMatch =
+        props.category === "All" || !props.category
+          ? true
+          : project.attributes.project_categories.data.some(
+              (category) => category.attributes.name === props.category
+            );
+
       // Filter by chain if specified
       const chainMatch =
         props.chain === "All" || !props.chain
@@ -142,7 +152,7 @@ const sortedProjects = computed(() => {
         .toLowerCase()
         .includes(searchTerm.value.toLowerCase());
 
-      return chainMatch && searchMatch;
+      return categoryMatch && chainMatch && searchMatch;
     })
     .sort((a, b) =>
       a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase() ? 1 : -1
