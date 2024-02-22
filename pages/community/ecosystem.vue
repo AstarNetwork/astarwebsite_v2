@@ -103,11 +103,7 @@ import { ProjectType, RelationType, QueryResponse } from "@/types";
 
 const query = gql`
   query getAllData {
-    projects(
-      pagination: { page: 1, pageSize: 1000 }
-      sort: "name"
-      filters: { id: { ne: 300 } }
-    ) {
+    projects(pagination: { page: 1, pageSize: 1000 }, sort: "name") {
       data {
         id
         attributes {
@@ -145,11 +141,7 @@ const query = gql`
         id
         attributes {
           name
-          projects(
-            pagination: { page: 1, pageSize: 1000 }
-            sort: "name"
-            filters: { id: { ne: 300 } }
-          ) {
+          projects(pagination: { page: 1, pageSize: 1000 }, sort: "name") {
             data {
               id
               attributes {
