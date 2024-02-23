@@ -1,82 +1,82 @@
 {
   "incubation": {
     "meta": {
-      "title": "Web3 Incubation Program by Sony Network Communications and Astar Network",
-      "description": "This incubation program is a joint program between Sony Network Communications and Astar, and aims to foster cutting-edge Web3 use cases using the knowledge and resources of Sony and Astar. The program is online and open to participants worldwide and runs for three months, from March to June.",
+      "title": "소니 네트워크 통신과 아스타 네트워크의 웹3 인큐베이션 프로그램",
+      "description": "이 인큐베이션 프로그램은 소니 네트워크 통신과 아스타의 공동 프로그램으로, 소니와 아스타의 지식과 자원을 활용하여 최첨단 웹3 사용 사례를 육성하는 것을 목표로 합니다. 이 프로그램은 온라인으로 전 세계 참가자를 대상으로 하며, 3월부터 6월까지 3개월간 진행됩니다.",
       "program": {
-        "title": "Program",
-        "description": "Provide large scale and comprehensive support for Web3 builders"
+        "title": "프로그램",
+        "description": "웹3 빌더를 위한 대규모 및 포괄적인 지원 제공"
       },
       "partners": {
-        "title": "Partners",
-        "description": "Provide all the support necessary for web3 companies to grow"
+        "title": "파트너",
+        "description": "웹3 기업이 성장하는 데 필요한 모든 지원 제공"
       },
       "mentors": {
-        "title": "Mentors",
-        "description": "Providing constructive advice and feedback by utilizing their technical and financial knowledge"
+        "title": "멘토",
+        "description": "기술 및 재정 지식을 활용하여 건설적인 조언과 피드백 제공"
       }
     },
     "nav": {
-      "tac": "Terms & Conditions",
-      "privacy": "Privacy Policy"
+      "tac": "약관",
+      "privacy": "개인정보 처리방침"
     },
     "cta": {
-      "apply": "Apply Now",
-      "lead": "Interested In Joining Us?",
-      "contact": "Any questions? Contact:"
+      "apply": "지금 신청하기",
+      "lead": "참여에 관심이 있으세요?",
+      "contact": "질문이 있으신가요? 문의:"
     },
-    "learn_more": "Learn More",
+    "learn_more": "더 알아보기",
     "program": {
       "about": {
-        "heading": "Developing Web3 projects which leverage the knowledge and resources of Sony Network Communications and Astar",
-        "description": "This incubation program is a joint program between Sony Network Communications and Astar, and aims to foster cutting-edge Web3 use cases using the knowledge and resources of Sony and Astar. The program is online and open to participants worldwide and runs for three months, from March to June."
+        "heading": "소니 네트워크 통신과 아스타의 지식과 자원을 활용한 웹3 프로젝트 개발",
+        "description": "이 인큐베이션 프로그램은 소니 네트워크 통신과 아스타의 공동 프로그램으로, 소니와 아스타의 지식과 자원을 활용하여 최첨단 웹3 사용 사례를 육성하는 것을 목표로 합니다. 이 프로그램은 온라인으로 전 세계 참가자를 대상으로 하며, 3월부터 6월까지 3개월간 진행됩니다."
       },
       "offer": {
         "connection": {
-          "lead": "Direct connection to the world's top Web3 innovators",
-          "text": "You will be able to make direct connections, receive feedback, and attend valuable sessions for no-cost with top-level Web3 innovators such as Web3 Foundation and Alchemy."
+          "lead": "세계 최고 수준의 웹3 이노베이터와 직접 연결",
+          "text": "세계적 수준의 웹3 이노베이터인 웹3 재단 및 알케미 같은 최고 수준의 웹3 이노베이터들과 직접 연결을 맺고 피드백을 받고 중요한 세션에 참석할 수 있습니다."
         },
         "support": {
-          "lead": "Access to Sony and Astar resources, tech and financial support",
-          "text": "Not only you will be able to utilize resources from Sony and Astar, but you will also receive technical and financial support. Good products may also be considered for investment from Sony."
+          "lead": "소니와 아스타 자원, 기술 및 재정 지원에 접근",
+          "text": "소니와 아스타의 자원뿐만 아니라 기술 및 재정 지원도 받을 수 있습니다. 우수한 제품은 소니로부터 투자 대상으로도 고려될 수 있습니다."
         },
         "grow": {
-          "lead": "Grow your Web3 startup together with Sony and Astar",
-          "text": "After the incubation program, some successful graduated projects are moved to the next phase and will conduct a proof of concept experiment together with Sony."
+          "lead": "소니와 아스타와 함께 웹3 스타트업 성장하기",
+          "text": "인큐베이션 프로그램 이후에는 일부 성공적으로 졸업한 프로젝트가 다음 단계로 진행되어 소니와 함께 개념 검증 실험을 수행합니다."
         }
       },
       "timeline": {
-        "subheading": "Timeline",
-        "heading": "A one-month application period, a three-month incubation period, and demo day",
-        "learn_more": "Learn more about timeline",
+        "subheading": "타임라인",
+        "heading": "1개월의 지원 기간, 3개월의 인큐베이션 기간 및 데모 데이",
+        "learn_more": "타임라인 자세히 알아보기",
         "application": {
-          "title": "Application",
-          "duration": "1 month",
-          "dates": "Feb 17th to March 6th",
-          "description": "During this phase, participants fill out an application form and provide basic information about their team and product. Both Sony Network Communications and Astar Foundation will review all applications and decide 10 to 15 cohorts. Selected applicants will be notified  by e-mail.",
-          "description_short": "This program is open to participants from all over the world, regardless of the status of their Web3 startups."
+          "title": "신청",
+          "duration": "1개월",
+          "dates": "2월 17일부터 3월 6일까지",
+          "description": "이 단계에서 참가자는 팀 및 제품에 대한 기본 정보를 제공하는 지원서를 작성합니다. 소니 네트워크 통신과 아스타 재단에서 모든 신청서를 검토하고 10~15개의 코호트를 선정합니다. 선정된 지원자에게는 이메일로 통보됩니다.",
+          "description_short": "이 프로그램은 웹3 스타트업의 상태에 관계없이 전 세계 참가자를 대상으로 합니다."
         },
         "incubation": {
-          "title": "Incubation",
-          "duration": "3 months",
-          "dates": "Mid March to June 18th",
-          "description": "This phase includes sessions from the world's best innovators, mentoring and feedback on strategies and development assistance from Sony Network Communications and Astar Foundation. We will match Sony's resources with Web3 startup technologies to create use cases.",
-          "description_short": "During the incubation program, we will provide sessions with global VCs and Web3 companies, mentoring on business and technology strategies, and matching with resources from the Sony group."
+          "title": "인큐베이션",
+          "duration": "3개월",
+          "dates": "3월 중순부터 6월 18일까지",
+          "description": "이 단계에는 세계 최고의 이노베이터들의 세션, 멘토링 및 전략에 대한 피드백 및 소니 네트워크 통신과 아스타 재단의 개발 지원이 포함됩니다. 소니 그룹의 자원을 웹3 스타트업 기술과 매칭하여 사용 사례를 만들 것입니다.",
+          "description_short": "인큐베이션 프로그램 동안 전 세계 VCs 및 웹3 기업과의 세션, 비즈니스 및 기술 전략에 대한 멘토링 및 소니 그룹 자원과의 매칭을 제공할 것입니다."
         },
         "demo": {
-          "title": "Demo Day",
+          "title": "데모 데이",
           "duration": "",
-          "dates": "June 18th",
-          "description": "Demo Day will be held in June at Sony Group Corporation Headquarters in Tokyo during Japan Blockchain. About 200 people, including companies and investors participating in the incubation program, will attend.",
-          "description_short": "Demo day will be held in June at Sony Group Corporation Headquarters in Tokyo."
+          "dates": "6월 18일",
+          "description": "데모 데이는 6월에 도쿄의 소니 그룹 본사에서 개최됩니다. 인큐베이션 프로그램에 참여하는 기업 및 투자자 약 200명이 참석합니다.",
+          "description_short": "데모 데이는 도쿄의 소니 그룹 본사에서 6월에 개최됩니다."
         }
       }
     },
     "partners": {
-      "learn_more": "See all partners"
+      "learn_more": "모든 파트너 보기"
     },
     "mentors": {
-      "learn_more": "See all mentors"
+      "learn_more": "모든 멘토 보기"
     }
   }
 }
