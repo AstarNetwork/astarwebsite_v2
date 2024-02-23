@@ -14,7 +14,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 lg:gap-x-12">
       <div
         v-for="(item, index) in data"
-        class="border border-slate-800 rounded-xl p-6 sm:p-8 lg:p-12 relative"
+        class="border rounded-xl p-6 sm:p-8 lg:p-12 relative"
+        :class="index === 0 ? 'border-stone-800' : 'border-slate-800'"
         data-aos="fade-up"
         :data-aos-delay="index * 100"
       >
