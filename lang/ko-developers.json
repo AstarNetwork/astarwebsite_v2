@@ -15,26 +15,26 @@
       "buildAndEarn": "Build & Earn은 유용한 dApp을 Astar/Shiden에 구축하는 개발자에게 기본 소득을 제공하기 위한 재정적 인센티브 프로그램입니다.",
       "inkubator": "ink!ubator는 핵심 개발자와 방대한 자원과 연결해줍니다. 다음 ink! 프로젝트에 대한 자금과 기술 지원을 받으세요."
     },
-    "learn":{
-      "title":"기초 배우기",
-      "university":"손에 잡히는 교육으로 웹3 커리어에 빠르게 발걸음을 내딛으세요. Solidity. Rust. 그리고 Polkadot.",
-      "docs":{
-        "title":"문서",
-        "build":{
-          "title":"구축",
-          "description":"네트워크에서 스마트 계약을 테스트, 배포 및 상호 작용하기 위해 필요한 모든 리소스를 찾으세요."
+    "learn": {
+      "title": "기초 배우기",
+      "university": "손에 잡히는 교육으로 웹3 커리어에 빠르게 발걸음을 내딛으세요. Solidity. Rust. 그리고 Polkadot.",
+      "docs": {
+        "title": "문서",
+        "build": {
+          "title": "구축",
+          "description": "네트워크에서 스마트 계약을 테스트, 배포 및 상호 작용하기 위해 필요한 모든 리소스를 찾으세요."
         },
-        "node":{
-          "title":"노드 실행",
-          "description":"풀 노드, 콜레이터, 인덱서 등을 실행하는 방법과 인프라 관련 모든 것에 대해 설명합니다."
+        "node": {
+          "title": "노드 실행",
+          "description": "풀 노드, 콜레이터, 인덱서 등을 실행하는 방법과 인프라 관련 모든 것에 대해 설명합니다."
         },
-        "xcm":{
-          "title":"Cross-Chain Message (XCM) 배우기",
-          "description":"XCM이 Astar에서 어떻게 사용되는지와 개발자가 다른 Polkadot 네트워크와 상호 작용할 수 있는 방법을 설명합니다."
+        "xcm": {
+          "title": "Cross-Chain Message (XCM) 배우기",
+          "description": "XCM이 Astar에서 어떻게 사용되는지와 개발자가 다른 Polkadot 네트워크와 상호 작용할 수 있는 방법을 설명합니다."
         },
-        "tool":{
-          "title":"도구 통합",
-          "description":"네트워크와 통합된 지갑, 브리지, 인덱서 및 오라클에 관한 관련 정보를 제공합니다."
+        "tool": {
+          "title": "도구 통합",
+          "description": "네트워크와 통합된 지갑, 브리지, 인덱서 및 오라클에 관한 관련 정보를 제공합니다."
         }
       }
     },
