@@ -123,21 +123,21 @@
       },
       "cta": "Developer support"
     },
-    "links":{
-      "astrAndItsUtility":{
-        "title":"ASTR and its utility",
-        "description":"ASTR is the native token driving Astar Network, having ultimate utility by serving various functions such as staking rewards, gas, and grants.",
-        "cta":"Check Tokenomics 2.0"
+    "links": {
+      "astrAndItsUtility": {
+        "title": "ASTR and its utility",
+        "description": "ASTR is the native token driving Astar Network, having ultimate utility by serving various functions such as staking rewards, gas, and grants.",
+        "cta": "Check Tokenomics 2.0"
       },
-      "dAppStaking":{
-        "title":"dApp Staking",
-        "description":"dApp Staking incentivizes developers to create their web3 vision and drives our commitment to make web3 accessible to all.",
-        "cta":"Start staking"
+      "dAppStaking": {
+        "title": "dApp Staking",
+        "description": "dApp Staking incentivizes developers to create their web3 vision and drives our commitment to make web3 accessible to all.",
+        "cta": "Start staking"
       },
-      "community":{
-        "title":"Community",
-        "description":"Connect with your tribe and grow your community together—we welcome all creators, entrepreneurs, and blockchain enthusiasts.",
-        "cta":"Join our community"
+      "community": {
+        "title": "Community",
+        "description": "Connect with your tribe and grow your community together—we welcome all creators, entrepreneurs, and blockchain enthusiasts.",
+        "cta": "Join our community"
       }
     }
   }

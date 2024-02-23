@@ -58,9 +58,9 @@
             "name": "Shibuya City",
             "description": "Astar is now partnering with the Shibuya to support the ward’s web3 initiatives. Shibuya prides itself on being the modern city of Tokyo. A hot spot for young entrepreneurs, high fashion, and miles of shopping outlets all centred around the Shibuya station."
           },
-          "fujitsu": {
-            "name": "FUJITSU",
-            "description": "(placeholder)"
+          "doubleJumpTokyo": {
+            "name": "double jump.tokyo",
+            "description": "Re-building the future of gaming with blockchain technology!"
           },
           "deloitteTohmatsu": {
             "name": "Deloitte Tohmatsu",
@@ -98,12 +98,12 @@
     },
     "dAppsOnAstar": {
       "title": "dApps on Astar",
-      "description": "(placeholder)",
+      "description": "Astar Network is fuelling the next era of dApps and web3 solutions.",
       "cta": "Explore ecosystem"
     },
     "funding": {
       "title": "Funding",
-      "description": "(placeholder)",
+      "description": "Astar Funding helps organizations and developers bring their ideas to web3.",
       "globalHackathons": {
         "title": "Global Hackathons",
         "description": "A collection of funding to connect you to web3.",
@@ -131,12 +131,12 @@
       },
       "dAppStaking": {
         "title": "dApp Staking",
-        "description": "dApp Staking is Astar’s unique mechanism to financially incentivise developers and is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.",
+        "description": "dApp Staking incentivizes developers to create their web3 vision and drives our commitment to make web3 accessible to all.",
         "cta": "Start staking"
       },
       "community": {
         "title": "Community",
-        "description": "Find your tribe and connect with with other Astar enthusiasts.",
+        "description": "Connect with your tribe and grow your community together—we welcome all creators, entrepreneurs, and blockchain enthusiasts.",
         "cta": "Join our community"
       }
     }

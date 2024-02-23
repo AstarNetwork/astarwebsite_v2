@@ -119,10 +119,12 @@ const data = {
         link: "https://medium.com/astar-network/astar-partners-with-shibuya-city-6824712020da",
       },
       {
-        name: t("home.solutions.japanLab.useCases.fujitsu.name"),
-        image: "fujitsu.webp",
-        description: t("home.solutions.japanLab.useCases.fujitsu.description"),
-        link: "",
+        name: t("home.solutions.japanLab.useCases.doubleJumpTokyo.name"),
+        image: "double-jump-tokyo.webp",
+        description: t(
+          "home.solutions.japanLab.useCases.doubleJumpTokyo.description"
+        ),
+        link: "https://www.doublejump.tokyo/",
       },
       {
         name: t("home.solutions.japanLab.useCases.deloitteTohmatsu.name"),

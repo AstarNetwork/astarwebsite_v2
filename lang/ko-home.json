@@ -58,9 +58,9 @@
             "name": "Shibuya City",
             "description": "Astar는 이제 시부야와 협력하여 이 지역의 웹3 프로젝트를 지원하고 있습니다. 시부야는 도쿄의 현대적인 도시로 자부합니다. 청년 기업가들, 하이패션 및 쇼핑 아울렛이 시부야 역을 중심으로 활기를 띠고 있습니다."
           },
-          "fujitsu": {
-            "name": "FUJITSU",
-            "description": "(자리 표시자)"
+          "doubleJumpTokyo": {
+            "name": "double jump.tokyo",
+            "description": "Re-building the future of gaming with blockchain technology!"
           },
           "deloitteTohmatsu": {
             "name": "Deloitte Tohmatsu",
@@ -98,12 +98,12 @@
     },
     "dAppsOnAstar": {
       "title": "Astar의 dApps",
-      "description": "(자리 표시자)",
+      "description": "Astar Network is fuelling the next era of dApps and web3 solutions.",
       "cta": "생태계 탐색"
     },
     "funding": {
       "title": "자금 조달",
-      "description": "(자리 표시자)",
+      "description": "Astar Funding helps organizations and developers bring their ideas to web3.",
       "globalHackathons": {
         "title": "글로벌 해커톤",
         "description": "웹3에 연결하는 자금 모음입니다.",
