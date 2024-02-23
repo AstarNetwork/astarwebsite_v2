@@ -2,142 +2,144 @@
   "home": {
     "hero": {
       "title": {
-        "connecting": "Connecting",
-        "youToWeb3": "you to web3"
+        "connecting": "연결",
+        "youToWeb3": "웹3으로"
       },
-      "description": "Creating opportunities for individuals to use web3 technology. We connect people to web3—through entertainment, blockchain development, business development, and community events."
+      "description": "웹3 기술을 활용하는 개인들을 위한 기회를 만들어줍니다. 우리는 엔터테인먼트, 블록체인 개발, 비즈니스 개발, 그리고 커뮤니티 이벤트를 통해 사람들을 웹3에 연결합니다."
     },
     "features": {
       "bridgeAndEcosystem": {
-        "title": "Bridge & Ecosystem",
-        "description": "Astar zkEVM is an Ethereum Layer-2 scaling solution that leverages Polygon's CDK and AggLayer technology. Astar zkEVM inherits Ethereum's security while maintaining EVM equivalence.",
+        "title": "다리 및 생태계",
+        "description": "Astar zkEVM은 폴리곤의 CDK와 AggLayer 기술을 활용한 이더리움 레이어-2 스케일링 솔루션입니다. Astar zkEVM은 이더리움의 보안을 유지하면서 EVM 동등성을 유지합니다.",
         "cta": {
-          "bridgeToAstar": "Bridge to Astar",
-          "exploreEcosystem": "Explore ecosystem"
+          "bridgeToAstar": "Astar로 다리 놓기",
+          "exploreEcosystem": "생태계 탐색"
         }
       },
       "yokiOrigins": {
-        "title": "Yoki Origins",
-        "description": "Yoki Origins is a journey to discover original Yoki characters inspired by supernatural creatures from Japan. Collect and upgrade your Yoki in this exciting and friendly web3 experience for everyone.",
+        "title": "요키 오리진스",
+        "description": "요키 오리진스는 일본의 초자연적 생물에 영감을 받은 원래 요키 캐릭터를 발견하는 여정입니다. 모든 사람들을 위한 흥미로운 웹3 경험에서 당신의 요키를 수집하고 업그레이드하세요.",
         "cta": {
-          "yokiOriginsWebsite": "Yoki Origins website"
+          "yokiOriginsWebsite": "요키 오리진스 웹사이트"
         }
       }
     },
     "latestNews": {
-      "title": "Latest News"
+      "title": "최신 뉴스"
     },
     "solutions": {
-      "title": "Our Solutions",
-      "description": "There’s a solution for everyone with Astar. Companies, developers, and individuals are connecting to web3.",
+      "title": "우리의 솔루션",
+      "description": "Astar와 함께하는 모든 사람들을 위한 해결책이 있습니다. 기업, 개발자, 개인들이 웹3에 연결되고 있습니다.",
       "startale": {
         "name": "Startale Labs",
-        "description": "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
-        "cta": "Startale labs website",
+        "description": "Startale Labs는 웹3의 대중적 채택을 가속화하고, 일본 최대의 공개 블록체인인 Astar 네트워크를 개발하며, Startale 웹3 클라우드를 통해 웹3 인프라를 제공하기 위해 헌신하고 있습니다.",
+        "cta": "Startale labs 웹사이트",
         "useCases": {
           "sony": {
             "name": "Sony Network Communications",
-            "description": "Sony Network Communications and Startale Labs are thrilled to announce that they have entered into a joint venture agreement dedicated to developing a blockchain that can become the backbone of global web3 infrastructure."
+            "description": "Sony Network Communications와 Startale Labs가 글로벌 웹3 인프라의 기반이 될 블록체인을 개발하기 위해 합작투자 계약을 체결했다는 소식을 기쁘게 발표합니다."
           },
           "bobg": {
             "name": "BOBG",
-            "description": "BOBG is a company that provides comprehensive services to Japanese blockchain businesses, ranging from token issuance, operation, and management to cryptocurrency listing."
+            "description": "BOBG는 토큰 발행, 운영 및 관리부터 암호화폐 상장까지 다양한 서비스를 제공하는 일본의 블록체인 기업입니다."
           },
           "uobAndSamsung": {
-            "name": "UOB Venture Management and Samsung Next",
-            "description": "Startale Labs secured a total of $3.5m in funding from UOB Venture Management, a wholly-owned subsidiary of one of Singapore's top three banks, United Overseas Bank, and Samsung Next, the CVC arm of Samsung."
+            "name": "UOB Venture Management 및 Samsung Next",
+            "description": "Startale Labs는 싱가포르 최고 은행 중 하나인 유나이티드 오버시즈 백의 자회사인 UOB Venture Management과 삼성의 CVC 부문인 Samsung Next로부터 총 350만 달러의 자금을 확보했습니다."
           }
         }
       },
       "japanLab": {
         "name": "Astar Japan Lab",
-        "description": "Astar Japan Lab fuels the growth of Japanese services and businesses by conducting research and development, gathering knowledge, and collaborating with exciting and established companies.",
+        "description": "Astar Japan Lab은 일본의 서비스 및 비즈니스 성장을 촉진하기 위해 연구 및 개발을 수행하고 지식을 모으며, 흥미로운 기업들과 협력합니다.",
         "cta": "Astar Japan Lab",
         "useCases": {
           "shibuyaCity": {
             "name": "Shibuya City",
-            "description": "Astar is now partnering with the Shibuya to support the ward’s web3 initiatives. Shibuya prides itself on being the modern city of Tokyo. A hot spot for young entrepreneurs, high fashion, and miles of shopping outlets all centred around the Shibuya station."
+            "description": "Astar는 이제 시부야와 협력하여 이 지역의 웹3 프로젝트를 지원하고 있습니다. 시부야는 도쿄의 현대적인 도시로 자부합니다. 청년 기업가들, 하이패션 및 쇼핑 아울렛이 시부야 역을 중심으로 활기를 띠고 있습니다."
           },
           "fujitsu": {
             "name": "FUJITSU",
-            "description": "(placeholder)"
+            "description": "(자리 표시자)"
           },
           "deloitteTohmatsu": {
             "name": "Deloitte Tohmatsu",
-            "description": "Deloitte Tohmatsu Group transforms the sports industry with Astar zkEVM"
+            "description": "Deloitte Tohmatsu 그룹은 Astar zkEVM을 통해 스포츠 산업을 혁신하고 있습니다."
           }
         }
       }
     },
     "developer": {
-      "title": "Developer",
-      "description": "As Astar 2.0 evolves, so does our tech. We are excited to offer our bleeding-edge, cross-layer tech stack that will allow developers to benefit from multiple VMs, layers and consensus protocols.",
+      "title": "개발자",
+      "description": "Astar 2.0이 진화함에 따라 우리의 기술도 진화합니다. 여러 가지 VM, 레이어 및 합의 프로토콜을 활용할 수 있는 최첨단 크로스
+
+ 레이어 기술 스택을 제공하여 개발자들이 혜택을 누릴 수 있도록 기대합니다.",
       "poweredBy": "Powered by",
       "substrate": {
-        "description": "Astar Substrate is the backend technology powering Polkadot’s leading parachain. Unlock access to build across virtual machines seamlessly and tap into interoperability with Polkadot SDK, substrate-based protocols. Ink! and Rust smart contracts ensure safety and our innovative reward mechanism powers unstoppable public goods.",
+        "description": "Astar Substrate은 폴카닷의 주요 파라체인을 구동하는 백엔드 기술입니다. 다양한 VM에서 원활하게 빌드할 수 있도록 잠금 해제하고, 폴리카닷 SDK, substrate 기반 프로토콜, Ink! 및 Rust 스마트 계약을 활용하여 상호 운용성을 확보합니다. 안전성을 보장하는 Rust 및 Ink! 스마트 계약과 혁신적인 보상 메커니즘을 통해 멈추지 않는 공공 재화를 구동합니다.",
         "features": {
-          "multiVmSupport": "Multi VM Support: EVM and WASM",
-          "rustAndInk": "Rust and ink! smart contracts",
-          "interoperabilityAndComposability": "Interoperability and Composability with Substrate chains",
-          "secured": "Secured by Polkadot validators",
-          "dappStakingRewards": "dApp staking rewards providing builder income",
-          "lowFees": "Low fees"
+          "multiVmSupport": "다중 VM 지원: EVM 및 WASM",
+          "rustAndInk": "Rust 및 ink! 스마트 계약",
+          "interoperabilityAndComposability": "Substrate 체인과의 상호 운용성 및 구성 가능성",
+          "secured": "폴카닷 밸리데이터에 의해 보호됨",
+          "dappStakingRewards": "개발자 소득을 제공하는 dApp 스테이킹 보상",
+          "lowFees": "낮은 수수료"
         }
       },
       "zkevm": {
-        "description": "Astar zkEVM is the perfect solution for enterprises looking to leverage the security and network effects of Ethereum without sacrificing the user experience. Powered by cutting-edge zero knowledge technology, Astar zkEVM empowers businesses to embrace web3 at scale while offering developers a familiar environment with proven tooling.",
+        "description": "Astar zkEVM은 사용자 경험을 희생하지 않고 이더리움의 보안 및 네트워크 효과를 활용하려는 기업에게 완벽한 솔루션입니다. 최첨단 제로 지식 기술을 활용하여 Astar zkEVM은 기업이 대규모로 웹3을 채택할 수 있게 하며, 개발자들에게는 익숙한 환경과 검증된 툴링을 제공합니다.",
         "features": {
-          "ethereumSecurity": "Inherits Ethereum’s security",
-          "highScalability": "High scalability",
-          "lowFees": "Low fees even during high demand",
-          "access": "Access to a vibrant web3 ecosystem",
-          "developerExperience": "Familiar developer experience powered by Ethereum’s proven stack of tooling and infrastructure"
+          "ethereumSecurity": "이더리움의 보안 상속",
+          "highScalability": "높은 확장성",
+          "lowFees": "수요가 높을 때도 낮은 수수료",
+          "access": "활기찬 웹3 생태계 접근",
+          "developerExperience": "이더리움의 검증된 스택 툴링 및 인프라에 의한 익숙한 개발자 경험"
         }
       },
-      "cta": "Start building"
+      "cta": "개발 시작"
     },
     "dAppsOnAstar": {
-      "title": "dApps on Astar",
-      "description": "(placeholder)",
-      "cta": "Explore ecosystem"
+      "title": "Astar의 dApps",
+      "description": "(자리 표시자)",
+      "cta": "생태계 탐색"
     },
     "funding": {
-      "title": "Funding",
-      "description": "(placeholder)",
+      "title": "자금 조달",
+      "description": "(자리 표시자)",
       "globalHackathons": {
-        "title": "Global Hackathons",
-        "description": "A collection of funding to connect you to web3.",
+        "title": "글로벌 해커톤",
+        "description": "웹3에 연결하는 자금 모음입니다.",
         "stats": {
-          "prize": "Prize (USD)",
-          "applications": "Applications"
+          "prize": "상금 (USD)",
+          "applications": "지원서"
         }
       },
       "dAppStaking": {
-        "title": "dApp Staking",
-        "description": "An incentivized program to connect developers to the Astar community, where everyone is rewarded.",
+        "title": "dApp 스테이킹",
+        "description": "모든 사람들이 보상을 받는 Astar 커뮤니티에 개발자를 연결하는 인센티브 프로그램입니다.",
         "stats": {
-          "tier1Rewards": "Tier 1 Rewards (USD)",
-          "totalStakers": "Total stakers",
-          "subjectToMarket": "(subject to market)"
+          "tier1Rewards": "티어 1 보상 (USD)",
+          "totalStakers": "총 스테이커 수",
+          "subjectToMarket": "(시장 영향을 받음)"
         }
       },
-      "cta": "Developer support"
+      "cta": "개발자 지원"
     },
-    "links":{
-      "astrAndItsUtility":{
-        "title":"ASTR and its utility",
-        "description":"ASTR is the native token driving Astar Network, having ultimate utility by serving various functions such as staking rewards, gas, and grants.",
-        "cta":"Check Tokenomics 2.0"
+    "links": {
+      "astrAndItsUtility": {
+        "title": "ASTR 및 그 유틸리티",
+        "description": "ASTR은 Astar 네트워크를 이끄는 네이티브 토큰으로, 스테이킹 보상, 가스 및 그랜트와 같은 다양한 기능을 제공합니다.",
+        "cta": "토큰 정보 확인 2.0"
       },
-      "dAppStaking":{
-        "title":"dApp Staking",
-        "description":"dApp Staking is Astar’s unique mechanism to financially incentivise developers and is a crucial accelerator in realizing the Web3 vision, as it lays the foundation for the development of exceptional dApps for users and fuels the drive towards making Web3 accessible to all.",
-        "cta":"Start staking"
+      "dAppStaking": {
+        "title": "dApp 스테이킹",
+        "description": "dApp 스테이킹은 개발자를 재정적으로 인센티브화하는 Astar의 독특한 메커니즘이며, 이것은 사용자를 위한 탁월한 dApp의 개발의 기초를 마련하고 모든 사람에게 웹3을 접근 가능하게 하는 데 중요한 역할을 합니다.",
+        "cta": "스테이킹 시작"
       },
-      "community":{
-        "title":"Community",
-        "description":"Find your tribe and connect with with other Astar enthusiasts.",
-        "cta":"Join our community"
+      "community": {
+        "title": "커뮤니티",
+        "description": "트라이브를 찾고 다른 Astar 애호가들과 연결하세요.",
+        "cta": "커뮤니티 가입"
       }
     }
   }
