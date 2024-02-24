@@ -7,7 +7,9 @@
       <p
         class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-16 sm:mb-20"
       >
-        {{ $t("solutions.japanAndAsia.description") }}
+        {{
+          $t("solutions.japanAndAsia.description", { japaneseMembers: "00" })
+        }}
       </p>
 
       <Swiper
