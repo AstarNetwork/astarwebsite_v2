@@ -1,34 +1,34 @@
 {
   "japan": {
-    "title": "아스타 일본 연구소",
-    "description": "아스타 일본 연구소는 일본의 서비스 및 비즈니스 성장을 촉진하기 위해 연구 및 개발을 수행하고 지식을 축적하며 흥미로운 기업들과 협력합니다.",
+    "title": "아스타 재팬 랩",
+    "description": "아스타 재팬 랩은 일본의 서비스 및 비즈니스 성장을 촉진하기 위해 연구 및 개발을 수행하고 노하우를 축적하며 다양한 기업들과 협력합니다.",
     "register": "지금 등록하기",
-    "see_use_cases": "최신 사용 사례 보기",
+    "see_use_cases": "최신 실사용 사례 살펴보기",
     "features": {
       "business_opportunities": "아스타 네트워크를 통한 일본의 비즈니스 기회 창출",
       "use_cases": "제안된 블록체인 및 NFT 사용 사례",
       "solution": "참여 솔루션 제공업체",
-      "vc": "일본의 웹 스타트업을 위한 해외 VC 소개",
-      "group_study": "아스타 사용 사례 진행을 위한 그룹 스터디 세션",
-      "connect": "아스타 커뮤니티 및 앰배서더와 연결하기"
+      "vc": "일본의 웹3 스타트업을 위한 해외 VC 소개",
+      "group_study": "아스타 실사용 사례 창출을 위한 그룹 스터디 세션",
+      "connect": "아스타 커뮤니티를 통해 로컬 앰배서더 컨택하기"
     },
     "members": {
       "title": "등록된 회원"
     },
     "use_cases": {
       "title": "사용 사례",
-      "sony": "Sony Network Communications 및 Astar Network는 세계 최고의 혁신가들을 활용하여 19개의 웹3 스타트업 성장을 돕기 위한 공동 인큐베이션 프로그램을 개최했습니다.",
-      "toyota": "Toyota는 Astar 네트워크에서 DAO 툴링을 개발하기 위한 첫 번째 웹3 해커톤을 후원했습니다. 이 해커톤은 혁신을 촉진하기 위한 기업 내 프로젝트를 지원했습니다.",
-      "calbee": "일본의 선도적인 스낵 제조업체인 Calbee Inc.은 새로운 \"NFT 칩\" 프로모션 캠페인의 일환으로 Astar 블록체인에 진화하는 감자 칩 NFT를 배포했습니다.",
-      "eren": "상징적인 일본 웹 만화 시리즈인 \"Eren The Southpaw\"은 Astar를 사용하여 \"The Black Monster\" 및 \"Night in Chelsea\"와 같은 스트리트 아트 걸작품 2점을 NFT로 발행했습니다.",
+      "sony": "Sony Network Communications 및 Astar Network는 세계 최고의 전문가분들과 함께 19개의 웹3 스타트업 성장을 돕고자 공동 인큐베이션 프로그램을 개설했습니다.",
+      "toyota": "Toyota는 Astar 네트워크 위에 DAO 툴링을 개발하기 위해 첫 번째 웹3 해커톤을 실시했습니다. 본 해커톤은 혁신적 사고방식을 촉진하기 위한 사내 프로젝트로 자리잡았습니다.",
+      "calbee": "일본의 선도적인 스낵 제조업체인 Calbee Inc.은 새로운 \"NFT 칩\" 프로모션 캠페인의 일환으로 Astar 블록체인에 진화하는 감자칩 NFT를 배포했습니다.",
+      "eren": "상징적인 일본 웹 만화 시리즈인 \"Eren The Southpaw\"은 Astar를 사용하여 \"The Black Monster\" 및 \"Night in Chelsea\"와 같은 스트리트아트 걸작 2점을 NFT로 발행했습니다.",
       "nikkei": "Astar 네트워크는 일본의 경제 신문 인 日本経済新聞에 광고를 게재하고 NFT를 배포했습니다.",
-      "candy": "Final Fantasy 개념 아티스트인 Yoshitaka Amano는 Astar 네트워크에 그의 첫 번째 \"Candy Girl\" 디지털 컬렉션을 가져왔습니다. 이 프로젝트는 블록체인 기술을 활용하여 미술, 스토리텔링 및 패션을 결합한 글로벌 프로젝트입니다.",
-      "learnMore": "더 알아보기"
+      "candy": "Final Fantasy 컨셉 아티스트인 Yoshitaka Amano는 Astar 네트워크에 그의 첫 번째 \"Candy Girl\" 디지털 컬렉션을 선보였습니다. 해당 프로젝트는 블록체인 기술을 활용하여 미술, 스토리텔링 및 패션을 결합한 글로벌 프로젝트입니다.",
+      "learnMore": "상세 설명"
     },
     "newsletter": {
-      "title": "우리의 뉴스레터 가입!",
-      "description": "최신 업데이트를 받으려면 우리의 뉴스레터를 구독하세요.",
-      "subscribe": "구독"
+      "title": "아스타 뉴스레터 구독",
+      "description": "아스타 뉴스레터를 구독하고 최신 업데이트를 받아보세요.",
+      "subscribe": "구독하기"
     },
     "blog": {
       "title": "아스타 일본 블로그"
