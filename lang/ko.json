@@ -1,33 +1,33 @@
 {
   "meta": {
-    "tagline": "Connecting Web3 to You",
-    "description": "Creating opportunities for individuals to use web3 technology. We connect people to web3—through entertainment, blockchain development, business development, and community events."
+    "tagline": "Web3을 당신에게 연결합니다",
+    "description": "개인이 web3 기술을 사용할 수 있는 기회를 창출합니다. 우리는 사람들을 엔터테인먼트, 블록체인 개발, 비즈니스 개발, 그리고 커뮤니티 이벤트를 통해 web3에 연결합니다."
   },
   "footer": {
     "nav": {
-      "build": "Build",
-      "docs": "Docs",
-      "apply": "Apply",
-      "careers": "Careers",
-      "ambassadorProgram": "Astar Ambassador Program",
-      "bugBountyProgram": "Bug Bounty Program",
-      "learn": "Learn",
-      "blog": "Astar Blog",
-      "videos": "Videos",
-      "forum": "Forum",
-      "other": "Other",
-      "brandAssets": "Brand Assets",
-      "privacyPolicy": "Privacy Policy",
-      "termsOfUse": "Terms of Use",
-      "contactUs": "Contact Us"
+      "build": "구축하기",
+      "docs": "문서",
+      "apply": "신청하기",
+      "careers": "채용 정보",
+      "ambassadorProgram": "Astar 대사 프로그램",
+      "bugBountyProgram": "버그 바운티 프로그램",
+      "learn": "학습하기",
+      "blog": "Astar 블로그",
+      "videos": "비디오",
+      "forum": "포럼",
+      "other": "기타",
+      "brandAssets": "브랜드 자산",
+      "privacyPolicy": "개인정보 처리방침",
+      "termsOfUse": "이용 약관",
+      "contactUs": "문의하기"
     },
     "contactUs": {
-      "title": "Contact Us",
-      "description": "Get in touch with the Astar Network team"
+      "title": "문의하기",
+      "description": "Astar Network 팀과 연락하기"
     },
     "newsletter": {
-      "title": "Newsletter",
-      "description": "Sign-up for our newsletter to stay up-to-date and learn about the latest developments."
+      "title": "뉴스레터",
+      "description": "최신 개발 상황을 알아보고 업데이트를 받기 위해 우리의 뉴스레터에 가입하세요."
     }
   }
 }
