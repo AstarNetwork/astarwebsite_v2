@@ -1,9 +1,9 @@
 {
   "developers": {
     "title": "개발자",
-    "description": "Astar 네트워크에서 EVM 및 WASM dApp을 구축하여 혁신적인 멀티체인 생태계를 만들어나가요. Astar XVM SDK는 아스타 고유의 멀티체인 스마트 컨트랙트 표준입니다.",
+    "description": "Astar 네트워크와 함께 EVM 및 WASM dApp을 구축하고 혁신적인 멀티체인 생태계를 만들어나가요. Astar XVM SDK는 아스타 고유의 멀티체인 스마트 컨트랙트 표준입니다.",
     "start": {
-      "title": "Astar에서 개발 시작",
+      "title": "Astar와 함께 개발 시작",
       "evm": "EVM dApp 개발",
       "wasm": "WASM dApp 개발",
       "collator": "콜레이터 노드 실행",
@@ -12,12 +12,12 @@
     },
     "support": {
       "title": "개발자 지원",
-      "buildAndEarn": "Build & Earn은 Astar/Shiden위에 유용한 dApp을 구축하는 개발자분들께 인센티브를 제공해드리기 위한 재정적 인센티브 프로그램입니다.",
+      "buildAndEarn": "Build & Earn은 Astar/Shiden위에서 유용한 dApp을 구축하는 개발자분들께 인센티브를 제공해드리기 위한 재정적 인센티브 프로그램입니다.",
       "inkubator": "ink!ubator는 핵심 개발자와 방대한 자원에 연결시켜드립니다. 지금 바로 ink! 프로젝트에 대한 자금과 기술 지원을 받아보세요."
     },
     "learn": {
       "title": "기초 배우기",
-      "university": "실습 교육을 통해 웹3 커리어에 한발짝 빠르게 다가가보세요. Solidity. Rust. 그리고 Polkadot.",
+      "university": "실습 교육을 통해 웹3 커리어에 한발짝 빠르게 다가가보세요. Solidity. Rust. 그리고 Polkadot에 대해 먼저 알아봅니다.",
       "docs": {
         "title": "공식 문서",
         "build": {
@@ -29,11 +29,11 @@
           "description": "풀 노드, 콜레이터, 인덱서 등을 실행하는 방법과 인프라 관련 모든 것에 대한 설명니다."
         },
         "xcm": {
-          "title": "Cross-Chain Message (XCM) 배우기",
-          "description": "Astar에서 XCM기술이 어떻게 용되는지와 개발자가 다른 Polkadot 네트워크와 상호 작용할 수 있는 방법을 알아봅니다."
+          "title": "Cross-Chain Message(XCM) 배우기",
+          "description": "Astar에서 XCM기술이 어떻게 응용되는지와 개발자가 다른 Polkadot 네트워크와 어떤식으로 상호 작용되는지에 대한 방법을 알아봅니다."
         },
         "tool": {
-          "title": "개발자 도구 연동",
+          "title": "개발자 도구 활용",
           "description": "네트워크와 연동된 지갑, 브릿지, 인덱서 및 오라클에 관한 관련 정보를 제공합니다."
         }
       }
@@ -82,7 +82,7 @@
       },
       "dao": {
         "title": "DAO",
-        "description": "분산형 자율 조직이 미래입니다. Astar의 커뮤니티는 투명하고 접근성 높은 방식을 통해 네트워크의 형태를 조율해나가고 있습니다."
+        "description": "분산형 자율 조직이 미래입니다. Astar의 커뮤니티는 투명하고 접근성 높은 방식을 통해 네트워크의 컨센서스를 조율해나가고 있습니다."
       }
     },
     "toolkit": {
