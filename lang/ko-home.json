@@ -37,7 +37,7 @@
         "useCases": {
           "sony": {
             "name": "소니 네트워크 커뮤니케이션즈",
-            "description": "Sony Network Communications와 Startale Labs가 글로벌 웹3 인프라의 기반이 될 블록체인 프로젝트를 개발하기 위해 합작투자 계약을 체결했니다."
+            "description": "Sony Network Communications와 Startale Labs가 글로벌 웹3 인프라의 기반이 될 블록체인 프로젝트를 개발하기 위해 합작투자 계약을 체결했습니다."
           },
           "bobg": {
             "name": "BOBG",
@@ -116,7 +116,7 @@
         "title": "dApp 스테이킹",
         "description": "모든 지지자분들과 함께 보상을 받는, 개발 프로젝트와 Astar 커뮤니티를 연결해드리는 Astar 고유의 인센티브 프로그램입니다.",
         "stats": {
-          "tier1Rewards": "티어 1 보상 (USD)",
+          "tier1Rewards": "1-티어 보상액 (USD)",
           "totalStakers": "총 스테이커 수",
           "subjectToMarket": "(시장 영향을 받음)"
         }
