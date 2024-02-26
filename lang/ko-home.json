@@ -18,7 +18,7 @@
       },
       "yokiOrigins": {
         "title": "요키 오리진스",
-        "description": "'요키 오리진스'는 일본의 고대 요괴생물로부터 영감을 받은 요괴 캐릭터 수집을 위한 NFT 캠페인입니다. 여러분만의 요키들을 수집하고 업그레이드하여 재밋는 웹3 경험을 체험해보세요.",
+        "description": "'요키 오리진스'는 일본의 고대 요괴생물로부터 영감을 받은 요괴 캐릭터 수집을 위한 NFT 캠페인입니다. 여러분만의 요키들을 수집하고 업그레이드하여 재밋는 웹3 경험을 체험해보세요.",
         "cta": {
           "yokiOriginsWebsite": "요키 오리진스 웹사이트"
         }
@@ -77,7 +77,7 @@
         "description": "Astar Substrate은 폴카닷의 패러체인을 구동시키기 위한 주요 백엔드 기술입니다. 다양한 가상머신(VM)에 이어 원활하게 빌드할 수 있는 환경을 제공하며, 폴리카닷 SDK, substrate 기반 다양한 모듈들, Ink! 및 Rust 스마트 컨트래트를 활용하여 상호 운용성을 확보합니다. 안전성을 보장하는 Rust 및 Ink! 스마트 컨트랙트와 혁신적인 보상 메커니즘을 통해 '반영구적 그랜트 프로그램'을 제공합니다.",
         "features": {
           "multiVmSupport": "멀티 가상머신 지원: EVM 및 WASM",
-          "rustAndInk": "Rust 및 ink! 스마트 컨트랙트",
+          "rustAndInk": "Rust 및 ink! 스마트 컨트랙트",
           "interoperabilityAndComposability": "Substrate 체인과의 상호 운용성 및 컴포저빌리티",
           "secured": "폴카닷의 완벽한 보안망",
           "dappStakingRewards": "개발자 인센티브를 제공하는 댑스테이킹 보상",
@@ -85,7 +85,7 @@
         }
       },
       "zkevm": {
-        "description": "Astar zkEVM은 사용자 경험을 희생하지 않고 이더리움의 보안 및 특징을 살리고 적극 활용하고자하는 기업들에게 완벽한 개발 환경입니다. Astar zkEVM은 최신 영지식 증명 기술을 활용하여 기업들이 웹3를 통해 부가가치를 창출할 수 있도록 도와드리며, 개발자들에게는 익숙한 환경과 검증된 툴링을 제공합니다.",
+        "description": "Astar zkEVM은 사용자 경험을 희생하지 않고 이더리움의 보안 및 특징을 살리고 적극 활용하고자하는 기업들에게 완벽한 개발 환경입니다. Astar zkEVM은 최신 영지식 증명 기술을 활용하여 기업들이 웹3를 통해 부가가치를 창출할 수 있도록 도와드리며, 개발자들에게는 익숙한 환경과 검증된 툴링을 제공합니다.",
         "features": {
           "ethereumSecurity": "이더리움의 보안 상속",
           "highScalability": "높은 확장성",
