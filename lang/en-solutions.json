@@ -1,23 +1,23 @@
 {
   "solutions": {
     "title": "Our Solutions",
-    "description": "There’s a solution for everyone with Astar. Companies, developers, and individuals are connecting to web3.",
+    "description": "Astarでは、すべての人にソリューションがあります。企業、開発者、個人がWeb3に接続しています。",
     "cta": "Get in Touch",
     "mission": {
       "title": "Our Mission",
-      "createNewOpportunities": "Create new opportunities for you to use web3.",
-      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundation creates the tools and community necessary to build a more inclusive and empowered web for you."
+      "createNewOpportunities": "あなたがWeb3を使用するための新しい機会を創出します。",
+      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundationは、より包括的で力を持ったWebを構築するために必要なツールとコミュニティを創出します。"
     },
     "usecases": {
       "title": "Use Cases",
-      "description": "Enterprises and governments trust Astar, from Japan Airlines creating new tourist experiences to Shibuya City supporting it’s entrepreneurs. 70% of the web3 market in Japan build with Astar’s high speed, low fees, and secure network.",
+      "description": "企業や政府はAstarを信頼しており、日本航空が新しい観光体験を創出することや渋谷区が起業家をサポートするまで、様々な形でその信頼を示しています。日本のWeb3市場の70%が、Astarの高速性、低料金、安全なネットワークを利用して構築されています。",
       "kokyoNft": {
         "title": "KOKYO NFT",
-        "description": "Special local experience packages available exclusively to NFT holders to enjoy the charm of regions across Japanese and develop deeper connections with local communities."
+        "description": "NFT保有者だけが利用できる特別なローカル体験パッケージを通じて、日本各地の魅力を楽しみ、地域コミュニティとのより深い繋がりを育むことができます。"
       },
       "yasushiAkimoto": {
-        "title": "Yasushi Akimoto creates idol projects with emerging entertainment enterprises on Astar",
-        "description": "The project introduces tokens to fundamentally change the relationship between fans and idols. Fans around the world can support idol groups beyond regional and language barriers."
+        "title": "秋元康氏はAstar上で新興のエンターテインメント企業とともにアイドルプロジェクトを創出します。",
+        "description": "このプロジェクトは、ファンとアイドルの関係を根本から変えるためにトークンを導入します。世界中のファンが地域や言語の壁を超えてアイドルグループをサポートできます。"
       },
       "jrKyushu": {
         "title": "JR Kyushu",
