@@ -5,12 +5,12 @@
         "connecting": "Connecting",
         "youToWeb3": "you to web3"
       },
-      "description": "Creating opportunities for individuals to use web3 technology. We connect people to web3—through entertainment, blockchain development, business development, and community events."
+      "description": "個人がWeb3の技術を利用する機会を創出します。エンターテイメント、ブロックチェーン開発、ビジネス開発、コミュニティイベントを通じて、人々とWeb3をつなげます。"
     },
     "features": {
       "bridgeAndEcosystem": {
         "title": "Bridge & Ecosystem",
-        "description": "Astar zkEVM is an Ethereum Layer-2 scaling solution that leverages Polygon's CDK and AggLayer technology. Astar zkEVM inherits Ethereum's security while maintaining EVM equivalence.",
+        "description": "Astar zkEVMは、PolygonのCDKおよびAggLayer技術を活用したEthereumのLayer-2スケーリングソリューションです。Astar zkEVMは、Ethereumのセキュリティを継承しつつ、EVMとの等価性を維持します。",
         "cta": {
           "bridgeToAstar": "Bridge to Astar",
           "exploreEcosystem": "Explore ecosystem"
@@ -18,7 +18,7 @@
       },
       "yokiOrigins": {
         "title": "Yoki Origins",
-        "description": "Yoki Origins is a journey to discover original Yoki characters inspired by supernatural creatures from Japan. Collect and upgrade your Yoki in this exciting and friendly web3 experience for everyone.",
+        "description": "Yoki Originsは、日本の超自然的な生き物にインスパイアされたオリジナルのYokiキャラクターを発見する旅です。エキサイティングでフレンドリーなWeb3の経験を通してYokiを集めてアップグレードしましょう。",
         "cta": {
           "yokiOriginsWebsite": "Yoki Origins website"
         }
@@ -29,15 +29,15 @@
     },
     "solutions": {
       "title": "Our Solutions",
-      "description": "There’s a solution for everyone with Astar. Companies, developers, and individuals are connecting to web3.",
+      "description": "Astarでは、すべての人にソリューションがあります。企業、開発者、個人がWeb3につながります。",
       "startale": {
         "name": "Startale Labs",
-        "description": "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
+        "description": "Startale Labsは、Web3のマスアダプションを加速させることに専念しており、日本最大の公共ブロックチェーンであるAstar Networkの開発と、Startale Web3 Cloudを通じたWeb3インフラの提供を行っています。",
         "cta": "Startale labs website",
         "useCases": {
           "sony": {
             "name": "Sony Network Communications",
-            "description": "Sony Network Communications and Startale Labs are thrilled to announce that they have entered into a joint venture agreement dedicated to developing a blockchain that can become the backbone of global web3 infrastructure."
+            "description": "Sony Network CommunicationsとStartale Labsは、グローバルなWeb3インフラの基盤となり得るブロックチェーンを開発することに専念する合弁事業契約を締結したことを発表し、大変嬉しく思っています。"
           },
           "bobg": {
             "name": "BOBG",
@@ -45,26 +45,26 @@
           },
           "uobAndSamsung": {
             "name": "UOB Venture Management and Samsung Next",
-            "description": "Startale Labs secured a total of $3.5m in funding from UOB Venture Management, a wholly-owned subsidiary of one of Singapore's top three banks, United Overseas Bank, and Samsung Next, the CVC arm of Samsung."
+            "description": "BOBGは、トークンの発行、運用、管理から仮想通貨の上場に至るまで、日本のブロックチェーンビジネスに幅広いサービスを提供する会社です。"
           }
         }
       },
       "japanLab": {
         "name": "Astar Japan Lab",
-        "description": "Astar Japan Lab fuels the growth of Japanese services and businesses by conducting research and development, gathering knowledge, and collaborating with exciting and established companies.",
+        "description": "Astar Japan Labは、リサーチや開発を行い知識を集積し、新鋭および確立された企業と協力することで、日本のサービスとビジネスの成長を促進します。",
         "cta": "Astar Japan Lab",
         "useCases": {
           "shibuyaCity": {
             "name": "Shibuya City",
-            "description": "Astar is now partnering with the Shibuya to support the ward’s web3 initiatives. Shibuya prides itself on being the modern city of Tokyo. A hot spot for young entrepreneurs, high fashion, and miles of shopping outlets all centred around the Shibuya station."
+            "description": "Astarは現在、渋谷区のWeb3イニシアチブをサポートするために渋谷区と提携しています。渋谷区は、東京のモダンな都市であることを誇りに思っています。若い起業家、ハイファッション、そして渋谷駅を中心にした数マイルに及ぶショッピングアウトレットのホットスポットです。"
           },
           "doubleJumpTokyo": {
             "name": "double jump.tokyo",
-            "description": "Re-building the future of gaming with blockchain technology!"
+            "description": "ブロックチェーン技術を活用して、ゲーミングの未来を再構築します！"
           },
           "deloitteTohmatsu": {
             "name": "Deloitte Tohmatsu",
-            "description": "Deloitte Tohmatsu Group transforms the sports industry with Astar zkEVM"
+            "description": "デロイトトーマツグループは、Astar zkEVMを用いてスポーツ産業を変革します。"
           }
         }
       }
@@ -98,12 +98,12 @@
     },
     "dAppsOnAstar": {
       "title": "dApps on Astar",
-      "description": "Astar Network is fuelling the next era of dApps and web3 solutions.",
+      "description": "Astar Networkは、次世代のdAppsとWeb3ソリューションを推進しています。",
       "cta": "Explore ecosystem"
     },
     "funding": {
       "title": "Funding",
-      "description": "Astar Funding helps organizations and developers bring their ideas to web3.",
+      "description": "Astar Fundingは、組織や開発者がそのアイデアをWeb3に持ち込むのを支援します。",
       "globalHackathons": {
         "title": "Global Hackathons",
         "description": "A collection of funding to connect you to web3.",
@@ -114,7 +114,7 @@
       },
       "dAppStaking": {
         "title": "dApp Staking",
-        "description": "An incentivized program to connect developers to the Astar community, where everyone is rewarded.",
+        "description": "開発者とAstarコミュニティとを繋げるためのインセンティブプログラムで、全員が報酬を受け取ることができます。",
         "stats": {
           "tier1Rewards": "Tier 1 Rewards (USD)",
           "totalStakers": "Total stakers",
@@ -131,12 +131,12 @@
       },
       "dAppStaking": {
         "title": "dApp Staking",
-        "description": "dApp Staking incentivizes developers to create their web3 vision and drives our commitment to make web3 accessible to all.",
+        "description": "ASTRはAstar Networkを動かすネイティブトークンであり、ステーキング報酬、ガス、助成金など様々な機能を提供することで最終的なユーティリティを持っています。",
         "cta": "Start staking"
       },
       "community": {
         "title": "Community",
-        "description": "Connect with your tribe and grow your community together—we welcome all creators, entrepreneurs, and blockchain enthusiasts.",
+        "description": "あなたの仲間と繋がり、共にコミュニティを成長させましょう—私たちはすべてのクリエイター、起業家、ブロックチェーン愛好家を歓迎します。",
         "cta": "Join our community"
       }
     }
