@@ -62,6 +62,10 @@
             "name": "double jump.tokyo",
             "description": "Re-building the future of gaming with blockchain technology!"
           },
+          "hakuhodo": {
+            "name": "HAKUHODO",
+            "description": "(placeholder)"
+          },
           "deloitteTohmatsu": {
             "name": "Deloitte Tohmatsu",
             "description": "Deloitte Tohmatsu Group transforms the sports industry with Astar zkEVM"
@@ -139,6 +143,9 @@
         "description": "Connect with your tribe and grow your community together—we welcome all creators, entrepreneurs, and blockchain enthusiasts.",
         "cta": "Join our community"
       }
+    },
+    "backers": {
+      "title": "Backers"
     }
   }
 }

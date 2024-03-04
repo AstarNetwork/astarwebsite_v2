@@ -62,6 +62,10 @@
             "name": "double jump.tokyo",
             "description": "ブロックチェーン技術を活用して、ゲーミングの未来を再構築します！"
           },
+          "hakuhodo": {
+            "name": "HAKUHODO",
+            "description": "(placeholder)"
+          },
           "deloitteTohmatsu": {
             "name": "Deloitte Tohmatsu",
             "description": "デロイトトーマツグループは、Astar zkEVMを用いてスポーツ産業を変革します。"
@@ -139,6 +143,9 @@
         "description": "あなたの仲間と繋がり、共にコミュニティを成長させましょう—私たちはすべてのクリエイター、起業家、ブロックチェーン愛好家を歓迎します。",
         "cta": "Join our community"
       }
+    },
+    "backers": {
+      "title": "Backers"
     }
   }
 }

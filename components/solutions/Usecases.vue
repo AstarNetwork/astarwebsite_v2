@@ -54,6 +54,12 @@ const posts = [
     link: "https://www.kokyo-nft.jp/",
   },
   {
+    title: t("solutions.usecases.incubation.title"),
+    image: "/images/solutions/usecases/incubation.webp",
+    description: t("solutions.usecases.incubation.description"),
+    link: "https://astar.network/incubation",
+  },
+  {
     title: t("solutions.usecases.yasushiAkimoto.title"),
     image: "/images/solutions/usecases/yasushi-akimoto.webp",
     description: t("solutions.usecases.yasushiAkimoto.description"),

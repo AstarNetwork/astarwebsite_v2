@@ -14,7 +14,7 @@
               class="border border-blue/30 rounded-full p-7 sm:p-12 lg:p-16 xl:p-20 inline-block"
             >
               <img
-                src="/images/solutions/astar-logo.svg"
+                src="/images/common/symbol.svg"
                 alt=""
                 class="mission-image w-24 sm:w-36 lg:w-48 xl:w-60"
               />
@@ -40,16 +40,12 @@
           <p
             class="text-slate-950 text-lg sm:text-xl lg:text-2xl leading-loose sm:leading-loose lg:leading-loose"
           >
-            {{ $t("solutions.mission.createNewOpportunities") }}
+            {{ $t("solutions.mission.first") }}
           </p>
           <p
             class="text-slate-950 text-lg sm:text-xl lg:text-2xl leading-loose sm:leading-loose lg:leading-loose"
           >
-            {{
-              $t(
-                "solutions.mission.astarFoundationCreatesTheToolsAndCommunityNecessary"
-              )
-            }}
+            {{ $t("solutions.mission.second") }}
           </p>
         </div>
       </div>

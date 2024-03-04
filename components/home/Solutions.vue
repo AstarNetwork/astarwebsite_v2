@@ -4,10 +4,15 @@
       {{ $t("home.solutions.title") }}
     </h2>
     <p
-      class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 s:text-lg leading-relaxed"
+      class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 s:text-lg leading-relaxed"
     >
       {{ $t("home.solutions.description") }}
     </p>
+    <div class="text-center mb-16 sm:mb-20">
+      <Button type="button" :href="localePath('/solutions/')">
+        {{ $t("home.solutions.title") }}
+      </Button>
+    </div>
 
     <div class="space-y-20 sm:space-y-40">
       <div v-for="partner in data" class="flex flex-col lg:flex-row gap-12">
@@ -66,7 +71,7 @@
 
 <script setup lang="ts">
 import { ArrowRightIcon } from "@heroicons/vue/24/outline";
-
+const localePath = useLocalePath();
 const { t } = useI18n();
 
 const data = {
@@ -118,13 +123,19 @@ const data = {
         ),
         link: "https://medium.com/astar-network/astar-partners-with-shibuya-city-6824712020da",
       },
+      // {
+      //   name: t("home.solutions.japanLab.useCases.doubleJumpTokyo.name"),
+      //   image: "double-jump-tokyo.webp",
+      //   description: t(
+      //     "home.solutions.japanLab.useCases.doubleJumpTokyo.description"
+      //   ),
+      //   link: "https://www.doublejump.tokyo/",
+      // },
       {
-        name: t("home.solutions.japanLab.useCases.doubleJumpTokyo.name"),
-        image: "double-jump-tokyo.webp",
-        description: t(
-          "home.solutions.japanLab.useCases.doubleJumpTokyo.description"
-        ),
-        link: "https://www.doublejump.tokyo/",
+        name: t("home.solutions.japanLab.useCases.hakuhodo.name"),
+        image: "hakuhodo.webp",
+        description: t("home.solutions.japanLab.useCases.hakuhodo.description"),
+        link: "https://www.hakuhodo-global.com/",
       },
       {
         name: t("home.solutions.japanLab.useCases.deloitteTohmatsu.name"),

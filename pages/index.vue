@@ -3,14 +3,15 @@
     <HomeCircles />
     <HomeHero />
     <HomeFeatures />
-    <HomeLatestNews />
     <HomeSolutions />
+    <HomeLatestNews />
     <div class="bg-black text-slate-300 py-12 sm:py-20">
       <HomeDeveloper />
       <HomeDappsOnAstar />
       <HomeFunding />
     </div>
     <HomeLinks />
+    <HomeBackers />
   </NuxtLayout>
 </template>
 

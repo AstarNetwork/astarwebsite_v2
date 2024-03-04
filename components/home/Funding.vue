@@ -73,7 +73,7 @@ const data = [
       },
       {
         name: t("home.funding.globalHackathons.stats.applications"),
-        number: 5000,
+        number: 8000,
         unitModifier: "+",
       },
     ],
@@ -87,12 +87,12 @@ const data = [
         name: t("home.funding.dAppStaking.stats.tier1Rewards"),
         number: 40,
         unitModifier: "k",
+        caption: t("home.funding.dAppStaking.stats.subjectToMarket"),
       },
       {
         name: t("home.funding.dAppStaking.stats.totalStakers"),
         number: 20,
         unitModifier: "k+",
-        caption: t("home.funding.dAppStaking.stats.subjectToMarket"),
       },
     ],
   },

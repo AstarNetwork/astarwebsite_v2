@@ -1,5 +1,5 @@
 <template>
-  <div class="container-lg py-20 sm:py-40">
+  <div class="container-lg pt-20 sm:pt-40">
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8">
       <div
         v-for="(item, index) in data"

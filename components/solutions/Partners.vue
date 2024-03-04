@@ -1,6 +1,6 @@
 <template>
   <section class="overflow-hidden">
-    <div class="container-md py-20">
+    <div class="container-xs py-20">
       <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
         {{ $t("solutions.partners.title") }}
       </h2>
@@ -43,15 +43,15 @@ const data = [
       url: "https://startale.org/",
     },
   },
-  {
-    name: t("solutions.partners.sony.name"),
-    image: "sony-logo.svg",
-    description: t("solutions.partners.sony.description"),
-    link: {
-      label: t("solutions.partners.sony.cta"),
-      url: "https://astar.network/incubation",
-    },
-  },
+  // {
+  //   name: t("solutions.partners.sony.name"),
+  //   image: "sony-logo.svg",
+  //   description: t("solutions.partners.sony.description"),
+  //   link: {
+  //     label: t("solutions.partners.sony.cta"),
+  //     url: "https://astar.network/incubation",
+  //   },
+  // },
 ];
 </script>
 

@@ -6,7 +6,9 @@
     "mission": {
       "title": "Our Mission",
       "createNewOpportunities": "Create new opportunities for you to use web3.",
-      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundation creates the tools and community necessary to build a more inclusive and empowered web for you."
+      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundation creates the tools and community necessary to build a more inclusive and empowered web for you.",
+      "first": "Connecting tradition with innovation! Accelerate web3 adoption.",
+      "second": "Pioneering the forefront of blockchain technology, we craft seamless infrastructures and ecosystems to bridge you with the dynamic world of Web3."
     },
     "usecases": {
       "title": "Use Cases",
@@ -14,6 +16,10 @@
       "kokyoNft": {
         "title": "KOKYO NFT",
         "description": "Special local experience packages available exclusively to NFT holders to enjoy the charm of regions across Japanese and develop deeper connections with local communities."
+      },
+      "incubation": {
+        "title": "Web3 Incubation Program by Sony Network Communications and Astar Network",
+        "description": "This incubation program is a joint program between Sony Network Communications and Astar, and aims to foster cutting-edge Web3 use cases using the knowledge and resources of Sony and Astar. The program is online and open to participants worldwide and runs for three months, from March to June."
       },
       "yasushiAkimoto": {
         "title": "Yasushi Akimoto creates idol projects with emerging entertainment enterprises on Astar",

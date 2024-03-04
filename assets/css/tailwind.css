@@ -167,3 +167,11 @@
 .container-md{
   @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
 }
+
+.container-sm{
+  @apply mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8;
+}
+
+.container-xs{
+  @apply mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8;
+}
