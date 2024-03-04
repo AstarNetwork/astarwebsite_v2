@@ -247,11 +247,11 @@ const nav = [
       },
       {
         name: t("footer.nav.privacyPolicy"),
-        href: localePath("/privacy-policy"),
+        href: "/privacy-policy",
       },
       {
         name: t("footer.nav.termsOfUse"),
-        href: localePath("/term-of-use"),
+        href: "/term-of-use",
       },
       {
         name: t("footer.nav.contactUs"),

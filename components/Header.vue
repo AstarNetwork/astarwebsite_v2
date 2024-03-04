@@ -86,7 +86,7 @@
                       <NuxtLink
                         v-for="menu in item.nav"
                         class="flex items-center py-1 text-slate-950 transition hover:text-blue whitespace-nowrap"
-                        :to="menu.href"
+                        :to="localePath(menu.href)"
                         :target="
                           menu.href.includes('https') ? '_blank' : '_self'
                         "
@@ -137,8 +137,6 @@ import {
 } from "@heroicons/vue/24/outline";
 
 const localePath = useLocalePath();
-const { locale } = useI18n();
-const i18n = locale.value === "ja" ? "/ja" : "";
 
 let open = false;
 
@@ -148,7 +146,7 @@ const menus = [
     nav: [
       {
         label: "",
-        nav: [{ label: "Get Started", href: i18n + "/developers" }],
+        nav: [{ label: "Get Started", href: "/developers" }],
       },
       {
         label: "Developer Support",
@@ -169,7 +167,7 @@ const menus = [
           },
           {
             label: "Astar University",
-            href: i18n + "/developers/university",
+            href: "/developers/university",
           },
         ],
       },
@@ -236,13 +234,13 @@ const menus = [
       {
         label: "",
         nav: [
-          { label: "Community Hub", href: i18n + "/community" },
-          { label: "Ecosystem", href: i18n + "/community/ecosystem" },
+          { label: "Community Hub", href: "/community" },
+          { label: "Ecosystem", href: "/community/ecosystem" },
         ],
       },
       {
         label: "What's on",
-        nav: [{ label: "Blog", href: i18n + "/blog" }],
+        nav: [{ label: "Blog", href: "/blog" }],
       },
       {
         label: "Getting Involved",
@@ -262,13 +260,13 @@ const menus = [
       {
         label: "",
         nav: [
-          { label: "2023 Starmap", href: i18n + "/starmap" },
-          { label: "Astar Japan Lab", href: i18n + "/japan" },
+          { label: "2023 Starmap", href: "/starmap" },
+          { label: "Astar Japan Lab", href: "/japan" },
           {
             label: "Careers",
             href: socialUrl.wellfound,
           },
-          { label: "Contact Us", href: i18n + "/contact" },
+          { label: "Contact Us", href: "/contact" },
         ],
       },
     ],

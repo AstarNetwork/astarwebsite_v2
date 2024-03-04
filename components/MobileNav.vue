@@ -87,7 +87,7 @@
                             <li v-for="menu in category.nav">
                               <NuxtLink
                                 class="flex items-center text-slate-700"
-                                :to="menu.href"
+                                :to="localePath(menu.href)"
                                 :target="
                                   menu.href.includes('https')
                                     ? '_blank'
