@@ -21,19 +21,19 @@
       },
       "jrKyushu": {
         "title": "JR Kyushu",
-        "description": "JR Kyushu Railway Company launched NFTs on Astar to boost customer engagement with it’s 331 million annual riders."
+        "description": "JR九州は、年間3億3,100万人の利用者の顧客エンゲージメントを高めるため、AstarでNFTを開始した。"
       },
       "calbee": {
         "title": "Calbee",
-        "description": "Calbee powers its “NFT Chips” promotional campaign with evolving potato chip NFTs to connect with customers in a new way."
+        "description": "Calbeeは、進化するポテトチップのNFTを活用した「NFTチップス」プロモーションキャンペーンで、新しい方法で顧客とつながりました。"
       }
     },
     "partners": {
       "title": "Partners",
-      "description": "Our important partners to achieve our mission",
+      "description": "ミッション達成のための重要なパートナー",
       "startale": {
         "name": "Startale Labs",
-        "description": "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
+        "description": "Startale Labsは、Web3の普及を加速させるべく、日本最大のパブリックブロックチェーンであるAstar Networkの開発、Startale Web3 CloudによるWeb3インフラの提供を行っています。",
         "cta": "Startale Labs website"
       },
       "sony": {
@@ -44,22 +44,22 @@
     },
     "japanAndAsia": {
       "title": "Japan and Asia",
-      "description": "Our strong community includes over {japaneseMembers} Japanese members and growing. We work closely with industry-leading enterprises, local/national government initiatives, and leaders to bring web3 to Asia and beyond.",
+      "description": "私たちの強固なコミュニティには、{japaneseMembers}人以上の日本人メンバーがおり、さらに増え続けています。業界をリードする企業、地方/国家政府のイニシアチブ、およびリーダーと密接に協力し、アジアおよびそれ以外の地域にweb3をもたらすために努力しています。",
       "korea": {
         "title": "Expand big community in Asia (Korea)",
-        "description": "We’re bridging different local markets in Asia to realize our shared vision of global mass adoption, including the expansion of Korean web3 companies to Japan."
+        "description": "アジアの異なるローカルマーケットを架け橋とし、韓国のweb3企業が日本への拡大を含む、グローバルな大衆採用の共有ビジョンを実現するために努力しています。"
       },
       "japanTaxationAndGovernment": {
         "title": "Sota influence to Japan taxation and government",
-        "description": "Sota Watanabe, the founder of Astar Network and a member of the Japanese Government's web3 task force, advises the Japanese government on developing web3 as part of its national strategy."
+        "description": "Astar Networkの創設者であり、日本政府のweb3タスクフォースのメンバーである渡辺創太は、国家戦略の一環としてweb3の開発について日本政府に助言しています。"
       },
       "yoake": {
         "title": "Something that can tell that mass adaption is not too far",
-        "description": "YOAKE entertainment Co, Ltd. starts an ambitious project on Astar to create global entertainment content and an idol economy through blockchain technology."
+        "description": "YOAKEエンターテインメント株式会社は、ブロックチェーン技術を通じてグローバルなエンターテインメントコンテンツとアイドル経済を創出する意欲的なプロジェクトをAstar上で開始します。"
       },
       "japanLab": {
         "title": "Astar Japan Lab",
-        "description": "394 companies work together to fuel the growth of web3 in Japan. Learn more and register your company."
+        "description": "日本でのweb3の成長を促進するために、394社が協力しています。詳細をご確認いただき是非ご登録ください。"
       }
     }
   }
