@@ -7,8 +7,8 @@
       "title": "Astar의 미션",
       "createNewOpportunities": "웹3 실사용 사례를 위한 새로운 기회를 창출해드립니다.",
       "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundation은 여러분이 꿈꾸는 웹환경을 마음껏 펼치실 수 있도록 포용적이고 꼭 필요한 개발자도구들과 커뮤니티를 선사합니다.",
-      "first": "Connecting tradition with innovation! Accelerate web3 adoption.",
-      "second": "Pioneering the forefront of blockchain technology, we craft seamless infrastructures and ecosystems to bridge you with the dynamic world of Web3."
+      "first": "전통성과 혁신성을 연결해드립니다! 저희와 함께 Web3 매스어덥션에 박차를 가해보아요.",
+      "second": "블록체인 기술의 최전선을 개척하며, 우리는 웹3의 다이내믹한 세계와의 연결을 위한 매끄러운 인프라와 생태계를 조성합니다."
     },
     "usecases": {
       "title": "실사용 사례",
@@ -36,7 +36,7 @@
     },
     "partners": {
       "title": "주요 파트너사",
-      "description": "Astar 미션을 이루기 위한 핵심 파트너",
+      "description": "Astar 미션을 함께 이루기 위해 뭉친 주요 파트너사",
       "startale": {
         "name": "Startale Labs",
         "description": "Startale Labs는 웹3의 매스어덥션(Mass Adoption)을 가속화하기 위해 기여하고, 일본 최대의 퍼블릭 블록체인인 Astar Network의 개발조직으로, Startale 웹3 클라우드를 통해 웹3 인프라 솔루션을 제공합니다.",
@@ -52,7 +52,7 @@
       "title": "일본과 아시아",
       "description": "우리의 강력한 커뮤니티는 {japaneseMembers} 명 이상의 일본 회원과 함께 성장하고 있습니다. 우리는 웹3를 일본과 아시아권에 집중시키기 위해 산업 선도 기업, 지역/국가 정부 계획 및 리더와 긴밀하게 협력합니다.",
       "korea": {
-        "title": "일본과 한국을 시작점으로",
+        "title": "일본과 한국을 기점으로",
         "description": "우리는 한국 웹3 기업의 일본 확장을 포함하여 전 세계적인 매스 어덥션의 공통된 비전을 실현하기 위해 아시아 내 추가 지역확장을 계획하고 있습니다."
       },
       "japanTaxationAndGovernment": {
