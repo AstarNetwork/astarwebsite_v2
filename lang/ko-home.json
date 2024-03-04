@@ -2,15 +2,15 @@
   "home": {
     "hero": {
       "title": {
-        "connecting": "지금 떠나요,",
-        "youToWeb3": "웹3의 항해"
+        "connecting": "아스타와 함께",
+        "youToWeb3": "웹3를 향한 새로운 여정"
       },
       "description": "웹3 기술을 일상적으로 사용하실 수 있도록 다양한 경험들을 선사해드립니다. Astar는 엔터테인먼트, 블록체인 개발, 비즈니스 개발, 그리고 커뮤니티 이벤트를 통해 웹3를 여러분의 일상과 연결시켜드리고자 합니다."
     },
     "features": {
       "bridgeAndEcosystem": {
         "title": "브릿지 & 생태계",
-        "description": "Astar zkEVM은 폴리곤의 CDK와 AggLayer 기술을 활용한 이더리움 레이어-2 기반의 확장 솔루션입니다. Astar zkEVM은 이더리움의 보안을 유지하면서 EVM 동등성을 유지합니다.",
+        "description": "Astar zkEVM은 폴리곤의 CDK와 AggLayer 기술을 활용한 이더리움 레이어-2 기반의 확장성 솔루션입니다. Astar zkEVM은 이더리움의 보안성을 지키면서 EVM 동등성또한 유지합니다.",
         "cta": {
           "bridgeToAstar": "Astar와 브릿지 연동",
           "exploreEcosystem": "생태계 탐색"
@@ -45,7 +45,7 @@
           },
           "uobAndSamsung": {
             "name": "UOB Venture Management 및 Samsung Next",
-            "description": "Startale Labs는 싱가포르 최고 은행 중 하나인 유나이티드 오버시즈 뱅크(United Overseas Bank)의 자회사인 UOB Venture Management와 삼성의 CVC 부문인 Samsung Next로부터 총 350만 달러의 투자를 유치했습니다."
+            "description": "Startale Labs는 싱가포르 은행권 중 하나인 유나이티드 오버시즈 뱅크(United Overseas Bank)의 자회사인 UOB Venture Management와 삼성의 CVC 부문인 Samsung Next로부터 총 350만 달러의 투자를 유치했습니다."
           }
         }
       },
