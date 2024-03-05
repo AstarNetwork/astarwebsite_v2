@@ -28,19 +28,6 @@
       class="border border-slate-200 bg-white rounded-md transition p-4 block"
       :class="item.attributes.website && 'hover:shadow-xl'"
     >
-      <ul class="flex gap-1 mb-2">
-        <li
-          v-for="chain in item.attributes.project_chains.data"
-          class="text-xs py-1 px-2 rounded-sm whitespace-nowrap border"
-          :class="
-            chain.id == 1
-              ? 'bg-pink/10 text-pink border-pink/50'
-              : 'bg-blue/10 text-blue border-blue/50'
-          "
-        >
-          {{ chain.attributes.name }}
-        </li>
-      </ul>
       <span class="block py-4 mb-2 lg:mb-4">
         <img
           :src="useStrapiMedia(item.attributes.logo.data.attributes.url)"
@@ -118,13 +105,11 @@ import { ProjectType } from "@/types";
 interface Props {
   projects: ProjectType[];
   category: string;
-  chain: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   projects: () => [] as ProjectType[],
   category: () => "",
-  chain: () => "",
 });
 
 // Updated computed property to filter by chain and search term
@@ -139,20 +124,12 @@ const sortedProjects = computed(() => {
               (category) => category.attributes.name === props.category
             );
 
-      // Filter by chain if specified
-      const chainMatch =
-        props.chain === "All" || !props.chain
-          ? true
-          : project.attributes.project_chains.data.some(
-              (chain) => chain.attributes.name === props.chain
-            );
-
       // Filter by search term if specified
       const searchMatch = project.attributes.name
         .toLowerCase()
         .includes(searchTerm.value.toLowerCase());
 
-      return categoryMatch && chainMatch && searchMatch;
+      return categoryMatch && searchMatch;
     })
     .sort((a, b) =>
       a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase() ? 1 : -1
