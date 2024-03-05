@@ -1,71 +1,71 @@
 {
   "solutions": {
     "title": "Our Solutions",
-    "description": "There’s a solution for everyone with Astar. Companies, developers, and individuals are connecting to web3.",
+    "description": "Astarでは、すべての人にソリューションがあります。企業、開発者、個人がWeb3に接続しています。",
     "cta": "Get in Touch",
     "mission": {
       "title": "Our Mission",
-      "createNewOpportunities": "Create new opportunities for you to use web3.",
-      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundation creates the tools and community necessary to build a more inclusive and empowered web for you.",
-      "first": "Connecting tradition with innovation! Accelerate web3 adoption.",
-      "second": "Pioneering the forefront of blockchain technology, we craft seamless infrastructures and ecosystems to bridge you with the dynamic world of Web3."
+      "createNewOpportunities": "あなたがWeb3を使用するための新しい機会を創出します。",
+      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundationは、より包括的で力を持ったWebを構築するために必要なツールとコミュニティを創出します。",
+      "first": "伝統と革新をつなぐ！Web3の導入を加速する。",
+      "second": "ブロックチェーン技術の最前線を切り拓き、私たちはシームレスなインフラとエコシステムを構築し、あなたをダイナミックなWeb3の世界とつなぐ橋渡しをします。"
     },
     "usecases": {
       "title": "Usecases",
-      "description": "Enterprises and governments trust Astar, from Japan Airlines creating new tourist experiences to Shibuya City supporting it’s entrepreneurs. 70% of the web3 market in Japan build with Astar’s high speed, low fees, and secure network.",
+      "description": "企業や政府はAstarを信頼しており、日本航空が新しい観光体験を創出することや渋谷区が起業家をサポートするまで、様々な形でその信頼を示しています。日本のWeb3市場の70%が、Astarの高速性、低料金、安全なネットワークを利用して構築されています。",
       "kokyoNft": {
         "title": "KOKYO NFT",
-        "description": "Special local experience packages available exclusively to NFT holders to enjoy the charm of regions across Japanese and develop deeper connections with local communities."
+        "description": "NFT保有者だけが利用できる特別なローカル体験パッケージを通じて、日本各地の魅力を楽しみ、地域コミュニティとのより深い繋がりを育むことができます。"
       },
       "incubation": {
         "title": "Web3 Incubation Program by Sony Network Communications and Astar Network",
         "description": "This incubation program is a joint program between Sony Network Communications and Astar, and aims to foster cutting-edge Web3 use cases using the knowledge and resources of Sony and Astar. The program is online and open to participants worldwide and runs for three months, from March to June."
       },
       "yasushiAkimoto": {
-        "title": "Yasushi Akimoto creates idol projects with emerging entertainment enterprises on Astar",
-        "description": "The project introduces tokens to fundamentally change the relationship between fans and idols. Fans around the world can support idol groups beyond regional and language barriers."
+        "title": "秋元康氏はAstar上で新興のエンターテインメント企業とともにアイドルプロジェクトを創出します。",
+        "description": "このプロジェクトは、ファンとアイドルの関係を根本から変えるためにトークンを導入します。世界中のファンが地域や言語の壁を超えてアイドルグループをサポートできます。"
       },
       "jrKyushu": {
         "title": "JR Kyushu",
-        "description": "JR Kyushu Railway Company launched NFTs on Astar to boost customer engagement with it’s 331 million annual riders."
+        "description": "JR九州は、年間3億3,100万人の利用者の顧客エンゲージメントを高めるため、AstarでNFTを開始した。"
       },
       "calbee": {
         "title": "Calbee",
-        "description": "Calbee powers its “NFT Chips” promotional campaign with evolving potato chip NFTs to connect with customers in a new way."
+        "description": "Calbeeは、進化するポテトチップのNFTを活用した「NFTチップス」プロモーションキャンペーンで、新しい方法で顧客とつながりました。"
       }
     },
     "partners": {
       "title": "Partners",
-      "description": "Our important partners to achieve our mission",
+      "description": "ミッション達成のための重要なパートナー",
       "startale": {
         "name": "Startale Labs",
-        "description": "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
+        "description": "Startale Labsは、Web3の普及を加速させるべく、日本最大のパブリックブロックチェーンであるAstar Networkの開発、Startale Web3 CloudによるWeb3インフラの提供を行っています。",
         "cta": "Startale labs website"
       },
       "sony": {
         "name": "Sony Network Communications",
-        "description": "Sony Network Communications and Astar Network created a joint incubation program that leveraged the world’s top innovators to drive growth for 19 web3 startups, receiving over 200 applications.",
+        "description": "ソニーネットワークコミュニケーションズとAstar Networkは、世界トップクラスのイノベーターを活用して19のweb3スタートアップの成長を促進する共同インキュベーションプログラムを作成し、200件以上の応募を受け付けました。",
         "cta": "Web3 Incubation Program"
       }
     },
     "japanAndAsia": {
       "title": "Japan and Asia",
-      "description": "Our strong community includes over {japaneseMembers} Japanese members and growing. We work closely with industry-leading enterprises, local/national government initiatives, and leaders to bring web3 to Asia and beyond.",
+      "description": "私たちの強固なコミュニティには、{japaneseMembers}人以上の日本人メンバーがおり、さらに増え続けています。業界をリードする企業、地方/国家政府のイニシアチブ、およびリーダーと密接に協力し、アジアおよびそれ以外の地域にweb3をもたらすために努力しています。",
       "korea": {
         "title": "Expand big community in Asia (Korea)",
-        "description": "We’re bridging different local markets in Asia to realize our shared vision of global mass adoption, including the expansion of Korean web3 companies to Japan."
+        "description": "アジアの異なるローカルマーケットを架け橋とし、韓国のweb3企業が日本への拡大を含む、グローバルな大衆採用の共有ビジョンを実現するために努力しています。"
       },
       "japanTaxationAndGovernment": {
-        "title": "Sota influence to Japan taxation and government",
-        "description": "Sota Watanabe, the founder of Astar Network and a member of the Japanese Government's web3 task force, advises the Japanese government on developing web3 as part of its national strategy."
+        "title": "渡辺創太と日本税制の改変と政府とのつながり",
+        "description": "Astar Networkの創設者であり、日本政府のweb3タスクフォースのメンバーでもあった渡辺創太は、国家戦略の一環としてweb3の開発について日本政府に助言しています。"
       },
       "yoake": {
-        "title": "Something that can tell that mass adaption is not too far",
-        "description": "YOAKE entertainment Co, Ltd. starts an ambitious project on Astar to create global entertainment content and an idol economy through blockchain technology."
+        "title": "マスアダプションはすぐそこ",
+        "description": "YOAKEエンターテインメント株式会社は、ブロックチェーン技術を通じてグローバルなエンターテインメントコンテンツとアイドル経済を創出する意欲的なプロジェクトをAstar上で開始します。"
       },
       "japanLab": {
         "title": "Astar Japan Lab",
-        "description": "394 companies work together to fuel the growth of web3 in Japan. Learn more and register your company."
+        "description": "日本でのweb3の成長を促進するために、394社が協力しています。詳細をご確認いただき是非ご登録ください。"
       }
     }
   }
