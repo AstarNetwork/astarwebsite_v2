@@ -1,8 +1,9 @@
 {
   "ecosystem": {
     "title": "Ecosystem",
-    "description": "Check out some of the many projects and DApps with Astar Network deployments.",
-    "who": "Astar Network上で\n開発しているプロジェクト",
-    "note": "注意：このページに掲載している情報は、プロジェクト名、ロゴ、Webページへのリンクを含め、一般的な情報提供のみを目的としており、決してプロジェクト、Webページの内容、またはチームを推奨するものではありません。"
+    "description": "Astarエコシステムの全てのアプリケーションとプロジェクト",
+    "chain": "チェーン:",
+    "categories": "カテゴリー:",
+    "searchTheEcosystem": "エコシステム内を検索"
   }
 }

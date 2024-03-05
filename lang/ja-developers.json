@@ -12,7 +12,7 @@
     },
     "support": {
       "title": "開発者サポート",
-      "build2earn": "#Build2Earnは、Astar/Shiden Network上で価値のあるdAppsを構築する開発者に、ベーシックインカムを提供することを目的としたインセンティブプログラムです。",
+      "buildAndEarn": "Build & Earnは、Astar/Shiden Network上で価値のあるdAppsを構築する開発者に、ベーシックインカムを提供することを目的としたインセンティブプログラムです。",
       "inkubator": "ink!ubatorは、ink!のコア開発者との繋がりや豊富なリソースを提供します。あなたの次のink!プロジェクトで、開発資金と技術サポートを受けましょう！"
     },
     "learn":{
@@ -60,8 +60,8 @@
         "title": "XCM",
         "description": "他のブロックチェーンと信頼性のあるブリッジで相互運用可能"
       },
-      "build2earn": {
-        "title": "Build2Earn",
+      "buildAndEarn": {
+        "title": "Build & Earn",
         "description": "Astar Networkでの開発を支援するため、dAppステーキングメカニズムを使用"
       }
     },

@@ -1,8 +1,9 @@
 {
   "ecosystem": {
     "title": "Ecosystem",
-    "description": "Check out some of the many projects and DApps with Astar Network deployments.",
-    "who": "Who's Building on Astar Network",
-    "note": "Note: The information presented on this page, including project names, logos, and links to external web pages, is made available solely for general information purposes and is by no means an endorsement of the project, the content of its web pages, or the team."
+    "description": "Discover all the apps and projects in the Astar ecosystem.",
+    "chain": "Chain:",
+    "categories": "Categories:",
+    "searchTheEcosystem": "Search the ecosystem"
   }
 }

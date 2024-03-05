@@ -10,27 +10,19 @@
         class="border border-white/30 rounded-3xl px-6 pt-1 pb-8 sm:pb-16 lg:w-1/2"
       >
         <img
-          src="/images/developers/build2earn.svg"
+          src="/images/developers/build-and-earn.svg"
           class="mx-auto max-w-[440px] mb-6 sm:mb-6 -mt-6 sm:-mt-16 w-full"
         />
         <h3
-          class="leading-tight mb-4 text-center text-3xl sm:text-4xl lg:text-4xl font-extrabold"
+          class="leading-tight mb-4 text-center text-3xl sm:text-4xl lg:text-4xl font-bold"
         >
-          Build2Earn
+          Build & Earn
         </h3>
         <p class="mx-auto max-w-2xl mb-8 sm:text-lg lg:text-center">
-          {{ $t("developers.support.build2earn") }}
+          {{ $t("developers.support.buildAndEarn") }}
         </p>
         <div class="text-center">
-          <Button
-            href="https://docs.astar.network/docs/build/dapp-staking/"
-            size="lg"
-            target="_blank"
-            class="w-72"
-          >
-            Build2Earn
-            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
-          </Button>
+          <Button :href="docsUrl.dappStaking">Build & Earn</Button>
         </div>
       </div>
       <div class="bg-[#B68AF6] rounded-3xl px-6 pt-1 pb-8 sm:pb-16 lg:w-1/2">
@@ -39,7 +31,7 @@
           class="mx-auto max-w-[440px] mb-6 sm:mb-10 -mt-6 sm:-mt-16 w-full"
         />
         <h3
-          class="text-black leading-tight mb-4 text-center text-3xl sm:text-5xl lg:text-5xl font-extrabold"
+          class="text-black leading-tight mb-4 text-center text-3xl sm:text-5xl lg:text-5xl font-bold"
         >
           ink!ubator
         </h3>
@@ -47,14 +39,9 @@
           {{ $t("developers.support.inkubator") }}
         </p>
         <div class="text-center">
-          <NuxtLink
-            to="https://use.ink/ubator/"
-            target="_blank"
-            class="bg-black rounded-xl p-4 w-72 inline-flex justify-center items-center text-lg hover:bg-gray-900"
-          >
+          <Button :href="grantsUrl.inkubator" color="whiteGray">
             ink!ubator
-            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
-          </NuxtLink>
+          </Button>
         </div>
       </div>
     </div>
@@ -62,5 +49,5 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+import { docsUrl, grantsUrl } from "@/data/links";
 </script>

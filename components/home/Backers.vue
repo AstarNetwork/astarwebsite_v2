@@ -1,12 +1,11 @@
 <template>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <h2
-      class="text-center text-space-gray-dark text-3xl lg:text-4xl font-bold mb-20"
-    >
-      {{ $t("home.backers") }}
+  <div class="container-lg py-20 sm:py-40">
+    <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-16 sm:mb-24">
+      {{ $t("home.backers.title") }}
     </h2>
+
     <div
-      class="grid grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-12 sm:gap-y-20 sm:grid-cols-4 lg:grid-cols-5"
+      class="grid gap-x-6 sm:gap-x-8 gap-y-8 grid-cols-3 sm:gap-y-16 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6"
     >
       <div v-for="item in projects" class="flex items-center justify-center">
         <NuxtLink

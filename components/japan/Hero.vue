@@ -1,32 +1,33 @@
 <template>
-  <div class="landscape:min-h-screen pb-16 flex items-end justify-start">
-    <div class="relative z-10 w-full">
-      <div class="text-center">
+  <div class="pt-8 pb-16 bg-gradient-to-r from-[#0047FF] to-[#00D1FF]">
+    <img
+      class="portrait:hidden max-w-[1280px] mx-auto w-full"
+      src="/images/japan/hero-landscape.svg"
+      :alt="$t('japan.title')"
+      width="1460"
+      height="808"
+    />
+    <img
+      class="landscape:hidden max-w-[640px] mx-auto w-full"
+      src="/images/japan/hero-portrait.svg"
+      :alt="$t('japan.title')"
+      width="1050"
+      height="1050"
+    />
+    <div class="px-4 sm:px-6 -mt-12 lg:-mt-24">
+      <h1 class="max-w-4xl mx-auto mb-6">
+        <span class="sr-only">{{ $t("japan.title") }}</span>
         <img
-          class="landscape:hidden mt-24 max-w-[640px] mx-auto w-full"
-          src="/images/japan/hero-portrait.svg"
+          class="w-full mx-auto"
+          src="/images/japan/title.svg"
           :alt="$t('japan.title')"
-          width="1050"
-          height="1050"
-          data-not-lazy
+          width="912"
+          height="114"
         />
-        <div class="px-4 sm:px-6">
-          <h1 class="max-w-4xl mx-auto mb-6">
-            <span class="sr-only">{{ $t("japan.title") }}</span>
-            <img
-              class="w-full mx-auto"
-              src="/images/japan/title.svg"
-              :alt="$t('japan.title')"
-              width="912"
-              height="114"
-              data-not-lazy
-            />
-          </h1>
-          <p class="sm:text-lg max-w-3xl mx-auto">
-            {{ $t("japan.description") }}
-          </p>
-        </div>
-      </div>
+      </h1>
+      <p class="sm:text-lg max-w-3xl mx-auto text-white text-center">
+        {{ $t("japan.description") }}
+      </p>
     </div>
   </div>
 </template>

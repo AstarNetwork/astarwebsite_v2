@@ -17,15 +17,12 @@
                 :alt="item.title"
               />
             </div>
-            <p class="font-medium mb-2">
+            <p class="mb-2 text-slate-950">
               {{ item.title }}
             </p>
 
-            <p
-              v-if="item.href"
-              class="text-space-cyan group-hover:underline transition"
-            >
-              {{ t("learn_more") }}
+            <p v-if="item.href" class="group-hover:underline transition">
+              {{ t("japan.use_cases.learnMore") }}
               <ArrowTopRightOnSquareIcon
                 class="w-4 h-4 inline-block stroke-2"
               />

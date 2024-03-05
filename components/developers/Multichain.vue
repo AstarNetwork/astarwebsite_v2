@@ -1,14 +1,5 @@
 <template>
   <div class="relative z-10">
-    <div data-aos="zoom-out-right" class="absolute z-[4]">
-      <img
-        class="max-h-80 sm:max-h-full lg:h-auto"
-        src="/images/developers/multichain-bg.svg"
-        alt="Multichain Future"
-        width="814"
-        height="498"
-      />
-    </div>
     <div
       class="max-w-7xl mx-auto px-4 sm:px-6 lg:flex items-center relative z-10 pt-80"
     >
