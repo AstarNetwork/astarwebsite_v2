@@ -12,7 +12,7 @@
     },
     "support": {
       "title": "Developer Support",
-      "buildAndEarn": "Build & Earn is our financial incentive program whose aim is to provide a basic income to developers for building useful dApps on Astar/Shiden.",
+      "build2earn": "#Build2Earn is our financial incentive program whose aim is to provide a basic income to developers for building useful dApps on Astar/Shiden.",
       "inkubator": "ink!ubator connects you with core developers and extensive resources. Get funding and technical support for your next ink! project."
     },
     "learn":{
@@ -60,8 +60,8 @@
         "title": "XCM",
         "description": "Interact with other blockchains with trustless bridges."
       },
-      "buildAndEarn": {
-        "title": "Build & Earn",
+      "build2earn": {
+        "title": "Build2Earn",
         "description": "Use our dApp staking mechanism to support your development on Astar Network."
       }
     },

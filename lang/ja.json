@@ -1,33 +1,23 @@
 {
   "meta": {
-    "tagline": "Connecting Web3 to You",
-    "description": "Creating opportunities for individuals to use web3 technology. We connect people to web3—through entertainment, blockchain development, business development, and community events."
+    "tagline": "マルチチェーン時代のスマートコントラクトハブ",
+    "description": "Astar Network（アスターネットワーク）はEVMとWebAssembly（Wasm）の両環境をサポートし、開発者に馴染みのあるツールや言語を提供する日本で最大のスマートコントラクト・プラットフォームです。",
+    "twitter": "AstarNetwork_JP"
   },
+  "learn_more": "詳細はこちら",
   "footer": {
-    "nav": {
-      "build": "Build",
-      "docs": "Docs",
-      "apply": "Apply",
-      "careers": "Careers",
-      "ambassadorProgram":"Astar Ambassador Program",
-      "bugBountyProgram":"Bug Bounty Program",
-      "learn": "Learn",
-      "blog": "Astar Blog",
-      "videos": "Videos",
-      "forum": "Forum",
-      "other": "Other",
-      "brandAssets": "Brand Assets",
-      "privacyPolicy": "Privacy Policy",
-      "termsOfUse": "Terms of Use",
-      "contactUs": "Contact Us"
-    },
-    "contactUs": {
-      "title": "Contact Us",
-      "description": "Get in touch with the Astar Network team"
-    },
-    "newsletter": {
-      "title": "Newsletter",
-      "description": "Sign-up for our newsletter to stay up-to-date and learn about the latest developments."
-    }
+    "build": "開発",
+    "docs": "ドキュメント",
+    "apply": "申請・応募",
+    "careers": "採用情報",
+    "learn": "学ぶ",
+    "blog": "Astar Blog",
+    "videos": "動画",
+    "forum": "フォーラム",
+    "other": "その他",
+    "brand_assets": "ブランドアセット",
+    "privacy_policy": "プライバシーポリシー",
+    "terms_of_use": "利用規約",
+    "contact": "お問い合わせ"
   }
 }

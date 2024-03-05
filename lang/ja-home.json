@@ -1,151 +1,77 @@
 {
   "home": {
     "hero": {
-      "title": {
-        "connecting": "Connecting",
-        "youToWeb3": "you to web3"
+      "description": "Astar Networkは、前例のないクロスレイヤースケーリングを実現し、Web3の社会実装・大衆化を目指します。",
+      "doc": "ドキュメント",
+      "app": "アプリへ"
+    },
+    "welcome": {
+      "title": "Astar Networkへようこそ！",
+      "description": "Astar Networkは、Web3のマスアダプションを目指すパブリックブロックチェーンであり、日本トップの時価総額とグローバルプレゼンスを有しています。私たちはEVMとWASMの両環境をサポートし、さらに高い水準のEVM等価性が実現できる「Astar zkEVM Powered by Polygon」を提供します。Build2Earnメカニズムは開発者にインセンティブを与える世界初の取り組みであり、分散型社会を構築する開発者をサポートします。"
+    },
+    "gateway": "マルチチェーン時代の\nゲートウェイ",
+    "ecosystem": {
+      "title": "急成長中のエコシステムに\n参加しよう",
+      "developer": {
+        "title": "開発者",
+        "description": "Astarのチェーン上にdAppやインフラを構築"
       },
-      "description": "個人がWeb3の技術を利用する機会を創出します。エンターテイメント、ブロックチェーン開発、ビジネス開発、コミュニティイベントを通じて、人々とWeb3をつなげます。"
+      "collator": {
+        "title": "コレーター",
+        "description": "ブロックチェーンをサポートするノードを実行"
+      },
+      "staker": {
+        "title": "ステーカー",
+        "description": "ASTRをステーキングして報酬を獲得"
+      },
+      "users": {
+        "title": "ユーザー",
+        "description": "ASTRトークンを使い、Web3ムーブメントに参加"
+      }
+    },
+    "reading": {
+      "title": "Astarについて",
+      "description": "Astarが誕生した経緯や過程を詳しくご紹介します",
+      "vision": {
+        "title": "Astarへようこそ",
+        "description": "Astarのビジョンと、それを実現する強力なブロックチェーン技術"
+      },
+      "tokenomics": {
+        "title": "ASTRのトークノミクス",
+        "description": "Web3を解き放つASTRのガバナンス、インセンティブ、及びその機能"
+      },
+      "ecosystem": {
+        "title": "エコシステムを探る",
+        "description": "Astarのエコシステムに参加し、そのパワーを実感"
+      }
     },
     "features": {
-      "bridgeAndEcosystem": {
-        "title": "Bridge & Ecosystem",
-        "description": "Astar zkEVMは、PolygonのCDKおよびAggLayer技術を活用したEthereumのLayer-2スケーリングソリューションです。Astar zkEVMは、Ethereumのセキュリティを継承しつつ、EVMとの等価性を維持します。",
-        "cta": {
-          "bridgeToAstar": "Bridge to Astar",
-          "exploreEcosystem": "Explore ecosystem"
-        }
+      "multichain": {
+        "title": "マルチチェーンスマートコントラクト",
+        "description": "Astarは、Ethereum、Polkadot、Cosmos等のチェーンと接続し、複数のエコシステム間での自由な資産移動やコミュニケーションを可能にします。"
       },
-      "yokiOrigins": {
-        "title": "Yoki Origins",
-        "description": "Yoki Originsは、日本の超自然的な生き物にインスパイアされたオリジナルのYokiキャラクターを発見する旅です。エキサイティングでフレンドリーなWeb3の経験を通してYokiを集めてアップグレードしましょう。",
-        "cta": {
-          "yokiOriginsWebsite": "Yoki Origins website"
-        }
+      "build2earn": {
+        "title": "Build2Earn",
+        "description": "Astarは、Build2Earnプログラムを先駆けて導入することで、開発者を支援し、エコシステムを成長させています。開発者は分散型アプリケーション（dApp）を開発・運用すると、ステーキングメカニズムを通してインセンティブを得ることができます。"
+      },
+      "web2_web3": {
+        "title": "Web2 + Web3",
+        "description": "Astar Networkは、ソフトウェア開発者が既によく使用しているツールや言語をサポートしています。また、マルチチェーンネイティブのWasm + EVMランタイム環境は、他のプラットフォームにはない独自の革新的なソリューションを構築することができ、究極の自由度と柔軟性を提供しています。"
       }
     },
-    "latestNews": {
-      "title": "Latest News"
-    },
-    "solutions": {
-      "title": "Our Solutions",
-      "description": "Astarでは、すべての人にソリューションがあります。企業、開発者、個人がWeb3につながります。",
-      "startale": {
-        "name": "Startale Labs",
-        "description": "Startale Labsは、Web3のマスアダプションを加速させることに専念しており、日本最大の公共ブロックチェーンであるAstar Networkの開発と、Startale Web3 Cloudを通じたWeb3インフラの提供を行っています。",
-        "cta": "Startale labs website",
-        "useCases": {
-          "sony": {
-            "name": "Sony Network Communications",
-            "description": "Sony Network CommunicationsとStartale Labsは、グローバルなWeb3インフラの基盤となり得るブロックチェーンを開発することに専念する合弁事業契約を締結したことを発表し、大変嬉しく思っています。"
-          },
-          "bobg": {
-            "name": "BOBG",
-            "description": "BOBGは、トークンの発行・運営・管理から暗号通貨の上場まで、日本のブロックチェーンビジネスに総合的なサービスを提供する企業です。"
-          },
-          "uobAndSamsung": {
-            "name": "UOB Venture Management and Samsung Next",
-            "description": "BOBGは、トークンの発行、運用、管理から仮想通貨の上場に至るまで、日本のブロックチェーンビジネスに幅広いサービスを提供する会社です。"
-          }
-        }
+    "backers": "後援",
+    "newsletter": {
+      "global": {
+        "title": "Newsletter",
+        "description": "Astarに関する最新情報をお届けします",
+        "signup": "登録する"
       },
-      "japanLab": {
-        "name": "Astar Japan Lab",
-        "description": "Astar Japan Labは、リサーチや開発を行い知識を集積し、新鋭および確立された企業と協力することで、日本のサービスとビジネスの成長を促進します。",
-        "cta": "Astar Japan Lab",
-        "useCases": {
-          "shibuyaCity": {
-            "name": "Shibuya City",
-            "description": "Astarは現在、渋谷区のWeb3イニシアチブをサポートするために渋谷区と提携しています。渋谷区は、東京のモダンな都市であることを誇りに思っています。若い起業家、ハイファッション、そして渋谷駅を中心にした数マイルに及ぶショッピングアウトレットのホットスポットです。"
-          },
-          "doubleJumpTokyo": {
-            "name": "double jump.tokyo",
-            "description": "ブロックチェーン技術を活用して、ゲーミングの未来を再構築します！"
-          },
-          "hakuhodo": {
-            "name": "HAKUHODO",
-            "description": "新しい顧客体験を創造し、Web3.0に多くの企業を引きつける、統合マーケティングとイノベーションのリーディングカンパニー。"
-          },
-          "deloitteTohmatsu": {
-            "name": "Deloitte Tohmatsu",
-            "description": "デロイトトーマツグループは、Astar zkEVMを用いてスポーツ産業を変革します。"
-          }
-        }
+      "japan": {
+        "title": "Japan Newsletter",
+        "description": "日本からブロックチェーンに関する最新情報をお届けします",
+        "signup": "登録する"
       }
     },
-    "developer": {
-      "title": "デベロッパー",
-      "description": "Astar 2.0へと進化するにつれ、我々の技術も進化します。開発者が複数のVM、レイヤー、コンセンサス・プロトコルの恩恵を受けられるよう、最先端のクロスレイヤー技術スタックを提供します。",
-      "poweredBy": "Powered by",
-      "substrate": {
-        "description": "Astar Substrateは、Polkadotを牽引するパラチェーンであるAstar Networkを支えるバックエンドテクノロジーです。仮想マシンの構築へのシームレスなアクセスと、Polkadot SDK、Substrateベースのプロトコルへの相互運用性を実現します。Ink!とRustスマートコントラクトにより確保された安全性と、革新的な報酬メカニズムがブロックチェーンの成長を後押しします。",
-        "features": {
-          "multiVmSupport": "複数のVMをサポート：EVMとWASM",
-          "rustAndInk": "Rustとink!で記述されたスマートコントラクト",
-          "interoperabilityAndComposability": "Substrateで構築されたチェーンとの相互運用性と互換性",
-          "secured": "Polkadotのバリデータが担保する安全性",
-          "dappStakingRewards": "開発者をサポートするdAppステーキング報酬",
-          "lowFees": "低いネットワーク手数料"
-        }
-      },
-      "zkevm": {
-        "description": "Astar zkEVMは高いUXを保ちながらEthereumの高いセキュリティとネットワーク効果を活用したい事業者にとって最適なソリューションを提供します。最先端のZKテクノロジーを活用したAstar zkEVMでは、開発者に定評あるツールと開発環境を提供し、Web3の大衆化に貢献します。",
-        "features": {
-          "ethereumSecurity": "Ethereumから継承した高いセキュリティ",
-          "highScalability": "高い拡張性",
-          "lowFees": "いつでも安価なネットワーク手数料",
-          "access": "最も活発なWeb3エコシステムへのアクセス",
-          "developerExperience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
-        }
-      },
-      "cta": "Start building"
-    },
-    "dAppsOnAstar": {
-      "title": "dApps on Astar",
-      "description": "Astar Networkは、次世代のdAppsとWeb3ソリューションを推進しています。",
-      "cta": "Explore ecosystem"
-    },
-    "funding": {
-      "title": "Funding",
-      "description": "Astar Fundingは、組織や開発者がそのアイデアをWeb3に持ち込むのを支援します。",
-      "globalHackathons": {
-        "title": "Global Hackathons",
-        "description": "A collection of funding to connect you to web3.",
-        "stats": {
-          "prize": "Prize (USD)",
-          "applications": "Applications"
-        }
-      },
-      "dAppStaking": {
-        "title": "dApp Staking",
-        "description": "開発者とAstarコミュニティとを繋げるためのインセンティブプログラムで、全員が報酬を受け取ることができます。",
-        "stats": {
-          "tier1Rewards": "Tier 1 Rewards (USD)",
-          "totalStakers": "Total stakers",
-          "subjectToMarket": "(subject to market)"
-        }
-      },
-      "cta": "Developer support"
-    },
-    "links": {
-      "astrAndItsUtility": {
-        "title": "ASTR and its utility",
-        "description": "ASTRはAstar Networkを稼働するネイティブトークンであり、ステーキング報酬、ガス、助成金など様々な機能を提供することで最終的なユーティリティを持っています。",
-        "cta": "Check Tokenomics 2.0"
-      },
-      "dAppStaking": {
-        "title": "dApp Staking",
-        "description": "ASTRはAstar Networkを動かすネイティブトークンであり、ステーキング報酬、ガス、助成金など様々な機能を提供することで最終的なユーティリティを持っています。",
-        "cta": "Start staking"
-      },
-      "community": {
-        "title": "Community",
-        "description": "あなたの仲間と繋がり、共にコミュニティを成長させましょう—私たちはすべてのクリエイター、起業家、ブロックチェーン愛好家を歓迎します。",
-        "cta": "Join our community"
-      }
-    },
-    "backers": {
-      "title": "Backers"
-    }
+    "hiring": "採用中です！"
   }
 }

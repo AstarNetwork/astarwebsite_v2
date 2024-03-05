@@ -1,12 +1,25 @@
 <template>
   <NuxtLayout name="default">
-    <ContentRenderer :value="data">
-      <SubPageHeader :title="data.title" />
+    <template #space>
+      <ContentRenderer :value="data">
+        <SubPageHeader>
+          <h1
+            class="text-3xl sm:text-4xl lg:text-6xl font-extrabold drop-shadow leading-tight"
+          >
+            {{ data.title }}
+          </h1>
+        </SubPageHeader>
 
-      <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-32">
-        <ContentRendererMarkdown class="entry-content" :value="data" />
-      </article>
-    </ContentRenderer>
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
+          <div class="entry-content leading-9">
+            <ContentRendererMarkdown :value="data" />
+          </div>
+        </article>
+      </ContentRenderer>
+    </template>
+    <template #earth>
+      <Footer />
+    </template>
   </NuxtLayout>
 </template>
 

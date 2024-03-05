@@ -1,50 +1,39 @@
 <template>
-  <div class="border-t border-slate-300">
+  <div class="relative overflow-hidden">
+    <img
+      class="absolute z-[-1] w-full h-full"
+      src="/images/common/zkevm-bg.webp"
+      alt=""
+      width="1728"
+      height="1429"
+      data-not-lazy
+    />
+    <img
+      class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
+      src="/images/common/space-cloud.webp"
+      alt=""
+      width="1728"
+      height="1281"
+      data-not-lazy
+    />
+    <img
+      class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
+      src="/images/common/space-stars.svg"
+      alt=""
+      width="1728"
+      height="1728"
+      data-not-lazy
+    />
     <div
-      class="pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 flex items-center justify-start sub-page-header"
+      class="pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 lg:pb-32 flex items-center justify-start sub-page-header"
     >
       <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 w-full text-center space-y-6 sm:space-y-10"
+        class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full text-center"
       >
-        <h1
-          v-if="title"
-          class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight"
-        >
-          {{ title }}
-        </h1>
-        <p
-          v-if="description"
-          class="sm:text-lg sm:leading-relaxed max-w-screen-sm mx-auto"
-        >
-          {{ description }}
-        </p>
-        <Button v-if="button.to" :href="button.to">
-          {{ button.label }}
-        </Button>
         <slot />
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-  title: {
-    type: String,
-    default: "",
-  },
-  description: {
-    type: String,
-    default: "",
-  },
-  button: {
-    type: Object,
-    default: {
-      label: "",
-      to: "",
-    },
-  },
-});
-</script>
 
 <style lang="postcss" scoped></style>

@@ -11,9 +11,11 @@
           class="transition rounded-3xl mb-16 sm:mb-0 group"
           :class="
             index === 4
-              ? `text-slate-950 ${item.color}`
+              ? `text-space-gray-dark ${item.color}`
               : `text-white ${item.color}`
           "
+          data-aos="flip-left"
+          :data-aos-delay="index * 100"
         >
           <NuxtLink
             :to="item.href"

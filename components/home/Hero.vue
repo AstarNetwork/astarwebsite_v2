@@ -1,51 +1,65 @@
 <template>
-  <section class="container-lg pt-20 pb-12">
-    <h1 class="text-center mb-12">
-      <span
-        class="block text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight md:tracking-tighter"
+  <div
+    class="text-center h-screen flex items-center justify-center z-10 relative"
+  >
+    <div class="max-w-4xl px-4 sm:px-6 pt-12">
+      <!-- <p class="font-medium text-xl mb-2">Astar 2.0 is here.</p> -->
+      <h1
+        class="text-3xl sm:text-6xl lg:text-9xl font-extrabold leading-none drop-shadow tracking-tight"
       >
-        {{ $t("home.hero.title.connecting") }}
-      </span>
-      <span
-        class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight"
-      >
-        {{ $t("home.hero.title.youToWeb3") }}
-      </span>
-    </h1>
-    <p class="trigger text-center max-w-2xl mx-auto sm:text-lg">
-      {{ $t("home.hero.description") }}
-    </p>
-  </section>
+        The Frontier of Innovation.
+      </h1>
+      <p class="sm:text-xl mt-6 sm:mt-10 mb-8 sm:mb-14">
+        {{ $t("home.hero.description") }}
+      </p>
+      <div class="sm:flex justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <Button
+          color="secondary"
+          size="lg"
+          href="https://astarnetwork.deform.cc/astarzkevm/"
+          target="_blank"
+          class="w-[260px] !border-[#C09CFF] bg-gradient-to-r from-[#8A46FF] to-[#6E38CC] !text-white hover:brightness-125"
+          style="box-shadow: 0px 2px 10px 0px rgba(255, 255, 255, 0.3)"
+        >
+          Build on Astar
+          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
+        </Button>
+        <!-- <Button
+          color="secondary"
+          variant="outlined"
+          size="lg"
+          href="https://docs.astar.network/"
+          target="_blank"
+          class="w-[260px]"
+        >
+          {{ $t("home.hero.doc") }}
+          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
+        </Button> -->
+        <!-- <Button
+          variant="outlined"
+          size="lg"
+          href="https://portal.astar.network/"
+          target="_blank"
+          class="w-[280px] sm:w-auto"
+        >
+          {{ $t("home.hero.app") }}
+          <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
+        </Button> -->
+        <Button
+          variant="outlined"
+          size="lg"
+          :href="i18n + '/developers/techstack'"
+          class="w-[260px]"
+        >
+          Astar Tech Stack
+        </Button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-const { $gsap, $ScrollTrigger } = useNuxtApp();
-
-onMounted(() => {
-  $gsap.to("h1 span:first-of-type", {
-    scale: 1.2,
-    opacity: 0.5,
-    scrollTrigger: {
-      toggleActions: "play none none reverse",
-      trigger: "section",
-      start: "bottom center",
-      // markers: true,
-      scrub: true,
-    },
-  });
-
-  $gsap.to("h1 span:last-of-type", {
-    scale: 1.6,
-    opacity: 0.5,
-    scrollTrigger: {
-      toggleActions: "play none none reverse",
-      trigger: "section",
-      start: "bottom center",
-      // markers: true,
-      scrub: true,
-    },
-  });
-});
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+const { locale } = useI18n();
+const i18n = locale.value === "ja" ? "/ja" : "";
 </script>
-
-<style lang="postcss" scoped></style>

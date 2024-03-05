@@ -11,7 +11,7 @@
         <small class="block text-xl sm:text-2xl font-bold">
           {{ $t("community.grants.title") }}
         </small>
-        <span class="block text-4xl sm:text-5xl lg:text-6xl font-bold">
+        <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold">
           ink!ubator
         </span>
       </h2>
@@ -19,14 +19,19 @@
         {{ $t("community.grants.description") }}
       </p>
       <div class="text-center">
-        <Button :href="grantsUrl.inkubator" color="whiteGray">
+        <NuxtLink
+          to="https://use.ink/ubator/"
+          target="_blank"
+          class="bg-black rounded-xl p-4 w-72 inline-flex justify-center items-center text-lg hover:bg-gray-900"
+        >
           ink!ubator
-        </Button>
+          <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
+        </NuxtLink>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { grantsUrl } from "@/data/links";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 </script>

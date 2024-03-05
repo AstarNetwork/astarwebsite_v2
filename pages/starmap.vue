@@ -1,11 +1,22 @@
 <template>
   <NuxtLayout name="default">
-    <SubPageHeader
-      :title="$t('starmap.title')"
-      :description="$t('starmap.description')"
-    />
+    <template #space>
+      <SubPageHeader>
+        <h1
+          class="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight drop-shadow"
+        >
+          {{ $t("starmap.title") }}
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl">
+          {{ $t("starmap.description") }}
+        </p>
+      </SubPageHeader>
 
-    <StarmapContents class="pb-28 sm:pb-44" />
+      <StarmapContents class="pb-28 sm:pb-44" />
+    </template>
+    <template #earth>
+      <Footer />
+    </template>
   </NuxtLayout>
 </template>
 

@@ -1,0 +1,37 @@
+{
+  "techstack": {
+    "title": "Astar Tech Stack",
+    "description": "Astar 2.0へと進化するにつれ、我々の技術も進化します。開発者が複数のVM、レイヤー、コンセンサス・プロトコルの恩恵を受けられるよう、最先端のクロスレイヤー技術スタックを提供します。",
+    "solution": {
+      "title": "ソリューション比較",
+      "substrate": {
+        "description": "Astar Substrateは、Polkadotを牽引するパラチェーンであるAstar Networkを支えるバックエンドテクノロジーです。仮想マシンの構築へのシームレスなアクセスと、Polkadot SDK、Substrateベースのプロトコルへの相互運用性を実現します。Ink!とRustスマートコントラクトにより確保された安全性と、革新的な報酬メカニズムがブロックチェーンの成長を後押しします。",
+        "features": {
+          "multi_vm_support": "複数のVMをサポート：EVMとWASM",
+          "rust_and_ink": "Rustとink!で記述されたスマートコントラクト",
+          "interoperability_and_composability": "Substrateで構築されたチェーンとの相互運用性と互換性",
+          "secured": "Polkadotのバリデータが担保する安全性",
+          "dapp_staking_rewards": "開発者をサポートするdAppステーキング報酬",
+          "low_fees": "低いネットワーク手数料"
+        }
+      },
+      "zkevm": {
+        "description": "Astar zkEVMは高いUXを保ちながらEthereumの高いセキュリティとネットワーク効果を活用したい事業者にとって最適なソリューションを提供します。最先端のZKテクノロジーを活用したAstar zkEVMでは、開発者に定評あるツールと開発環境を提供し、Web3の大衆化に貢献します。",
+        "features": {
+          "ethereum_security": "Ethereumから継承した高いセキュリティ",
+          "high_scalability": "高い拡張性",
+          "low_fees": "いつでも安価なネットワーク手数料",
+          "access": "最も活発なWeb3エコシステムへのアクセス",
+          "developer_experience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
+        }
+      }
+    },
+    "toolkit": {
+      "title": "Astarの開発者ツールキット"
+    },
+    "lean_more":{
+      "docs":"ドキュメントへ",
+      "blog":"記事を読む"
+    }
+  }
+}
