@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-4 py-2.5 sm:px-3.5 sm:before:flex-1"
+    class="relative isolate flex items-center gap-x-6 overflow-hidden bg-slate-50 px-4 py-2.5 sm:px-3.5 sm:before:flex-1"
     v-if="isVisible"
   >
     <div
@@ -59,7 +59,7 @@
         "
       />
     </div>
-    <p class="text-sm leading-5 text-space-gray-dark">
+    <p class="text-sm leading-5 text-slate-950">
       <NuxtLink
         :to="
           locale === 'ja'
@@ -94,7 +94,7 @@
         @click="isVisible = false"
       >
         <span class="sr-only">Dismiss</span>
-        <XMarkIcon class="h-5 w-5 text-space-gray-dark" aria-hidden="true" />
+        <XMarkIcon class="h-5 w-5 text-slate-950" aria-hidden="true" />
       </button>
     </div>
   </div>

@@ -1,0 +1,26 @@
+{
+  "contact": {
+    "title": "문의하기",
+    "description": "아스타팀에 연락하기",
+    "marketing": {
+      "title": "마케팅 협업신청",
+      "description": "콜라보관련 아이디어가 있으신가요?",
+      "button": "신청하기"
+    },
+    "partnerships": {
+      "title": "재정 지원",
+      "description": "dApp 스테이킹 및 통합 지원.",
+      "button": "신청하기"
+    },
+    "technical": {
+      "title": "기술 지원",
+      "description": "기술적인 문제나 질문이 있으시면, Discord에서 문의해 주세요",
+      "button": "디스코드로 이동"
+    },
+    "other": {
+      "title": "기타 모든 문의",
+      "description": "파트너십 요청, 온보딩, 비즈니스 지원, 이벤트 등.",
+      "button": "문의하기"
+    }
+  }
+}

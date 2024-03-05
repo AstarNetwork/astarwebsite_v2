@@ -1,9 +1,12 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  build: {
+    transpile: ['gsap'],
+  },
   vite: {
     build: {
-      chunkSizeWarningLimit: 10000
-    }
+      chunkSizeWarningLimit: 10000,
+    },
   },
   app: {
     baseURL: "/",
@@ -29,12 +32,7 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
     "@nuxt/content",
-    [
-      "nuxt3-lazy-load",
-      {
-        defaultImage: "/images/placeholder.png",
-      },
-    ],
+    "nuxt-swiper",
   ],
   runtimeConfig: {
     public: {
@@ -82,7 +80,7 @@ export default defineNuxtConfig({
           "en-starmap.json",
           "en-vision.json",
           "en-university.json",
-          "en-techstack.json",
+          "en-solutions.json",
         ],
       },
       {
@@ -103,7 +101,28 @@ export default defineNuxtConfig({
           "ja-starmap.json",
           "ja-vision.json",
           "ja-university.json",
-          "ja-techstack.json",
+          "ja-solutions.json",
+        ],
+      },
+      {
+        code: "ko",
+        name: "한국어",
+        iso: "ko-KR",
+        files: [
+          "ko.json",
+          "ko-incubation.json",
+          "ko-blog.json",
+          "ko-developers.json",
+          "ko-community.json",
+          "ko-ecosystem.json",
+          "ko-japan.json",
+          "ko-contact.json",
+          "ko-home.json",
+          "ko-ecosystem.json",
+          "ko-starmap.json",
+          "ko-vision.json",
+          "ko-university.json",
+          "ko-solutions.json",
         ],
       },
     ],

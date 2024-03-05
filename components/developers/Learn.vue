@@ -6,26 +6,21 @@
     <div
       class="max-w-7xl mx-auto lg:flex items-center lg:space-x-12 space-y-16 lg:space-y-0"
     >
-      <!-- <DevelopersAstarUniversity /> -->
       <DevelopersKey3Hackathon />
       <div class="lg:w-1/2">
         <h3
-          class="font-extrabold text-3xl lg:text-4xl mb-6 text-center sm:text-left"
+          class="font-bold text-3xl lg:text-4xl mb-6 text-center sm:text-left"
         >
           {{ $t("developers.learn.docs.title") }}
         </h3>
         <ul class="space-y-6">
           <li v-for="item in docs">
             <h4>
-              <NuxtLink
-                :to="item.href"
-                target="_blank"
-                class="text-space-cyan hover:underline hover:text-space-cyan-lighter font-semibold text-lg lg:text-xl"
-              >
-                {{ item.title }} <span class="whitespace-nowrap">-></span>
-              </NuxtLink>
+              <TextLink :href="item.href" target="_blank">{{
+                item.title
+              }}</TextLink>
             </h4>
-            <p class="text-tiny lg:text-base">{{ item.description }}</p>
+            <p>{{ item.description }}</p>
           </li>
         </ul>
       </div>
