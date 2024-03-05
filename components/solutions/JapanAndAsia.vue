@@ -7,9 +7,7 @@
       <p
         class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-16 sm:mb-20"
       >
-        {{
-          $t("solutions.japanAndAsia.description", { japaneseMembers: "00" })
-        }}
+        {{ $t("solutions.japanAndAsia.description") }}
       </p>
 
       <Swiper
@@ -37,7 +35,7 @@
           },
         }"
       >
-        <SwiperSlide v-for="(post, index) in posts">
+        <SwiperSlide v-for="post in posts">
           <BlogArticleCard :post="post" :key="post.title" />
         </SwiperSlide>
       </Swiper>
@@ -65,7 +63,7 @@ const posts = [
   },
   {
     title: t("solutions.japanAndAsia.yoake.title"),
-    image: "/images/solutions/japan-and-asia/yasushi-akimoto.webp",
+    image: "/images/solutions/japan-and-asia/yoake.webp",
     description: t("solutions.japanAndAsia.yoake.description"),
     link: "/blog/yasushi-akimoto-japan's-legendary-idol-producer-starts-54961/",
   },
