@@ -6,7 +6,9 @@
     "mission": {
       "title": "Our Mission",
       "createNewOpportunities": "あなたがWeb3を使用するための新しい機会を創出します。",
-      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundationは、より包括的で力を持ったWebを構築するために必要なツールとコミュニティを創出します。"
+      "astarFoundationCreatesTheToolsAndCommunityNecessary": "Astar Foundationは、より包括的で力を持ったWebを構築するために必要なツールとコミュニティを創出します。",
+      "first": "伝統と革新をつなぐ！Web3の導入を加速する。",
+      "second": "ブロックチェーン技術の最前線を切り拓き、私たちはシームレスなインフラストラクチャとエコシステムを構築し、あなたをダイナミックなWeb3の世界とつなぐ橋渡しをします。"
     },
     "usecases": {
       "title": "Use Cases",
