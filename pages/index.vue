@@ -1,21 +1,98 @@
 <template>
   <NuxtLayout name="default">
-    <HomeCircles />
-    <HomeHero />
-    <HomeFeatures />
-    <HomeSolutions />
-    <HomeLatestNews />
-    <div class="bg-black text-slate-300 py-12 sm:py-20">
-      <HomeDeveloper />
-      <HomeDappsOnAstar />
-      <HomeFunding />
-    </div>
-    <HomeLinks />
-    <HomeBackers />
+    <template #space>
+      <div class="bg-black relative">
+        <div class="absolute z-0 w-full h-screen flex items-center">
+          <ScrollParallax :speed="0.25" class="mx-auto">
+            <video
+              webkit-playsinline
+              playsinline
+              muted
+              autoplay
+              loop
+              data-not-lazy
+            >
+              <source src="/videos/astar.mp4" type="video/mp4" />
+            </video>
+          </ScrollParallax>
+        </div>
+        <div class="mix-blend-screen">
+          <img
+            class="absolute z-[-1] w-full h-full"
+            src="/images/common/zkevm-bg.webp"
+            alt=""
+            width="1728"
+            height="1429"
+            data-not-lazy
+          />
+          <img
+            class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
+            src="/images/common/space-cloud.webp"
+            alt=""
+            width="1728"
+            height="1281"
+            data-not-lazy
+          />
+          <img
+            class="fixed z-[2] portrait:h-screen landscape:w-screen object-cover"
+            src="/images/common/space-stars.svg"
+            alt=""
+            width="1728"
+            height="1728"
+            data-not-lazy
+          />
+          <HomeHero />
+          <div class="welcome-bg -mt-44 pt-44 pb-32 sm:pb-64 relative z-[1]">
+            <HomeWelcome />
+          </div>
+        </div>
+      </div>
+
+      <HomeFeaturedContents />
+
+      <HomeJoin class="pt-32 sm:pt-64 pb-32 sm:pb-64" />
+
+      <HomeRecommendedReading class="sm:py-24" />
+
+      <HomeNewsletter class="pb-12 sm:py-12" />
+    </template>
+
+    <template #earth>
+      <div class="sky-gradient">
+        <div class="sky-gradient-inner">
+          <HomeFeatures class="pt-12 pb-32 sm:pb-56" />
+          <HomeBackers />
+          <img
+            class="w-full"
+            src="/images/home/footer-sky.svg"
+            alt=""
+            width="1728"
+            height="290"
+            data-not-lazy
+          />
+          <img
+            class="w-full"
+            src="/images/home/footer-landscape.svg"
+            alt=""
+            width="1728"
+            height="220"
+            data-not-lazy
+          />
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-inner pt-12 sm:pt-28">
+          <Footer color="light" />
+        </div>
+      </div>
+    </template>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
+
 import { meta } from "@/data/meta";
 const { t } = useI18n();
 const seoTitle = `${meta.siteName} - ${t("meta.tagline")}`;
@@ -43,4 +120,38 @@ definePageMeta({
 });
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.welcome-bg {
+  background: linear-gradient(
+    0deg,
+    rgba(8, 16, 41, 1) 50%,
+    rgba(8, 16, 41, 0) 100%
+  );
+}
+.sky-gradient {
+  background: linear-gradient(
+    90deg,
+    #ffeff8 2.37%,
+    #f0e7ff 22.25%,
+    #dcedff 43.43%,
+    #def2ff 68%,
+    #d7faff 85.32%
+  );
+}
+.sky-gradient-inner {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.footer {
+  background: linear-gradient(260deg, #3d41f8 0.16%, #58cef4 94.67%);
+}
+.footer-inner {
+  background-image: url(/images/home/footer-reflect.svg);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+</style>

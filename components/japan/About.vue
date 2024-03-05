@@ -7,6 +7,8 @@
         <img
           :src="'/images/japan/' + item.image"
           :alt="item.text"
+          data-aos="fade-up"
+          :data-aos-delay="index * 100"
           width="100"
           height="100"
           class="mx-auto w-16 sm:w-24 mb-6 sm:mb-12"

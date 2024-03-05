@@ -4,7 +4,7 @@
       <span>{{ $t("university.faq.title") }}</span>
     </h2>
     <dl
-      class="space-y-6 sm:space-y-10 divide-y divide-slate-300 border-t border-b border-slate-300 pb-6 sm:pb-10"
+      class="space-y-6 sm:space-y-10 divide-y divide-white/20 border-t border-b border-white/20 pb-6 sm:pb-10"
     >
       <Disclosure
         as="div"
@@ -14,7 +14,7 @@
       >
         <dt class="pt-6 sm:pt-10">
           <DisclosureButton
-            class="flex w-full items-start justify-between text-left text-slate-950"
+            class="flex w-full items-start justify-between text-left text-white"
           >
             <span class="text-base sm:text-xl font-medium">
               {{ faq.question }}
@@ -28,7 +28,7 @@
         <DisclosurePanel as="dd" class="mt-6 pr-12 university-faqs__answer">
           <p
             v-html="faq.answer"
-            class="text-base sm:text-lg whitespace-pre-wrap"
+            class="text-base sm:text-lg text-gray-300 whitespace-pre-wrap"
           />
         </DisclosurePanel>
       </Disclosure>
@@ -93,4 +93,8 @@ const faqs = [
 ];
 </script>
 
-<style lang="postcss"></style>
+<style lang="postcss">
+.university-faqs__answer a {
+  @apply text-space-cyan hover:underline hover:text-space-cyan-lighter;
+}
+</style>

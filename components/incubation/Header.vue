@@ -5,7 +5,7 @@
     <Popover v-slot="{ open }">
       <div
         :class="[
-          open ? 'bg-gray-950 shadow-lg bg-opacity-95' : '',
+          open ? 'bg-space-gray-dark shadow-lg bg-opacity-95' : '',
           'transition z-40 w-full',
         ]"
       >

@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 bg-slate-900 bg-opacity-90 transition-opacity"
+          class="fixed inset-0 bg-gray-900 bg-opacity-90 transition-opacity"
         />
       </TransitionChild>
 
@@ -52,7 +52,7 @@
                   >
                     <div class="my-6">
                       <p
-                        class="text-slate-200 whitespace-pre-wrap"
+                        class="text-gray-200 whitespace-pre-wrap"
                         :class="
                           discoveries[discoveryId]['image'] === '' &&
                           'text-center'
@@ -103,7 +103,7 @@
 
               <button
                 type="button"
-                class="text-slate-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-slate-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
+                class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
                 @click="open = false"
               >
                 <XMarkIcon class="w-8 h-8 sm:w-12 sm:h-12" />
@@ -116,7 +116,7 @@
   </TransitionRoot>
 
   <div
-    class="relative z-10 bg-cover text-slate-300 bg-space-gray-dark"
+    class="relative z-10 bg-cover"
     style="
       background-image: url(/images/starmap/nebula.webp);
       background-position: center top;
@@ -129,9 +129,9 @@
       >
         <div class="sm:flex items-center min-h-[600px] lg:min-h-[800px]">
           <div
-            class="whitespace-nowrap text-center text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="text-white font-semibold tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
               Q1
             </span>
             <span
@@ -141,7 +141,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] sm:ml-10 relative z-10">
-            <h2 class="text-white font-semibold leading-tight mb-4">
+            <h2 class="title mb-4">
               <span class="text-3xl lg:text-4xl">
                 {{ $t("starmap.reborn.title") }}
               </span>
@@ -150,7 +150,7 @@
               <p class="mb-8">
                 {{ $t("starmap.reborn.description") }}
               </p>
-              <h3 class="font-semibold text-xl text-white">Q1</h3>
+              <h3 class="font-bold text-xl">Q1</h3>
               <p>
                 {{ $t("starmap.reborn.plan") }}
               </p>
@@ -189,9 +189,9 @@
           class="sm:flex items-center justify-end min-h-[600px] lg:min-h-[800px]"
         >
           <div
-            class="whitespace-nowrap text-center order-2 text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center order-2 text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="text-white font-semibold tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
               Q2
             </span>
             <span
@@ -201,7 +201,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] order-1 relative z-10">
-            <h2 class="text-white font-semibold leading-tight mb-4">
+            <h2 class="title mb-4">
               <span class="text-3xl lg:text-4xl">
                 {{ $t("starmap.growth.title") }}
               </span>
@@ -210,7 +210,7 @@
               <p class="mb-8">
                 {{ $t("starmap.growth.description") }}
               </p>
-              <h3 class="font-semibold text-xl text-white">Q2</h3>
+              <h3 class="font-bold text-xl">Q2</h3>
               <p>
                 {{ $t("starmap.growth.plan") }}
               </p>
@@ -232,9 +232,9 @@
 
         <div class="sm:flex items-center min-h-[600px] lg:min-h-[800px]">
           <div
-            class="whitespace-nowrap text-center text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="text-white font-semibold tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
               Q3
             </span>
             <span
@@ -244,7 +244,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] sm:ml-10 relative z-10">
-            <h2 class="text-white font-semibold leading-tight mb-4">
+            <h2 class="title mb-4">
               <span class="text-3xl lg:text-4xl">{{
                 $t("starmap.expansion.title")
               }}</span>
@@ -253,7 +253,7 @@
               <p class="mb-8">
                 {{ $t("starmap.expansion.description") }}
               </p>
-              <h3 class="font-semibold text-xl text-white">Q3</h3>
+              <h3 class="font-bold text-xl">Q3</h3>
               <p>
                 {{ $t("starmap.expansion.plan") }}
               </p>
@@ -282,9 +282,9 @@
           class="sm:flex items-center justify-end min-h-[600px] lg:min-h-[800px]"
         >
           <div
-            class="whitespace-nowrap text-center order-2 text-7xl sm:text-[9rem] lg:text-[10rem] xl:text-[13rem] mb-4 sm:mb-0 leading-none"
+            class="whitespace-nowrap text-center order-2 text-7xl sm:text-10xl lg:text-11xl xl:text-14xl mb-4 sm:mb-0 leading-none"
           >
-            <span class="text-white font-semibold tracking-tight sm:block mr-1 sm:mr-0">
+            <span class="font-black tracking-tight sm:block mr-1 sm:mr-0">
               Q4
             </span>
             <span
@@ -294,7 +294,7 @@
             </span>
           </div>
           <div class="md:max-w-[400px] xl:max-w-[540px] order-1 relative z-10">
-            <h2 class="text-white font-semibold leading-tight mb-4">
+            <h2 class="title mb-4">
               <span class="text-3xl lg:text-4xl">
                 {{ $t("starmap.shine.title") }}
               </span>
@@ -303,7 +303,7 @@
               <p class="mb-8">
                 {{ $t("starmap.shine.description") }}
               </p>
-              <h3 class="font-semibold text-xl text-white">Q4</h3>
+              <h3 class="font-bold text-xl">Q4</h3>
               <ul class="list-disc pl-4">
                 <li>
                   <span @click="clickAction('zkEvmTestnet')" class="popup-link">
@@ -411,7 +411,7 @@ const discoveries: { [index: string]: Discovery } = {
   techStack: {
     title: t("starmap.expansion.tech_stack.title"),
     description: t("starmap.expansion.tech_stack.description"),
-    href: "/developers/",
+    href: "/developers/techstack/",
     image: "tech-stack.webp",
   },
   zkEvmTestnet: {

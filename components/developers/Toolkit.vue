@@ -1,18 +1,28 @@
 <template>
   <div class="relative">
+    <div data-aos="zoom-out-left" class="absolute right-4 z-[4]">
+      <img
+        class="h-48 lg:h-auto float-animation"
+        src="/images/developers/toolkit-bg.svg"
+        alt="Astar Developer Toolkit"
+        width="556"
+        height="294"
+      />
+    </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pt-40">
       <h2 class="title text-center mb-8 sm:mb-12 whitespace-pre-wrap">
         <span>{{ $t("developers.toolkit.title") }}</span>
       </h2>
-      <div class="mb-12 sm:mb-28 text-center">
-        <p>
-          {{ $t("developers.toolkit.description") }}
-        </p>
-        <TextLink href="/community/ecosystem">
+      <p class="text-center mb-12 sm:mb-28">
+        {{ $t("developers.toolkit.description") }}<br />
+        <NuxtLink
+          to="/community/ecosystem"
+          class="text-space-cyan transition hover:text-space-cyan-light hover:underline"
+        >
           {{ $t("developers.toolkit.ecosystem") }}
-        </TextLink>
-      </div>
-
+          <ArrowRightIcon class="inline-block w-5 h-5 stroke-2" />
+        </NuxtLink>
+      </p>
       <div class="px-4 sm:px-6">
         <div
           class="grid grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-12 sm:gap-y-20 sm:grid-cols-4 lg:grid-cols-5"
@@ -27,7 +37,13 @@
               class="hover:opacity-80"
             >
               <img
-                :src="useStrapiMedia(item.attributes.logo.data.attributes.url)"
+                :src="
+                  useStrapiMedia(
+                    item.attributes.logo_white.data !== null
+                      ? item.attributes.logo_white.data.attributes.url
+                      : item.attributes.logo.data.attributes.url
+                  )
+                "
                 :alt="item.attributes.name"
                 class="h-12 w-32 lg:w-48 object-contain"
               />
@@ -55,6 +71,13 @@ const query = gql`
           name
           website
           description
+          logo_white {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
           logo {
             data {
               attributes {

@@ -45,7 +45,7 @@
       "title": "よくある質問",
       "astar": {
         "q": "Astar Networkとは？",
-        "a": "Astarは日本で最大のスマートコントラクト・プラットフォームです。EVMとWebAssembly（Wasm）の両環境をサポートし、Cross-Virtual Machineを用いることによって両環境間の相互運用を実現します。Astarの革新的なBuild & Earnプログラムは、開発者が分散型アプリケーション（dApp）を開発するためのインセンティブを提供します。"
+        "a": "Astarは日本で最大のスマートコントラクト・プラットフォームです。EVMとWebAssembly（Wasm）の両環境をサポートし、Cross-Virtual Machineを用いることによって両環境間の相互運用を実現します。Astarの革新的なBuild2Earnプログラムは、開発者が分散型アプリケーション（dApp）を開発するためのインセンティブを提供します。"
       },
       "goal": {
         "q": "Astar Universityの目標は何ですか？",

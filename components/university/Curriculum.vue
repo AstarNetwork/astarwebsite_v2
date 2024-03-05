@@ -4,16 +4,14 @@
       <span>{{ $t("university.curriculum.title") }}</span>
     </h2>
     <ol
-      class="space-y-6 relative before:content-[''] before:w-[1px] before:bg-slate-300 before:h-full before:block before:left-1.5 before:absolute before:-z-10"
+      class="space-y-6 relative before:content-[''] before:w-[1px] before:bg-white/20 before:h-full before:block before:left-1.5 before:absolute before:-z-10"
     >
       <li
         v-for="(item, index) in curriculum"
-        class="flex before:content-[''] before:w-3 before:h-3 before:block before:rounded-full before:bg-blue before:shrink-0 before:mt-12"
+        class="flex before:content-[''] before:w-3 before:h-3 before:block before:rounded-full before:bg-space-pink before:shrink-0 before:mt-12"
       >
-        <div
-          class="rounded-lg border border-slate-300 p-8 sm:p-10 flex-1 ml-4 sm:ml-10"
-        >
-          <p class="text-blue font-medium text-lg">
+        <div class="bg-space-gray rounded-2xl p-8 sm:p-10 flex-1 ml-4 sm:ml-10">
+          <p class="gradient-text font-medium text-lg">
             <span v-if="index === 3">
               {{ locale === "ja" ? "ボーナスモジュール" : "Bonus Module" }}
             </span>
@@ -21,10 +19,10 @@
               {{ $t("university.curriculum.module") }} {{ index + 1 }}
             </span>
           </p>
-          <h3 class="text-xl sm:text-2xl mb-2 leading-tight">
+          <h3 class="font-bold text-xl sm:text-2xl mb-2 leading-tight">
             {{ item.title }}
           </h3>
-          <p>{{ item.description }}</p>
+          <p class="text-gray-300">{{ item.description }}</p>
         </div>
       </li>
     </ol>

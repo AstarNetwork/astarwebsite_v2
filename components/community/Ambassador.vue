@@ -1,7 +1,7 @@
 <template>
   <section class="px-4 sm:px-6 relative z-10">
     <div
-      class="bg-gradient-to-r from-[#0047FF] to-[#00D1FF] rounded-3xl max-w-7xl mx-auto px-6 sm:px-12 pt-1 pb-10 sm:pb-20 lg:py-20 lg:flex justify-center items-center lg:space-x-6"
+      class="space-gradient rounded-3xl max-w-7xl mx-auto px-6 sm:px-12 pt-1 pb-10 sm:pb-20 lg:py-20 lg:flex justify-center items-center lg:space-x-6"
     >
       <div class="lg:w-2/5">
         <img
@@ -11,7 +11,7 @@
       </div>
       <div class="lg:w-3/5">
         <h2
-          class="text-white leading-tight mb-4 text-2xl sm:text-4xl lg:text-4xl font-bold text-center lg:text-left"
+          class="text-white leading-tight mb-4 text-2xl sm:text-4xl lg:text-4xl font-extrabold text-center lg:text-left"
         >
           {{ $t("community.ambassador.title") }}
         </h2>
@@ -20,10 +20,13 @@
         </p>
         <div class="text-center lg:text-left">
           <Button
-            color="whiteBlue"
+            variant="outlined"
+            size="lg"
             href="https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4"
+            target="_blank"
           >
             {{ $t("community.ambassador.button") }}
+            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
           </Button>
         </div>
       </div>
@@ -31,4 +34,6 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+</script>

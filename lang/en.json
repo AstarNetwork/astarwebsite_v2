@@ -1,33 +1,23 @@
 {
   "meta": {
-    "tagline": "Connecting Web3 to You",
-    "description": "Creating opportunities for individuals to use web3 technology. We connect people to web3—through entertainment, blockchain development, business development, and community events."
+    "tagline": "The Future of Multichain Smart Contracts",
+    "description": "Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and the tools and languages developers already know.",
+    "twitter": "AstarNetwork"
   },
+  "learn_more": "Learn more",
   "footer": {
-    "nav": {
-      "build": "Build",
-      "docs": "Docs",
-      "apply": "Apply",
-      "careers": "Careers",
-      "ambassadorProgram":"Astar Ambassador Program",
-      "bugBountyProgram":"Bug Bounty Program",
-      "learn": "Learn",
-      "blog": "Astar Blog",
-      "videos": "Videos",
-      "forum": "Forum",
-      "other": "Other",
-      "brandAssets": "Brand Assets",
-      "privacyPolicy": "Privacy Policy",
-      "termsOfUse": "Terms of Use",
-      "contactUs": "Contact Us"
-    },
-    "contactUs": {
-      "title": "Contact Us",
-      "description": "Get in touch with the Astar Network team"
-    },
-    "newsletter": {
-      "title": "Newsletter",
-      "description": "Sign-up for our newsletter to stay up-to-date and learn about the latest developments."
-    }
+    "build": "Build",
+    "docs": "Docs",
+    "apply": "Apply",
+    "careers": "Careers",
+    "learn": "Learn",
+    "blog": "Astar Blog",
+    "videos": "Videos",
+    "forum": "Forum",
+    "other": "Other",
+    "brand_assets": "Brand Assets",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use",
+    "contact": "Contact Us"
   }
 }

@@ -1,0 +1,37 @@
+{
+  "techstack": {
+    "title": "Astar Tech Stack",
+    "description": "As Astar 2.0 evolves, so does our tech. We are excited to offer our bleeding-edge, cross-layer tech stack that will allow developers to benefit from multiple VMs, layers and consensus protocols.",
+    "solution": {
+      "title": "Solution Comparison",
+      "substrate": {
+        "description": "Astar Substrate is the backend technology powering Polkadot’s leading parachain. Unlock access to build across virtual machines seamlessly and tap into interoperability with Polkadot SDK, substrate-based protocols. Ink! and Rust smart contracts ensure safety and our innovative reward mechanism powers unstoppable public goods.",
+        "features": {
+          "multi_vm_support": "Multi VM Support: EVM and WASM",
+          "rust_and_ink": "Rust and ink! smart contracts",
+          "interoperability_and_composability": "Interoperability and Composability with Substrate chains",
+          "secured": "Secured by Polkadot validators",
+          "dapp_staking_rewards": "dApp staking rewards providing builder income",
+          "low_fees": "Low fees"
+        }
+      },
+      "zkevm": {
+        "description": "Astar zkEVM is the perfect solution for enterprises looking to leverage the security and network effects of Ethereum without sacrificing the user experience. Powered by cutting-edge zero knowledge technology, Astar zkEVM empowers businesses to embrace web3 at scale while offering developers a familiar environment with proven tooling.",
+        "features": {
+          "ethereum_security": "Inherits Ethereum’s security",
+          "high_scalability": "High scalability",
+          "low_fees": "Low fees even during high demand",
+          "access": "Access to a vibrant web3 ecosystem",
+          "developer_experience": "Familiar developer experience powered by Ethereum’s proven stack of tooling and infrastructure"
+        }
+      }
+    },
+    "toolkit": {
+      "title": "Reach into \nAstar Developer Toolkit"
+    },
+    "lean_more":{
+      "docs":"Go to the docs",
+      "blog":"Read the article"
+    }
+  }
+}

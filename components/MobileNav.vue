@@ -1,7 +1,7 @@
 <template>
   <Popover>
     <PopoverButton
-      class="inline-flex items-center justify-center rounded-md p-2 text-slate-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
+      class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
     >
       <span class="sr-only">Open menu</span>
       <Bars3Icon class="h-6 w-6" aria-hidden="true" />
@@ -20,9 +20,9 @@
           focus
           class="absolute inset-x-0 top-0 z-50 origin-top-right transform transition"
         >
-          <div class="bg-white shadow-lg min-h-screen pb-96">
+          <div class="bg-space-gray-dark shadow-lg min-h-screen pb-96">
             <div
-              class="flex items-center justify-between px-4 sm:px-6 py-2 sm:py-3 lg:py-4"
+              class="flex items-center justify-between px-4 py-5 sm:px-6 sm:py-8"
             >
               <NuxtLink :to="localePath('/')" class="block">
                 <img
@@ -35,7 +35,7 @@
               </NuxtLink>
               <div class="-mr-2 sm:mr-0">
                 <PopoverButton
-                  class="inline-flex items-center justify-center rounded-md p-2 text-slate-950 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
+                  class="inline-flex items-center justify-center rounded-md p-2 text-gray-200 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-white"
                 >
                   <span class="sr-only">Close menu</span>
                   <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -43,19 +43,11 @@
               </div>
             </div>
             <nav class="">
-              <ul class="border-b border-slate-300">
-                <li>
-                  <NuxtLink
-                    :to="localePath('/solutions')"
-                    class="flex items-center border-t border-slate-300 px-6 py-5 text-slate-950"
-                  >
-                    Solutions
-                  </NuxtLink>
-                </li>
+              <ul class="border-b border-gray-600">
                 <li>
                   <NuxtLink
                     :to="localePath('/astar2')"
-                    class="flex items-center border-t border-slate-300 px-6 py-5 text-slate-950"
+                    class="flex items-center border-t border-gray-600 px-6 py-5"
                   >
                     Astar 2.0
                   </NuxtLink>
@@ -63,7 +55,7 @@
                 <li v-for="menu in menus">
                   <Disclosure as="div" v-slot="{ open }">
                     <DisclosureButton
-                      class="text-slate-950 border-t border-slate-300 px-6 py-5 w-full flex justify-between items-center"
+                      class="text-white border-t border-gray-600 px-6 py-5 w-full flex justify-between items-center"
                     >
                       <span>{{ menu.label }}</span>
                       <ChevronDownIcon
@@ -79,15 +71,15 @@
                         <li v-for="category in menu.nav">
                           <span
                             v-if="category.label !== ''"
-                            class="uppercase block text-slate-500 mb-2 text-xs"
+                            class="uppercase block text-gray-400 mb-2 text-xs"
                           >
                             {{ category.label }}
                           </span>
                           <ul class="space-y-2">
                             <li v-for="menu in category.nav">
                               <NuxtLink
-                                class="flex items-center text-slate-700"
-                                :to="localePath(menu.href)"
+                                class="flex items-center text-tiny"
+                                :to="menu.href"
                                 :target="
                                   menu.href.includes('https')
                                     ? '_blank'
@@ -109,8 +101,14 @@
                 </li>
               </ul>
               <div class="py-12 px-6">
-                <Button href="https://portal.astar.network/" class="w-full">
-                  Astar Portal
+                <Button
+                  href="https://portal.astar.network/"
+                  target="_blank"
+                  size="lg"
+                  class="w-full"
+                >
+                  {{ $t("home.hero.app") }}
+                  <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
                 </Button>
               </div>
 

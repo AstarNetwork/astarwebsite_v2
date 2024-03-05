@@ -1,35 +1,14 @@
 <template>
-  <NuxtLink
-    v-if="href !== ''"
-    :class="button({ size: size, color: color })"
-    :to="href"
-    :target="href.includes('https') ? '_blank' : '_self'"
-  >
-    <span :class="innerButton({ size: size })">
-      <slot>Button</slot>
-      <span :class="circle({ size: size, color: color })">
-        <span :class="innerCircle({ size: size, color: color })">
-          <ArrowRightIcon :class="arrow({ size: size, color: color })" />
-        </span>
-      </span>
-    </span>
+  <NuxtLink v-if="href !== ''" :class="classes" :to="href">
+    <span><slot>Button</slot></span>
   </NuxtLink>
-
-  <button v-else :class="button({ size: size, color: color })" type="button">
-    <span :class="innerButton({ size: size })">
-      <slot>Button</slot>
-      <span :class="circle({ size: size, color: color })">
-        <span :class="innerCircle({ size: size, color: color })">
-          <ArrowRightIcon :class="arrow({ size: size, color: color })" />
-        </span>
-      </span>
-    </span>
+  <button v-else :class="classes" type="button">
+    <span><slot>Button</slot></span>
   </button>
 </template>
 
 <script setup lang="ts">
-import { tv } from "tailwind-variants";
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
+import { computed } from "vue";
 
 const props = defineProps({
   href: {
@@ -37,115 +16,123 @@ const props = defineProps({
     default: "",
   },
   color: {
-    type: String as () => "blue" | "whiteBlue" | "whiteGray" | "outlinedGray",
-    default: "blue",
+    type: String,
+    default: "primary",
+  },
+  variant: {
+    type: String,
+    default: "contained",
   },
   size: {
-    type: String as () => "sm" | "md" | "lg",
+    type: String,
     default: "md",
   },
 });
 
-const button = tv({
-  base: "transition-all inline-flex items-center justify-center relative rounded-full group overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-64 hover:before:w-64",
-  variants: {
-    color: {
-      blue: "text-white hover:text-white bg-gradient-to-r from-[#0047FF] to-[#00D1FF] before:bg-blue before:mix-blend-screen before:opacity-30",
-      whiteBlue:
-        "bg-white text-blue hover:text-blue border border-blue before:bg-blue before:opacity-10",
-      whiteGray:
-        "bg-white text-slate-950 hover:text-slate-950 before:bg-slate-200",
-      outlinedGray:
-        "border border-slate-500 text-slate-700 hover:text-slate-700 before:bg-slate-50",
-    },
-    size: {
-      sm: "pl-5 pr-3 py-3 text-sm",
-      md: "pl-7 pr-4 py-4",
-      lg: "",
-    },
-  },
-  defaultVariants: {
-    size: "md",
-    color: "blue",
-  },
-});
-
-const innerButton = tv({
-  base: "relative z-10 inline-flex items-center justify-center",
-  variants: {
-    size: {
-      sm: "gap-2",
-      md: "gap-3",
-      lg: "",
-    },
-  },
-  defaultVariants: {
-    size: "md",
-  },
-});
-
-const circle = tv({
-  base: "rounded-full flex items-center justify-center",
-  variants: {
-    color: {
-      blue: "bg-white/40",
-      whiteBlue: "bg-blue/30",
-      whiteGray: "bg-slate-700/25",
-      outlinedGray: "bg-slate-500/25",
-    },
-    size: {
-      sm: "w-5 h-5",
-      md: "w-6 h-6",
-      lg: "",
-    },
-  },
-  defaultVariants: {
-    size: "md",
-    color: "blue",
-  },
-});
-
-const innerCircle = tv({
-  base: "rounded-full w-2 h-2 flex items-center justify-center transition-all",
-  variants: {
-    color: {
-      blue: "bg-white",
-      whiteBlue: "bg-blue",
-      whiteGray: "bg-slate-700",
-      outlinedGray: "bg-slate-500",
-    },
-    size: {
-      sm: "group-hover:w-5 group-hover:h-5",
-      md: "group-hover:w-6 group-hover:h-6",
-      lg: "",
-    },
-  },
-  defaultVariants: {
-    size: "md",
-    color: "blue",
-  },
-});
-
-const arrow = tv({
-  base: "w-0 h-0 transition-all",
-  variants: {
-    color: {
-      blue: "text-blue",
-      whiteBlue: "text-white",
-      whiteGray: "text-white",
-      outlinedGray: "text-white",
-    },
-    size: {
-      sm: "group-hover:w-3 group-hover:h-3",
-      md: "group-hover:w-4 group-hover:h-4",
-      lg: "",
-    },
-  },
-  defaultVariants: {
-    size: "md",
-    color: "blue",
-  },
-});
+const classes = computed(() => ({
+  btn: true,
+  primary: props.color === "primary",
+  secondary: props.color === "secondary",
+  [`${props.size || "md"}`]: true,
+  contained: props.variant === "contained",
+  outlined: props.variant === "outlined",
+}));
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.btn {
+  @apply shadow font-medium transition-all inline-block hover:cursor-pointer;
+}
+.btn span {
+  @apply flex items-center justify-center;
+}
+.btn.sm {
+  @apply text-sm px-3 py-1;
+}
+.btn.md {
+  @apply px-4 py-2;
+}
+.btn.lg {
+  @apply text-lg px-10 py-3;
+}
+.btn.xl {
+  @apply text-lg sm:text-xl px-6 py-4 sm:px-8 sm:py-5;
+}
+.btn.xxl {
+  @apply text-xl px-14 py-5 sm:text-2xl sm:px-20 sm:py-6;
+}
+.btn.contained.primary {
+  @apply text-white rounded-xl;
+  background: linear-gradient(
+    120deg,
+    #e6007a -5.88%,
+    #703ac2 15.42%,
+    #0070eb 40.77%,
+    #0297fb 72.21%,
+    #0ae2ff 95.53%
+  );
+}
+.btn.contained.primary:hover {
+  background: linear-gradient(
+    120deg,
+    #ff1994 -5.88%,
+    #8e4fee 15.42%,
+    #3091f9 40.77%,
+    #3db1ff 72.21%,
+    #3fe9ff 95.53%
+  );
+}
+.btn.outlined.primary {
+  border-radius: 0.625rem;
+  position: relative;
+  background: linear-gradient(
+    120deg,
+    #ffebf6 -5.88%,
+    #ebdeff 15.42%,
+    #d3e8ff 40.77%,
+    #bee5ff 72.21%,
+    #bef7ff 95.53%
+  );
+}
+.btn.outlined.primary:hover {
+  background: linear-gradient(120deg, white 08%, white 100%);
+}
+.btn.outlined.primary::after {
+  @apply rounded-xl;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  background-image: linear-gradient(
+    120deg,
+    #e6007a -5.88%,
+    #703ac2 15.42%,
+    #0070eb 40.77%,
+    #0297fb 72.21%,
+    #0ae2ff 95.53%
+  );
+}
+.btn.outlined.primary span {
+  background: linear-gradient(
+    90deg,
+    #e6007a -5.88%,
+    #703ac2 15.42%,
+    #0070eb 40.77%,
+    #0297fb 72.21%,
+    #0ae2ff 95.53%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply text-space-sky;
+}
+.btn.contained.secondary {
+  @apply border-2 border-white rounded-xl text-space-gray-dark bg-white bg-opacity-80 hover:bg-opacity-100;
+}
+.btn.outlined.secondary {
+  @apply border border-white rounded-xl bg-white/20 hover:bg-white/60 hover:text-space-gray-dark;
+}
+</style>
