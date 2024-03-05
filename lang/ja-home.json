@@ -41,7 +41,7 @@
           },
           "bobg": {
             "name": "BOBG",
-            "description": "BOBG is a company that provides comprehensive services to Japanese blockchain businesses, ranging from token issuance, operation, and management to cryptocurrency listing."
+            "description": "BOBGは、トークンの発行・運営・管理から暗号通貨の上場まで、日本のブロックチェーンビジネスに総合的なサービスを提供する企業です。"
           },
           "uobAndSamsung": {
             "name": "UOB Venture Management and Samsung Next",
@@ -64,7 +64,7 @@
           },
           "hakuhodo": {
             "name": "HAKUHODO",
-            "description": "(placeholder)"
+            "description": "新しい顧客体験を創造し、Web3.0に多くの企業を引きつける、統合マーケティングとイノベーションのリーディングカンパニー。"
           },
           "deloitteTohmatsu": {
             "name": "Deloitte Tohmatsu",
@@ -130,7 +130,7 @@
     "links": {
       "astrAndItsUtility": {
         "title": "ASTR and its utility",
-        "description": "ASTR is the native token driving Astar Network, having ultimate utility by serving various functions such as staking rewards, gas, and grants.",
+        "description": "ASTRはAstar Networkを稼働するネイティブトークンであり、ステーキング報酬、ガス、助成金など様々な機能を提供することで最終的なユーティリティを持っています。",
         "cta": "Check Tokenomics 2.0"
       },
       "dAppStaking": {
