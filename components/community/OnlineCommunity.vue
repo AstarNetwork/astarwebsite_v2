@@ -7,7 +7,7 @@
       <p class="mb-36">
         {{ $t("community.online_community.description") }}
       </p>
-      <h3 class="text-white font-bold text-3xl sm:text-4xl mb-6 leading-tight">
+      <h3 class="font-bold text-3xl sm:text-4xl mb-6 leading-tight">
         {{ $t("community.online_community.social.title") }}
       </h3>
       <p class="mb-16">
@@ -21,7 +21,7 @@
         <NuxtLink
           :to="item.href"
           target="_blank"
-          class="bg-space-gray block rounded-3xl text-center py-6 sm:py-8 px-2 hover:bg-space-gray-lighter transition"
+          class="bg-white block rounded-md border border-slate-300 text-center py-6 sm:py-8 px-2 hover:bg-gray-50 transition hover:shadow-xl"
         >
           <component
             :is="item.icon"
@@ -29,7 +29,7 @@
             :class="item.color"
             aria-hidden="true"
           />
-          <h3 class="font-medium mt-1 sm:mt-2 text-tiny sm:text-base">
+          <h3 class="font-medium mt-1 sm:mt-2 text-slate-950">
             {{ item.name }}
           </h3>
         </NuxtLink>
@@ -39,7 +39,9 @@
 </template>
 
 <script setup lang="ts">
-const Twitter = resolveComponent("IconTwitter");
+import { socialUrl, forumUrl } from "@/data/links";
+
+const X = resolveComponent("IconX");
 const Discord = resolveComponent("IconDiscord");
 const Telegram = resolveComponent("IconTelegram");
 const Reddit = resolveComponent("IconReddit");
@@ -47,48 +49,59 @@ const Github = resolveComponent("IconGithub");
 const Youtube = resolveComponent("IconYoutube");
 const Comments = resolveComponent("IconComments");
 
+const { locale } = useI18n();
+
+let twitterUrl = socialUrl.twitter.global.url;
+if (locale.value === "ja") {
+  twitterUrl = socialUrl.twitter.japan.url;
+} else if (locale.value === "ko") {
+  twitterUrl = socialUrl.twitter.korea.url;
+}
+
+const i18n = locale.value === "ja" ? "/ja" : "";
+
 const social = [
   {
     name: "GitHub",
-    href: "https://github.com/AstarNetwork/Astar",
+    href: socialUrl.github,
     icon: Github,
-    color: "text-[#FAFAFA]",
+    color: "text-black",
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/astarNetwork",
-    icon: Twitter,
-    color: "text-[#1DA1F2]",
+    name: "X(Twitter)",
+    href: twitterUrl,
+    icon: X,
+    color: "text-black",
   },
   {
     name: "Telegram",
-    href: "https://t.me/PlasmOfficial",
+    href: socialUrl.telegram,
     icon: Telegram,
     color: "text-[#0088CC]",
   },
   {
     name: "Discord",
-    href: "https://discord.gg/astarnetwork",
+    href: socialUrl.discord,
     icon: Discord,
     color: "text-[#5865F2]",
   },
   {
     name: "Reddit",
-    href: "https://www.reddit.com/r/AstarNetwork/",
+    href: socialUrl.reddit,
     icon: Reddit,
     color: "text-[#FF4500]",
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/c/AstarNetwork",
+    href: socialUrl.youtube,
     icon: Youtube,
     color: "text-[#FF0000]",
   },
   {
     name: "Forum",
-    href: "https://forum.astar.network/",
+    href: forumUrl,
     icon: Comments,
-    color: "text-gray-200",
+    color: "text-slate-950",
   },
 ];
 </script>

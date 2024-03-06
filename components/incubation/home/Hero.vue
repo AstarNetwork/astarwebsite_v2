@@ -5,7 +5,7 @@
     <div class="w-full lg:flex flex-wrap items-center">
       <div class="w-full lg:w-[62%]">
         <h1
-          class="text-5xl sm:text-8xl lg:text-10xl leading-[0.94] font-bold text-white text-center lg:text-left mb-8 sm:mb-12 lg:mb-0"
+          class="text-5xl sm:text-8xl lg:text-[9rem] leading-[0.94] font-bold text-white text-center lg:text-left mb-8 sm:mb-12 lg:mb-0"
         >
           Web3 <br />Incubation <br />Program
         </h1>
@@ -46,7 +46,6 @@
           src="/images/incubation/home/hero-logos.svg"
           alt="by Sony Network Communications and Astar"
           class="max-w-[200px] sm:max-w-[340px] lg:max-w-full w-full lg:pl-16"
-          data-not-lazy
         />
       </div>
     </div>

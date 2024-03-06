@@ -1,38 +1,31 @@
 <template>
   <NuxtLayout name="default">
-    <template #space>
-      <SubPageHeader>
-        <p class="text-lg sm:text-2xl -mb-2">{{ $t("blog.tag") }}:</p>
-        <h1
-          class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
-        >
-          {{ tag }}
-        </h1>
-      </SubPageHeader>
+    <SubPageHeader>
+      <p class="text-lg sm:text-2xl">{{ $t("blog.tag") }}:</p>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+        {{ tag }}
+      </h1>
+    </SubPageHeader>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mb-12 sm:mb-24">
-        <ul
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
-          v-if="posts.length > 0"
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mb-12 sm:mb-24">
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+        v-if="posts.length > 0"
+      >
+        <BlogArticleCard v-for="post in posts" :post="post" :blog="true" />
+      </ul>
+      <div v-else class="text-center">
+        <p class="mb-6">{{ $t("blog.no_articles") }}</p>
+        <NuxtLink
+          :to="localePath('/blog')"
+          class="text-space-cyan hover:text-space-cyan-lighter hover:underline"
         >
-          <BlogArticleCard v-for="post in posts" :post="post" />
-        </ul>
-        <div v-else class="text-center">
-          <p class="mb-6">{{ $t("blog.no_articles") }}</p>
-          <NuxtLink
-            :to="localePath('/blog')"
-            class="text-space-cyan hover:text-space-cyan-lighter hover:underline"
-          >
-            {{ $t("blog.back") }} ->
-          </NuxtLink>
-        </div>
+          {{ $t("blog.back") }} ->
+        </NuxtLink>
       </div>
+    </div>
 
-      <HomeNewsletter class="py-20 sm:py-32" />
-    </template>
-    <template #earth>
-      <Footer />
-    </template>
+    <HomeNewsletter class="py-20 sm:py-32" />
   </NuxtLayout>
 </template>
 

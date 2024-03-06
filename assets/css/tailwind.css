@@ -1,19 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@900&family=Roboto+Mono:wght@300&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Noto+Sans+JP:wght@900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html,
-  body {
+  html,body{
     @apply overflow-x-hidden;
   }
-  /* html {
-    @apply scroll-smooth;
-  } */
   body {
-    @apply leading-relaxed text-base;
+    @apply leading-relaxed;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-slate-950 font-semibold;
+  }
+  a {
+    @apply text-blue hover:text-blue/80 transition;
+  }
+  ::selection{
+    @apply bg-blue text-white;
   }
 }
 
@@ -29,9 +38,8 @@
     );
   }
   .title {
-    @apply font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight;
+    @apply font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight;
   }
-  .title span,
   .gradient-text span {
     background: linear-gradient(
       90deg,
@@ -45,7 +53,7 @@
     -webkit-text-fill-color: transparent;
   }
   .title-zkevm {
-    @apply font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight;
+    @apply font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight;
     span {
       background: linear-gradient(
         90deg,
@@ -99,18 +107,22 @@
 
   /* Ecosystem */
   .tab {
-    @apply text-space-blue hover:text-space-blue-lighter cursor-pointer;
+    @apply text-slate-500 hover:text-blue cursor-pointer text-left px-2 lg:px-4 py-2 lg:py-2.5 rounded hover:bg-blue/5 transition text-xs sm:text-sm lg:text-base block;
   }
   .tab.current {
-    @apply text-space-gray cursor-default outline-0;
+    @apply text-white bg-blue cursor-default outline-0;
   }
   .tab-panel {
-    @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 max-w-7xl mx-auto px-4 sm:px-6;
+    @apply grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-4;
   }
 
   /* Article */
   .entry-content {
-    @apply prose prose-invert lg:prose-xl mx-auto prose-a:text-space-cyan hover:prose-a:text-space-cyan-lighter prose-headings:text-white bg-space-gray-dark prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:text-tiny lg:prose-blockquote:text-base prose-blockquote:bg-white/5 prose-strong:font-medium prose-em:text-white prose-img:mx-auto;
+    @apply prose lg:prose-lg mx-auto prose-a:text-blue hover:prose-a:text-blue prose-headings:text-slate-950 prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-slate-50 prose-strong:font-medium prose-em:text-slate-950 prose-img:mx-auto;
+  }
+  .entry-content h2:first-child,
+  .entry-content p:first-child{
+    @apply mt-0;
   }
   .entry-content p code {
     font-size: 0.85em;
@@ -124,7 +136,7 @@
   }
   .entry-content ul li::marker,
   .entry-content ol li::marker {
-    @apply text-white;
+    @apply text-slate-500;
   }
   .entry-content h1 {
     font-size: 1.8em;
@@ -143,15 +155,23 @@
   }
   .entry-content h2 a,
   .entry-content h3 a {
-    @apply text-white no-underline hover:text-white;
+    @apply text-slate-950 no-underline hover:text-slate-950;
   }
 }
 
-.sub-page-header::before {
-  @apply w-full h-full absolute content-[""] z-[0] bottom-0;
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
+
+.container-lg{
+  @apply mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8;
+}
+
+.container-md{
+  @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
+}
+
+.container-sm{
+  @apply mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8;
+}
+
+.container-xs{
+  @apply mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8;
 }

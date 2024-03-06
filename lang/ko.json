@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "tagline": "아스타와 함께 웹3를 향한 새로운 여정",
+    "description": "일반개인도 web3 기술을 어려움 없이 사용할 수 있는 환경을 조성합니다. 저희는 엔터테인먼트, 블록체인 개발, 비즈니스 개발, 그리고 다양한 커뮤니티 이벤트를 통해 web3 세상과 연결 도와드립니다."
+  },
+  "footer": {
+    "nav": {
+      "build": "빌드 시작",
+      "docs": "공식 문서",
+      "apply": "신청하기",
+      "careers": "채용 정보",
+      "ambassadorProgram": "Astar 앰배서더 프로그램",
+      "bugBountyProgram": "버그 바운티 프로그램",
+      "learn": "학습하기",
+      "blog": "Astar 블로그",
+      "videos": "영상",
+      "forum": "포럼",
+      "other": "기타",
+      "brandAssets": "브랜드 에셋",
+      "privacyPolicy": "개인정보 처리방침",
+      "termsOfUse": "이용 약관",
+      "contactUs": "문의하기"
+    },
+    "contactUs": {
+      "title": "문의하기",
+      "description": "Astar Network 팀과 연락하기"
+    },
+    "newsletter": {
+      "title": "뉴스레터",
+      "description": "아스타 뉴스레터 구독하고 최신 업데이트 받기"
+    }
+  }
+}

@@ -1,35 +1,20 @@
 <template>
   <NuxtLayout name="default">
-    <template #space>
-      <SubPageHeader>
-        <h1
-          class="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight drop-shadow"
-        >
-          {{ $t("blog.title") }}
-        </h1>
-        <p class="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">
-          {{ $t("blog.description") }}
-        </p>
-      </SubPageHeader>
+    <SubPageHeader
+      :title="$t('blog.title')"
+      :description="$t('blog.description')"
+    />
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mb-12 sm:mb-24">
-        <h2
-          class="text-center text-3xl sm:text-4xl font-semibold mb-8 sm:mb-12"
-        >
-          {{ $t("blog.latest") }}
-        </h2>
-        <ul
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
-        >
-          <BlogArticleCard v-for="post in posts" :post="post" />
-        </ul>
-      </div>
-
-      <HomeNewsletter class="py-20 sm:py-32" />
-    </template>
-    <template #earth>
-      <Footer />
-    </template>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mb-12 sm:mb-24">
+      <h2 class="text-center text-3xl sm:text-4xl font-semibold mb-8 sm:mb-12">
+        {{ $t("blog.latest") }}
+      </h2>
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+      >
+        <BlogArticleCard v-for="post in posts" :post="post" :blog="true" />
+      </ul>
+    </div>
   </NuxtLayout>
 </template>
 
