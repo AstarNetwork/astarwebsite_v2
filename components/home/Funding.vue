@@ -48,9 +48,21 @@
       </div>
     </div>
 
-    <div class="text-center mt-8 sm:mt-12">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8 sm:mt-12">
       <Button :href="localePath('/developers/')" color="whiteGray">
         {{ $t("home.funding.cta") }}
+      </Button>
+
+      <Button
+        color="whiteGray"
+        data-tf-popup="OUQlTvWu"
+        data-tf-opacity="100"
+        data-tf-size="100"
+        data-tf-iframe-props="title=Support"
+        data-tf-transitive-search-params
+        data-tf-medium="snippet"
+      >
+        {{ $t("contact.partnerships.title") }}
       </Button>
     </div>
   </div>
@@ -59,6 +71,10 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 const { t } = useI18n();
+
+useHead({
+  script: [{ src: "//embed.typeform.com/next/embed.js" }],
+});
 
 const data = [
   {
