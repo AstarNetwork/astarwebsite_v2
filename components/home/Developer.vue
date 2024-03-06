@@ -56,9 +56,13 @@
       </div>
     </div>
 
-    <div class="text-center mt-8 sm:mt-12">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8 sm:mt-12">
       <Button :href="localePath('/developers/')" color="whiteGray">
-        {{ $t("home.developer.cta") }}
+        {{ $t("home.developer.cta.startBuilding") }}
+      </Button>
+
+      <Button href="#" color="whiteGray">
+        {{ $t("home.developer.cta.ourNetworks") }}
       </Button>
     </div>
   </div>
