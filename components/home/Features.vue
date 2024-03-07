@@ -23,14 +23,7 @@
         {{ item.description }}
       </p>
       <div class="flex justify-center flex-col lg:flex-row gap-3">
-        <div
-          v-if="item.disabled"
-          class="rounded-full bg-slate-300 text-slate-500 px-8 py-4 text-center"
-        >
-          Coming Soon
-        </div>
         <Button
-          v-else
           v-for="button in item.links"
           :href="
             button.url.includes('https') ? button.url : localePath(button.url)
@@ -74,7 +67,6 @@ const data = [
     title: t("home.features.yokiOrigins.title"),
     image: "yoki-origins.webp",
     description: t("home.features.yokiOrigins.description"),
-    disabled: true,
     links: [
       {
         label: t("home.features.yokiOrigins.cta.yokiOriginsWebsite"),
