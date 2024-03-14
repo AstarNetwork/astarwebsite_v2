@@ -20,38 +20,60 @@
 <script setup lang="ts">
 import gql from "graphql-tag";
 
-// The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
 const { locale } = useI18n();
-const astarSpace = locale.value === "ja" ? 11315 : 10802;
+const tag = locale.value === "ja" ? "" : "japan";
+
 const query = gql`
-  query PostsBySpaceId {
-    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "japan", hidden_eq: false }, orderBy: id_DESC) {
-      publishedDate: createdOnDay
-      title
-      href: canonical
-      image
-      slug
-      id
+query PostsByTag {
+    posts(
+      locale: "${locale.value}"
+      filters: { tags: { containsi: "${tag}" } }
+      pagination: { page: 1, pageSize: 100 }
+      sort: "publishedAt:DESC"
+    ) {
+      data {
+        id
+        attributes {
+          publishedAt
+          title
+          slug
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+        }
+      }
     }
   }
+}
 `;
 
-const { data } = await useAsyncQuery({ query, clientId: "subsocial" });
+const { data }: any = await useAsyncQuery({ query, clientId: "strapi" });
 const posts = data.value.posts.map(
-  (item: { publishedDate: string | number | Date }) => {
-    const lowercaseSlug = item.slug.toLowerCase();
-    const date = new Date(item.publishedDate);
+  (item: {
+    attributes: {
+      slug: string;
+      publishedAt: string | number | Date;
+      image: { data: { attributes: { url: string } } };
+    };
+  }) => {
+    const lowercaseSlug = item.attributes.slug.toLowerCase();
+    const date = new Date(item.attributes.publishedAt);
     const formattedDate = date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
       year: "numeric",
     });
+    const imageName = item.attributes?.image?.data?.attributes?.url;
+    const imagePath = imageName
+      ? "http://localhost:1337" + imageName
+      : "/images/blog/placeholder.webp";
     return {
-      ...item,
-      image: item.image
-        ? "https://ipfs.subsocial.network/ipfs/" + item.image
-        : "/images/blog/placeholder.webp",
-      publishedDate: formattedDate,
+      ...item.attributes,
+      image: imagePath,
+      publishedAt: formattedDate,
       slug: lowercaseSlug,
     };
   }

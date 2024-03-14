@@ -10,7 +10,7 @@
 
     <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
       <header class="text-center mb-12">
-        <time>{{ post.publishedDate }}</time>
+        <time>{{ post.publishedAt }}</time>
         <h1
           class="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight"
         >
@@ -23,7 +23,7 @@
           <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
           <div class="flex flex-wrap">
             <NuxtLink
-              v-for="tag in post.tagsOriginal.split(',')"
+              v-for="tag in post.tags"
               :href="i18n + '/blog/tag/' + tag"
               class="block text-slate-500 border border-slate-500 py-2 px-4 rounded-full hover:bg-white/10 mr-1 mb-2"
             >
@@ -34,24 +34,28 @@
         <div class="flex border border-slate-500 rounded-3xl px-3 py-6 sm:p-8">
           <div class="shrink-0 mr-3 sm:mr-4">
             <img
-              :src="post.authorImg"
+              src="https://ipfs.subsocial.network/ipfs/bafybeigblzs4mgxityqmkvxqyknl4jiibg3bo6winogvf6kfobc2qolnjq"
               alt=""
               class="object-cover w-12 sm:w-16 h-12 sm:h-16 rounded-full"
             />
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg lg:text-xl mb-2">
-              {{ post.author.profileSpace.name }}
+              Astar Network Team
             </h3>
             <p>
-              {{ post.author.profileSpace.about }}
+              Astar serves as the gateway for projects across enterprise,
+              entertainment, and gaming to enter Japan and beyond. Driving
+              global adoption of web3 to millions with an ecosystem powered by
+              Polkadot and Polygon as the industry-leading blockchain for the
+              Japan market.
             </p>
           </div>
         </div>
       </footer>
     </article>
 
-    <HomeNewsletter class="mb-36" />
+    <!-- HomeNewsletter class="mb-36" / -->
 
     <div
       v-if="posts.length > 0"
@@ -70,101 +74,138 @@
 </template>
 
 <script setup lang="ts">
-// defineI18nRoute(false);
-
 import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
-const md = new MarkdownIt();
 
+const md = new MarkdownIt();
 const route = useRoute();
 const slug = route.params.slug;
 const id = route.params.slug.slice(-5);
-
-// The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
 const { locale, t } = useI18n();
-const astarSpace = locale.value === "ja" ? 11315 : 10802;
 const i18n = locale.value === "ja" ? "/ja" : "";
 
 const query = gql`
-  query PostsBySlug {
-    posts(where: { space: { id_eq: "10802" }, id_eq: "${id}", hidden_eq: false, OR: { space: { id_eq: "11315" }, id_eq: "${id}", hidden_eq: false } }, orderBy: id_DESC) {
-
-      publishedDate: createdOnDay
-      title
-      href: canonical
-      image
-      body
-      summary
-      tagsOriginal
-      author: ownedByAccount { profileSpace { name, image, about } }
+  query PostsById {
+    posts(
+      locale: "${locale.value}"
+      filters: { id: { eq: "${id}" } }
+    ) {
+      data {
+        attributes {
+          title
+          publishedAt
+          body
+          summary
+          tags
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;
 
-const { data } = await useAsyncQuery({ query, clientId: "subsocial" });
-const post = data.value.posts.map(
-  (item: { publishedDate: string | number | Date }) => {
-    const date = new Date(item.publishedDate);
+const { data }: any = await useAsyncQuery({ query, clientId: "strapi" });
+const post = data.value.posts.data.map(
+  (item: {
+    attributes: {
+      publishedAt: string | number | Date;
+      body: string;
+      image: { data: { attributes: { url: string } } };
+    };
+  }) => {
+    const date = new Date(item.attributes.publishedAt);
     const formattedDate = date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
       year: "numeric",
     });
+    const imageName = item.attributes?.image?.data?.attributes?.url;
+    const imagePath = imageName
+      ? "http://localhost:1337" + imageName
+      : "/images/blog/placeholder.webp";
     return {
-      ...item,
-      image: item.image
-        ? "https://ipfs.subsocial.network/ipfs/" + item.image
-        : "/images/blog/placeholder.webp",
-      authorImg: item.author.profileSpace.image
-        ? "https://ipfs.subsocial.network/ipfs/" +
-          item.author.profileSpace.image
-        : "/images/blog/placeholder.webp",
-      publishedDate: formattedDate,
-      body: item.body ? md.render(item.body) : "",
+      ...item.attributes,
+      image: imagePath,
+      publishedAt: formattedDate,
+      body: item.attributes.body ? md.render(item.attributes.body) : "",
     };
   }
 )[0];
 
-const orConditions = post.tagsOriginal
-  .split(",")
-  .map((tag: string) => `{ tagsOriginal_containsInsensitive: "${tag}" }`)
+const orConditions = post.tags
+  .map((tag: string) => `{ tags: { containsi: "${tag}" } }`)
   .join(", ");
 
 const querySpace = gql`
   query PostsByTag {
-    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, id_not_eq: "${id}", hidden_eq: false }, orderBy: id_DESC, limit: 6) {
-      publishedDate: createdOnDay
-      title
-      href: canonical
-      image
-      slug
+    posts(
+      locale: "${locale.value}"
+      filters: { id: { ne: "${id}" } and: { or: [${orConditions}] } }
+      pagination: { limit: 6 }
+      sort: "publishedAt:DESC"
+    ) {
+      data {
+        id
+        attributes {
+          publishedAt
+          title
+          slug
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+        }
+      }
     }
   }
+}
 `;
 
-const dataRelated = await useAsyncQuery({
+const dataRelated: any = await useAsyncQuery({
   query: querySpace,
-  clientId: "subsocial",
+  clientId: "strapi",
 });
-const posts = dataRelated.data.value.posts.map(
-  (item: { publishedDate: string | number | Date }) => {
-    const lowercaseSlug = item.slug.toLowerCase();
-    const date = new Date(item.publishedDate);
+const posts = dataRelated.data.value.posts.data.map(
+  (item: {
+    id: string;
+    attributes: {
+      slug: string;
+      publishedAt: string | number | Date;
+      image: { data: { attributes: { url: string } } };
+    };
+  }) => {
+    const lowercaseSlug = item.attributes.slug.toLowerCase();
+    const date = new Date(item.attributes.publishedAt);
     const formattedDate = date.toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
       year: "numeric",
     });
+    const imageName = item.attributes?.image?.data?.attributes?.url;
+    const imagePath = imageName
+      ? "http://localhost:1337" + imageName
+      : "/images/blog/placeholder.webp";
     return {
-      ...item,
-      image: item.image
-        ? "https://ipfs.subsocial.network/ipfs/" + item.image
-        : "/images/blog/placeholder.webp",
-      publishedDate: formattedDate,
+      id: item.id,
+      ...item.attributes,
+      image: imagePath,
+      publishedAt: formattedDate,
       slug: lowercaseSlug,
     };
   }
 );
+
+posts.sort(
+  (a: { id: string }, b: { id: string }) => parseInt(b.id) - parseInt(a.id)
+); // For descending order
 
 import { meta } from "@/data/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
@@ -183,7 +224,7 @@ if (locale.value === "ja") {
 useServerSeoMeta({
   title: () => seoTitle,
   description: () => seoDescription,
-  author: () => post.author.profileSpace.name,
+  author: () => "Astar Network Team",
   ogSiteName: () => "Astar Network",
   ogLocale: () => locale.value,
   ogTitle: () => seoTitle,
@@ -202,7 +243,7 @@ useServerSeoMeta({
 useSchemaOrg([
   defineArticle({
     author: {
-      name: post.author.profileSpace.name,
+      name: "Astar Network Team",
     },
   }),
 ]);
