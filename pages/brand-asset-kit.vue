@@ -2,7 +2,7 @@
   <NuxtLayout name="default">
     <SubPageHeader :title="$t('brandAssetKit.title')" :description="$t('brandAssetKit.description')">
       <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-        <Button :href="brandAssetKitUrl.zip">
+        <Button :href="brandAssetKitUrl.zip" target="_blank" download>
           {{ $t("brandAssetKit.cta.downloadZip") }}
         </Button>
         <Button :href="brandAssetKitUrl.figma" color="outlinedGray">

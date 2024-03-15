@@ -6,8 +6,8 @@ export const bugBountyProgramUrl = "https://immunefi.com/bounty/astarnetwork";
 export const forumUrl = "https://forum.astar.network/";
 
 export const brandAssetKitUrl = {
-  zip: "https://astar.network/brand-asset-kit.zip",
-  figma: "#",
+  zip: "/astar-brand-asset-kit.zip",
+  figma: "https://www.figma.com/file/xEu8dYHuvpraJhI7HfyG7y/Brand-Asset-Kit?type=design&node-id=0%3A1&mode=design&t=oMyNB877IZkMUUeB-1",
 };
 
 export const docsUrl = {

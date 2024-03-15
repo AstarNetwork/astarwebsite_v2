@@ -51,12 +51,9 @@ const button = tv({
   variants: {
     color: {
       blue: "text-white hover:text-white bg-gradient-to-r from-[#0047FF] to-[#00D1FF] before:bg-blue before:mix-blend-screen before:opacity-30",
-      whiteBlue:
-        "bg-white text-blue hover:text-blue border border-blue before:bg-blue before:opacity-10",
-      whiteGray:
-        "bg-white text-slate-950 hover:text-slate-950 before:bg-slate-200",
-      outlinedGray:
-        "border border-slate-500 text-slate-700 hover:text-slate-700 before:bg-slate-50",
+      whiteBlue: "bg-white text-blue hover:text-blue border border-blue before:bg-blue before:opacity-10",
+      whiteGray: "bg-white text-slate-950 hover:text-slate-950 before:bg-slate-200",
+      outlinedGray: "border border-slate-500 text-slate-700 hover:text-slate-700 before:bg-slate-50",
     },
     size: {
       sm: "pl-5 pr-3 py-3 text-sm",

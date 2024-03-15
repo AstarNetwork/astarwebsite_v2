@@ -6,7 +6,7 @@
       <h2 class="text-4xl lg:text-5xl text-white">{{ $t("brandAssetKit.cta.title") }}</h2>
       <p class="sm:container-xs text-white">{{ $t("brandAssetKit.cta.description") }}</p>
       <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-        <Button :href="brandAssetKitUrl.zip" color="whiteBlue">
+        <Button :href="brandAssetKitUrl.zip" color="whiteBlue" target="_blank" download>
           {{ $t("brandAssetKit.cta.downloadZip") }}
         </Button>
         <Button :href="brandAssetKitUrl.figma" color="whiteBlue">
