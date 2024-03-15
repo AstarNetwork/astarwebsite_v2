@@ -17,9 +17,7 @@
             <span
               class="w-0 h-0 group-hover:bg-blue group-hover:w-12 group-hover:h-12 absolute duration-300 ease-out rounded-full"
             />
-            <ArrowRightIcon
-              class="w-5 h-5 group-hover:text-white transition relative z-10 text-blue"
-            />
+            <ArrowRightIcon class="w-5 h-5 group-hover:text-white transition relative z-10 text-blue" />
           </span>
         </div>
       </NuxtLink>
@@ -37,9 +35,7 @@
             <span
               class="w-0 h-0 group-hover:bg-blue group-hover:w-12 group-hover:h-12 absolute duration-300 ease-out rounded-full"
             />
-            <ArrowRightIcon
-              class="w-5 h-5 group-hover:text-white transition relative z-10 text-blue"
-            />
+            <ArrowRightIcon class="w-5 h-5 group-hover:text-white transition relative z-10 text-blue" />
           </span>
         </div>
       </div>
@@ -67,11 +63,7 @@
               class="w-0 h-0 group-hover:bg-white/20 group-hover:w-16 group-hover:h-16 absolute duration-200 ease-out rounded-full"
             />
             <span class="sr-only">{{ item.name }}</span>
-            <component
-              :is="item.icon"
-              class="h-6 w-6 text-white"
-              aria-hidden="true"
-            />
+            <component :is="item.icon" class="h-6 w-6 text-white" aria-hidden="true" />
           </NuxtLink>
         </div>
 
@@ -82,11 +74,7 @@
               {{ category.name }}
             </h3>
             <ul role="list" class="mt-4 space-y-4">
-              <li
-                v-for="item in category.nav"
-                :key="item.name"
-                class="leading-snug"
-              >
+              <li v-for="item in category.nav" :key="item.name" class="leading-snug">
                 <NuxtLink
                   :to="item.href"
                   :target="item.href.includes('https') ? '_blank' : '_self'"
@@ -104,8 +92,7 @@
         </div>
 
         <p class="text-center text-white text-sm">
-          &copy; {{ new Date().getFullYear() }} Astar Network. All Rights
-          Reserved.
+          &copy; {{ new Date().getFullYear() }} Astar Network. All Rights Reserved.
         </p>
       </div>
     </div>
@@ -122,15 +109,11 @@
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
-        <div
-          class="fixed inset-0 bg-slate-950 bg-opacity-90 transition-opacity"
-        />
+        <div class="fixed inset-0 bg-slate-950 bg-opacity-90 transition-opacity" />
       </TransitionChild>
 
       <div class="fixed inset-0 z-10 overflow-y-auto">
-        <div
-          class="flex min-h-full items-center justify-center p-2 sm:p-4 text-center"
-        >
+        <div class="flex min-h-full items-center justify-center p-2 sm:p-4 text-center">
           <TransitionChild
             as="template"
             enter="ease-out duration-300"
@@ -162,12 +145,7 @@
 <script setup lang="ts">
 import { XMarkIcon } from "@heroicons/vue/20/solid";
 import { ref } from "vue";
-import {
-  Dialog,
-  DialogPanel,
-  TransitionChild,
-  TransitionRoot,
-} from "@headlessui/vue";
+import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from "@headlessui/vue";
 import { meta } from "@/data/meta";
 import {
   newsletterUrl,
@@ -175,13 +153,9 @@ import {
   ambassadorProgramUrl,
   bugBountyProgramUrl,
   forumUrl,
-  brandAssetsUrl,
   docsUrl,
 } from "@/data/links";
-import {
-  ArrowTopRightOnSquareIcon,
-  ArrowRightIcon,
-} from "@heroicons/vue/24/outline";
+import { ArrowTopRightOnSquareIcon, ArrowRightIcon } from "@heroicons/vue/24/outline";
 
 const newsletterOpen = ref(false);
 
@@ -242,8 +216,8 @@ const nav = [
     name: t("footer.nav.other"),
     nav: [
       {
-        name: t("footer.nav.brandAssets"),
-        href: brandAssetsUrl,
+        name: t("brandAssetKit.title"),
+        href: localePath("/brand-asset-kit"),
       },
       {
         name: t("footer.nav.privacyPolicy"),
