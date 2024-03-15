@@ -1,21 +1,21 @@
 {
   "brandAssetKit": {
     "title": "Brand Asset Kit",
-    "description": "The Astar Brand Asset Kit serves as the definitive reference point for community members and ecosystem projects. Dive into this brand guide to discover the exciting possibilities and guidelines for leveraging Astar's branding elements.",
+    "description": "The Astar Brand Asset Kit is the definitive reference point for community members and ecosystem projects. Use this brand guide to discover the exciting possibilities and guidelines for using our branding elements.",
     "logo": {
       "title": "Our logo",
-      "description": "You can’t edit, change, distort, recolor, or reconfigure the Astar logo. And, of course, don’t use our Logo to refer to any product or service that’s not Astar.",
+      "description": "Do not edit, change, distort, recolour, or reconfigure the Astar logo. And, of course, don’t use our logo to refer to any product or service that’s not Astar.",
       "primary": "Primary",
       "zkEvm": "Astar zkEVM",
       "symbol": "Symbol"
     },
     "colors": {
       "title": "Colours",
-      "description": "The Astar brand should always be expressed by using this colour palette exclusively. Please do not use any other/unauthorized colours."
+      "description": "The Astar brand should always be expressed using our colour palette. Please only use these approved colours with our logo and design elements."
     },
     "typography": {
       "title": "Typography",
-      "description": "Astar has strategically selected and implemented the typefaces to effectively communicate our values and establish a memorable brand presence.",
+      "description": "We chose Poppins as our typeface to communicate our values and establish a memorable brand presence.",
       "getFont": "Get Poppins font"
     },
     "cta": {
