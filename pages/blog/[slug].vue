@@ -74,145 +74,30 @@
 </template>
 
 <script setup lang="ts">
-import gql from "graphql-tag";
-import MarkdownIt from "markdown-it";
+import { meta } from "@/data/meta";
+import { socialUrl } from "@/data/links";
+import { getPosts } from "@/components/blog";
 
-const md = new MarkdownIt();
 const route = useRoute();
 const slug = route.params.slug;
 const id = route.params.slug.slice(-5);
 const { locale, t } = useI18n();
 const i18n = locale.value === "ja" ? "/ja" : "";
 
-const query = gql`
-  query PostsById {
-    posts(
-      locale: "${locale.value}"
-      filters: { id: { eq: "${id}" } }
-    ) {
-      data {
-        attributes {
-          title
-          publishedAt
-          body
-          summary
-          tags
-          image {
-            data {
-              attributes {
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-const { data }: any = await useAsyncQuery({ query, clientId: "strapi" });
-const post = data.value.posts.data.map(
-  (item: {
-    attributes: {
-      publishedAt: string | number | Date;
-      body: string;
-      image: { data: { attributes: { url: string } } };
-    };
-  }) => {
-    const date = new Date(item.attributes.publishedAt);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-    const imageName = item.attributes?.image?.data?.attributes?.url;
-    const imagePath = imageName
-      ? "http://localhost:1337" + imageName
-      : "/images/blog/placeholder.webp";
-    return {
-      ...item.attributes,
-      image: imagePath,
-      publishedAt: formattedDate,
-      body: item.attributes.body ? md.render(item.attributes.body) : "",
-    };
-  }
-)[0];
+const filter = `id: { eq: "${id}" }`;
+const post = (await getPosts(filter))[0];
 
 const orConditions = post.tags
   .map((tag: string) => `{ tags: { containsi: "${tag}" } }`)
   .join(", ");
 
-const querySpace = gql`
-  query PostsByTag {
-    posts(
-      locale: "${locale.value}"
-      filters: { id: { ne: "${id}" } and: { or: [${orConditions}] } }
-      pagination: { limit: 6 }
-      sort: "publishedAt:DESC"
-    ) {
-      data {
-        id
-        attributes {
-          publishedAt
-          title
-          slug
-          image {
-            data {
-              attributes {
-                url
-              }
-            }
-        }
-      }
-    }
-  }
-}
-`;
+const filters = `id: { ne: "${id}" } and: { or: [${orConditions}] }`;
+const pagination = "limit: 6";
+const posts = await getPosts(filters, pagination);
 
-const dataRelated: any = await useAsyncQuery({
-  query: querySpace,
-  clientId: "strapi",
-});
-const posts = dataRelated.data.value.posts.data.map(
-  (item: {
-    id: string;
-    attributes: {
-      slug: string;
-      publishedAt: string | number | Date;
-      image: { data: { attributes: { url: string } } };
-    };
-  }) => {
-    const lowercaseSlug = item.attributes.slug.toLowerCase();
-    const date = new Date(item.attributes.publishedAt);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-    const imageName = item.attributes?.image?.data?.attributes?.url;
-    const imagePath = imageName
-      ? "http://localhost:1337" + imageName
-      : "/images/blog/placeholder.webp";
-    return {
-      id: item.id,
-      ...item.attributes,
-      image: imagePath,
-      publishedAt: formattedDate,
-      slug: lowercaseSlug,
-    };
-  }
-);
-
-posts.sort(
-  (a: { id: string }, b: { id: string }) => parseInt(b.id) - parseInt(a.id)
-); // For descending order
-
-import { meta } from "@/data/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
 const seoDescription = post.summary;
 const seoUrl = `${meta.url}${route.fullPath}`;
-
-import { socialUrl } from "@/data/links";
 
 let twitterId = socialUrl.twitter.global.id;
 if (locale.value === "ja") {

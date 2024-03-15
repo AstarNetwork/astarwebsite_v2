@@ -16,68 +16,12 @@
 </template>
 
 <script setup lang="ts">
-import gql from "graphql-tag";
+import { getPosts } from "@/components/blog";
 
 const { locale, t } = useI18n();
 const tag = locale.value === "ja" ? "" : "japan";
-
-const query = gql`
-query PostsByTag {
-    posts(
-      locale: "${locale.value}"
-      filters: { tags: { containsi: "${tag}" } }
-      pagination: { limit: 3 }
-      sort: "publishedAt:DESC"
-    ) {
-      data {
-        id
-        attributes {
-          publishedAt
-          title
-          slug
-          image {
-            data {
-              attributes {
-                url
-              }
-            }
-        }
-      }
-    }
-  }
-}
-`;
-
-const { data }: any = await useAsyncQuery({ query, clientId: "strapi" });
-const posts = data.value.posts.data.map(
-  (item: {
-    attributes: {
-      slug: string;
-      publishedAt: string | number | Date;
-      image: { data: { attributes: { url: string } } };
-    };
-  }) => {
-    const lowercaseSlug = item.attributes.slug.toLowerCase();
-    const date = new Date(item.attributes.publishedAt);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-    const imageName = item.attributes?.image?.data?.attributes?.url;
-    const imagePath = imageName
-      ? "http://localhost:1337" + imageName
-      : "/images/blog/placeholder.webp";
-    return {
-      ...item.attributes,
-      image: imagePath,
-      publishedAt: formattedDate,
-      slug: lowercaseSlug,
-    };
-  }
-);
-
+const filters = `tags: { containsi: "${tag}" }`;
+const posts = await getPosts(filters);
 const localePath = useLocalePath();
-
 const toBlog = locale.value === "ja" ? "/ja/blog" : "/blog/japan";
 </script>

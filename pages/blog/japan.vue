@@ -18,70 +18,15 @@
 </template>
 
 <script setup lang="ts">
-import gql from "graphql-tag";
-
-const { locale } = useI18n();
-const tag = locale.value === "ja" ? "" : "japan";
-
-const query = gql`
-query PostsByTag {
-    posts(
-      locale: "${locale.value}"
-      filters: { tags: { containsi: "${tag}" } }
-      pagination: { page: 1, pageSize: 100 }
-      sort: "publishedAt:DESC"
-    ) {
-      data {
-        id
-        attributes {
-          publishedAt
-          title
-          slug
-          image {
-            data {
-              attributes {
-                url
-              }
-            }
-        }
-      }
-    }
-  }
-}
-`;
-
-const { data }: any = await useAsyncQuery({ query, clientId: "strapi" });
-const posts = data.value.posts.map(
-  (item: {
-    attributes: {
-      slug: string;
-      publishedAt: string | number | Date;
-      image: { data: { attributes: { url: string } } };
-    };
-  }) => {
-    const lowercaseSlug = item.attributes.slug.toLowerCase();
-    const date = new Date(item.attributes.publishedAt);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-    const imageName = item.attributes?.image?.data?.attributes?.url;
-    const imagePath = imageName
-      ? "http://localhost:1337" + imageName
-      : "/images/blog/placeholder.webp";
-    return {
-      ...item.attributes,
-      image: imagePath,
-      publishedAt: formattedDate,
-      slug: lowercaseSlug,
-    };
-  }
-);
+import { meta } from "@/data/meta";
+import { getPosts } from "@/components/blog";
 
 const route = useRoute();
-const { t } = useI18n();
-import { meta } from "@/data/meta";
+const { locale, t } = useI18n();
+const tag = locale.value === "ja" ? "" : "japan";
+const filters = `tags: { containsi: "${tag}" }`;
+const posts = await getPosts(filters);
+
 const seoTitle = `Astar Japan Blog | ${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("blog.description");
 const seoUrl = `${meta.url}${route.fullPath}`;

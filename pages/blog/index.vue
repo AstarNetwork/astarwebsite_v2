@@ -19,72 +19,13 @@
 </template>
 
 <script setup lang="ts">
-import gql from "graphql-tag";
+import { meta } from "@/data/meta";
+import { getPosts } from "@/components/blog";
 
-const { locale } = useI18n();
-const query = gql`
-  query PostsByLocal {
-    posts(
-        pagination: { page: 1, pageSize: 100 }
-        locale: "${locale.value}"
-    ) {
-      data {
-        id
-        attributes {
-          publishedAt
-          title
-          image {
-            data {
-              attributes {
-                url
-              }
-            }
-          }
-          slug
-        }
-      }
-    }
-  }
-`;
-
-const { data }: any = await useAsyncQuery({ query, clientId: "strapi" });
-const posts = data.value.posts.data.map(
-  (item: {
-    id: string;
-    attributes: {
-      slug: string;
-      publishedAt: string | number | Date;
-      image: { data: { attributes: { url: string } } };
-    };
-  }) => {
-    const lowercaseSlug = item.attributes.slug.toLowerCase();
-    const date = new Date(item.attributes.publishedAt);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-    const imageName = item.attributes?.image?.data?.attributes?.url;
-    const imagePath = imageName
-      ? "http://localhost:1337" + imageName
-      : "/images/blog/placeholder.webp";
-    return {
-      id: item.id,
-      ...item.attributes,
-      image: imagePath,
-      publishedAt: formattedDate,
-      slug: lowercaseSlug,
-    };
-  }
-);
-
-posts.sort(
-  (a: { id: string }, b: { id: string }) => parseInt(b.id) - parseInt(a.id)
-); // For descending order
-
+const posts = await getPosts();
 const route = useRoute();
 const { t } = useI18n();
-import { meta } from "@/data/meta";
+
 const seoTitle = `${t("blog.title")} | ${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("blog.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
