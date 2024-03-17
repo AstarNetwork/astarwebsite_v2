@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   build: {
-    transpile: ['gsap'],
+    transpile: ["gsap"],
   },
   vite: {
     build: {
@@ -81,6 +81,7 @@ export default defineNuxtConfig({
           "en-vision.json",
           "en-university.json",
           "en-solutions.json",
+          "en-brand-asset-kit.json",
         ],
       },
       {
@@ -102,6 +103,7 @@ export default defineNuxtConfig({
           "ja-vision.json",
           "ja-university.json",
           "ja-solutions.json",
+          "ja-brand-asset-kit.json",
         ],
       },
       {
@@ -123,6 +125,7 @@ export default defineNuxtConfig({
           "ko-vision.json",
           "ko-university.json",
           "ko-solutions.json",
+          "ko-brand-asset-kit.json",
         ],
       },
     ],

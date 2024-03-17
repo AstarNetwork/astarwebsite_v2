@@ -5,7 +5,10 @@ export const bugBountyProgramUrl = "https://immunefi.com/bounty/astarnetwork";
 
 export const forumUrl = "https://forum.astar.network/";
 
-export const brandAssetsUrl = "https://github.com/AstarNetwork/brand-assets";
+export const brandAssetKitUrl = {
+  zip: "/astar-brand-asset-kit.zip",
+  figma: "https://www.figma.com/file/xEu8dYHuvpraJhI7HfyG7y/Brand-Asset-Kit?type=design&node-id=0%3A1&mode=design&t=oMyNB877IZkMUUeB-1",
+};
 
 export const docsUrl = {
   index: "https://docs.astar.network/",
@@ -13,10 +16,8 @@ export const docsUrl = {
 };
 
 export const newsletterUrl = {
-  global:
-    "https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380",
-  japan:
-    "https://cdn.forms-content.sg-form.com/14380152-3085-11ee-8b23-becd142e98bb",
+  global: "https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380",
+  japan: "https://cdn.forms-content.sg-form.com/14380152-3085-11ee-8b23-becd142e98bb",
 };
 
 export const socialUrl = {

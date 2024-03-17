@@ -1,14 +1,7 @@
 <template>
   <PopoverGroup>
-    <div
-      :class="[
-        open ? 'bg-gray-950 shadow-lg bg-opacity-95' : '',
-        'transition z-40 w-full',
-      ]"
-    >
-      <div
-        class="container-lg flex items-center justify-between py-2 sm:py-3 lg:py-4 gap-12"
-      >
+    <div :class="[open ? 'bg-gray-950 shadow-lg bg-opacity-95' : '', 'transition z-40 w-full']">
+      <div class="container-lg flex items-center justify-between py-2 sm:py-3 lg:py-4 gap-12">
         <NuxtLink :to="localePath('/')" class="flex">
           <span class="sr-only">Astar Network</span>
           <img
@@ -26,17 +19,11 @@
 
         <div class="hidden lg:flex lg:items-center lg:justify-between flex-1">
           <nav class="flex items-center space-x-4 xl:space-x-8">
-            <NuxtLink
-              :to="localePath('/solutions')"
-              class="transition text-slate-950 hover:text-blue pr-2"
-            >
+            <NuxtLink :to="localePath('/solutions')" class="transition text-slate-950 hover:text-blue pr-2">
               Solutions
             </NuxtLink>
 
-            <NuxtLink
-              :to="localePath('/astar2')"
-              class="transition text-slate-950 hover:text-blue pr-2"
-            >
+            <NuxtLink :to="localePath('/astar2')" class="transition text-slate-950 hover:text-blue pr-2">
               Astar 2.0
             </NuxtLink>
 
@@ -51,9 +38,7 @@
                   <span>{{ category.label }}</span>
                   <ChevronDownIcon
                     :class="[
-                      open
-                        ? 'text-blue rotate-180 transform'
-                        : 'text-slate-950',
+                      open ? 'text-blue rotate-180 transform' : 'text-slate-950',
                       'ml-1 h-3 w-3 group-hover:text-blue stroke-2',
                     ]"
                     aria-hidden="true"
@@ -69,9 +54,7 @@
                 >
                   <PopoverPanel
                     :class="`bg-white shadow-lg absolute left-1/2 z-50 mt-4 -translate-x-1/2 py-12 px-8 rounded-md ${
-                      category.label === 'Network'
-                        ? 'w-[700px] grid grid-cols-3'
-                        : 'w-72'
+                      category.label === 'Network' ? 'w-[700px] grid grid-cols-3' : 'w-72'
                     }`"
                   >
                     <div v-for="item in category.nav">
@@ -87,15 +70,10 @@
                         v-for="menu in item.nav"
                         class="flex items-center py-1 text-slate-950 transition hover:text-blue whitespace-nowrap"
                         :to="localePath(menu.href)"
-                        :target="
-                          menu.href.includes('https') ? '_blank' : '_self'
-                        "
+                        :target="menu.href.includes('https') ? '_blank' : '_self'"
                       >
                         {{ menu.label }}
-                        <ArrowTopRightOnSquareIcon
-                          v-if="menu.href.includes('https')"
-                          class="w-4 h-4 ml-1"
-                        />
+                        <ArrowTopRightOnSquareIcon v-if="menu.href.includes('https')" class="w-4 h-4 ml-1" />
                       </NuxtLink>
                     </div>
                   </PopoverPanel>
@@ -104,11 +82,7 @@
             </template>
           </nav>
 
-          <Button
-            color="whiteBlue"
-            href="https://portal.astar.network/"
-            target="_blank"
-          >
+          <Button color="whiteBlue" href="https://portal.astar.network/" target="_blank">
             Astar Portal
           </Button>
         </div>
@@ -118,25 +92,12 @@
 </template>
 
 <script setup>
-import {
-  docsUrl,
-  socialUrl,
-  ambassadorProgramUrl,
-  forumUrl,
-  grantsUrl,
-} from "@/data/links";
-import {
-  Popover,
-  PopoverButton,
-  PopoverPanel,
-  PopoverGroup,
-} from "@headlessui/vue";
-import {
-  ChevronDownIcon,
-  ArrowTopRightOnSquareIcon,
-} from "@heroicons/vue/24/outline";
+import { docsUrl, socialUrl, ambassadorProgramUrl, forumUrl, grantsUrl } from "@/data/links";
+import { Popover, PopoverButton, PopoverPanel, PopoverGroup } from "@headlessui/vue";
+import { ChevronDownIcon, ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 
 const localePath = useLocalePath();
+const { t } = useI18n();
 
 let open = false;
 
@@ -266,14 +227,13 @@ const menus = [
             label: "Careers",
             href: socialUrl.wellfound,
           },
+          { label: t("brandAssetKit.title"), href: "/brand-asset-kit" },
           { label: "Contact Us", href: "/contact" },
         ],
       },
     ],
   },
 ];
-
-const network = [];
 </script>
 
 <style lang="postcss" scoped></style>
