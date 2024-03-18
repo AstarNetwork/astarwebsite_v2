@@ -1,26 +1,17 @@
 <template>
-  <div class="table-of-contents">
-    <div v-for="item in toc.table_of_contents" :key="item.link" class="mb-4">
-      <NuxtLink :to="item.link" class="font-bold block">
-        {{ item.title }}
-      </NuxtLink>
-      <div v-if="item.subsections && item.subsections.length" class="ml-4">
-        <NuxtLink
-          v-for="subsection in item.subsections"
-          :key="subsection.link"
-          :to="subsection.link"
-          class="block"
-        >
-          {{ subsection.title }}
-        </NuxtLink>
-      </div>
-    </div>
+  <div class="table-of-contents pb-8">
+    <TableOfContentsItem
+      v-for="item in toc.table_of_contents"
+      :key="item.link"
+      :item="item"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { parse } from "node-html-parser";
+import TableOfContentsItem from "./TableOfContentsItem.vue";
 
 interface TableOfContentsItem {
   title: string;
@@ -48,6 +39,9 @@ function removeEmptyLinkLayers(
 
 export default defineComponent({
   name: "TableOfContents",
+  components: {
+    TableOfContentsItem,
+  },
   props: {
     body: {
       type: String,
