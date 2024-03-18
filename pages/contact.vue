@@ -43,13 +43,13 @@
             </Button>
           </template>
 
-          <template v-else-if="item.slug === 'partnerships'">
+          <template v-else-if="item.slug === 'support'">
             <button
               class="btn"
-              data-tf-popup="XcL9Ii6l"
+              data-tf-popup="OUQlTvWu"
               data-tf-opacity="100"
               data-tf-size="100"
-              data-tf-iframe-props="title=Partnerships"
+              data-tf-iframe-props="title=Support"
               data-tf-transitive-search-params
               data-tf-medium="snippet"
             >
@@ -126,7 +126,7 @@ const options = [
     icon: Marketing,
   },
   {
-    slug: "partnerships",
+    slug: "support",
     title: t("contact.partnerships.title"),
     description: t("contact.partnerships.description"),
     buttonLabel: t("contact.partnerships.button"),
