@@ -34,6 +34,8 @@
     "vue3-parallax": "^0.1.4"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^13.0.1",
+    "markdown-it-named-headings": "^1.1.0",
+    "node-html-parser": "^6.1.12"
   }
 }

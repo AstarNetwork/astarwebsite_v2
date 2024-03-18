@@ -1,49 +1,112 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="item in safeToc.table_of_contents" :key="item.link">
-        <a :href="item.link">{{ item.title }}</a>
-        <ul v-if="item.subsections.length">
-          <li v-for="subsection in item.subsections" :key="subsection.link">
-            <a :href="subsection.link">{{ subsection.title }}</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+  <div class="table-of-contents">
+    <div v-for="item in toc.table_of_contents" :key="item.link" class="mb-4">
+      <NuxtLink :to="item.link" class="font-bold block">
+        {{ item.title }}
+      </NuxtLink>
+      <div v-if="item.subsections && item.subsections.length" class="ml-4">
+        <NuxtLink
+          v-for="subsection in item.subsections"
+          :key="subsection.link"
+          :to="subsection.link"
+          class="block"
+        >
+          {{ subsection.title }}
+        </NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed } from 'vue';
-
-interface Subsection {
-  title: string;
-  link: string;
-}
+import { defineComponent, ref } from "vue";
+import { parse } from "node-html-parser";
 
 interface TableOfContentsItem {
   title: string;
   link: string;
-  subsections: Subsection[];
+  subsections: TableOfContentsItem[];
 }
 
-interface TableOfContents {
-  table_of_contents: TableOfContentsItem[];
+function removeEmptyLinkLayers(
+  section: TableOfContentsItem[]
+): TableOfContentsItem[] {
+  return section.reduce<TableOfContentsItem[]>((acc, current) => {
+    // If the current section has an empty link, we don't include it directly,
+    // but its subsections should be leveled up.
+    if (current.link === "") {
+      const leveledUpSubsections = removeEmptyLinkLayers(current.subsections);
+      acc.push(...leveledUpSubsections);
+    } else {
+      // If the current section has a non-empty link, process its subsections normally.
+      const processedSubsections = removeEmptyLinkLayers(current.subsections);
+      acc.push({ ...current, subsections: processedSubsections });
+    }
+    return acc;
+  }, []);
 }
 
 export default defineComponent({
-  name: 'TableOfContents',
+  name: "TableOfContents",
   props: {
-    toc: {
-      type: Object as PropType<TableOfContents>,
-      default: () => ({ table_of_contents: [] }),
+    body: {
+      type: String,
+      default: "",
     },
   },
   setup(props) {
-    const safeToc = computed(() => props.toc || { table_of_contents: [] });
+    const toc = ref<{ table_of_contents: TableOfContentsItem[] }>({
+      table_of_contents: [],
+    });
+
+    const parseHTMLContent = (html: string) => {
+      const doc = parse(html);
+      const headings = doc.querySelectorAll("h1, h2, h3, h4, h5, h6");
+      let currentToc: TableOfContentsItem[] = [];
+      let levels: Array<TableOfContentsItem[]> = [currentToc];
+
+      headings.forEach((heading) => {
+        const level = parseInt(heading.tagName.substring(1)); // e.g., "2" for "h2"
+        const title = heading.textContent || "";
+        const link = `#${heading.id}`;
+
+        while (level >= levels.length) {
+          let lastLevel = levels[levels.length - 1];
+          if (lastLevel.length === 0) {
+            // If the last level is empty, this means there's a level jump
+            // Create a dummy item to act as the parent for the next level
+            const dummyItem: TableOfContentsItem = {
+              title: "",
+              link: "",
+              subsections: [],
+            };
+            lastLevel.push(dummyItem);
+          }
+          let newLevel: TableOfContentsItem[] = [];
+          lastLevel[lastLevel.length - 1].subsections = newLevel;
+          levels.push(newLevel);
+        }
+
+        while (level < levels.length - 1) {
+          levels.pop();
+        }
+
+        const tocItem: TableOfContentsItem = { title, link, subsections: [] };
+        levels[levels.length - 1].push(tocItem);
+
+        if (tocItem.subsections) {
+          levels[levels.length] = tocItem.subsections;
+        }
+      });
+
+      toc.value.table_of_contents = removeEmptyLinkLayers(currentToc);
+    };
+
+    // Directly parse the provided HTML content
+    parseHTMLContent(props.body);
 
     return {
-      safeToc,
+      toc,
     };
   },
 });

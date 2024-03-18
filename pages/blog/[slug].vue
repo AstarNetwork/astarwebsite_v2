@@ -17,7 +17,7 @@
           {{ post.title }}
         </h1>
       </header>
-      <TableOfContents :toc="post.toc" />
+      <TableOfContents :body="post.body" />
       <div class="entry-content" v-html="post.body" />
       <footer class="mt-16">
         <div class="flex mb-12">

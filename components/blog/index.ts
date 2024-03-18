@@ -1,5 +1,7 @@
 import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
+// @ts-ignore
+import plugin from "markdown-it-named-headings";
 import { useRuntimeConfig } from "#imports";
 
 export async function getPosts(
@@ -7,7 +9,7 @@ export async function getPosts(
   pagination: string = "page: 1, pageSize: 100"
 ) {
   const { locale } = useI18n();
-  const md = new MarkdownIt();
+  const md = new MarkdownIt().use(plugin);
   const config = useRuntimeConfig();
 
   const query = gql`
