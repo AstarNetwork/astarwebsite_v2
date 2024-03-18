@@ -35,7 +35,7 @@
         <div class="flex border border-slate-500 rounded-3xl px-3 py-6 sm:p-8">
           <div class="shrink-0 mr-3 sm:mr-4">
             <img
-              src="https://ipfs.subsocial.network/ipfs/bafybeigblzs4mgxityqmkvxqyknl4jiibg3bo6winogvf6kfobc2qolnjq"
+              src="/images/author-astar.png"
               alt=""
               class="object-cover w-12 sm:w-16 h-12 sm:h-16 rounded-full"
             />
