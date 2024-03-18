@@ -1,13 +1,15 @@
 import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
+import { useRuntimeConfig } from "#imports";
 
 export async function getPosts(
-  filters: string ="",
+  filters: string = "",
   pagination: string = "page: 1, pageSize: 100"
 ) {
   const { locale } = useI18n();
   const md = new MarkdownIt();
-  
+  const config = useRuntimeConfig();
+
   const query = gql`
     query PostsByLocal {
       posts(
@@ -24,6 +26,7 @@ export async function getPosts(
             slug
             body
             summary
+            toc
             tags
             image {
               data {
@@ -38,7 +41,7 @@ export async function getPosts(
     }
   `;
 
-  const { data }: any = await useAsyncQuery({ query, clientId: "strapi" });
+  const { data }: any = await useAsyncQuery({ query, clientId: "strapi" }); // community
   const posts = data.value.posts.data.map(
     (item: {
       id: string;
@@ -58,7 +61,7 @@ export async function getPosts(
       });
       const imageName = item.attributes?.image?.data?.attributes?.url;
       const imagePath = imageName
-        ? "http://localhost:1337" + imageName
+        ? "http://localhost:1337" + imageName // : `${config.strapi.url}${imageName}`
         : "/images/blog/placeholder.webp";
       return {
         id: item.id,

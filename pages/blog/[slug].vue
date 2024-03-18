@@ -17,6 +17,7 @@
           {{ post.title }}
         </h1>
       </header>
+      <TableOfContents :toc="post.toc" />
       <div class="entry-content" v-html="post.body" />
       <footer class="mt-16">
         <div class="flex mb-12">
@@ -77,6 +78,7 @@
 import { meta } from "@/data/meta";
 import { socialUrl } from "@/data/links";
 import { getPosts } from "@/components/blog";
+import TableOfContents from '@/components/blog/TableOfContents.vue';
 
 const route = useRoute();
 const slug = route.params.slug;
