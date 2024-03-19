@@ -2,7 +2,6 @@ import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
 // @ts-ignore
 import plugin from "markdown-it-named-headings";
-import { useRuntimeConfig } from "#imports";
 
 export async function getPosts(
   filters: string = "",
@@ -10,7 +9,7 @@ export async function getPosts(
 ) {
   const { locale } = useI18n();
   const md = new MarkdownIt().use(plugin);
-  const config = useRuntimeConfig();
+  const strapiUrl = "https://community-stg.astar.network";
 
   const query = gql`
     query PostsByLocal {
@@ -28,7 +27,6 @@ export async function getPosts(
             slug
             body
             summary
-            toc
             tags
             image {
               data {
@@ -63,7 +61,7 @@ export async function getPosts(
       });
       const imageName = item.attributes?.image?.data?.attributes?.url;
       const imagePath = imageName
-        ? `${config.strapi.url}${imageName}`
+        ? `${strapiUrl}${imageName}`
         : "/images/blog/placeholder.webp";
       return {
         id: item.id,
