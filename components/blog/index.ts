@@ -43,7 +43,7 @@ export async function getPosts(
     }
   `;
 
-  const { data }: any = await useAsyncQuery({ query, clientId: "strapi" }); // community
+  const { data }: any = await useAsyncQuery({ query, clientId: "community" });
   const posts = data.value.posts.data.map(
     (item: {
       id: string;
@@ -63,7 +63,7 @@ export async function getPosts(
       });
       const imageName = item.attributes?.image?.data?.attributes?.url;
       const imagePath = imageName
-        ? "http://localhost:1337" + imageName // : `${config.strapi.url}${imageName}`
+        ? `${config.strapi.url}${imageName}`
         : "/images/blog/placeholder.webp";
       return {
         id: item.id,

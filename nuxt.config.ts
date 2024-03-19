@@ -45,10 +45,7 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       community: {
-        httpEndpoint: "https://community.astar.network/graphql",
-      },
-      strapi: {
-        httpEndpoint: "http://localhost:1337/graphql",
+        httpEndpoint: "https://community-stg.astar.network/graphql",
       },
     },
   },
