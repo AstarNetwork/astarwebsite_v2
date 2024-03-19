@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     },
   },
   strapi: {
-    url: "https://community.astar.network",
+    url: "https://community-stg.astar.network",
     prefix: "/api",
     version: "v4",
     cookie: {},
