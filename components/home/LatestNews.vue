@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { getPosts } from "@/components/blog";
 
-const pagination = "limit: 4";
+const pagination = "limit: 12";
 const posts = await getPosts("", pagination);
 </script>
 
