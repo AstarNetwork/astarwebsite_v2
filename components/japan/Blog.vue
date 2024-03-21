@@ -21,7 +21,8 @@ import { getPosts } from "@/components/blog";
 const { locale, t } = useI18n();
 const tag = locale.value === "ja" ? "" : "japan";
 const filters = `tags: { containsi: "${tag}" }`;
-const posts = await getPosts(filters);
+const pagination = "limit: 3";
+const posts = await getPosts(filters, pagination);
 const localePath = useLocalePath();
 const toBlog = locale.value === "ja" ? "/ja/blog" : "/blog/japan";
 </script>
