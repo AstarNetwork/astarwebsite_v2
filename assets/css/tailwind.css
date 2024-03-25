@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 @layer base {
-  html,
-  body {
+  html,body{
     @apply overflow-x-hidden;
   }
   body {
@@ -17,12 +16,12 @@
   h3,
   h4,
   h5 {
-    @apply font-semibold text-slate-950;
+    @apply text-slate-950 font-semibold;
   }
   a {
-    @apply text-blue transition hover:text-blue/80;
+    @apply text-blue hover:text-blue/80 transition;
   }
-  ::selection {
+  ::selection{
     @apply bg-blue text-white;
   }
 }
@@ -39,7 +38,7 @@
     );
   }
   .title {
-    @apply text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl;
+    @apply font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight;
   }
   .gradient-text span {
     background: linear-gradient(
@@ -54,7 +53,7 @@
     -webkit-text-fill-color: transparent;
   }
   .title-zkevm {
-    @apply text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl;
+    @apply font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight;
     span {
       background: linear-gradient(
         90deg,
@@ -69,7 +68,7 @@
   }
 
   .gradient-outlined-box {
-    @apply relative bg-space-gray-dark;
+    @apply bg-space-gray-dark relative;
     border-radius: 1.4rem;
   }
   .gradient-outlined-box::after {
@@ -108,26 +107,26 @@
 
   /* Ecosystem */
   .tab {
-    @apply block cursor-pointer rounded px-2 py-2 text-left text-xs text-slate-500 transition hover:bg-blue/5 hover:text-blue sm:text-sm lg:px-4 lg:py-2.5 lg:text-base;
+    @apply text-slate-500 hover:text-blue cursor-pointer text-left px-2 lg:px-4 py-2 lg:py-2.5 rounded hover:bg-blue/5 transition text-xs sm:text-sm lg:text-base block;
   }
   .tab.current {
-    @apply cursor-default bg-blue text-white outline-0;
+    @apply text-white bg-blue cursor-default outline-0;
   }
   .tab-panel {
-    @apply grid grid-cols-2 gap-2 md:grid-cols-3 lg:gap-4 xl:grid-cols-4;
+    @apply grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-4;
   }
 
   /* Article */
   .entry-content {
-    @apply prose mx-auto lg:prose-lg prose-headings:font-bold prose-headings:text-slate-950 prose-a:text-blue hover:prose-a:text-blue prose-blockquote:bg-slate-50 prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-strong:font-medium prose-em:text-slate-950 prose-img:mx-auto;
+    @apply prose lg:prose-lg mx-auto prose-a:text-blue hover:prose-a:text-blue prose-headings:text-slate-950 prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-slate-50 prose-strong:font-medium prose-em:text-slate-950 prose-img:mx-auto;
   }
   .entry-content h2:first-child,
-  .entry-content p:first-child {
+  .entry-content p:first-child{
     @apply mt-0;
   }
   .entry-content p code {
     font-size: 0.85em;
-    @apply rounded bg-white/20 px-2 py-1 font-normal;
+    @apply bg-white/20 font-normal rounded py-1 px-2;
   }
   .entry-content p code::before,
   .entry-content p code::after,
@@ -137,7 +136,7 @@
   }
   .entry-content ul li::marker,
   .entry-content ol li::marker {
-    @apply text-slate-700;
+    @apply text-slate-500;
   }
   .entry-content h1 {
     font-size: 1.8em;
@@ -162,32 +161,30 @@
   .table-of-contents {
     @apply leading-snug;
   }
-
   .table-of-contents a {
     @apply font-normal no-underline hover:underline;
   }
-
   .table-of-contents ul li ul {
     list-style: circle;
   }
-
   .table-of-contents ul li ul li ul {
     list-style: square;
   }
 }
 
-.container-lg {
+
+.container-lg{
   @apply mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8;
 }
 
-.container-md {
+.container-md{
   @apply mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8;
 }
 
-.container-sm {
+.container-sm{
   @apply mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8;
 }
 
-.container-xs {
+.container-xs{
   @apply mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8;
 }
