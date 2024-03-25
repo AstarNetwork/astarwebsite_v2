@@ -45,12 +45,12 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       community: {
-        httpEndpoint: "https://community-stg.astar.network/graphql",
+        httpEndpoint: "https://community.astar.network/graphql",
       },
     },
   },
   strapi: {
-    url: "https://community-stg.astar.network",
+    url: "https://community.astar.network",
     prefix: "/api",
     version: "v4",
     cookie: {},

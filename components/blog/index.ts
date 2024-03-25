@@ -9,7 +9,7 @@ export async function getPosts(
 ) {
   const { locale } = useI18n();
   const md = new MarkdownIt().use(plugin);
-  const strapiUrl = "https://community-stg.astar.network";
+  const strapiUrl = "https://community.astar.network";
 
   const query = gql`
     query PostsByLocal {
