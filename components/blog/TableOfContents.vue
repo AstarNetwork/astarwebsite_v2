@@ -1,10 +1,20 @@
 <template>
-  <div class="table-of-contents pb-8">
-    <TableOfContentsItem
-      v-for="item in toc.table_of_contents"
-      :key="item.link"
-      :item="item"
-    />
+  <div
+    v-if="toc.table_of_contents.length > 1"
+    class="table-of-contents mb-20 rounded-lg p-6 shadow-lg lg:p-12 lg:pb-6"
+  >
+    <p
+      class="mb-0 text-xl font-semibold tracking-tight text-slate-950 lg:text-2xl"
+    >
+      Table of Contents
+    </p>
+    <ul>
+      <TableOfContentsItem
+        v-for="item in toc.table_of_contents"
+        :key="item.link"
+        :item="item"
+      />
+    </ul>
   </div>
 </template>
 
