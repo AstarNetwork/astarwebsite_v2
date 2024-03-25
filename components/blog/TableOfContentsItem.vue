@@ -10,7 +10,7 @@
     >
       {{ item.title }}
     </NuxtLink>
-    <ul v-if="item.subsections && item.subsections.length" class="">
+    <ul v-if="item.subsections && item.subsections.length">
       <TableOfContentsItem
         v-for="subsection in item.subsections"
         :key="subsection.link"

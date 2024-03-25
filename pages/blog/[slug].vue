@@ -4,15 +4,15 @@
       <img
         :src="post.image"
         alt=""
-        class="-my-6 aspect-blog w-full max-w-[1280px] object-cover shadow-xl lg:-my-8"
+        class="object-cover w-full aspect-blog max-w-[1280px] shadow-xl -my-6 lg:-my-8"
       />
     </SubPageHeader>
 
-    <article class="relative z-10 mx-auto mb-12 max-w-4xl px-4 sm:px-6">
-      <header class="mb-12 text-center">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
+      <header class="text-center mb-12">
         <time>{{ post.publishedAt }}</time>
         <h1
-          class="text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl"
+          class="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight"
         >
           {{ post.title }}
         </h1>
@@ -24,28 +24,28 @@
       </div>
 
       <footer class="mt-16">
-        <div class="mb-12 flex">
+        <div class="flex mb-12">
           <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
           <div class="flex flex-wrap">
             <NuxtLink
               v-for="tag in post.tags"
               :href="i18n + '/blog/tag/' + tag"
-              class="mb-2 mr-1 block rounded-full border border-slate-500 px-4 py-2 text-slate-500 hover:bg-white/10"
+              class="block text-slate-500 border border-slate-500 py-2 px-4 rounded-full hover:bg-white/10 mr-1 mb-2"
             >
               {{ tag }}
             </NuxtLink>
           </div>
         </div>
-        <div class="flex rounded-3xl border border-slate-500 px-3 py-6 sm:p-8">
-          <div class="mr-3 shrink-0 sm:mr-4">
+        <div class="flex border border-slate-500 rounded-3xl px-3 py-6 sm:p-8">
+          <div class="shrink-0 mr-3 sm:mr-4">
             <img
               src="/images/author-astar.png"
               alt=""
-              class="h-12 w-12 rounded-full object-cover sm:h-16 sm:w-16"
+              class="object-cover w-12 sm:w-16 h-12 sm:h-16 rounded-full"
             />
           </div>
           <div class="flex-1">
-            <h3 class="mb-2 text-lg font-bold lg:text-xl">
+            <h3 class="font-bold text-lg lg:text-xl mb-2">
               Astar Network Team
             </h3>
             <p>
@@ -64,13 +64,13 @@
 
     <div
       v-if="posts.length > 0"
-      class="relative z-10 mx-auto my-36 max-w-7xl px-4 sm:px-6"
+      class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 my-36"
     >
-      <h2 class="mb-12 text-center text-3xl font-semibold lg:text-4xl">
+      <h2 class="text-center text-3xl lg:text-4xl font-semibold mb-12">
         {{ $t("blog.related") }}
       </h2>
       <ul
-        class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
       >
         <BlogArticleCard v-for="post in posts" :post="post" :blog="true" />
       </ul>
