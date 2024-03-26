@@ -86,7 +86,7 @@ import TableOfContents from "@/components/blog/TableOfContents.vue";
 
 const route = useRoute();
 const slug = route.params.slug;
-const id = route.params.slug.slice(-5);
+const id = slug.slice(slug.lastIndexOf('-') + 1);
 const { locale, t } = useI18n();
 const i18n = locale.value === "ja" ? "/ja" : "";
 
