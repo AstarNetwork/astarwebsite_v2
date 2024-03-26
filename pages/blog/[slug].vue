@@ -17,8 +17,12 @@
           {{ post.title }}
         </h1>
       </header>
-      <TableOfContents :body="post.body" />
-      <div class="entry-content" v-html="post.body" />
+
+      <div class="entry-content">
+        <TableOfContents :body="post.body" />
+        <div v-html="post.body" />
+      </div>
+
       <footer class="mt-16">
         <div class="flex mb-12">
           <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
@@ -78,7 +82,7 @@
 import { meta } from "@/data/meta";
 import { socialUrl } from "@/data/links";
 import { getPosts } from "@/components/blog";
-import TableOfContents from '@/components/blog/TableOfContents.vue';
+import TableOfContents from "@/components/blog/TableOfContents.vue";
 
 const route = useRoute();
 const slug = route.params.slug;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <li>
     <NuxtLink
       :to="item.link"
       :class="{
@@ -10,15 +10,15 @@
     >
       {{ item.title }}
     </NuxtLink>
-    <div v-if="item.subsections && item.subsections.length" class="ml-4">
+    <ul v-if="item.subsections && item.subsections.length">
       <TableOfContentsItem
         v-for="subsection in item.subsections"
         :key="subsection.link"
         :item="subsection"
         :isTopLevel="false"
       />
-    </div>
-  </div>
+    </ul>
+  </li>
 </template>
 
 <script>

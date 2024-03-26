@@ -157,6 +157,16 @@
   .entry-content h3 a {
     @apply text-slate-950 no-underline hover:text-slate-950;
   }
+
+  .table-of-contents {
+    @apply leading-snug;
+  }
+  .table-of-contents a {
+    @apply font-normal no-underline hover:underline;
+  }
+  .table-of-contents ul li ul {
+    display: none;
+  }
 }
 
 
