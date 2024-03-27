@@ -47,9 +47,6 @@ export default defineNuxtConfig({
       community: {
         httpEndpoint: "https://community.astar.network/graphql",
       },
-      subsocial: {
-        httpEndpoint: "https://squid.subsquid.io/subsocial/graphql",
-      },
     },
   },
   strapi: {

@@ -67,16 +67,21 @@ const query = gql`
     }
   }
 `;
-const { data } = await useAsyncQuery({ query, clientId: "community" });
+const { data }: any = await useAsyncQuery({ query, clientId: "community" });
 
-let projects = [];
+let projects: any[] = [];
 if (data.value !== null) {
-  projects = data.value.projects.data.sort((a, b) => {
-    if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
-      return 1;
-    } else {
-      return -1;
+  projects = data.value.projects.data.sort(
+    (
+      a: { attributes: { name: { toLowerCase: () => number } } },
+      b: { attributes: { name: { toLowerCase: () => number } } }
+    ) => {
+      if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
+        return 1;
+      } else {
+        return -1;
+      }
     }
-  });
+  );
 }
 </script>

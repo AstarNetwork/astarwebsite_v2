@@ -30,50 +30,16 @@
 </template>
 
 <script setup lang="ts">
-import gql from "graphql-tag";
-const localePath = useLocalePath();
-
-const route = useRoute();
-const tag = encodeURI(route.params.tag);
-
-// The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
-const { locale, t } = useI18n();
-const astarSpace = locale.value === "ja" ? 11315 : 10802;
-
-const query = gql`
-query PostsByTag {
-    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "${tag}", hidden_eq: false }, orderBy: id_DESC) {
-      publishedDate: createdOnDay
-      title
-      href: canonical
-      image
-      slug
-    }
-  }
-`;
-
-const { data } = await useAsyncQuery({ query, clientId: "subsocial" });
-const posts = data.value.posts.map(
-  (item: { publishedDate: string | number | Date }) => {
-    const lowercaseSlug = item.slug.toLowerCase();
-    const date = new Date(item.publishedDate);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-    return {
-      ...item,
-      image: item.image
-        ? "https://ipfs.subsocial.network/ipfs/" + item.image
-        : "/images/blog/placeholder.webp",
-      publishedDate: formattedDate,
-      slug: lowercaseSlug,
-    };
-  }
-);
-
 import { meta } from "@/data/meta";
+import { getPosts } from "@/components/blog";
+
+const localePath = useLocalePath();
+const route = useRoute();
+const tag = encodeURI(route.params.tag.toString());
+const { locale, t } = useI18n();
+const filters = `tags: { containsi: "${tag}" }`;
+const posts = await getPosts(filters);
+
 const seoTitle = `${tag} | ${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("blog.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
