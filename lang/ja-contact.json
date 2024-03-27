@@ -2,25 +2,15 @@
   "contact": {
     "title": "Contact Us",
     "description": "Get in touch with the Astar Network team",
-    "marketing": {
-      "title": "マーケティングリクエスト",
-      "description": "Astarと一緒にあなたのプロジェクトを成長させる",
-      "button": "リクエストする"
-    },
-    "partnerships": {
-      "title": "ファイナンシャルサポート",
-      "description": "dAppステーキングと助成金のサポート",
-      "button": "サポートを受ける"
+    "general": {
+      "title": "お問い合わせ",
+      "description": "マーケティングリクエスト、ファイナンシャルサポート、パートナーシップのご相談、リスティング、その他、ビジネス、サービスからイベント関連など。",
+      "button": "連絡する"
     },
     "technical": {
       "title": "技術サポート",
       "description": "技術的な問題や質問がある場合はDiscordでお尋ねください",
       "button": "Discordチャンネルへ"
-    },
-    "other": {
-      "title": "その他のお問い合わせ",
-      "description": "パートナーシップの依頼、リスティング、ビジネスサービス、イベントなど",
-      "button": "問い合わせる"
     }
   }
 }
