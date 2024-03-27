@@ -98,7 +98,10 @@
           "developerExperience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
         }
       },
-      "cta": "Start building"
+      "cta": {
+        "startBuilding": "Start building",
+        "ourNetworks": "Our networks"
+      }
     },
     "dAppsOnAstar": {
       "title": "dApps on Astar",
