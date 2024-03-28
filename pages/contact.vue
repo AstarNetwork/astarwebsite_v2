@@ -5,7 +5,7 @@
       :description="$t('contact.description')"
     />
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-0 text-center relative z-10 pb-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10 pb-32">
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <li
           v-for="item in options"
@@ -17,7 +17,7 @@
               class="h-16 w-16 mx-auto"
               aria-hidden="true"
             />
-            <h2 class="text-[2.5rem] leading-[3.75rem] sm:my-4">{{ item.title }}</h2>
+            <h2 class="text-2xl sm:text-4xl my-4">{{ item.title }}</h2>
             <p class="mb-7">{{ item.description }}</p>
           </div>
 
