@@ -2,9 +2,9 @@
   "contact": {
     "title": "문의하기",
     "description": "아스타팀에 연락하기",
-    "marketing": {
-      "title": "문의",
-      "description": "마케팅 문의, 재정 지원, 파트너십 요청, 리스팅, 비즈니스, 이벤트, 기타 모든 문의",
+    "general": {
+      "title": "일반 문의",
+      "description": "마케팅 문의, 재정 지원, 파트너십 요청, 리스팅, 비즈니스, 이벤트 등 기타 모든 문의",
       "button": "연락하기"
     },
     "technical": {
