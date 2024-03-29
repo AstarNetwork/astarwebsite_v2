@@ -2,12 +2,15 @@
   <NuxtLayout name="default">
     <SubPageHeader
       :title="$t('community.title')"
+      :subtitle="$t('community.subtitle')"
       :description="$t('community.description')"
     />
-    <CommunityOnlineCommunity class="pb-28 sm:pb-64 pt-12" />
-    <CommunityBuilders class="pb-28 sm:pb-64" />
-    <CommunityGrants class="pb-28 sm:pb-40" />
-    <CommunityAmbassador class="pb-28 sm:pb-40" />
+    <CommunityOnlineCommunity class="pb-28 pt-12 sm:pb-64 sm:pt-36" />
+    <CommunityBuilders class="pb-28 sm:pb-40" />
+    <CommunityCommunities class="pb-28 sm:pb-40" />
+    <div class="absolute -z-10 right-0 top-0">
+      <img src="/images/common/gradient-bg-2.svg" />
+    </div>
   </NuxtLayout>
 </template>
 
