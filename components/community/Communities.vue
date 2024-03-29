@@ -2,10 +2,10 @@
   <div class="px-4 sm:px-6 relative z-10">  
     <div class="max-w-4xl mx-auto text-center">
       <h3 class="font-bold text-3xl sm:text-4xl mb-6 sm:mb-10 leading-tight">
-        {{ $t("community.online_community.social.title") }}
+        {{ $t("community.communities.title") }}
       </h3>
       <p class="mb-16">
-        {{ $t("community.online_community.social.description") }}
+        {{ $t("community.communities.description") }}
       </p>
     </div>
 
