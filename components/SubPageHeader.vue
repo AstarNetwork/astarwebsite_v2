@@ -12,12 +12,20 @@
         >
           {{ title }}
         </h1>
-        <p
-          v-if="description"
-          class="sm:text-lg sm:leading-relaxed max-w-screen-sm mx-auto"
-        >
-          {{ description }}
-        </p>
+        <div>
+          <h2
+            v-if="subtitle"
+            class="sm:text-lg sm:leading-relaxed font-semibold max-w-screen-sm mx-auto"
+          >
+            {{ subtitle }}
+          </h2>
+          <p
+            v-if="description"
+            class="sm:text-lg sm:leading-relaxed max-w-screen-sm mx-auto"
+          >
+            {{ description }}
+          </p>
+        </div>
         <Button v-if="button.to" :href="button.to">
           {{ button.label }}
         </Button>
@@ -32,6 +40,10 @@ const props = defineProps({
   title: {
     type: String,
     default: "",
+  },
+  subtitle: {
+    type: String,
+    default: ""
   },
   description: {
     type: String,
