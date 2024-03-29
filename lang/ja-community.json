@@ -1,12 +1,20 @@
 {
   "community": {
     "title": "Community",
-    "description": "The true stars of our ecosystem.",
+    "subtitle": "Connect with Astar’s community.",
+    "description": "Start your journey to learn with others and make your mark in web3.",
     "online_community": {
-      "description": "Astar Networkの未来にワクワクしていますか？私たちもです。Web3を多くの人々に広め、すべての人にとって革新的な未来を一緒に創っていきましょう。今すぐAstarのコミュニティに参加して、自由にdAppsを開発し、ブロックチェーンのフロンティアを開拓しよう。",
       "social": {
         "title": "オンラインコミュニティに参加しよう！",
         "description": "コミュニティに参加し、仲間を見つけ、他の熱いサポーターたちと一緒に、Astarを成長させよう。"
+      },
+      "space_club": {
+        "title": "Astar Ecosystem Agent Program",
+        "description": "Grow with Astar. Support the ecosystem and gain experience in web3 while receiving rewards.",
+        "button": {
+          "space_club": "Astar Space Club",
+          "read_more": "Read more"
+        }
       }
     },
     "builders": {
@@ -14,7 +22,10 @@
       "ecosystem": {
         "title": "Ecosystem",
         "description": "すでにAstar Network上で開発しているプロジェクトを見てみましょう。また、ドキュメントを確認して自分で構築してみましょう。",
-        "go_to_docs": "ドキュメントへ"
+        "button": {
+          "explore": "Explore ecosystem",
+          "docs": "ドキュメントへ"
+        }
       },
       "space_labs": {
         "title": "Astar Space Labs",
