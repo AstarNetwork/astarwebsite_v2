@@ -1,29 +1,29 @@
 {
   "community": {
-    "title": "Community",
-    "subtitle": "Connect with Astar’s community.",
-    "description": "Start your journey to learn with others and make your mark in web3.",
+    "title": "コミュニティ",
+    "subtitle": "Astarのコミュニティに参加しよう。",
+    "description": "みんなと一緒に学び、Web3で活躍するための旅を始めよう。",
     "online_community": {
       "social": {
         "title": "オンラインコミュニティに参加しよう！",
         "description": "コミュニティに参加し、仲間を見つけ、他の熱いサポーターたちと一緒に、Astarを成長させよう。"
       },
       "space_club": {
-        "title": "Astar Ecosystem Agent Program",
-        "description": "Grow with Astar. Support the ecosystem and gain experience in web3 while receiving rewards.",
+        "title": "Astar エコシステム エージェント プログラム",
+        "description": "Astarと共に成長しよう。エコシステムをサポートしすることで報酬を受け取りながらWeb3を体験していこう。",
         "button": {
-          "space_club": "Astar Space Club",
-          "read_more": "Read more"
+          "space_club": "Astar スペースクラブ",
+          "read_more": "もっと読む"
         }
       }
     },
     "builders": {
       "title": "Astar Network上でのdApps構築",
       "ecosystem": {
-        "title": "Ecosystem",
+        "title": "エコシステム",
         "description": "すでにAstar Network上で開発しているプロジェクトを見てみましょう。また、ドキュメントを確認して自分で構築してみましょう。",
         "button": {
-          "explore": "Explore ecosystem",
+          "explore": "エコシステムを探る",
           "docs": "ドキュメントへ"
         }
       },
@@ -42,11 +42,11 @@
       "button": "アンバサダープログラム"
     },
     "communities": {
-      "title": "Find Your Community On Astar",
-      "description": "Connect with like-minded people to discuss, learn, and celebrate Astar in your language.",
+      "title": "Astarのコミュニティを見つけよう",
+      "description": "志を同じくする人々とつながり、あなたの言語でアスターについて話し合い、学び、お祝いしましょう。",
       "table": {
         "columns": {
-          "language": "Language",
+          "language": "言語",
           "telegram": "Telegram Channel",
           "twitter": "X(Twitter) Account"
         },
