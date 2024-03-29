@@ -9,17 +9,18 @@
       </p>
     </div>
 
-    <table class="mx-auto w-full max-w-3xl border-collapse border border-slate-300 table-auto inline-table sm:table">
+    <div class="mx-auto w-full md:max-w-3xl overflow-x-scroll">
+      <table class="w-full table-auto border-collapse border border-slate-300">
       <thead>
         <tr>
-          <th class="border border-slate-300 p-5 text-left font-medium text-slate-950 bg-slate-50">{{ $t('community.communities.table.columns.language') }}</th>
-          <th class="border border-slate-300 p-5 text-left font-medium text-slate-950 bg-slate-50">
+          <th class="min-w-[175px]">{{ $t('community.communities.table.columns.language') }}</th>
+          <th class="min-w-[340px]">
             <span class="flex flex-row align-center gap-[6px]">
               <Telegram class="h-6 w-6 text-[#0088CC]" />
               {{ $t('community.communities.table.columns.telegram') }}
             </span>
           </th>
-          <th class="border border-slate-300 p-5 text-left font-medium text-slate-950 bg-slate-50">
+          <th class="min-w-[234px]">
             <span class="flex flex-row align-center gap-[6px]">
               <X class="h-6 w-6 text-black" />
             {{ $t('community.communities.table.columns.twitter') }}
@@ -29,16 +30,17 @@
       </thead>
       <tbody>
         <tr v-for="community in communities" :key="community.id">
-          <td class="border border-slate-300 p-5 font-medium text-slate-950">{{ community.name }}</td>
-          <td class="border border-slate-300 p-5">
+          <td class="font-medium text-slate-950">{{ community.name }}</td>
+          <td>
             <NuxtLink :href="community.telegram" target='_blank'>{{ community.telegram }}</NuxtLink>
           </td>
-          <td class="border border-slate-300 p-5">
+          <td>
             <NuxtLink :href="`https://twitter.com/${community.twitter}`" target='_blank'>@{{ community.twitter }}</NuxtLink>
           </td>
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </template>
 
@@ -81,4 +83,12 @@ const communities = [
 ]
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+  th {
+    @apply border border-slate-300 p-5 text-left font-medium text-slate-950 bg-slate-50
+  }
+
+  td {
+    @apply border border-slate-300 p-5 
+  }
+</style>
