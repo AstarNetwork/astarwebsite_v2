@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white text-gray-600 font-roboto">
+  <div class="bg-white text-gray-600 font-roboto antialiased">
     <slot name="hero" />
     <slot name="main" />
     <IncubationFooter />
