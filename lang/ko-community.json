@@ -2,7 +2,7 @@
   "community": {
     "title": "커뮤니티",
     "subtitle": " 아스타 커뮤니티와 연결하세요.",
-    "description": "다른 사람들과 함께 배우고 웹3에서 자신의 이름을 남기세요.",
+    "description": "다른 사람들과 함께 배우고 Web3 에서 자신의 이름을 남기세요.",
     "online_community": {
       "social": {
         "title": "온라인 커뮤니티로 초대합니다",
@@ -40,6 +40,24 @@
       "title": "에이전트(앰배서더) 프로그램 지원하기",
       "description": "남녀노소 누구나 참여가 가능한 아스타 생태계만의 유일무이한 오픈형 커뮤니티 프로그램입니다. 유의미한 기여를 통해 dApp 스테이킹으로 포인트를 획득하고 보상을 받을 수 있습니다.",
       "button": "에이전트 프로그램"
+    },
+    "communities": {
+      "title": "아스타의 커뮤니티를 찾아보세요",
+      "description": "같은 문화의 사람들과 연결하여 자신의 언어로 Astar에 대해 토론하고, 배우고, 축하해보세요.",
+      "table": {
+        "columns": {
+          "language": "언어",
+          "telegram": "Telegram 채널",
+          "twitter": "X(Twitter) 계정"
+        },
+        "rows": {
+          "turkish": "터키어",
+          "portuguese": "포르투갈어",
+          "vietnamese": "베트남어",
+          "japanese": "일본어",
+          "korean": "한국어"
+        }
+      }
     }
   }
 }

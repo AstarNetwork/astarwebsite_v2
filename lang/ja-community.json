@@ -40,6 +40,24 @@
       "title": "公式アンバサダーになろう",
       "description": "誰でも参加ができ、Astarエコシステムをサポートできる、オープンなコミュニティプログラムを作りました。アンバサダーとして価値貢献を行うことでポイントを貯め、dAppステーキングを通じて報酬を受け取ることができます。",
       "button": "アンバサダープログラム"
+    },
+    "communities": {
+      "title": "Find Your Community On Astar",
+      "description": "Connect with like-minded people to discuss, learn, and celebrate Astar in your language.",
+      "table": {
+        "columns": {
+          "language": "Language",
+          "telegram": "Telegram Channel",
+          "twitter": "X(Twitter) Account"
+        },
+        "rows": {
+          "turkish": "Turkish",
+          "portuguese": "Portuguese",
+          "vietnamese": "Vietnamese",
+          "japanese": "Japanese",
+          "korean": "Korean"
+        }
+      }
     }
   }
 }
