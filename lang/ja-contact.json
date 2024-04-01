@@ -11,6 +11,11 @@
       "title": "技術サポート",
       "description": "技術的な問題や質問がある場合はDiscordでお尋ねください",
       "button": "Discordチャンネルへ"
+    },
+    "partnerships": {
+      "title": "ファイナンシャルサポート",
+      "description": "dAppステーキングと助成金のサポート",
+      "button": "サポートを受ける"
     }
   }
 }
