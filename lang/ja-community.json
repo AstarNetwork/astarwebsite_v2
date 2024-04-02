@@ -1,20 +1,31 @@
 {
   "community": {
-    "title": "Community",
-    "description": "The true stars of our ecosystem.",
+    "title": "コミュニティ",
+    "subtitle": "Astarのコミュニティに参加しよう。",
+    "description": "みんなと一緒に学び、Web3で活躍するための旅を始めよう。",
     "online_community": {
-      "description": "Astar Networkの未来にワクワクしていますか？私たちもです。Web3を多くの人々に広め、すべての人にとって革新的な未来を一緒に創っていきましょう。今すぐAstarのコミュニティに参加して、自由にdAppsを開発し、ブロックチェーンのフロンティアを開拓しよう。",
       "social": {
         "title": "オンラインコミュニティに参加しよう！",
         "description": "コミュニティに参加し、仲間を見つけ、他の熱いサポーターたちと一緒に、Astarを成長させよう。"
+      },
+      "space_club": {
+        "title": "Astar エコシステム エージェント プログラム",
+        "description": "Astarと共に成長しよう。エコシステムをサポートしすることで報酬を受け取りながらWeb3を体験していこう。",
+        "button": {
+          "space_club": "Astar スペースクラブ",
+          "read_more": "もっと読む"
+        }
       }
     },
     "builders": {
       "title": "Astar Network上でのdApps構築",
       "ecosystem": {
-        "title": "Ecosystem",
+        "title": "エコシステム",
         "description": "すでにAstar Network上で開発しているプロジェクトを見てみましょう。また、ドキュメントを確認して自分で構築してみましょう。",
-        "go_to_docs": "ドキュメントへ"
+        "button": {
+          "explore": "エコシステムを探る",
+          "docs": "ドキュメントへ"
+        }
       },
       "space_labs": {
         "title": "Astar Space Labs",
@@ -29,6 +40,24 @@
       "title": "公式アンバサダーになろう",
       "description": "誰でも参加ができ、Astarエコシステムをサポートできる、オープンなコミュニティプログラムを作りました。アンバサダーとして価値貢献を行うことでポイントを貯め、dAppステーキングを通じて報酬を受け取ることができます。",
       "button": "アンバサダープログラム"
+    },
+    "communities": {
+      "title": "Astarのコミュニティを見つけよう",
+      "description": "志を同じくする人々とつながり、あなたの言語でアスターについて話し合い、学び、お祝いしましょう。",
+      "table": {
+        "columns": {
+          "language": "言語",
+          "telegram": "Telegram Channel",
+          "twitter": "X(Twitter) Account"
+        },
+        "rows": {
+          "turkish": "Turkish",
+          "portuguese": "Portuguese",
+          "vietnamese": "Vietnamese",
+          "japanese": "Japanese",
+          "korean": "Korean"
+        }
+      }
     }
   }
 }
