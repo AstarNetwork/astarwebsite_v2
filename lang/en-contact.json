@@ -11,6 +11,11 @@
       "title": "Technical Support",
       "description": "If you have any technical problems or questions, please ask in Discord",
       "button": "Discord Channel"
+    },
+    "partnerships": {
+      "title": "Financial Support",
+      "description": "dApp staking and grants support.",
+      "button": "Get support"
     }
   }
 }

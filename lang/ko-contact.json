@@ -11,6 +11,11 @@
       "title": "기술 지원",
       "description": "기술적인 문제나 질문이 있으시면, Discord에서 문의해 주세요",
       "button": "디스코드로 이동"
+    },
+    "partnerships": {
+      "title": "재정 지원",
+      "description": "dApp 스테이킹 및 그랜트 지원.",
+      "button": "신청하기"
     }
   }
 }
