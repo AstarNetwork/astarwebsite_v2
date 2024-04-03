@@ -35,12 +35,12 @@ import { getPosts } from "@/components/blog";
 
 const localePath = useLocalePath();
 const route = useRoute();
-const tag = route.params.tag.toString();
+const tag = route.params.tag.toString()
 const { locale, t } = useI18n();
 const filters = `tags: { containsi: "${tag}" }`;
 const posts = await getPosts(filters);
 
-const seoTitle = `${tag} | ${meta.siteName} - ${t("meta.tagline")}`;
+const seoTitle = `${encodeURI(tag)} | ${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("blog.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
 const seoImage = `${meta.image}blog.png`;
