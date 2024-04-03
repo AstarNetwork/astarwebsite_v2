@@ -11,7 +11,10 @@
         <Button href="/community/ecosystem">
           {{ $t("community.builders.ecosystem.button.explore") }}
         </Button>
-        <Button href="https://docs.astar.network/" color="whiteBlue">
+        <Button
+          href="https://docs.astar.network/"
+          color="whiteBlue"
+        >
           {{ $t("community.builders.ecosystem.button.docs") }}
         </Button>
       </div>
@@ -22,7 +25,7 @@
       class="mx-auto block"
       width="600"
       height="600"
-    />
+    >
   </section>
 </template>
 

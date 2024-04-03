@@ -9,6 +9,7 @@
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <li
           v-for="item in options"
+          :key="item.slug"
           class="border-2 border-white px-12 py-[3.75rem] rounded-lg flex flex-col justify-between items-center box"
         >
           <div>
@@ -17,8 +18,12 @@
               class="h-16 w-16 mx-auto"
               aria-hidden="true"
             />
-            <h2 class="text-2xl sm:text-4xl my-4">{{ item.title }}</h2>
-            <p class="mb-7">{{ item.description }}</p>
+            <h2 class="text-2xl sm:text-4xl my-4">
+              {{ item.title }}
+            </h2>
+            <p class="mb-7">
+              {{ item.description }}
+            </p>
           </div>
 
           <template v-if="item.slug === 'general'">
@@ -29,7 +34,11 @@
 
           <template v-else-if="item.slug === 'technical'">
             <Button :href="socialUrl.discord">
-              <component :is="Discord" class="h-5 w-5" aria-hidden="true" />
+              <component
+                :is="Discord"
+                class="h-5 w-5"
+                aria-hidden="true"
+              />
               {{ item.buttonLabel }}
             </Button>
           </template>
@@ -37,27 +46,27 @@
       </ul>
     </div>
     <div class="absolute -z-10 right-0 top-0">
-      <img src="/images/common/gradient-bg-2.svg" />
+      <img src="/images/common/gradient-bg-2.svg">
     </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { socialUrl } from "@/data/links";
+import { socialUrl } from '@/data/links'
 
 useHead({
-  script: [{ src: "//embed.typeform.com/next/embed.js" }],
-});
+  script: [{ src: '//embed.typeform.com/next/embed.js' }],
+})
 
-const route = useRoute();
-import { meta } from "@/data/meta";
-const { t } = useI18n();
-const seoTitle = `${t("contact.title")} | ${meta.siteName} - ${t(
-  "meta.tagline"
-)}`;
-const seoDescription = t("contact.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}common.png`;
+const route = useRoute()
+import { meta } from '@/data/meta'
+const { t } = useI18n()
+const seoTitle = `${t('contact.title')} | ${meta.siteName} - ${t(
+  'meta.tagline',
+)}`
+const seoDescription = t('contact.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}common.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -66,38 +75,38 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 
-const General = resolveComponent("IconGeneralInquiries");
-const Technical = resolveComponent("IconTechnicalSupport");
-const Discord = resolveComponent("IconDiscord");
+const General = resolveComponent('IconGeneralInquiries')
+const Technical = resolveComponent('IconTechnicalSupport')
+const Discord = resolveComponent('IconDiscord')
 
 const options = [
   {
-    slug: "general",
-    title: t("contact.general.title"),
-    description: t("contact.general.description"),
-    buttonLabel: t("contact.general.button"),
-    icon: General
+    slug: 'general',
+    title: t('contact.general.title'),
+    description: t('contact.general.description'),
+    buttonLabel: t('contact.general.button'),
+    icon: General,
   },
   {
-    slug: "technical",
-    title: t("contact.technical.title"),
-    description: t("contact.technical.description"),
-    buttonLabel: t("contact.technical.button"),
+    slug: 'technical',
+    title: t('contact.technical.title'),
+    description: t('contact.technical.description'),
+    buttonLabel: t('contact.technical.button'),
     icon: Technical,
   },
-];
+]
 </script>
 
 <style lang="postcss" scoped>

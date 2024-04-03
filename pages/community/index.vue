@@ -15,15 +15,15 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
-const { t } = useI18n();
-import { meta } from "@/data/meta";
-const seoTitle = `${t("community.title")} | ${meta.siteName} - ${t(
-  "meta.tagline"
-)}`;
-const seoDescription = t("community.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}community.png`;
+const route = useRoute()
+const { t } = useI18n()
+import { meta } from '@/data/meta'
+const seoTitle = `${t('community.title')} | ${meta.siteName} - ${t(
+  'meta.tagline',
+)}`
+const seoDescription = t('community.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}community.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -32,17 +32,17 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 </script>
 
 <style lang="postcss" scoped></style>

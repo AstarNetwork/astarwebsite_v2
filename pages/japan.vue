@@ -5,8 +5,13 @@
     <div
       class="container-md py-12 flex flex-col sm:flex-row justify-center gap-4"
     >
-      <Button :href="registerForm">{{ $t("japan.register") }}</Button>
-      <Button href="#useCases" color="outlinedGray">
+      <Button :href="registerForm">
+        {{ $t("japan.register") }}
+      </Button>
+      <Button
+        href="#useCases"
+        color="outlinedGray"
+      >
         {{ $t("japan.see_use_cases") }}
       </Button>
     </div>
@@ -32,20 +37,20 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 
-const registerForm =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfjqTQyzWIlpl4T921MO8z7nn9v438lRLdlZSpF1nC7HHm3-g/viewform?usp=sf_link";
+const registerForm
+  = 'https://docs.google.com/forms/d/e/1FAIpQLSfjqTQyzWIlpl4T921MO8z7nn9v438lRLdlZSpF1nC7HHm3-g/viewform?usp=sf_link'
 
-const route = useRoute();
-import { meta } from "@/data/meta";
-const { t } = useI18n();
-const seoTitle = `${t("japan.title")} | ${meta.siteName} - ${t(
-  "meta.tagline"
-)}`;
-const seoDescription = t("japan.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}japan.png`;
+const route = useRoute()
+import { meta } from '@/data/meta'
+const { t } = useI18n()
+const seoTitle = `${t('japan.title')} | ${meta.siteName} - ${t(
+  'meta.tagline',
+)}`
+const seoDescription = t('japan.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}japan.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -54,17 +59,17 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 </script>
 
 <style lang="postcss" scoped></style>

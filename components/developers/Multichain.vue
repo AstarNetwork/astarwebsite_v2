@@ -12,17 +12,23 @@
         </p>
       </div>
       <ul class="grid gap-12 lg:ml-28">
-        <li v-for="item in future" class="flex">
+        <li
+          v-for="item in future"
+          :key="item.name"
+          class="flex"
+        >
           <div class="mr-8 shrink-0">
             <img
               :src="'/images/developers/' + item.image"
               :alt="item.name"
               width="60"
               height="60"
-            />
+            >
           </div>
           <div>
-            <h3 class="font-bold text-xl mb-1">{{ item.name }}</h3>
+            <h3 class="font-bold text-xl mb-1">
+              {{ item.name }}
+            </h3>
             <p>{{ item.description }}</p>
           </div>
         </li>
@@ -32,28 +38,28 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const future = [
   {
-    name: t("developers.multichain.defi.title"),
-    description: t("developers.multichain.defi.description"),
-    image: "multichain-defi.svg",
+    name: t('developers.multichain.defi.title'),
+    description: t('developers.multichain.defi.description'),
+    image: 'multichain-defi.svg',
   },
   {
-    name: t("developers.multichain.nft.title"),
-    description: t("developers.multichain.nft.description"),
-    image: "multichain-nft.svg",
+    name: t('developers.multichain.nft.title'),
+    description: t('developers.multichain.nft.description'),
+    image: 'multichain-nft.svg',
   },
   {
-    name: t("developers.multichain.infra.title"),
-    description: t("developers.multichain.infra.description"),
-    image: "multichain-providers.svg",
+    name: t('developers.multichain.infra.title'),
+    description: t('developers.multichain.infra.description'),
+    image: 'multichain-providers.svg',
   },
   {
-    name: t("developers.multichain.dao.title"),
-    description: t("developers.multichain.dao.description"),
-    image: "multichain-dao.svg",
+    name: t('developers.multichain.dao.title'),
+    description: t('developers.multichain.dao.description'),
+    image: 'multichain-dao.svg',
   },
-];
+]
 </script>

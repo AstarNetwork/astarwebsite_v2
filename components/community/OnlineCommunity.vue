@@ -11,7 +11,10 @@
     <ul
       class="max-w-7xl mx-auto grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-7 gap-2 sm:gap-3"
     >
-      <li v-for="item in social">
+      <li
+        v-for="item in social"
+        :key="item.name"
+      >
         <NuxtLink
           :to="item.href"
           target="_blank"
@@ -40,7 +43,10 @@
         <Button href="https://www.notion.so/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=21">
           {{ $t("community.online_community.space_club.button.space_club") }}
         </Button>
-        <Button href="https://astar.network/blog/astar-ecosystem-agent-program-41364" color="whiteBlue">
+        <Button
+          href="https://astar.network/blog/astar-ecosystem-agent-program-41364"
+          color="whiteBlue"
+        >
           {{ $t("community.online_community.space_club.button.read_more") }}
         </Button>
       </div>
@@ -49,69 +55,70 @@
 </template>
 
 <script setup lang="ts">
-import { socialUrl, forumUrl } from "@/data/links";
+import { socialUrl, forumUrl } from '@/data/links'
 
-const X = resolveComponent("IconX");
-const Discord = resolveComponent("IconDiscord");
-const Telegram = resolveComponent("IconTelegram");
-const Reddit = resolveComponent("IconReddit");
-const Github = resolveComponent("IconGithub");
-const Youtube = resolveComponent("IconYoutube");
-const Comments = resolveComponent("IconComments");
+const X = resolveComponent('IconX')
+const Discord = resolveComponent('IconDiscord')
+const Telegram = resolveComponent('IconTelegram')
+const Reddit = resolveComponent('IconReddit')
+const Github = resolveComponent('IconGithub')
+const Youtube = resolveComponent('IconYoutube')
+const Comments = resolveComponent('IconComments')
 
-const { locale } = useI18n();
+const { locale } = useI18n()
 
-let twitterUrl = socialUrl.twitter.global.url;
-if (locale.value === "ja") {
-  twitterUrl = socialUrl.twitter.japan.url;
-} else if (locale.value === "ko") {
-  twitterUrl = socialUrl.twitter.korea.url;
+let twitterUrl = socialUrl.twitter.global.url
+if (locale.value === 'ja') {
+  twitterUrl = socialUrl.twitter.japan.url
+}
+else if (locale.value === 'ko') {
+  twitterUrl = socialUrl.twitter.korea.url
 }
 
 const social = [
   {
-    name: "GitHub",
+    name: 'GitHub',
     href: socialUrl.github,
     icon: Github,
-    color: "text-black",
+    color: 'text-black',
   },
   {
-    name: "X(Twitter)",
+    name: 'X(Twitter)',
     href: twitterUrl,
     icon: X,
-    color: "text-black",
+    color: 'text-black',
   },
   {
-    name: "Telegram",
+    name: 'Telegram',
     href: socialUrl.telegram,
     icon: Telegram,
-    color: "text-[#0088CC]",
+    color: 'text-[#0088CC]',
   },
   {
-    name: "Discord",
+    name: 'Discord',
     href: socialUrl.discord,
     icon: Discord,
-    color: "text-[#5865F2]",
+    color: 'text-[#5865F2]',
   },
   {
-    name: "Reddit",
+    name: 'Reddit',
     href: socialUrl.reddit,
     icon: Reddit,
-    color: "text-[#FF4500]",
+    color: 'text-[#FF4500]',
   },
   {
-    name: "YouTube",
+    name: 'YouTube',
     href: socialUrl.youtube,
     icon: Youtube,
-    color: "text-[#FF0000]",
+    color: 'text-[#FF0000]',
   },
   {
-    name: "Forum",
+    name: 'Forum',
     href: forumUrl,
     icon: Comments,
-    color: "text-slate-950",
+    color: 'text-slate-950',
   },
-];
+]
 </script>
 
 <style lang="postcss" scoped>

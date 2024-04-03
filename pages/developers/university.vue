@@ -12,7 +12,10 @@
           poster="/videos/astar_uni_teaser_v2.webp"
           class="w-full"
         >
-          <source src="/videos/astar_uni_teaser_v2.mp4" type="video/mp4" />
+          <source
+            src="/videos/astar_uni_teaser_v2.mp4"
+            type="video/mp4"
+          >
         </video>
         <div class="text-center text-xl mt-6 sm:mt-12">
           <p class="text-blue font-semibold text-xl sm:text-2xl">
@@ -28,25 +31,34 @@
     <div class="relative z-10">
       <UniversityOverview class="py-24" />
       <UniversityCurriculum class="py-24" />
-      <DevelopersTestimonials class="py-24" :title="$t('university.reason')" />
-      <UniversityFAQs class="py-24" :application="application" />
-      <UniversityCTA class="my-24" :application="application" />
+      <DevelopersTestimonials
+        class="py-24"
+        :title="$t('university.reason')"
+      />
+      <UniversityFAQs
+        class="py-24"
+        :application="application"
+      />
+      <UniversityCTA
+        class="my-24"
+        :application="application"
+      />
     </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-const application = "https://forms.gle/4fnF1fWS3GRdDxtL6";
+const application = 'https://forms.gle/4fnF1fWS3GRdDxtL6'
 
-const route = useRoute();
-const { t } = useI18n();
-import { meta } from "@/data/meta";
-const seoTitle = `Astar University | ${meta.siteName} - ${t("meta.tagline")}`;
+const route = useRoute()
+const { t } = useI18n()
+import { meta } from '@/data/meta'
+const seoTitle = `Astar University | ${meta.siteName} - ${t('meta.tagline')}`
 
-const seoDescription =
-  "Gain valuable web3 programming skills. Hands-on training to put you on the fast track to a web3 career. Rust. Solidity. And Polkadot.";
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}university.png`;
+const seoDescription
+  = 'Gain valuable web3 programming skills. Hands-on training to put you on the fast track to a web3 career. Rust. Solidity. And Polkadot.'
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}university.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -55,15 +67,15 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 </script>

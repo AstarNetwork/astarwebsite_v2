@@ -20,14 +20,14 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 
 const props = defineProps({
   href: {
     type: String,
-    default: "",
+    default: '',
   },
-});
+})
 </script>
 
 <style lang="postcss" scoped></style>

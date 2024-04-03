@@ -19,11 +19,12 @@
             {{ $t("ecosystem.chain") }}
           </RadioGroupLabel>
           <RadioGroupOption
+            v-for="_chain in chains"
             v-slot="{ checked }"
-            :value="chain"
-            v-for="chain in chains"
+            :key="_chain"
+            :value="_chain"
           >
-            <span :class="checked ? 'tab current' : 'tab'">{{ chain }}</span>
+            <span :class="checked ? 'tab current' : 'tab'">{{ _chain }}</span>
           </RadioGroupOption>
         </RadioGroup>
 
@@ -37,13 +38,14 @@
             {{ $t("ecosystem.categories") }}
           </RadioGroupLabel>
           <RadioGroupOption
+            v-for="_category in categories"
             v-slot="{ checked }"
-            :value="category.name"
-            v-for="category in categories"
+            :key="_category.name"
+            :value="_category.name"
           >
             <span :class="checked ? 'tab current' : 'tab'">
-              {{ category.name }}
-              <span class="text-xs">({{ category.projects.length }})</span>
+              {{ _category.name }}
+              <span class="text-xs">({{ _category.projects.length }})</span>
             </span>
           </RadioGroupOption>
         </RadioGroup>
@@ -60,15 +62,15 @@
     </div>
 
     <div class="absolute -z-10 left-0 top-0">
-      <img src="/images/common/gradient-bg.svg" />
+      <img src="/images/common/gradient-bg.svg">
     </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { RadioGroup, RadioGroupLabel, RadioGroupOption } from "@headlessui/vue";
-import gql from "graphql-tag";
-import { ProjectType, QueryResponse } from "@/types";
+import { RadioGroup, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
+import gql from 'graphql-tag'
+import type { ProjectType, QueryResponse } from '@/types'
 
 const query = gql`
   query getAllData {
@@ -127,62 +129,67 @@ const query = gql`
       }
     }
   }
-`;
+`
 const { data } = await useLazyAsyncQuery<QueryResponse>({
   query,
-  clientId: "community",
-});
+  clientId: 'community',
+})
 
 interface CategoryType {
-  name: string;
-  projects: ProjectType[];
+  name: string
+  projects: ProjectType[]
 }
 
-let projects = ref<ProjectType[]>([]);
-let categories = ref<CategoryType[]>([{ name: "All", projects: [] }]);
-let category = ref<CategoryType>(categories.value[0]);
-let chains = ref<string[]>(["All"]);
-let chain = ref<string>("zkEVM");
-let isLoading = ref<Boolean>(false);
+let projects = ref<ProjectType[]>([])
+let categories = ref<CategoryType[]>([{ name: 'All', projects: [] }])
+const category = ref<CategoryType>(categories.value[0])
+let chains = ref<string[]>(['All'])
+const chain = ref<string>('zkEVM')
+let isLoading = ref<boolean>(false)
 
-isLoading = computed(() => (data.value !== null ? true : false));
+isLoading = computed(() => (data.value !== null ? true : false))
 
 projects = computed(() =>
-  data.value !== null ? data.value.projects.data : []
-);
+  data.value !== null ? data.value.projects.data : [],
+)
 
 categories = computed(() => {
   if (data.value !== null) {
-    return [{ name: "All", projects: projects.value }].concat(
-      data.value.projectCategories.data.map((category) => {
+    return [{ name: 'All', projects: projects.value }].concat(
+      data.value.projectCategories.data.map((category: {
+        attributes: { name: string, projects: { data: ProjectType[] } }
+      }) => {
         return {
           name: category.attributes.name,
           projects: category.attributes.projects.data,
-        };
-      })
-    );
-  } else {
-    return [{ name: "All", projects: projects.value }];
+        }
+      }),
+    )
   }
-});
+  else {
+    return [{ name: 'All', projects: projects.value }]
+  }
+})
 
 chains = computed(() =>
   data.value !== null
-    ? ["All"].concat(
-        data.value.projectChains.data.map((chain) => chain.attributes.name)
+    ? ['All'].concat(
+        data.value.projectChains.data.map((chain: {
+          attributes: { name: string }
+        }) => chain.attributes.name),
       )
-    : ["All"]
-);
+    : ['All'],
+)
 
-const route = useRoute();
-const { t } = useI18n();
-import { meta } from "@/data/meta";
-const seoTitle = `${t("ecosystem.title")} | ${meta.siteName} - ${t(
-  "meta.tagline"
-)}`;
-const seoDescription = t("ecosystem.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}ecosystem.png`;
+const route = useRoute()
+const { t } = useI18n()
+import { meta } from '@/data/meta'
+const seoTitle = `${t('ecosystem.title')} | ${meta.siteName} - ${t(
+  'meta.tagline',
+)}`
+const seoDescription = t('ecosystem.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}ecosystem.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -191,15 +198,15 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 </script>

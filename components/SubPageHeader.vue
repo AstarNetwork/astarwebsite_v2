@@ -26,7 +26,10 @@
             {{ description }}
           </p>
         </div>
-        <Button v-if="button.to" :href="button.to">
+        <Button
+          v-if="button.to"
+          :href="button.to"
+        >
           {{ button.label }}
         </Button>
         <slot />
@@ -36,27 +39,27 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   title: {
     type: String,
-    default: "",
+    default: '',
   },
   subtitle: {
     type: String,
-    default: ""
+    default: '',
   },
   description: {
     type: String,
-    default: "",
+    default: '',
   },
   button: {
     type: Object,
-    default: {
-      label: "",
-      to: "",
-    },
+    default: () => ({
+      label: '',
+      to: '',
+    }),
   },
-});
+})
 </script>
 
 <style lang="postcss" scoped></style>

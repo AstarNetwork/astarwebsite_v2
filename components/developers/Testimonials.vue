@@ -4,7 +4,11 @@
       <span>{{ title }}</span>
     </h2>
     <carousel :items-to-show="1.2">
-      <slide v-for="item in testimonials" class="px-2 sm:px-8">
+      <slide
+        v-for="item in testimonials"
+        :key="item.name"
+        class="px-2 sm:px-8"
+      >
         <div
           class="bg-gradient-to-r from-[#0047FF] to-[#00D1FF] w-full rounded-3xl text-white p-2 sm:px-12 sm:py-12 h-full flex items-center"
         >
@@ -20,12 +24,16 @@
                       class="mx-auto h-12 sm:h-16 w-12 sm:w-16 rounded-full"
                       :src="'/images/developers/testimonials/' + item.image"
                       :alt="item.name"
-                    />
+                    >
                   </div>
                   <div class="ml-2 md:ml-4 md:flex md:items-center">
                     <div class="text-left leading-tight">
-                      <div class="sm:text-xl font-medium">{{ item.name }}</div>
-                      <div class="text-sm sm:text-base">{{ item.company }}</div>
+                      <div class="sm:text-xl font-medium">
+                        {{ item.name }}
+                      </div>
+                      <div class="text-sm sm:text-base">
+                        {{ item.company }}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -43,38 +51,38 @@
 </template>
 
 <script setup lang="ts">
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 const testimonials = [
   {
-    name: "Ben White",
-    company: "Parity Technologies",
-    text: t("developers.testimonials.ben"),
-    image: "ben-white.webp",
+    name: 'Ben White',
+    company: 'Parity Technologies',
+    text: t('developers.testimonials.ben'),
+    image: 'ben-white.webp',
   },
   {
-    name: "Miko Matsumura",
-    company: "Managing Partner, gumi Cryptos Capital",
-    text: t("developers.testimonials.miko"),
-    image: "miko-matsumura.webp",
+    name: 'Miko Matsumura',
+    company: 'Managing Partner, gumi Cryptos Capital',
+    text: t('developers.testimonials.miko'),
+    image: 'miko-matsumura.webp',
   },
   {
-    name: "Michael Garland",
-    company: "Product Manager, Alchemy",
-    text: t("developers.testimonials.michael"),
-    image: "michael-garland.webp",
+    name: 'Michael Garland',
+    company: 'Product Manager, Alchemy',
+    text: t('developers.testimonials.michael'),
+    image: 'michael-garland.webp',
   },
-];
+]
 
 const props = defineProps({
   title: {
     type: String,
-    default: "Testimonials",
+    default: 'Testimonials',
   },
-});
+})
 </script>
 
 <style lang="postcss">

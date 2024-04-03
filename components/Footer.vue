@@ -3,7 +3,10 @@
     <div
       class="flex flex-col sm:flex-row border-t border-slate-300 sm:divide-x divide-y sm:divide-y-0 divide-slate-300"
     >
-      <NuxtLink :to="localePath('/contact/')" class="cta group">
+      <NuxtLink
+        :to="localePath('/contact/')"
+        class="cta group"
+      >
         <div class="cta-inner">
           <div class="flex-1">
             <h3>{{ $t("footer.contactUs.title") }}</h3>
@@ -21,7 +24,10 @@
           </span>
         </div>
       </NuxtLink>
-      <div @click="newsletterOpen = true" class="cta group">
+      <div
+        class="cta group"
+        @click="newsletterOpen = true"
+      >
         <div class="cta-inner">
           <div class="flex-1">
             <h3>{{ $t("footer.newsletter.title") }}</h3>
@@ -48,14 +54,14 @@
             src="/images/common/logo-white.svg"
             :alt="meta.siteName"
             class="mx-auto w-full max-w-[100px] sm:max-w-[144px]"
-          />
+          >
         </div>
 
         <div class="flex justify-center items-center gap-2">
           <NuxtLink
             v-for="item in social"
-            target="_blank"
             :key="item.name"
+            target="_blank"
             :to="item.href"
             class="flex items-center justify-center rounded-full w-12 sm:w-16 h-12 sm:h-16 relative group"
           >
@@ -63,18 +69,32 @@
               class="w-0 h-0 group-hover:bg-white/20 group-hover:w-16 group-hover:h-16 absolute duration-200 ease-out rounded-full"
             />
             <span class="sr-only">{{ item.name }}</span>
-            <component :is="item.icon" class="h-6 w-6 text-white" aria-hidden="true" />
+            <component
+              :is="item.icon"
+              class="h-6 w-6 text-white"
+              aria-hidden="true"
+            />
           </NuxtLink>
         </div>
 
         <div class="grid gap-8 sm:grid-cols-3 lg:grid-cols-5">
           <LangSwitcher />
-          <div v-for="category in nav">
+          <div
+            v-for="category in nav"
+            :key="category.name"
+          >
             <h3 class="font-medium uppercase text-white">
               {{ category.name }}
             </h3>
-            <ul role="list" class="mt-4 space-y-4">
-              <li v-for="item in category.nav" :key="item.name" class="leading-snug">
+            <ul
+              role="list"
+              class="mt-4 space-y-4"
+            >
+              <li
+                v-for="item in category.nav"
+                :key="item.name"
+                class="leading-snug"
+              >
                 <NuxtLink
                   :to="item.href"
                   :target="item.href.includes('https') ? '_blank' : '_self'"
@@ -98,8 +118,15 @@
     </div>
   </footer>
 
-  <TransitionRoot as="template" :show="newsletterOpen">
-    <Dialog as="div" class="relative z-50" @close="newsletterOpen = false">
+  <TransitionRoot
+    as="template"
+    :show="newsletterOpen"
+  >
+    <Dialog
+      as="div"
+      class="relative z-50"
+      @close="newsletterOpen = false"
+    >
       <TransitionChild
         as="template"
         enter="ease-out duration-300"
@@ -126,7 +153,10 @@
             <DialogPanel
               class="relative transform overflow-hidden rounded-xl bg-white shadow-xl transition-all w-full sm:max-w-2xl"
             >
-              <iframe class="w-full h-[600px]" :src="newsletterUrl.global" />
+              <iframe
+                class="w-full h-[600px]"
+                :src="newsletterUrl.global"
+              />
               <button
                 type="button"
                 class="text-slate-500 transition cursor-pointer p-3 hover:bg-gray-100 hover:text-slate-950 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
@@ -143,10 +173,10 @@
 </template>
 
 <script setup lang="ts">
-import { XMarkIcon } from "@heroicons/vue/20/solid";
-import { ref } from "vue";
-import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from "@headlessui/vue";
-import { meta } from "@/data/meta";
+import { XMarkIcon } from '@heroicons/vue/20/solid'
+import { ref } from 'vue'
+import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
+import { meta } from '@/data/meta'
 import {
   newsletterUrl,
   socialUrl,
@@ -154,128 +184,129 @@ import {
   bugBountyProgramUrl,
   forumUrl,
   docsUrl,
-} from "@/data/links";
-import { ArrowTopRightOnSquareIcon, ArrowRightIcon } from "@heroicons/vue/24/outline";
+} from '@/data/links'
+import { ArrowTopRightOnSquareIcon, ArrowRightIcon } from '@heroicons/vue/24/outline'
 
-const newsletterOpen = ref(false);
+const newsletterOpen = ref(false)
 
-const localePath = useLocalePath();
+const localePath = useLocalePath()
 
-const Discord = resolveComponent("IconDiscord");
-const Telegram = resolveComponent("IconTelegram");
-const Medium = resolveComponent("IconMedium");
-const Github = resolveComponent("IconGithub");
-const Youtube = resolveComponent("IconYoutube");
-const X = resolveComponent("IconX");
+const Discord = resolveComponent('IconDiscord')
+const Telegram = resolveComponent('IconTelegram')
+const Medium = resolveComponent('IconMedium')
+const Github = resolveComponent('IconGithub')
+const Youtube = resolveComponent('IconYoutube')
+const X = resolveComponent('IconX')
 
 interface Props {
-  color?: string;
+  color?: string
 }
-const props = defineProps<Props>();
+const props = defineProps<Props>()
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 const nav = [
   {
-    name: t("footer.nav.build"),
+    name: t('footer.nav.build'),
     nav: [
-      { name: t("footer.nav.docs"), href: docsUrl.index },
-      { name: "GitHub", href: socialUrl.github },
-      { name: "Discord", href: socialUrl.discord },
+      { name: t('footer.nav.docs'), href: docsUrl.index },
+      { name: 'GitHub', href: socialUrl.github },
+      { name: 'Discord', href: socialUrl.discord },
     ],
   },
   {
-    name: t("footer.nav.apply"),
+    name: t('footer.nav.apply'),
     nav: [
       {
-        name: t("footer.nav.careers"),
+        name: t('footer.nav.careers'),
         href: socialUrl.wellfound,
       },
       {
-        name: t("footer.nav.ambassadorProgram"),
+        name: t('footer.nav.ambassadorProgram'),
         href: ambassadorProgramUrl,
       },
       {
-        name: t("footer.nav.bugBountyProgram"),
+        name: t('footer.nav.bugBountyProgram'),
         href: bugBountyProgramUrl,
       },
     ],
   },
   {
-    name: t("footer.nav.learn"),
+    name: t('footer.nav.learn'),
     nav: [
-      { name: t("footer.nav.blog"), href: localePath("/blog") },
+      { name: t('footer.nav.blog'), href: localePath('/blog') },
       {
-        name: t("footer.nav.videos"),
+        name: t('footer.nav.videos'),
         href: socialUrl.youtube,
       },
-      { name: t("footer.nav.forum"), href: forumUrl },
+      { name: t('footer.nav.forum'), href: forumUrl },
     ],
   },
   {
-    name: t("footer.nav.other"),
+    name: t('footer.nav.other'),
     nav: [
       {
-        name: t("brandAssetKit.title"),
-        href: localePath("/brand-asset-kit"),
+        name: t('brandAssetKit.title'),
+        href: localePath('/brand-asset-kit'),
       },
       {
-        name: t("footer.nav.privacyPolicy"),
-        href: "/privacy-policy",
+        name: t('footer.nav.privacyPolicy'),
+        href: '/privacy-policy',
       },
       {
-        name: t("footer.nav.termsOfUse"),
-        href: "/term-of-use",
+        name: t('footer.nav.termsOfUse'),
+        href: '/term-of-use',
       },
       {
-        name: t("footer.nav.contactUs"),
-        href: localePath("/contact"),
+        name: t('footer.nav.contactUs'),
+        href: localePath('/contact'),
       },
     ],
   },
-];
+]
 
-const { locale } = useI18n();
+const { locale } = useI18n()
 
-let twitterUrl = socialUrl.twitter.global.url;
-if (locale.value === "ja") {
-  twitterUrl = socialUrl.twitter.japan.url;
-} else if (locale.value === "ko") {
-  twitterUrl = socialUrl.twitter.korea.url;
+let twitterUrl = socialUrl.twitter.global.url
+if (locale.value === 'ja') {
+  twitterUrl = socialUrl.twitter.japan.url
+}
+else if (locale.value === 'ko') {
+  twitterUrl = socialUrl.twitter.korea.url
 }
 
 const social = [
   {
-    name: "X(Twitter)",
+    name: 'X(Twitter)',
     href: twitterUrl,
     icon: X,
   },
   {
-    name: "Discord",
+    name: 'Discord',
     href: socialUrl.discord,
     icon: Discord,
   },
   {
-    name: "Telegram",
+    name: 'Telegram',
     href: socialUrl.telegram,
     icon: Telegram,
   },
   {
-    name: "Medium",
+    name: 'Medium',
     href: socialUrl.medium,
     icon: Medium,
   },
   {
-    name: "GitHub",
+    name: 'GitHub',
     href: socialUrl.github,
     icon: Github,
   },
   {
-    name: "YouTube",
+    name: 'YouTube',
     href: socialUrl.youtube,
     icon: Youtube,
   },
-];
+]
 </script>
 
 <style lang="postcss" scoped>

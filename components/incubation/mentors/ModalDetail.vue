@@ -5,7 +5,11 @@
         Areas of Expertise
       </h3>
       <ul class="mb-8 list-disc pl-4 text-gray-700">
-        <li v-for="item in mentor.expertise" class="leading-tight my-2">
+        <li
+          v-for="item in mentor.expertise"
+          :key="item"
+          class="leading-tight my-2"
+        >
           {{ item }}
         </li>
       </ul>
@@ -14,15 +18,17 @@
     <template
       v-if="
         mentor.links.website !== '' ||
-        mentor.links.linkedin !== '' ||
-        mentor.links.twitter !== ''
+          mentor.links.linkedin !== '' ||
+          mentor.links.twitter !== ''
       "
     >
-      <h3 class="font-medium text-lg mb-2 text-black leading-snug">Links</h3>
+      <h3 class="font-medium text-lg mb-2 text-black leading-snug">
+        Links
+      </h3>
       <div class="flex flex-wrap items-center">
         <NuxtLink
-          :to="mentor.links.website"
           v-if="mentor.links.website"
+          :to="mentor.links.website"
           target="_blank"
           class="link-item"
         >
@@ -30,8 +36,8 @@
           Website
         </NuxtLink>
         <NuxtLink
-          :to="mentor.links.linkedin"
           v-if="mentor.links.linkedin"
+          :to="mentor.links.linkedin"
           target="_blank"
           class="link-item"
         >
@@ -39,8 +45,8 @@
           Linkedin
         </NuxtLink>
         <NuxtLink
-          :to="mentor.links.twitter"
           v-if="mentor.links.twitter"
+          :to="mentor.links.twitter"
           target="_blank"
           class="link-item"
         >
@@ -53,12 +59,20 @@
 </template>
 
 <script setup lang="ts">
-import { GlobeAltIcon } from "@heroicons/vue/24/outline";
-const { locale } = useI18n();
+import { GlobeAltIcon } from '@heroicons/vue/24/outline'
 
-defineProps({
-  mentor: {},
-});
+interface Props {
+  mentor: {
+    expertise: string[]
+    links: {
+      website: string
+      linkedin: string
+      twitter: string
+    }
+  }
+}
+
+defineProps<Props>()
 </script>
 
 <style lang="postcss" scoped>

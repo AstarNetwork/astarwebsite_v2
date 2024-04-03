@@ -7,7 +7,11 @@
     <div
       class="grid gap-x-6 sm:gap-x-8 gap-y-8 grid-cols-3 sm:gap-y-16 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6"
     >
-      <div v-for="item in projects" class="flex items-center justify-center">
+      <div
+        v-for="item in projects"
+        :key="item.attributes.name"
+        class="flex items-center justify-center"
+      >
         <NuxtLink
           :to="item.attributes.website"
           target="_blank"
@@ -17,7 +21,7 @@
             :src="useStrapiMedia(item.attributes.logo.data.attributes.url)"
             :alt="item.attributes.name"
             class="h-12 w-32 lg:w-48 object-contain"
-          />
+          >
         </NuxtLink>
       </div>
     </div>
@@ -25,7 +29,20 @@
 </template>
 
 <script setup lang="ts">
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
+
+type Attributes = {
+  name: string
+  website: string
+  description: string
+  logo: {
+    data: {
+      attributes: {
+        url: string
+      }
+    }
+  }
+}
 
 const query = gql`
   query getAllData {
@@ -49,17 +66,29 @@ const query = gql`
       }
     }
   }
-`;
-const { data } = await useAsyncQuery({ query, clientId: "community" });
+`
+const { data }: {
+  data: {
+    value: {
+      projects: {
+        data: {
+          attributes: Attributes
+        }[]
+      }
+    }
+  }
+} = await useAsyncQuery({ query, clientId: 'community' })
 
-let projects = [];
+let projects: Array<{ attributes: Attributes }> = []
+
 if (data.value !== null) {
   projects = data.value.projects.data.sort((a, b) => {
     if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
-      return 1;
-    } else {
-      return -1;
+      return 1
     }
-  });
+    else {
+      return -1
+    }
+  })
 }
 </script>

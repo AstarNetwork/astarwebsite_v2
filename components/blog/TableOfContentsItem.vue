@@ -15,7 +15,7 @@
         v-for="subsection in item.subsections"
         :key="subsection.link"
         :item="subsection"
-        :isTopLevel="false"
+        :is-top-level="false"
       />
     </ul>
   </li>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "TableOfContentsItem",
+  name: 'TableOfContentsItem',
   props: {
     item: {
       type: Object,
@@ -34,5 +34,5 @@ export default {
       default: true, // Assume top-level by default
     },
   },
-};
+}
 </script>

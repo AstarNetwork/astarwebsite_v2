@@ -16,7 +16,7 @@
         :navigation="true"
         :slides-per-view="1.25"
         :slides-per-group="1"
-        :spaceBetween="12"
+        :space-between="12"
         :breakpoints="{
           768: {
             slidesPerView: 2.25,
@@ -35,8 +35,14 @@
           },
         }"
       >
-        <SwiperSlide v-for="(post, index) in posts">
-          <BlogArticleCard :post="post" :key="post.title" />
+        <SwiperSlide
+          v-for="post in posts"
+          :key="post.title"
+        >
+          <BlogArticleCard
+            :key="post.title"
+            :post="post"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -44,40 +50,40 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const posts = [
   {
-    title: t("solutions.usecases.kokyoNft.title"),
-    image: "/images/solutions/usecases/kokyo-nft.webp",
-    description: t("solutions.usecases.kokyoNft.description"),
-    link: "https://www.kokyo-nft.jp/",
+    title: t('solutions.usecases.kokyoNft.title'),
+    image: '/images/solutions/usecases/kokyo-nft.webp',
+    description: t('solutions.usecases.kokyoNft.description'),
+    link: 'https://www.kokyo-nft.jp/',
   },
   {
-    title: t("solutions.usecases.incubation.title"),
-    image: "/images/solutions/usecases/incubation.webp",
-    description: t("solutions.usecases.incubation.description"),
-    link: "https://astar.network/incubation",
+    title: t('solutions.usecases.incubation.title'),
+    image: '/images/solutions/usecases/incubation.webp',
+    description: t('solutions.usecases.incubation.description'),
+    link: 'https://astar.network/incubation',
   },
   {
-    title: t("solutions.usecases.yasushiAkimoto.title"),
-    image: "/images/solutions/usecases/yasushi-akimoto.webp",
-    description: t("solutions.usecases.yasushiAkimoto.description"),
-    link: "/blog/yasushi-akimoto-japan's-legendary-idol-producer-starts-54961/",
+    title: t('solutions.usecases.yasushiAkimoto.title'),
+    image: '/images/solutions/usecases/yasushi-akimoto.webp',
+    description: t('solutions.usecases.yasushiAkimoto.description'),
+    link: '/blog/yasushi-akimoto-japan\'s-legendary-idol-producer-starts-54961/',
   },
   {
-    title: t("solutions.usecases.jrKyushu.title"),
-    image: "/images/solutions/usecases/jr-kyushu.webp",
-    description: t("solutions.usecases.jrKyushu.description"),
-    link: "/blog/jr-kyushu-railway-company-to-launch-nfts-on-astar-network-to-38364/",
+    title: t('solutions.usecases.jrKyushu.title'),
+    image: '/images/solutions/usecases/jr-kyushu.webp',
+    description: t('solutions.usecases.jrKyushu.description'),
+    link: '/blog/jr-kyushu-railway-company-to-launch-nfts-on-astar-network-to-38364/',
   },
   {
-    title: t("solutions.usecases.calbee.title"),
-    image: "/images/solutions/usecases/calbee.webp",
-    description: t("solutions.usecases.calbee.description"),
-    link: "https://medium.com/astar-network/leading-japanese-snack-food-maker-calbee-inc-1df16b42b2b6/",
+    title: t('solutions.usecases.calbee.title'),
+    image: '/images/solutions/usecases/calbee.webp',
+    description: t('solutions.usecases.calbee.description'),
+    link: 'https://medium.com/astar-network/leading-japanese-snack-food-maker-calbee-inc-1df16b42b2b6/',
   },
-];
+]
 </script>
 
 <style lang="postcss">

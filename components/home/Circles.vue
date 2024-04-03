@@ -1,11 +1,23 @@
 <template>
   <div class="w-screen overflow-hidden absolute min-h-screen top-0 -z-10">
     <div class="circle-wrapper">
-      <div class="circle" style="animation-delay: 0s"></div>
-      <div class="circle" style="animation-delay: 1s"></div>
-      <div class="circle" style="animation-delay: 2s"></div>
-      <div class="circle" style="animation-delay: 3s"></div>
-      <div class="circle-center"></div>
+      <div
+        class="circle"
+        style="animation-delay: 0s"
+      />
+      <div
+        class="circle"
+        style="animation-delay: 1s"
+      />
+      <div
+        class="circle"
+        style="animation-delay: 2s"
+      />
+      <div
+        class="circle"
+        style="animation-delay: 3s"
+      />
+      <div class="circle-center" />
     </div>
   </div>
 </template>

@@ -6,7 +6,9 @@
         no-repeat;
     "
   >
-    <h3 class="sr-only">web3 Global Hackathon 2023 AW</h3>
+    <h3 class="sr-only">
+      web3 Global Hackathon 2023 AW
+    </h3>
     <div
       class="flex justify-center absolute bottom-[115px] sm:bottom-[170px] w-full"
     >
