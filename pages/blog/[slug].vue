@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout v-if="post != null" name="default">
+  <NuxtLayout v-if="post" name="default">
     <SubPageHeader>
       <img
         :src="post.image"
