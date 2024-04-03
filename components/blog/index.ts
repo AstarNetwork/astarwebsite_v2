@@ -7,7 +7,8 @@ export async function getPosts(
   filters: string = "",
   pagination: string = "page: 1, pageSize: 100"
 ) {
-  const { locale } = useI18n();
+  const { $i18n } = useNuxtApp();
+  const locale = $i18n.locale;
   const md = new MarkdownIt().use(plugin);
   const strapiUrl = "https://community.astar.network";
 
