@@ -16,7 +16,7 @@
         :navigation="true"
         :slides-per-view="1.25"
         :slides-per-group="1"
-        :spaceBetween="12"
+        :space-between="12"
         :breakpoints="{
           768: {
             slidesPerView: 2.25,
@@ -35,8 +35,14 @@
           },
         }"
       >
-        <SwiperSlide v-for="post in posts">
-          <BlogArticleCard :post="post" :key="post.title" />
+        <SwiperSlide
+          v-for="post in posts"
+          :key="post.title"
+        >
+          <BlogArticleCard
+            :key="post.title"
+            :post="post"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -44,36 +50,36 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const posts = [
   {
-    title: t("solutions.japanAndAsia.korea.title"),
-    image: "/images/solutions/japan-and-asia/korea.webp",
-    description: t("solutions.japanAndAsia.korea.description"),
-    link: "https://startale.org/blog/71699",
+    title: t('solutions.japanAndAsia.korea.title'),
+    image: '/images/solutions/japan-and-asia/korea.webp',
+    description: t('solutions.japanAndAsia.korea.description'),
+    link: 'https://startale.org/blog/71699',
   },
   {
-    title: t("solutions.japanAndAsia.japanTaxationAndGovernment.title"),
-    image: "/images/solutions/japan-and-asia/japanese-government-web3.webp",
+    title: t('solutions.japanAndAsia.japanTaxationAndGovernment.title'),
+    image: '/images/solutions/japan-and-asia/japanese-government-web3.webp',
     description: t(
-      "solutions.japanAndAsia.japanTaxationAndGovernment.description"
+      'solutions.japanAndAsia.japanTaxationAndGovernment.description',
     ),
-    link: "https://www.youtube.com/watch?v=EAe67yxlsOM",
+    link: 'https://www.youtube.com/watch?v=EAe67yxlsOM',
   },
   {
-    title: t("solutions.japanAndAsia.yoake.title"),
-    image: "/images/solutions/japan-and-asia/yoake.webp",
-    description: t("solutions.japanAndAsia.yoake.description"),
-    link: "/blog/yasushi-akimoto-japan's-legendary-idol-producer-starts-54961/",
+    title: t('solutions.japanAndAsia.yoake.title'),
+    image: '/images/solutions/japan-and-asia/yoake.webp',
+    description: t('solutions.japanAndAsia.yoake.description'),
+    link: '/blog/yasushi-akimoto-japan\'s-legendary-idol-producer-starts-54961/',
   },
   {
-    title: t("solutions.japanAndAsia.japanLab.title"),
-    image: "/images/solutions/japan-and-asia/astar-japan-lab.webp",
-    description: t("solutions.japanAndAsia.japanLab.description"),
-    link: "/japan/",
+    title: t('solutions.japanAndAsia.japanLab.title'),
+    image: '/images/solutions/japan-and-asia/astar-japan-lab.webp',
+    description: t('solutions.japanAndAsia.japanLab.description'),
+    link: '/japan/',
   },
-];
+]
 </script>
 
 <style lang="postcss">

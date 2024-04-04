@@ -6,7 +6,7 @@
       <img
         src="/images/community/inkubator-tanks.svg"
         class="mx-auto max-w-3xl mb-6 sm:mb-10 -mt-12 sm:-mt-24 w-full"
-      />
+      >
       <h2 class="text-black leading-tight mb-4 text-center">
         <small class="block text-xl sm:text-2xl font-bold">
           {{ $t("community.grants.title") }}
@@ -19,7 +19,10 @@
         {{ $t("community.grants.description") }}
       </p>
       <div class="text-center">
-        <Button :href="grantsUrl.inkubator" color="whiteGray">
+        <Button
+          :href="grantsUrl.inkubator"
+          color="whiteGray"
+        >
           ink!ubator
         </Button>
       </div>
@@ -28,5 +31,5 @@
 </template>
 
 <script setup lang="ts">
-import { grantsUrl } from "@/data/links";
+import { grantsUrl } from '@/data/links'
 </script>

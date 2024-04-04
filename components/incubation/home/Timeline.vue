@@ -44,11 +44,9 @@
           <li class="after:bg-space-sky before:text-space-sky">
             <h3 class="text-space-sky">
               {{ $t("incubation.program.timeline.incubation.title") }}
-              <small
-                >({{
-                  $t("incubation.program.timeline.incubation.duration")
-                }})</small
-              >
+              <small>({{
+                $t("incubation.program.timeline.incubation.duration")
+              }})</small>
             </h3>
             <p class="text-gray-300">
               {{
@@ -71,9 +69,9 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon, ChevronDownIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
 
-const localePath = useLocalePath();
+const localePath = useLocalePath()
 </script>
 
 <style lang="postcss" scoped>

@@ -14,6 +14,7 @@
     >
       <IncubationMentorsListItem
         v-for="(mentor, index) in indexMentors"
+        :key="mentor.name"
         :mentor="mentor"
         @modal="modalAction(index)"
       />
@@ -39,23 +40,23 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
-import { mentors } from "@/data/mentors";
-import { ref } from "vue";
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
+import { mentors } from '@/data/mentors'
+import { ref } from 'vue'
 
-const localePath = useLocalePath();
+const localePath = useLocalePath()
 
-const indexMentors = mentors.filter((x) => x.index === true);
+const indexMentors = mentors.filter(x => x.index === true)
 
-const open = ref(false);
-const mentorIndex = ref(0);
+const open = ref(false)
+const mentorIndex = ref(0)
 
 const modalAction = (index: number) => {
-  mentorIndex.value = index;
-  open.value = true;
-};
+  mentorIndex.value = index
+  open.value = true
+}
 
 const modalClose = () => {
-  open.value = false;
-};
+  open.value = false
+}
 </script>

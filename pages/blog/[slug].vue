@@ -1,11 +1,14 @@
 <template>
-  <NuxtLayout v-if="post" name="default">
+  <NuxtLayout
+    v-if="post"
+    name="default"
+  >
     <SubPageHeader>
       <img
         :src="post.image"
         alt=""
         class="object-cover w-full aspect-blog max-w-[1280px] shadow-xl -my-6 lg:-my-8"
-      />
+      >
     </SubPageHeader>
 
     <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
@@ -24,11 +27,17 @@
       </div>
 
       <footer class="mt-16">
-        <div v-if="post.tags.length > 1" class="flex mb-12">
-          <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
+        <div
+          v-if="post.tags.length > 1"
+          class="flex mb-12"
+        >
+          <p class="mr-2 mt-3">
+            {{ $t("blog.tags") }}:
+          </p>
           <div class="flex flex-wrap">
             <NuxtLink
               v-for="tag in post.tags"
+              :key="tag"
               :href="i18n + '/blog/tag/' + tag"
               class="block text-slate-500 border border-slate-500 py-2 px-4 rounded-full hover:bg-white/10 mr-1 mb-2"
             >
@@ -42,7 +51,7 @@
               src="/images/author-astar.png"
               alt=""
               class="object-cover w-12 sm:w-16 h-12 sm:h-16 rounded-full"
-            />
+            >
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg lg:text-xl mb-2">
@@ -72,107 +81,117 @@
       <ul
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
       >
-        <BlogArticleCard v-for="post in posts" :post="post" :blog="true" />
+        <BlogArticleCard
+          v-for="_post in posts"
+          :key="_post.slug"
+          :post="_post"
+          :blog="true"
+        />
       </ul>
     </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useRouter, useRoute } from "vue-router";
-import { getPosts } from "@/components/blog";
-import TableOfContents from "@/components/blog/TableOfContents.vue";
-import { meta } from "@/data/meta";
-import { socialUrl } from "@/data/links";
+import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { getPosts } from '@/components/blog'
+import TableOfContents from '@/components/blog/TableOfContents.vue'
+import { meta } from '@/data/meta'
+import { socialUrl } from '@/data/links'
 
 interface Post {
-  title: string;
-  body: string;
-  image: string;
-  publishedAt: string;
-  summary: string;
-  tags: string[];
+  title: string
+  body: string
+  image: string
+  publishedAt: string
+  summary: string
+  tags: string[]
+  slug: string
 }
 
-const { $i18n } = useNuxtApp();
-const locale = $i18n.locale;
-const i18n = locale.value === "ja" ? "/ja" : "";
-const router = useRouter();
-const route = useRoute();
-const slug = route.params.slug;
-const id = slug.slice(slug.lastIndexOf("-") + 1);
-const post = ref<Post>();
-const posts = ref<Post[]>([]);
+const { $i18n } = useNuxtApp()
+const locale = $i18n.locale
+const i18n = locale.value === 'ja' ? '/ja' : ''
+const router = useRouter()
+const route = useRoute()
+const slug = route.params.slug
+const id = slug.slice(slug.lastIndexOf('-') + 1) as string
+const post = ref<Post>()
+const posts = ref<Post[]>([])
 
-const isNumeric = (n: any) => !isNaN(parseFloat(n)) && isFinite(n);
+const isNumeric = (n: string | number) => !isNaN(parseFloat(`${n}`)) && isFinite(Number(n))
+
 if (!isNumeric(id)) {
-  router.push("/blog");
-} else {
+  router.push('/blog')
+}
+else {
   const fetchData = async () => {
-    const filter = `id: { eq: "${id}" }`;
-    const fetchedPosts = await getPosts(filter);
+    const filter = `id: { eq: "${id}" }`
+    const fetchedPosts = await getPosts(filter)
 
     if (fetchedPosts && fetchedPosts.length > 0) {
-      post.value = fetchedPosts[0] as Post; // Cast to Post
-      console.log(`tags|${post.value.tags}|${post.value.tags.length}|`);
+      post.value = fetchedPosts[0] as unknown as Post // Cast to Post
+      console.log(`tags|${post.value.tags}|${post.value.tags.length}|`)
 
       if (post.value) {
         const orConditions = post.value.tags
-          .map((tag) => `{ tags: { containsi: "${tag}" } }`)
-          .join(", ");
+          .map(tag => `{ tags: { containsi: "${tag}" } }`)
+          .join(', ')
 
-        const filters = `id: { ne: "${id}" } and: { or: [${orConditions}] }`;
-        const pagination = "limit: 6";
-        posts.value = (await getPosts(filters, pagination)) as Post[];
+        const filters = `id: { ne: "${id}" } and: { or: [${orConditions}] }`
+        const pagination = 'limit: 6'
+        posts.value = (await getPosts(filters, pagination)) as unknown as Post[]
 
-        const seoTitle = `${post.value.title} | ${meta.siteName}`;
-        const seoDescription = post.value.summary;
-        const seoUrl = `${meta.url}${route.fullPath}`;
+        const seoTitle = `${post.value.title} | ${meta.siteName}`
+        const seoDescription = post.value.summary
+        const seoUrl = `${meta.url}${route.fullPath}`
 
-        let twitterId = socialUrl.twitter.global.id;
-        if (locale.value === "ja") {
-          twitterId = socialUrl.twitter.japan.id;
-        } else if (locale.value === "ko") {
-          twitterId = socialUrl.twitter.korea.id;
+        let twitterId = socialUrl.twitter.global.id
+        if (locale.value === 'ja') {
+          twitterId = socialUrl.twitter.japan.id
+        }
+        else if (locale.value === 'ko') {
+          twitterId = socialUrl.twitter.korea.id
         }
 
         useServerSeoMeta({
           title: () => seoTitle,
           description: () => seoDescription,
-          author: () => "Astar Network Team",
-          ogSiteName: () => "Astar Network",
+          author: () => 'Astar Network Team',
+          ogSiteName: () => 'Astar Network',
           ogLocale: () => locale.value,
           ogTitle: () => seoTitle,
           ogDescription: () => seoDescription,
           ogImage: () => post.value?.image,
           ogImageUrl: () => post.value?.image,
-          ogType: () => "article",
+          ogType: () => 'article',
           ogUrl: () => seoUrl,
           twitterSite: () => twitterId,
-          twitterCard: () => "summary_large_image",
+          twitterCard: () => 'summary_large_image',
           twitterTitle: () => seoTitle,
           twitterDescription: () => seoDescription,
           twitterImage: () => post.value?.image,
-        });
+        })
 
         useSchemaOrg([
           defineArticle({
             author: {
-              name: "Astar Network Team",
+              name: 'Astar Network Team',
             },
           }),
-        ]);
+        ])
 
         definePageMeta({
           layout: false,
-        });
+        })
       }
-    } else {
-      router.push("/blog");
     }
-  };
+    else {
+      router.push('/blog')
+    }
+  }
 
-  fetchData();
+  fetchData()
 }
 </script>

@@ -13,15 +13,15 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
-import { meta } from "@/data/meta";
-const { t } = useI18n();
-const seoTitle = `${t("solutions.title")} | ${meta.siteName} - ${t(
-  "meta.tagline"
-)}`;
-const seoDescription = t("solutions.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}solutions.png`;
+const route = useRoute()
+import { meta } from '@/data/meta'
+const { t } = useI18n()
+const seoTitle = `${t('solutions.title')} | ${meta.siteName} - ${t(
+  'meta.tagline',
+)}`
+const seoDescription = t('solutions.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}solutions.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -30,17 +30,17 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 </script>
 
 <style lang="postcss" scoped></style>

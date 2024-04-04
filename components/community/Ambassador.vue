@@ -7,7 +7,7 @@
         <img
           src="/images/community/ambassador.svg"
           class="-mt-12 w-64 sm:w-80 lg:w-full mx-auto"
-        />
+        >
       </div>
       <div class="lg:w-3/5">
         <h2

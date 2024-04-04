@@ -7,7 +7,7 @@
           class="mx-auto w-full mb-12 max-w-[800px]"
           src="/images/vision/title.svg"
           alt="Astar 2.0 Building the Unstoppable"
-        />
+        >
       </h1>
       <h2 class="sm:text-xl lg:text-xl">
         A Scalable Network Powering a Global Web3 Vision for All.
@@ -26,8 +26,8 @@
       <div class="relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-30">
           <VisionSpaceStation
-            v-on:showDetails="clickAction"
             class="w-full h-auto"
+            @show-details="clickAction"
           />
         </div>
         <div
@@ -37,25 +37,36 @@
             class="w-full max-w-[1600px] mx-auto"
             src="/images/vision/supernova.webp"
             alt=""
-          />
+          >
         </div>
       </div>
 
       <ul
         class="flex justify-center items-center py-20 sm:py-44 divide-x divide-space-cyan"
       >
-        <li v-for="logo in logos" class="px-2 sm:px-6">
+        <li
+          v-for="logo in logos"
+          :key="logo.title"
+          class="px-2 sm:px-6"
+        >
           <img
             class="mx-auto w-full"
             :src="`/images/vision/${logo.image}`"
             :alt="logo.title"
-          />
+          >
         </li>
       </ul>
     </div>
 
-    <TransitionRoot as="template" :show="open">
-      <Dialog as="div" class="relative z-50" @close="open = false">
+    <TransitionRoot
+      as="template"
+      :show="open"
+    >
+      <Dialog
+        as="div"
+        class="relative z-50"
+        @close="open = false"
+      >
         <TransitionChild
           as="template"
           enter="ease-out duration-300"
@@ -115,83 +126,83 @@
 </template>
 
 <script setup lang="ts">
-import { XMarkIcon } from "@heroicons/vue/24/outline";
+import { XMarkIcon } from '@heroicons/vue/24/outline'
 import {
   Dialog,
   DialogPanel,
   DialogTitle,
   TransitionChild,
   TransitionRoot,
-} from "@headlessui/vue";
-const open = ref(false);
-const visionId = ref("staking");
+} from '@headlessui/vue'
+const open = ref(false)
+const visionId = ref('staking')
 
 const clickAction = (vision: string) => {
-  visionId.value = vision;
-  open.value = true;
-};
+  visionId.value = vision
+  open.value = true
+}
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 interface Vision {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
 const visions: { [index: string]: Vision } = {
   staking: {
-    title: "Staking 2.0",
-    description: t("vision.staking"),
+    title: 'Staking 2.0',
+    description: t('vision.staking'),
   },
   startale: {
-    title: "Startale",
-    description: t("vision.startale"),
+    title: 'Startale',
+    description: t('vision.startale'),
   },
   tokenomics: {
-    title: "Tokenomics 2.0",
-    description: t("vision.tokenomics"),
+    title: 'Tokenomics 2.0',
+    description: t('vision.tokenomics'),
   },
   foundation: {
-    title: "Astar Foundation",
-    description: t("vision.foundation"),
+    title: 'Astar Foundation',
+    description: t('vision.foundation'),
   },
   governance: {
-    title: "Astar Governance",
-    description: t("vision.governance"),
+    title: 'Astar Governance',
+    description: t('vision.governance'),
   },
   link: {
-    title: "Astar Link",
-    description: t("vision.link"),
+    title: 'Astar Link',
+    description: t('vision.link'),
   },
   supernova: {
-    title: "Astar zkEVM",
-    description: t("vision.supernova"),
+    title: 'Astar zkEVM',
+    description: t('vision.supernova'),
   },
-};
+}
 
 const logos = [
   {
-    title: "Ethereum",
-    image: "logo-eth.svg",
+    title: 'Ethereum',
+    image: 'logo-eth.svg',
   },
   {
-    title: "Polygon",
-    image: "logo-polygon.svg",
+    title: 'Polygon',
+    image: 'logo-polygon.svg',
   },
   {
-    title: "Polkadot",
-    image: "logo-polkadot.svg",
+    title: 'Polkadot',
+    image: 'logo-polkadot.svg',
   },
-];
+]
 
-const route = useRoute();
-import { meta } from "@/data/meta";
-const seoTitle = `${t("vision.title")} | ${meta.siteName} - ${t(
-  "meta.tagline"
-)}`;
-const seoDescription = t("vision.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}vision.png`;
+const route = useRoute()
+import { meta } from '@/data/meta'
+const seoTitle = `${t('vision.title')} | ${meta.siteName} - ${t(
+  'meta.tagline',
+)}`
+const seoDescription = t('vision.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}vision.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -200,17 +211,17 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 </script>
 
 <style lang="postcss" scoped>

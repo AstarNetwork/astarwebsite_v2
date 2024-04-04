@@ -17,7 +17,7 @@
                 src="/images/common/symbol.svg"
                 alt=""
                 class="mission-image w-24 sm:w-36 lg:w-48 xl:w-60"
-              />
+              >
             </span>
           </span>
         </span>
@@ -52,7 +52,7 @@
     </div>
 
     <div class="absolute -z-10 left-0 top-0">
-      <img src="/images/common/gradient-bg.svg" />
+      <img src="/images/common/gradient-bg.svg">
     </div>
   </div>
 </template>

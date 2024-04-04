@@ -1,6 +1,11 @@
 <template>
-  <section class="container-lg my-16 sm:my-24">
-    <h2 class="text-xl mb-4">{{ $t("home.latestNews.title") }}</h2>
+  <section
+    v-if="posts.length !== 0"
+    class="container-lg my-16 sm:my-24"
+  >
+    <h2 class="text-xl mb-4">
+      {{ $t("home.latestNews.title") }}
+    </h2>
 
     <Swiper
       class="swiper--latest-news"
@@ -8,7 +13,7 @@
       :navigation="true"
       :slides-per-view="1.25"
       :slides-per-group="1"
-      :spaceBetween="12"
+      :space-between="12"
       :breakpoints="{
         768: {
           slidesPerView: 2.25,
@@ -27,18 +32,25 @@
         },
       }"
     >
-      <SwiperSlide v-for="post in posts">
-        <BlogArticleCard :post="post" :key="post" :blog="true" />
+      <SwiperSlide
+        v-for="post in posts"
+        :key="post.slug"
+      >
+        <BlogArticleCard
+          :post="post"
+          :blog="true"
+        />
       </SwiperSlide>
     </Swiper>
   </section>
 </template>
 
 <script setup lang="ts">
-import { getPosts } from "@/components/blog";
+import { getPosts } from '@/components/blog'
 
-const pagination = "limit: 12";
-const posts = await getPosts("", pagination);
+const pagination = 'limit: 12'
+const posts = await getPosts('', pagination)
+
 </script>
 
 <style lang="postcss">

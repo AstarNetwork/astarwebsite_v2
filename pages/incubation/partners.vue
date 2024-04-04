@@ -8,10 +8,17 @@
     </template>
     <template #main>
       <main class="max-w-5xl mx-auto px-4 py-12 sm:py-24">
-        <template v-for="partner in partners">
+        <template
+          v-for="partner in partners"
+          :key="partner.label.en"
+        >
           <h2>
-            <template v-if="locale === 'ja'">{{ partner.label.ja }}</template>
-            <template v-else>{{ partner.label.en }}</template>
+            <template v-if="locale === 'ja'">
+              {{ partner.label.ja }}
+            </template>
+            <template v-else>
+              {{ partner.label.en }}
+            </template>
           </h2>
           <ul
             class="grid gap-x-2 gap-y-2 lg:gap-y-16 mt-8 mb-24"
@@ -23,6 +30,7 @@
           >
             <li
               v-for="item in partner.logos"
+              :key="item.name"
               class="flex items-center justify-center"
             >
               <NuxtLink
@@ -40,7 +48,7 @@
                   "
                   :src="'/images/incubation/partners/' + item.image"
                   :alt="item.name"
-                />
+                >
               </NuxtLink>
             </li>
           </ul>
@@ -51,17 +59,17 @@
 </template>
 
 <script setup lang="ts">
-import { partners } from "@/data/partners";
+import { partners } from '@/data/partners'
 
-const route = useRoute();
-import { meta } from "@/data/meta";
-const { t } = useI18n();
-const seoTitle = `${t("incubation.meta.partners.title")} | ${t(
-  "incubation.meta.title"
-)}`;
-const seoDescription = t("incubation.meta.partners.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}incubation.png`;
+const route = useRoute()
+import { meta } from '@/data/meta'
+const { t } = useI18n()
+const seoTitle = `${t('incubation.meta.partners.title')} | ${t(
+  'incubation.meta.title',
+)}`
+const seoDescription = t('incubation.meta.partners.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}incubation.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -70,19 +78,19 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 
-const { locale } = useI18n();
+const { locale } = useI18n()
 </script>
 
 <style lang="postcss" scoped>

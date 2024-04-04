@@ -1,48 +1,48 @@
 export interface ProjectType {
-  id: number;
+  id: number
   attributes: {
-    name: string;
-    website?: string;
-    description?: string;
+    name: string
+    website?: string
+    description?: string
     logo: {
       data: {
         attributes: {
-          url: string;
-        };
-      };
-    };
+          url: string
+        }
+      }
+    }
     project_categories: {
-      data: RelationType[];
-    };
+      data: RelationType[]
+    }
     project_chains: {
-      data: RelationType[];
-    };
-  };
+      data: RelationType[]
+    }
+  }
 }
 
 export interface RelationType {
-  id: number;
+  id: number
   attributes: {
-    name: string;
+    name: string
     projects: {
-      data: ProjectType[];
-    };
-  };
+      data: ProjectType[]
+    }
+  }
 }
 
 export interface QueryResponse {
   projects: {
     meta: {
       pagination: {
-        total: number;
-      };
-    };
-    data: ProjectType[];
-  };
+        total: number
+      }
+    }
+    data: ProjectType[]
+  }
   projectCategories: {
-    data: RelationType[];
-  };
+    data: RelationType[]
+  }
   projectChains: {
-    data: RelationType[];
-  };
+    data: RelationType[]
+  }
 }

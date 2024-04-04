@@ -7,7 +7,7 @@
         <h1
           class="text-5xl sm:text-8xl lg:text-[9rem] leading-[0.94] font-bold text-white text-center lg:text-left mb-8 sm:mb-12 lg:mb-0"
         >
-          Web3 <br />Incubation <br />Program
+          Web3 <br>Incubation <br>Program
         </h1>
         <div class="hidden lg:flex lg:space-x-4 lg:mt-20">
           <IncubationButton
@@ -46,7 +46,7 @@
           src="/images/incubation/home/hero-logos.svg"
           alt="by Sony Network Communications and Astar"
           class="max-w-[200px] sm:max-w-[340px] lg:max-w-full w-full lg:pl-16"
-        />
+        >
       </div>
     </div>
   </div>
@@ -56,5 +56,5 @@
 import {
   ArrowRightIcon,
   ArrowTopRightOnSquareIcon,
-} from "@heroicons/vue/24/outline";
+} from '@heroicons/vue/24/outline'
 </script>

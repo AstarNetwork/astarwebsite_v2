@@ -2,7 +2,10 @@
   <PopoverGroup>
     <div :class="[open ? 'bg-gray-950 shadow-lg bg-opacity-95' : '', 'transition z-40 w-full']">
       <div class="container-lg flex items-center justify-between py-2 sm:py-3 lg:py-4 gap-12">
-        <NuxtLink :to="localePath('/')" class="flex">
+        <NuxtLink
+          :to="localePath('/')"
+          class="flex"
+        >
           <span class="sr-only">Astar Network</span>
           <img
             class="h-10 w-auto sm:h-14"
@@ -10,7 +13,7 @@
             alt="Astar Network"
             width="188"
             height="60"
-          />
+          >
         </NuxtLink>
 
         <div class="-my-2 -mr-2 lg:hidden">
@@ -19,16 +22,28 @@
 
         <div class="hidden lg:flex lg:items-center lg:justify-between flex-1">
           <nav class="flex items-center space-x-4 xl:space-x-8">
-            <NuxtLink :to="localePath('/solutions')" class="transition text-slate-950 hover:text-blue pr-2">
+            <NuxtLink
+              :to="localePath('/solutions')"
+              class="transition text-slate-950 hover:text-blue pr-2"
+            >
               Solutions
             </NuxtLink>
 
-            <NuxtLink :to="localePath('/astar2')" class="transition text-slate-950 hover:text-blue pr-2">
+            <NuxtLink
+              :to="localePath('/astar2')"
+              class="transition text-slate-950 hover:text-blue pr-2"
+            >
               Astar 2.0
             </NuxtLink>
 
-            <template v-for="category in menus">
-              <Popover v-slot="{ open }" class="relative">
+            <template
+              v-for="category in menus"
+              :key="category.label"
+            >
+              <Popover
+                v-slot="{ open }"
+                class="relative"
+              >
                 <PopoverButton
                   :class="[
                     open ? 'text-blue' : 'text-slate-950 hover:text-blue',
@@ -57,7 +72,10 @@
                       category.label === 'Network' ? 'w-[700px] grid grid-cols-3' : 'w-72'
                     }`"
                   >
-                    <div v-for="item in category.nav">
+                    <div
+                      v-for="item in category.nav"
+                      :key="item.label"
+                    >
                       <p
                         v-if="item.label !== ''"
                         :class="`text-xs uppercase text-slate-500 mb-1 ${
@@ -68,12 +86,16 @@
                       </p>
                       <NuxtLink
                         v-for="menu in item.nav"
+                        :key="menu.label"
                         class="flex items-center py-1 text-slate-950 transition hover:text-blue whitespace-nowrap"
                         :to="localePath(menu.href)"
                         :target="menu.href.includes('https') ? '_blank' : '_self'"
                       >
                         {{ menu.label }}
-                        <ArrowTopRightOnSquareIcon v-if="menu.href.includes('https')" class="w-4 h-4 ml-1" />
+                        <ArrowTopRightOnSquareIcon
+                          v-if="menu.href.includes('https')"
+                          class="w-4 h-4 ml-1"
+                        />
                       </NuxtLink>
                     </div>
                   </PopoverPanel>
@@ -82,7 +104,11 @@
             </template>
           </nav>
 
-          <Button color="whiteBlue" href="https://portal.astar.network/" target="_blank">
+          <Button
+            color="whiteBlue"
+            href="https://portal.astar.network/"
+            target="_blank"
+          >
             Astar Portal
           </Button>
         </div>
@@ -92,148 +118,148 @@
 </template>
 
 <script setup>
-import { docsUrl, socialUrl, ambassadorProgramUrl, forumUrl, grantsUrl } from "@/data/links";
-import { Popover, PopoverButton, PopoverPanel, PopoverGroup } from "@headlessui/vue";
-import { ChevronDownIcon, ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+import { docsUrl, socialUrl, ambassadorProgramUrl, forumUrl, grantsUrl } from '@/data/links'
+import { Popover, PopoverButton, PopoverPanel, PopoverGroup } from '@headlessui/vue'
+import { ChevronDownIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 
-const localePath = useLocalePath();
-const { t } = useI18n();
+const localePath = useLocalePath()
+const { t } = useI18n()
 
-let open = false;
+const open = false
 
 const menus = [
   {
-    label: "Developers",
+    label: 'Developers',
     nav: [
       {
-        label: "",
-        nav: [{ label: "Get Started", href: "/developers" }],
+        label: '',
+        nav: [{ label: 'Get Started', href: '/developers' }],
       },
       {
-        label: "Developer Support",
+        label: 'Developer Support',
         nav: [
           {
-            label: "Build & Earn",
+            label: 'Build & Earn',
             href: docsUrl.dappStaking,
           },
-          { label: "ink!ubator", href: grantsUrl.inkubator },
+          { label: 'ink!ubator', href: grantsUrl.inkubator },
         ],
       },
       {
-        label: "Learn the Basics",
+        label: 'Learn the Basics',
         nav: [
           {
-            label: "Documentation",
+            label: 'Documentation',
             href: docsUrl.index,
           },
           {
-            label: "Astar University",
-            href: "/developers/university",
+            label: 'Astar University',
+            href: '/developers/university',
           },
         ],
       },
     ],
   },
   {
-    label: "Network",
+    label: 'Network',
     nav: [
       {
-        label: "Explorer",
+        label: 'Explorer',
         nav: [
-          { label: "Subscan", href: "https://astar.subscan.io/" },
-          { label: "Blockscout", href: "https://blockscout.com/astar/" },
+          { label: 'Subscan', href: 'https://astar.subscan.io/' },
+          { label: 'Blockscout', href: 'https://blockscout.com/astar/' },
         ],
       },
       {
-        label: "Status",
+        label: 'Status',
         nav: [
           {
-            label: "DApp Staking",
-            href: "https://portal.astar.network/#/astar/dapp-staking/discover",
+            label: 'DApp Staking',
+            href: 'https://portal.astar.network/#/astar/dapp-staking/discover',
           },
-          { label: "DeFi TVL", href: "https://defillama.com/chain/Astar" },
+          { label: 'DeFi TVL', href: 'https://defillama.com/chain/Astar' },
           {
-            label: "Applications",
-            href: "https://dappradar.com/rankings/protocol/astar",
+            label: 'Applications',
+            href: 'https://dappradar.com/rankings/protocol/astar',
           },
         ],
       },
       {
-        label: "Infrastructure",
+        label: 'Infrastructure',
         nav: [
           {
-            label: "Shiden Network",
-            href: "https://shiden.astar.network",
+            label: 'Shiden Network',
+            href: 'https://shiden.astar.network',
           },
           {
-            label: "Alchemy",
-            href: "https://www.alchemy.com/astar",
+            label: 'Alchemy',
+            href: 'https://www.alchemy.com/astar',
           },
           {
-            label: "Blockdeamon",
-            href: "https://blockdaemon.com/protocols/astar/",
+            label: 'Blockdeamon',
+            href: 'https://blockdaemon.com/protocols/astar/',
           },
           {
-            label: "BlastAPI",
-            href: "https://blastapi.io/",
+            label: 'BlastAPI',
+            href: 'https://blastapi.io/',
           },
           {
-            label: "Dwellir",
-            href: "https://www.dwellir.com/networks/astar",
+            label: 'Dwellir',
+            href: 'https://www.dwellir.com/networks/astar',
           },
           {
-            label: "OnFinality",
-            href: "https://www.onfinality.io/marketplace/astar",
+            label: 'OnFinality',
+            href: 'https://www.onfinality.io/marketplace/astar',
           },
         ],
       },
     ],
   },
   {
-    label: "Community",
+    label: 'Community',
     nav: [
       {
-        label: "",
+        label: '',
         nav: [
-          { label: "Community Hub", href: "/community" },
-          { label: "Ecosystem", href: "/community/ecosystem" },
+          { label: 'Community Hub', href: '/community' },
+          { label: 'Ecosystem', href: '/community/ecosystem' },
         ],
       },
       {
-        label: "What's on",
-        nav: [{ label: "Blog", href: "/blog" }],
+        label: 'What\'s on',
+        nav: [{ label: 'Blog', href: '/blog' }],
       },
       {
-        label: "Getting Involved",
+        label: 'Getting Involved',
         nav: [
           {
-            label: "Ambassador Program",
+            label: 'Ambassador Program',
             href: ambassadorProgramUrl,
           },
-          { label: "Community Forum", href: forumUrl },
+          { label: 'Community Forum', href: forumUrl },
         ],
       },
     ],
   },
   {
-    label: "About",
+    label: 'About',
     nav: [
       {
-        label: "",
+        label: '',
         nav: [
-          { label: "2023 Starmap", href: "/starmap" },
-          { label: "Astar Japan Lab", href: "/japan" },
+          { label: '2023 Starmap', href: '/starmap' },
+          { label: 'Astar Japan Lab', href: '/japan' },
           {
-            label: "Careers",
+            label: 'Careers',
             href: socialUrl.wellfound,
           },
-          { label: t("brandAssetKit.title"), href: "/brand-asset-kit" },
-          { label: "Contact Us", href: "/contact" },
+          { label: t('brandAssetKit.title'), href: '/brand-asset-kit' },
+          { label: 'Contact Us', href: '/contact' },
         ],
       },
     ],
   },
-];
+]
 </script>
 
 <style lang="postcss" scoped></style>

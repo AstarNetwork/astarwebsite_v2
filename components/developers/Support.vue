@@ -12,7 +12,7 @@
         <img
           src="/images/developers/build-and-earn.svg"
           class="mx-auto max-w-[440px] mb-6 sm:mb-6 -mt-6 sm:-mt-16 w-full"
-        />
+        >
         <h3
           class="leading-tight mb-4 text-center text-3xl sm:text-4xl lg:text-4xl font-bold"
         >
@@ -22,14 +22,16 @@
           {{ $t("developers.support.buildAndEarn") }}
         </p>
         <div class="text-center">
-          <Button :href="docsUrl.dappStaking">Build & Earn</Button>
+          <Button :href="docsUrl.dappStaking">
+            Build & Earn
+          </Button>
         </div>
       </div>
       <div class="bg-[#B68AF6] rounded-3xl px-6 pt-1 pb-8 sm:pb-16 lg:w-1/2">
         <img
           src="/images/community/inkubator-tanks.svg"
           class="mx-auto max-w-[440px] mb-6 sm:mb-10 -mt-6 sm:-mt-16 w-full"
-        />
+        >
         <h3
           class="text-black leading-tight mb-4 text-center text-3xl sm:text-5xl lg:text-5xl font-bold"
         >
@@ -39,7 +41,10 @@
           {{ $t("developers.support.inkubator") }}
         </p>
         <div class="text-center">
-          <Button :href="grantsUrl.inkubator" color="whiteGray">
+          <Button
+            :href="grantsUrl.inkubator"
+            color="whiteGray"
+          >
             ink!ubator
           </Button>
         </div>
@@ -49,5 +54,5 @@
 </template>
 
 <script setup lang="ts">
-import { docsUrl, grantsUrl } from "@/data/links";
+import { docsUrl, grantsUrl } from '@/data/links'
 </script>

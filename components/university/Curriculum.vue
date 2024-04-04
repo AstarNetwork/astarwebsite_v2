@@ -8,6 +8,7 @@
     >
       <li
         v-for="(item, index) in curriculum"
+        :key="item.title"
         class="flex before:content-[''] before:w-3 before:h-3 before:block before:rounded-full before:bg-blue before:shrink-0 before:mt-12"
       >
         <div
@@ -32,24 +33,24 @@
 </template>
 
 <script setup lang="ts">
-const { t, locale } = useI18n();
+const { t, locale } = useI18n()
 
 const curriculum = [
   {
-    title: t("university.curriculum.module1.title"),
-    description: t("university.curriculum.module1.description"),
+    title: t('university.curriculum.module1.title'),
+    description: t('university.curriculum.module1.description'),
   },
   {
-    title: t("university.curriculum.module2.title"),
-    description: t("university.curriculum.module2.description"),
+    title: t('university.curriculum.module2.title'),
+    description: t('university.curriculum.module2.description'),
   },
   {
-    title: t("university.curriculum.module3.title"),
-    description: t("university.curriculum.module3.description"),
+    title: t('university.curriculum.module3.title'),
+    description: t('university.curriculum.module3.description'),
   },
   {
-    title: t("university.curriculum.bonus.title"),
-    description: t("university.curriculum.bonus.description"),
+    title: t('university.curriculum.bonus.title'),
+    description: t('university.curriculum.bonus.description'),
   },
-];
+]
 </script>

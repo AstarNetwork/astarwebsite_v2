@@ -19,99 +19,100 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import { parse } from "node-html-parser";
-import TableOfContentsItem from "./TableOfContentsItem.vue";
+import { defineComponent, ref } from 'vue'
+import { parse } from 'node-html-parser'
+import TableOfContentsItem from './TableOfContentsItem.vue'
 
 interface TableOfContentsItem {
-  title: string;
-  link: string;
-  subsections: TableOfContentsItem[];
+  title: string
+  link: string
+  subsections: TableOfContentsItem[]
 }
 
 function removeEmptyLinkLayers(
-  section: TableOfContentsItem[]
+  section: TableOfContentsItem[],
 ): TableOfContentsItem[] {
   return section.reduce<TableOfContentsItem[]>((acc, current) => {
     // If the current section has an empty link, we don't include it directly,
     // but its subsections should be leveled up.
-    if (current.link === "") {
-      const leveledUpSubsections = removeEmptyLinkLayers(current.subsections);
-      acc.push(...leveledUpSubsections);
-    } else {
-      // If the current section has a non-empty link, process its subsections normally.
-      const processedSubsections = removeEmptyLinkLayers(current.subsections);
-      acc.push({ ...current, subsections: processedSubsections });
+    if (current.link === '') {
+      const leveledUpSubsections = removeEmptyLinkLayers(current.subsections)
+      acc.push(...leveledUpSubsections)
     }
-    return acc;
-  }, []);
+    else {
+      // If the current section has a non-empty link, process its subsections normally.
+      const processedSubsections = removeEmptyLinkLayers(current.subsections)
+      acc.push({ ...current, subsections: processedSubsections })
+    }
+    return acc
+  }, [])
 }
 
 export default defineComponent({
-  name: "TableOfContents",
+  name: 'TableOfContents',
   components: {
     TableOfContentsItem,
   },
   props: {
     body: {
       type: String,
-      default: "",
+      default: '',
     },
   },
   setup(props) {
     const toc = ref<{ table_of_contents: TableOfContentsItem[] }>({
       table_of_contents: [],
-    });
+    })
 
     const parseHTMLContent = (html: string) => {
-      const doc = parse(html);
-      const headings = doc.querySelectorAll("h1, h2, h3, h4, h5, h6");
-      let currentToc: TableOfContentsItem[] = [];
-      let levels: Array<TableOfContentsItem[]> = [currentToc];
+      const doc = parse(html)
+      const headings = doc.querySelectorAll('h1, h2, h3, h4, h5, h6')
+      const currentToc: TableOfContentsItem[] = []
+      const levels: Array<TableOfContentsItem[]> = [currentToc]
 
       headings.forEach((heading) => {
-        const level = parseInt(heading.tagName.substring(1)); // e.g., "2" for "h2"
-        const title = heading.textContent || "";
-        const link = `#${heading.id}`;
+        const level = parseInt(heading.tagName.substring(1)) // e.g., "2" for "h2"
+        const title = heading.textContent || ''
+        const link = `#${heading.id}`
 
         while (level >= levels.length) {
-          let lastLevel = levels[levels.length - 1];
+          const lastLevel = levels[levels.length - 1]
           if (lastLevel.length === 0) {
             // If the last level is empty, this means there's a level jump
             // Create a dummy item to act as the parent for the next level
             const dummyItem: TableOfContentsItem = {
-              title: "",
-              link: "",
+              title: '',
+              link: '',
               subsections: [],
-            };
-            lastLevel.push(dummyItem);
+            }
+            lastLevel.push(dummyItem)
           }
-          let newLevel: TableOfContentsItem[] = [];
-          lastLevel[lastLevel.length - 1].subsections = newLevel;
-          levels.push(newLevel);
+          const newLevel: TableOfContentsItem[] = []
+          lastLevel[lastLevel.length - 1].subsections = newLevel
+          levels.push(newLevel)
         }
 
         while (level < levels.length - 1) {
-          levels.pop();
+          levels.pop()
         }
 
-        const tocItem: TableOfContentsItem = { title, link, subsections: [] };
-        levels[levels.length - 1].push(tocItem);
+        const tocItem: TableOfContentsItem = { title, link, subsections: [] }
+        levels[levels.length - 1].push(tocItem)
 
         if (tocItem.subsections) {
-          levels[levels.length] = tocItem.subsections;
+          levels[levels.length] = tocItem.subsections
         }
-      });
+      })
 
-      toc.value.table_of_contents = removeEmptyLinkLayers(currentToc);
-    };
+      toc.value.table_of_contents = removeEmptyLinkLayers(currentToc)
+    }
 
     // Directly parse the provided HTML content
-    parseHTMLContent(props.body);
+    parseHTMLContent(props.body)
 
     return {
       toc,
-    };
+    }
   },
-});
+})
 </script>

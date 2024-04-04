@@ -4,6 +4,7 @@
     <nav class="flex justify-center space-x-6 sm:space-x-10">
       <NuxtLink
         v-for="item in social"
+        :key="item.name"
         :to="item.href"
         target="_blank"
         class="block"
@@ -44,45 +45,45 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 
-const Twitter = resolveComponent("IconTwitter");
-const Discord = resolveComponent("IconDiscord");
-const Telegram = resolveComponent("IconTelegram");
-const Medium = resolveComponent("IconMedium");
-const Github = resolveComponent("IconGithub");
-const Youtube = resolveComponent("IconYoutube");
+const Twitter = resolveComponent('IconTwitter')
+const Discord = resolveComponent('IconDiscord')
+const Telegram = resolveComponent('IconTelegram')
+const Medium = resolveComponent('IconMedium')
+const Github = resolveComponent('IconGithub')
+const Youtube = resolveComponent('IconYoutube')
 
 const social = [
   {
-    name: "Twitter",
-    href: "https://twitter.com/astarNetwork",
+    name: 'Twitter',
+    href: 'https://twitter.com/astarNetwork',
     icon: Twitter,
   },
   {
-    name: "Discord",
-    href: "https://discord.gg/astarnetwork",
+    name: 'Discord',
+    href: 'https://discord.gg/astarnetwork',
     icon: Discord,
   },
   {
-    name: "Telegram",
-    href: "https://t.me/PlasmOfficial",
+    name: 'Telegram',
+    href: 'https://t.me/PlasmOfficial',
     icon: Telegram,
   },
   {
-    name: "Medium",
-    href: "https://medium.com/astar-network",
+    name: 'Medium',
+    href: 'https://medium.com/astar-network',
     icon: Medium,
   },
   {
-    name: "GitHub",
-    href: "https://github.com/AstarNetwork",
+    name: 'GitHub',
+    href: 'https://github.com/AstarNetwork',
     icon: Github,
   },
   {
-    name: "YouTube",
-    href: "https://www.youtube.com/c/AstarNetwork",
+    name: 'YouTube',
+    href: 'https://www.youtube.com/c/AstarNetwork',
     icon: Youtube,
   },
-];
+]
 </script>

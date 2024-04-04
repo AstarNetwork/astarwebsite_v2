@@ -19,33 +19,33 @@
 </template>
 
 <script setup lang="ts">
-const { $gsap, $ScrollTrigger } = useNuxtApp();
+const { $gsap, $ScrollTrigger } = useNuxtApp()
 
 onMounted(() => {
-  $gsap.to("h1 span:first-of-type", {
+  $gsap.to('h1 span:first-of-type', {
     scale: 1.2,
     opacity: 0.5,
     scrollTrigger: {
-      toggleActions: "play none none reverse",
-      trigger: "section",
-      start: "bottom center",
+      toggleActions: 'play none none reverse',
+      trigger: 'section',
+      start: 'bottom center',
       // markers: true,
       scrub: true,
     },
-  });
+  })
 
-  $gsap.to("h1 span:last-of-type", {
+  $gsap.to('h1 span:last-of-type', {
     scale: 1.6,
     opacity: 0.5,
     scrollTrigger: {
-      toggleActions: "play none none reverse",
-      trigger: "section",
-      start: "bottom center",
+      toggleActions: 'play none none reverse',
+      trigger: 'section',
+      start: 'bottom center',
       // markers: true,
       scrub: true,
     },
-  });
-});
+  })
+})
 </script>
 
 <style lang="postcss" scoped></style>

@@ -13,6 +13,7 @@
       <div class="flex flex-col sm:flex-row gap-4 lg:gap-10 2xl:gap-20">
         <div
           v-for="(item, index) in data"
+          :key="item.name"
           class="flex-1 rounded-lg bg-white/50 transition shadow-lg px-6 py-10 sm:px-8 sm:py-12 lg:p-12 space-y-6 sm:space-y-8"
           data-aos="fade-up"
           :data-aos-delay="index * 100"
@@ -21,9 +22,11 @@
             :src="`/images/solutions/partners/${item.image}`"
             :alt="item.name"
             class="h-16 sm:h-20 mx-auto"
-          />
+          >
           <p>{{ item.description }}</p>
-          <TextLink :href="item.link.url">{{ item.link.label }}</TextLink>
+          <TextLink :href="item.link.url">
+            {{ item.link.label }}
+          </TextLink>
         </div>
       </div>
     </div>
@@ -31,16 +34,16 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const data = [
   {
-    name: t("solutions.partners.startale.name"),
-    image: "startale-logo.svg",
-    description: t("solutions.partners.startale.description"),
+    name: t('solutions.partners.startale.name'),
+    image: 'startale-logo.svg',
+    description: t('solutions.partners.startale.description'),
     link: {
-      label: t("solutions.partners.startale.cta"),
-      url: "https://startale.org/",
+      label: t('solutions.partners.startale.cta'),
+      url: 'https://startale.org/',
     },
   },
   // {
@@ -52,7 +55,7 @@ const data = [
   //     url: "https://astar.network/incubation",
   //   },
   // },
-];
+]
 </script>
 
 <style lang="postcss" scoped></style>
