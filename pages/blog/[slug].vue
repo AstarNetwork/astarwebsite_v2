@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="default">
+  <NuxtLayout v-if="post" name="default">
     <SubPageHeader>
       <img
         :src="post.image"
@@ -24,10 +24,8 @@
       </div>
 
       <footer class="mt-16">
-        <div class="flex mb-12">
-          <p class="mr-2 mt-3">
-            {{ $t("blog.tags") }}:
-          </p>
+        <div v-if="post.tags.length > 1" class="flex mb-12">
+          <p class="mr-2 mt-3">{{ $t("blog.tags") }}:</p>
           <div class="flex flex-wrap">
             <NuxtLink
               v-for="tag in post.tags"
@@ -87,79 +85,100 @@
 </template>
 
 <script setup lang="ts">
-import { meta } from '@/data/meta'
-import { socialUrl } from '@/data/links'
-import { getPosts } from '@/components/blog'
-import TableOfContents from '@/components/blog/TableOfContents.vue'
+import { ref } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import { getPosts } from "@/components/blog";
+import TableOfContents from "@/components/blog/TableOfContents.vue";
+import { meta } from "@/data/meta";
+import { socialUrl } from "@/data/links";
 
-type BlogPost = {
-  id: string
-  title: string
-  slug: string
-  summary: string
-  image: string
-  publishedAt: string
-  tags: string[]
-  body: string
+interface Post {
+  title: string;
+  body: string;
+  image: string;
+  publishedAt: string;
+  summary: string;
+  tags: string[];
 }
 
-const route = useRoute()
-const slug = route.params.slug
-const id = slug.slice(slug.lastIndexOf('-') + 1)
-const { locale, t } = useI18n()
-const i18n = locale.value === 'ja' ? '/ja' : ''
+const { $i18n } = useNuxtApp();
+const locale = $i18n.locale;
+const i18n = locale.value === "ja" ? "/ja" : "";
+const router = useRouter();
+const route = useRoute();
+const slug = route.params.slug;
+const id = slug.slice(slug.lastIndexOf("-") + 1);
+const post = ref<Post>();
+const posts = ref<Post[]>([]);
 
-const filter = `id: { eq: "${id}" }`
-const post = (await getPosts(filter))[0] as BlogPost
+const isNumeric = (n: any) => !isNaN(parseFloat(n)) && isFinite(n);
+if (!isNumeric(id)) {
+  router.push("/blog");
+} else {
+  const fetchData = async () => {
+    const filter = `id: { eq: "${id}" }`;
+    const fetchedPosts = await getPosts(filter);
 
-const orConditions = post.tags
-  .map((tag: string) => `{ tags: { containsi: "${tag}" } }`)
-  .join(', ')
+    if (fetchedPosts && fetchedPosts.length > 0) {
+      post.value = fetchedPosts[0] as Post; // Cast to Post
+      console.log(`tags|${post.value.tags}|${post.value.tags.length}|`);
 
-const filters = `id: { ne: "${id}" } and: { or: [${orConditions}] }`
-const pagination = 'limit: 6'
-const posts = await getPosts(filters, pagination)
+      if (post.value) {
+        const orConditions = post.value.tags
+          .map((tag) => `{ tags: { containsi: "${tag}" } }`)
+          .join(", ");
 
-const seoTitle = `${post.title} | ${meta.siteName}`
-const seoDescription = post.summary
-const seoUrl = `${meta.url}${route.fullPath}`
+        const filters = `id: { ne: "${id}" } and: { or: [${orConditions}] }`;
+        const pagination = "limit: 6";
+        posts.value = (await getPosts(filters, pagination)) as Post[];
 
-let twitterId = socialUrl.twitter.global.id
-if (locale.value === 'ja') {
-  twitterId = socialUrl.twitter.japan.id
+        const seoTitle = `${post.value.title} | ${meta.siteName}`;
+        const seoDescription = post.value.summary;
+        const seoUrl = `${meta.url}${route.fullPath}`;
+
+        let twitterId = socialUrl.twitter.global.id;
+        if (locale.value === "ja") {
+          twitterId = socialUrl.twitter.japan.id;
+        } else if (locale.value === "ko") {
+          twitterId = socialUrl.twitter.korea.id;
+        }
+
+        useServerSeoMeta({
+          title: () => seoTitle,
+          description: () => seoDescription,
+          author: () => "Astar Network Team",
+          ogSiteName: () => "Astar Network",
+          ogLocale: () => locale.value,
+          ogTitle: () => seoTitle,
+          ogDescription: () => seoDescription,
+          ogImage: () => post.value?.image,
+          ogImageUrl: () => post.value?.image,
+          ogType: () => "article",
+          ogUrl: () => seoUrl,
+          twitterSite: () => twitterId,
+          twitterCard: () => "summary_large_image",
+          twitterTitle: () => seoTitle,
+          twitterDescription: () => seoDescription,
+          twitterImage: () => post.value?.image,
+        });
+
+        useSchemaOrg([
+          defineArticle({
+            author: {
+              name: "Astar Network Team",
+            },
+          }),
+        ]);
+
+        definePageMeta({
+          layout: false,
+        });
+      }
+    } else {
+      router.push("/blog");
+    }
+  };
+
+  fetchData();
 }
-else if (locale.value === 'ko') {
-  twitterId = socialUrl.twitter.korea.id
-}
-
-useServerSeoMeta({
-  title: () => seoTitle,
-  description: () => seoDescription,
-  author: () => 'Astar Network Team',
-  ogSiteName: () => 'Astar Network',
-  ogLocale: () => locale.value,
-  ogTitle: () => seoTitle,
-  ogDescription: () => seoDescription,
-  ogImage: () => post.image,
-  ogImageUrl: () => post.image,
-  ogType: () => 'article',
-  ogUrl: () => seoUrl,
-  twitterSite: () => twitterId,
-  twitterCard: () => 'summary_large_image',
-  twitterTitle: () => seoTitle,
-  twitterDescription: () => seoDescription,
-  twitterImage: () => post.image,
-})
-
-useSchemaOrg([
-  defineArticle({
-    author: {
-      name: 'Astar Network Team',
-    },
-  }),
-])
-
-definePageMeta({
-  layout: false,
-})
 </script>

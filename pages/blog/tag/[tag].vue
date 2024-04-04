@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <HomeNewsletter class="py-20 sm:py-32" />
+    <!-- HomeNewsletter class="py-20 sm:py-32" / -->
   </NuxtLayout>
 </template>
 
@@ -45,17 +45,17 @@
 import { meta } from '@/data/meta'
 import { getPosts } from '@/components/blog'
 
-const localePath = useLocalePath()
-const route = useRoute()
-const tag = encodeURI(route.params.tag.toString())
-const { locale, t } = useI18n()
-const filters = `tags: { containsi: "${tag}" }`
-const posts = await getPosts(filters)
+const localePath = useLocalePath();
+const route = useRoute();
+const tag = route.params.tag.toString()
+const { locale, t } = useI18n();
+const filters = `tags: { containsi: "${tag}" }`;
+const posts = await getPosts(filters);
 
-const seoTitle = `${tag} | ${meta.siteName} - ${t('meta.tagline')}`
-const seoDescription = t('blog.description')
-const seoUrl = `${meta.url}${route.fullPath}`
-const seoImage = `${meta.image}blog.png`
+const seoTitle = `${encodeURI(tag)} | ${meta.siteName} - ${t("meta.tagline")}`;
+const seoDescription = t("blog.description");
+const seoUrl = `${meta.url}${route.fullPath}`;
+const seoImage = `${meta.image}blog.png`;
 
 useServerSeoMeta({
   title: () => seoTitle,
