@@ -9,7 +9,7 @@
     <CommunityBuilders class="pb-28 sm:pb-40" />
     <CommunityCommunities class="pb-28 sm:pb-40" />
     <div class="absolute -z-10 right-0 top-0">
-      <img src="/images/common/gradient-bg-2.svg" />
+      <img src="/images/common/gradient-bg-2.svg">
     </div>
   </NuxtLayout>
 </template>
