@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/* eslint-disable */
 
 (() => {
   if (typeof window !== 'undefined') {
@@ -21,7 +21,7 @@
             return new Promise(function (e) {
               if (document.querySelector(n))
                 return e(document.querySelector(n))
-              // eslint-disable-next-line no-unused-vars
+               
               var o = new MutationObserver(function (t) {
                 document.querySelector(n)
                 && (e(document.querySelector(n)), o.disconnect())
