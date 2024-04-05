@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+/* eslint-disable */
 
 (() => {
   if (typeof window !== 'undefined') {
@@ -21,12 +21,15 @@
             return new Promise(function (e) {
               if (document.querySelector(n))
                 return e(document.querySelector(n))
-              // eslint-disable-next-line no-unused-vars
+               
               var o = new MutationObserver(function (t) {
                 document.querySelector(n)
                 && (e(document.querySelector(n)), o.disconnect())
               })
-              o.observe(document.body, { childList: !0, subtree: !0 })
+
+              var container = document.documentElement || document.body;
+
+              o.observe(container, { childList: true, subtree: true })
             })
           }),
           t && t('#docsbotai-root').then(e).catch(o)
