@@ -26,7 +26,10 @@
                 document.querySelector(n)
                 && (e(document.querySelector(n)), o.disconnect())
               })
-              o.observe(document.body, { childList: !0, subtree: !0 })
+
+              var container = document.documentElement || document.body;
+
+              o.observe(container, { childList: true, subtree: true })
             })
           }),
           t && t('#docsbotai-root').then(e).catch(o)
