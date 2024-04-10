@@ -10,7 +10,7 @@
     "features": {
       "bridgeAndEcosystem": {
         "title": "브릿지 & 생태계",
-        "description": "Astar zkEVM은 폴리곤의 CDK와 AggLayer 기술을 활용한 이더리움 레이어-2 기반의 확장성 솔루션입니다. Astar zkEVM은 이더리움의 보안성을 지키면서 EVM 동등성또한 유지합니다.",
+        "description": "Astar zkEVM은 폴리곤의 CDK와 AggLayer 기술을 활용한 이더리움 레이어-2 기반의 확장성 솔루션입니다. Astar zkEVM은 이더리움의 보안성을 지키면서 EVM 동등성또한 유지합니다.",
         "cta": {
           "bridgeToAstar": "Astar와 브릿지 연동",
           "exploreEcosystem": "생태계 탐색"

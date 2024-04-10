@@ -1,0 +1,90 @@
+{
+  "header": {
+    "solution": {
+      "title": "Solutions",
+      "solutions": {
+        "label": "Solutions",
+        "description": "Web3 solutions for companies, devs, and people"
+      },
+      "startale": {
+        "label": "Startale Labs",
+        "description": "Accelerating web3, building Astar, providing infrastructure"
+      },
+      "japan": {
+        "label": "Astar Japan Lab",
+        "description": "Fuels the growth of Japanese services and businesses"
+      },
+      "astar2": {
+        "label": "Astar 2.0",
+        "description": "A scalable network powering a global web3 vision for all"
+      }
+    },
+    "ecosystem": {
+      "title": "Ecosystem",
+      "use": {
+        "label": "Use",
+          "portal": {
+            "label": "Portal",
+            "description": "Multi-chain platform hub for asset management"
+          },
+          "dappStaking": {
+            "label": "dApp Staking",
+            "description": "Incentivized program connecting devs to Astar community"
+          },
+          "ecosystem": {
+            "label": "Ecosystem",
+            "description": "Discover all the apps and projects on Astar"
+          }
+      },
+      "developer": {
+        "label": "Developer",
+        "start": {
+          "label": "Start Building",
+          "description": "Cross-layer tech stack for devs to benefit from VMs, layers, and consensus"
+        },
+        "docs": {
+          "label": "Docs",
+          "description": "Comprehensive library of information for Astar Network"
+        }
+      },
+      "explore": {
+        "label": "Explore",
+        "community": {
+          "label": "Community",
+          "description": "Connect with Astar’s community"
+        },
+        "blog": {
+          "label": "Blog",
+          "description": "Major news, ecosystem announcements, engineering updates, and more"
+        },
+        "agent": {
+          "label": "Become our Agent",
+          "description": "A community program to support Astar"
+        },
+        "discord": {
+          "label": "Discord Community",
+          "description": "Join our community of developers"
+        },
+        "forum": {
+          "label": "Astar Forum",
+          "description": "Community-driven discussions about Astar."
+        }
+      }
+    },
+    "about": {
+      "title": "About",
+      "brand": {
+        "label": "Brand Asset Kit",
+        "description": "Reference to discover exciting branding possibilities and guidelines"
+      },
+      "career": {
+        "label": "Careers",
+        "description": "Find your dream job"
+      },
+      "contact": {
+        "label": "Contact Us",
+        "description": "Get in touch with the Astar team"
+      }
+    }
+  }
+}
