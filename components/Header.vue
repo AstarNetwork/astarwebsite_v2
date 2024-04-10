@@ -115,6 +115,7 @@
         </nav>
 
         <LangSwitcher
+          class="hidden lg:flex"
           color="black"
           menu-position="right"
         />
