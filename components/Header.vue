@@ -93,7 +93,7 @@
                           v-else
                           :class="['h-6 w-6', menu.iconColor ? `text-[${menu.iconColor}]` : 'text-white']"
                         />
-                        <span class="text-base font-bold text-slate-950">{{ menu.label }}</span>
+                        <span class="text-base font-semibold text-slate-950">{{ menu.label }}</span>
                         <ArrowTopRightOnSquareIcon
                           v-if="menu.href.includes('https')"
                           class="w-4 h-4 text-slate-950"
