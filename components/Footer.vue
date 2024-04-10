@@ -78,7 +78,10 @@
         </div>
 
         <div class="grid gap-8 sm:grid-cols-3 lg:grid-cols-5">
-          <LangSwitcher />
+          <LangSwitcher
+            color="white"
+            menu-position="left"
+          />
           <div
             v-for="category in nav"
             :key="category.name"
@@ -201,7 +204,7 @@ const X = resolveComponent('IconX')
 interface Props {
   color?: string
 }
-const props = defineProps<Props>()
+defineProps<Props>()
 
 const { t } = useI18n()
 
