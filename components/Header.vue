@@ -114,14 +114,10 @@
           </Popover>
         </nav>
 
-        <Button
-          color="whiteBlue"
-          href="https://portal.astar.network/"
-          target="_blank"
-          class="hidden lg:flex"
-        >
-          Astar Portal
-        </Button>
+        <LangSwitcher
+          color="black"
+          menu-position="right"
+        />
       </div>
     </div>
   </PopoverGroup>
