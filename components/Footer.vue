@@ -77,7 +77,7 @@
           </NuxtLink>
         </div>
 
-        <div class="grid gap-8 sm:grid-cols-3 lg:grid-cols-5">
+        <div class="grid gap-8 sm:grid-cols-4 lg:grid-cols-7">
           <LangSwitcher
             color="white"
             menu-position="left"
@@ -86,7 +86,7 @@
             v-for="category in nav"
             :key="category.name"
           >
-            <h3 class="font-medium uppercase text-white">
+            <h3 class="font-medium text-white font-semibold text-lg">
               {{ category.name }}
             </h3>
             <ul
@@ -101,7 +101,7 @@
                 <NuxtLink
                   :to="item.href"
                   :target="item.href.includes('https') ? '_blank' : '_self'"
-                  class="hover:underline transition text-slate-200 hover:text-slate-50"
+                  class="hover:underline transition text-white text-base"
                 >
                   {{ item.name }}
                   <ArrowTopRightOnSquareIcon
@@ -184,9 +184,11 @@ import {
   newsletterUrl,
   socialUrl,
   ambassadorProgramUrl,
-  bugBountyProgramUrl,
   forumUrl,
   docsUrl,
+  startaleUrl,
+  portalUrl,
+  careerUrl,
 } from '@/data/links'
 import { ArrowTopRightOnSquareIcon, ArrowRightIcon } from '@heroicons/vue/24/outline'
 
@@ -210,48 +212,89 @@ const { t } = useI18n()
 
 const nav = [
   {
-    name: t('footer.nav.build'),
+    name: t('header.solution.title'),
     nav: [
-      { name: t('footer.nav.docs'), href: docsUrl.index },
-      { name: 'GitHub', href: socialUrl.github },
-      { name: 'Discord', href: socialUrl.discord },
+      { name: t('header.solution.solutions.label'), href: localePath('/solutions') },
+      { name: t('header.solution.startale.label'), href: startaleUrl },
+      { name: t('header.solution.japan.label'), href: localePath('/japan') },
+      { name: t('header.solution.astar2.label'), href: localePath('/astar2') },
     ],
   },
   {
-    name: t('footer.nav.apply'),
+    name: t('header.ecosystem.use.label'),
     nav: [
       {
-        name: t('footer.nav.careers'),
-        href: socialUrl.wellfound,
+        name: t('header.ecosystem.use.portal.label'),
+        href: portalUrl.index,
       },
       {
-        name: t('footer.nav.ambassadorProgram'),
+        name: t('header.ecosystem.use.dappStaking.label'),
+        href: portalUrl.dappStaking,
+      },
+      {
+        name: t('header.ecosystem.use.ecosystem.label'),
+        href: localePath('/ecosystem'),
+      },
+    ],
+  },
+  {
+    name: t('header.ecosystem.developer.label'),
+    nav: [
+      {
+        name: t('header.ecosystem.developer.start.label'),
+        href: localePath('/developers'),
+      },
+      {
+        name: t('header.ecosystem.developer.docs.label'),
+        href: docsUrl.index,
+      },
+    ],
+  },
+  {
+    name: t('header.ecosystem.explore.label'),
+    nav: [
+      {
+        name: t('header.ecosystem.explore.community.label'),
+        href: localePath('/community'),
+      },
+      {
+        name: t('header.ecosystem.explore.blog.label'),
+        href: localePath('/blog'),
+      },
+      {
+        name: t('header.ecosystem.explore.agent.label'),
         href: ambassadorProgramUrl,
       },
       {
-        name: t('footer.nav.bugBountyProgram'),
-        href: bugBountyProgramUrl,
+        name: t('header.ecosystem.explore.discord.label'),
+        href: socialUrl.discord,
+      },
+      {
+        name: t('header.ecosystem.explore.forum.label'),
+        href: forumUrl,
       },
     ],
   },
   {
-    name: t('footer.nav.learn'),
-    nav: [
-      { name: t('footer.nav.blog'), href: localePath('/blog') },
-      {
-        name: t('footer.nav.videos'),
-        href: socialUrl.youtube,
-      },
-      { name: t('footer.nav.forum'), href: forumUrl },
-    ],
-  },
-  {
-    name: t('footer.nav.other'),
+    name: t('header.about.title'),
     nav: [
       {
-        name: t('brandAssetKit.title'),
+        name: t('header.about.brand.label'),
         href: localePath('/brand-asset-kit'),
       },
+      {
+        name: t('header.about.career.label'),
+        href: careerUrl,
+      },
+      {
+        name: t('header.about.contact.label'),
+        href: localePath('/contact'),
+      },
+    ],
+  },
+  {
+    name: t('footer.nav.legal'),
+    nav: [
       {
         name: t('footer.nav.privacyPolicy'),
         href: '/privacy-policy',
@@ -259,10 +302,6 @@ const nav = [
       {
         name: t('footer.nav.termsOfUse'),
         href: '/term-of-use',
-      },
-      {
-        name: t('footer.nav.contactUs'),
-        href: localePath('/contact'),
       },
     ],
   },
