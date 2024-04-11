@@ -99,7 +99,7 @@
                           class="w-4 h-4 text-slate-950"
                         />
                       </div>
-                      <p class="text-sm text-slate-950 font-normal break-all whitespace-pre-line">
+                      <p class="text-sm text-slate-500 font-normal break-all whitespace-pre-line">
                         {{ menu.description }}
                       </p>
                     </NuxtLink>
