@@ -47,3 +47,12 @@ export const socialUrl = {
 export const grantsUrl = {
   inkubator: 'https://use.ink/ubator/',
 }
+
+export const portalUrl = {
+  index: 'https://portal.astar.network/',
+  dappStaking: 'https://portal.astar.network/astar/dapp-staking/discover',
+}
+
+export const careerUrl = 'https://boards.greenhouse.io/startale'
+
+export const startaleUrl = 'https://startale.org/'

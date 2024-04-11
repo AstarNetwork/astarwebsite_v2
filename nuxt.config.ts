@@ -80,6 +80,7 @@ export default defineNuxtConfig({
           'en-university.json',
           'en-solutions.json',
           'en-brand-asset-kit.json',
+          'en-header.json',
         ],
       },
       {
@@ -102,6 +103,7 @@ export default defineNuxtConfig({
           'ja-university.json',
           'ja-solutions.json',
           'ja-brand-asset-kit.json',
+          'ja-header.json',
         ],
       },
       {
@@ -124,6 +126,7 @@ export default defineNuxtConfig({
           'ko-university.json',
           'ko-solutions.json',
           'ko-brand-asset-kit.json',
+          'ko-header.json',
         ],
       },
     ],

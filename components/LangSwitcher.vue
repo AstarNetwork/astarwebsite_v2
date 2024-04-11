@@ -5,7 +5,11 @@
   >
     <div>
       <MenuButton
-        class="inline-flex justify-center items-center gap-x-1.5 rounded-md border border-white px-3 py-2 text-white hover:bg-white/10 transition"
+        class="inline-flex justify-center items-center gap-x-1.5 rounded-md px-3 py-2 transition"
+        :class="{
+          'border border-white text-white hover:bg-white/10': color === 'white',
+          'text-slate-950': color === 'black',
+        }"
       >
         <GlobeAltIcon class="w-6 h-6 inline-block" />
         {{ currentLocale.name }}
@@ -25,7 +29,11 @@
       leave-to-class="transform opacity-0 scale-95"
     >
       <MenuItems
-        class="absolute left-0 z-10 mt-2 w-44 origin-top-right rounded-md bg-white focus:outline-none"
+        class="absolute z-10 mt-2 w-44 origin-top-right rounded-md bg-white focus:outline-none"
+        :class="{
+          'left-0': menuPosition === 'left',
+          'right-0': menuPosition === 'right',
+        }"
       >
         <div class="py-1">
           <MenuItem
@@ -65,4 +73,11 @@ const currentLocale = computed(() => {
     name: 'English',
   }
 })
+
+type Props = {
+  color: 'white' | 'black'
+  menuPosition: 'left' | 'right'
+}
+
+defineProps<Props>()
 </script>
