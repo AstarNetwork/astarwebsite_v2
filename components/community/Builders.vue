@@ -8,7 +8,7 @@
         {{ $t("community.builders.ecosystem.description") }}
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <Button href="/community/ecosystem">
+        <Button href="/ecosystem">
           {{ $t("community.builders.ecosystem.button.explore") }}
         </Button>
         <Button
