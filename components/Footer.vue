@@ -233,7 +233,7 @@ const nav = [
       },
       {
         name: t('header.ecosystem.use.ecosystem.label'),
-        href: localePath('/ecosystem'),
+        href: localePath('/community/ecosystem'),
       },
     ],
   },

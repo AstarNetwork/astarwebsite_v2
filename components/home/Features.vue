@@ -70,7 +70,7 @@ const data: Array<{
       },
       {
         label: t('home.features.bridgeAndEcosystem.cta.exploreEcosystem'),
-        url: '/ecosystem/',
+        url: '/community/ecosystem/',
         color: 'outlinedGray',
       },
     ],
