@@ -206,7 +206,7 @@ const menus: Menu[] = [
           {
             label: t('header.ecosystem.use.ecosystem.label'),
             description: t('header.ecosystem.use.ecosystem.description'),
-            href: localePath('/community/ecosystem'),
+            href: localePath('/ecosystem'),
           },
         ],
       },

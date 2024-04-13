@@ -13,7 +13,7 @@
       </p>
       <div class="text-center sm:text-left">
         <Button
-          :href="localePath('/community/ecosystem/')"
+          :href="localePath('/ecosystem/')"
           color="whiteGray"
         >
           {{ $t("home.dAppsOnAstar.cta") }}
