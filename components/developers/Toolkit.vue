@@ -8,7 +8,7 @@
         <p>
           {{ $t("developers.toolkit.description") }}
         </p>
-        <TextLink href="/community/ecosystem">
+        <TextLink href="/ecosystem">
           {{ $t("developers.toolkit.ecosystem") }}
         </TextLink>
       </div>
