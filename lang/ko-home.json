@@ -99,8 +99,8 @@
         }
       },
       "cta": {
-        "startBuilding": "개발 시작",
-        "ourNetworks": "우리 네트워크"
+        "startBuilding": "시작하기",
+        "ourNetworks": "네트워크 알아보기"
       }
     },
     "dAppsOnAstar": {
