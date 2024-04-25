@@ -91,10 +91,7 @@
                         <component
                           :is="menu.icon"
                           v-else
-                          :class="[
-                            'h-6 w-6',
-                            menu.iconColor ? `text-[${menu.iconColor}]` : 'text-white',
-                          ]"
+                          :class="['h-6 w-6', menu.iconColor ? `text-[${menu.iconColor}]` : 'text-white']"
                         />
                         <span class="text-base font-semibold text-slate-950">{{ menu.label }}</span>
                         <ArrowTopRightOnSquareIcon
@@ -136,15 +133,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  docsUrl,
-  socialUrl,
-  ambassadorProgramUrl,
-  forumUrl,
-  portalUrl,
-  careerUrl,
-  startaleUrl,
-} from '@/data/links'
+import { docsUrl, socialUrl, ambassadorProgramUrl, forumUrl, portalUrl, careerUrl, startaleUrl } from '@/data/links'
 import { Popover, PopoverButton, PopoverPanel, PopoverGroup } from '@headlessui/vue'
 import { ChevronDownIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 
