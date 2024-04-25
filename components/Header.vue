@@ -1,7 +1,9 @@
 <template>
   <PopoverGroup>
-    <div class="transition z-40 w-full">
-      <div class="container-lg flex items-center justify-between py-2 sm:py-3 lg:py-4 gap-12">
+    <div class="z-40 w-full transition">
+      <div
+        class="container-lg flex items-center justify-between gap-12 py-2 sm:py-3 lg:py-4"
+      >
         <NuxtLink
           :to="localePath('/')"
           class="flex"
@@ -19,7 +21,7 @@
         <div class="-my-2 -mr-2 lg:hidden">
           <MobileNav :menus="menus" />
         </div>
-        <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8">
+        <nav class="hidden items-center space-x-8 lg:flex">
           <Popover
             v-for="(category, categoryIndex) in menus"
             v-slot="{ open, close }"
@@ -32,8 +34,8 @@
                 open ? 'text-blue' : 'text-slate-950 hover:text-blue',
                 'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 transition',
               ]"
-              @mouseover="e => handleMouseEnter(e, categoryIndex)"
-              @mouseleave="e => handleMouseLeave(e, close)"
+              @mouseover="(e) => handleMouseEnter(e, categoryIndex)"
+              @mouseleave="(e) => handleMouseLeave(e, close)"
             >
               <span>{{ category.label }}</span>
               <ChevronDownIcon
@@ -53,7 +55,7 @@
               leave-to-class="opacity-0 -translate-y-1"
             >
               <PopoverPanel
-                class="bg-white shadow-lg absolute left-1/2 z-50 mt-4 -translate-x-1/2 py-6 px-3 rounded-md flex flex-row gap-3"
+                class="absolute left-1/2 z-50 mt-4 flex -translate-x-1/2 flex-row gap-3 rounded-md bg-white px-3 py-6 shadow-lg"
               >
                 <template
                   v-for="(item, index) in category.nav"
@@ -61,27 +63,29 @@
                 >
                   <div
                     class="flex flex-col"
-                    @mouseover="e => handleMouseEnter(e, categoryIndex)"
-                    @mouseleave="e => handleMouseLeave(e, close)"
+                    @mouseover="(e) => handleMouseEnter(e, categoryIndex)"
+                    @mouseleave="(e) => handleMouseLeave(e, close)"
                   >
                     <div
                       v-if="item.label !== ''"
-                      class="flex flex-row items-center gap-2 justify-start w-72 py-3 px-6"
+                      class="flex w-72 flex-row items-center justify-start gap-2 px-6 py-3"
                     >
                       <component
                         :is="item.icon"
                         class="h-6 w-6 text-white"
                       />
-                      <span class="text-base text-slate-500 font-semibold">{{ item.label }}</span>
+                      <span class="text-base font-semibold text-slate-500">{{
+                        item.label
+                      }}</span>
                     </div>
                     <NuxtLink
                       v-for="menu in item.nav"
                       :key="menu.label"
-                      class="flex flex-col gap-1 items-start transition bg-white hover:bg-slate-50 whitespace-nowrap w-72 py-3 px-6"
+                      class="flex w-72 flex-col items-start gap-1 whitespace-nowrap bg-white px-6 py-3 transition hover:bg-slate-50"
                       :to="menu.href"
                       :target="menu.href.includes('https') ? '_blank' : '_self'"
                     >
-                      <div class="flex flex-row gap-1 items-center">
+                      <div class="flex flex-row items-center gap-1">
                         <img
                           v-if="typeof menu.icon === 'string'"
                           :src="menu.icon"
@@ -91,15 +95,24 @@
                         <component
                           :is="menu.icon"
                           v-else
-                          :class="['h-6 w-6', menu.iconColor ? `text-[${menu.iconColor}]` : 'text-white']"
+                          :class="[
+                            'h-6 w-6',
+                            menu.iconColor
+                              ? `text-[${menu.iconColor}]`
+                              : 'text-white',
+                          ]"
                         />
-                        <span class="text-base font-semibold text-slate-950">{{ menu.label }}</span>
+                        <span class="text-base font-semibold text-slate-950">{{
+                          menu.label
+                        }}</span>
                         <ArrowTopRightOnSquareIcon
                           v-if="menu.href.includes('https')"
-                          class="w-4 h-4 text-slate-950"
+                          class="h-4 w-4 text-slate-950"
                         />
                       </div>
-                      <p class="text-sm text-slate-500 font-normal break-all whitespace-pre-line">
+                      <p
+                        class="whitespace-pre-line break-all text-sm font-normal text-slate-500"
+                      >
                         {{ menu.description }}
                       </p>
                     </NuxtLink>
@@ -114,20 +127,44 @@
           </Popover>
         </nav>
 
-        <LangSwitcher
-          class="hidden lg:flex"
-          color="black"
-          menu-position="right"
-        />
+        <div class="hidden items-center gap-2 lg:flex">
+          <LangSwitcher
+            color="black"
+            menu-position="right"
+          />
+          <Button
+            color="whiteBlue"
+            href="https://portal.astar.network/"
+            target="_blank"
+          >
+            Astar Portal
+          </Button>
+        </div>
       </div>
     </div>
   </PopoverGroup>
 </template>
 
 <script setup lang="ts">
-import { docsUrl, socialUrl, ambassadorProgramUrl, forumUrl, portalUrl, careerUrl, startaleUrl } from '@/data/links'
-import { Popover, PopoverButton, PopoverPanel, PopoverGroup } from '@headlessui/vue'
-import { ChevronDownIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
+import {
+  docsUrl,
+  socialUrl,
+  ambassadorProgramUrl,
+  forumUrl,
+  portalUrl,
+  careerUrl,
+  startaleUrl,
+} from '@/data/links'
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  PopoverGroup,
+} from '@headlessui/vue'
+import {
+  ChevronDownIcon,
+  ArrowTopRightOnSquareIcon,
+} from '@heroicons/vue/24/outline'
 
 interface Menu {
   label: string
