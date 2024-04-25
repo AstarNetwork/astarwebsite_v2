@@ -16,11 +16,12 @@
           {{ $t("ecosystem.chain") }}
         </RadioGroupLabel>
         <RadioGroupOption
+          v-for="_chain in chains"
           v-slot="{ checked }"
-          :value="chain"
-          v-for="chain in chains"
+          :key="_chain"
+          :value="_chain"
         >
-          <span :class="checked ? 'tab current' : 'tab'">{{ chain }}</span>
+          <span :class="checked ? 'tab current' : 'tab'">{{ _chain }}</span>
         </RadioGroupOption>
       </RadioGroup>
 
@@ -34,13 +35,14 @@
           {{ $t("ecosystem.categories") }}
         </RadioGroupLabel>
         <RadioGroupOption
+          v-for="_category in categories"
           v-slot="{ checked }"
-          :value="category.name"
-          v-for="category in categories"
+          :key="_category.name"
+          :value="_category.name"
         >
           <span :class="checked ? 'tab current' : 'tab'">
-            {{ category.name }}
-            <span class="text-xs">({{ category.projects.length }})</span>
+            {{ _category.name }}
+            <span class="text-xs">({{ _category.projects.length }})</span>
           </span>
         </RadioGroupOption>
       </RadioGroup>
@@ -58,9 +60,9 @@
 </template>
 
 <script setup lang="ts">
-import { RadioGroup, RadioGroupLabel, RadioGroupOption } from "@headlessui/vue";
-import gql from "graphql-tag";
-import { ProjectType, QueryResponse } from "@/types";
+import { RadioGroup, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
+import gql from 'graphql-tag'
+import type { ProjectType, QueryResponse } from '@/types'
 
 const query = gql`
   query getAllData {
@@ -127,54 +129,61 @@ const query = gql`
       }
     }
   }
-`;
+`
 const { data } = await useLazyAsyncQuery<QueryResponse>({
   query,
-  clientId: "community",
-});
+  clientId: 'community',
+})
 
 interface CategoryType {
-  name: string;
-  id: number;
-  projects: ProjectType[];
+  name: string
+  id: number
+  projects: ProjectType[]
 }
 
-let projects = ref<ProjectType[]>([]);
-let categories = ref<CategoryType[]>([{ name: "All", id: 0, projects: [] }]);
-let category = ref<CategoryType>(categories.value[0]);
-let chains = ref<string[]>(["All"]);
-let chain = ref<string>(chains.value[0]);
-let isLoading = ref<Boolean>(false);
+let projects = ref<ProjectType[]>([])
+let categories = ref<CategoryType[]>([{ name: 'All', id: 0, projects: [] }])
+const category = ref<CategoryType>(categories.value[0])
+let chains = ref<string[]>(['All'])
+const chain = ref<string>(chains.value[0])
+let isLoading = ref<boolean>(false)
 
-isLoading = computed(() => (data.value !== null ? true : false));
+isLoading = computed(() => (data.value !== null ? true : false))
 
 projects = computed(() =>
-  data.value !== null ? data.value.projects.data : []
-);
+  data.value !== null ? data.value.projects.data : [],
+)
 
 categories = computed(() => {
   if (data.value !== null) {
-    return [{ name: "All", id: 0, projects: projects.value }]
+    return [{ name: 'All', id: 0, projects: projects.value }]
       .concat(
-        data.value.projectCategories.data.map((category) => {
+        data.value.projectCategories.data.map((category: {
+          id: string
+          attributes: { name: string, projects: { data: ProjectType[] } }
+        }) => {
           return {
             name: category.attributes.name,
             id: Number(category.id),
             projects: category.attributes.projects.data,
-          };
-        })
+          }
+        }),
       )
-      .filter((category) => category.projects.length > 0 && category.id !== 15);
-  } else {
-    return [{ name: "All", id: 0, projects: projects.value }];
+      .filter(category => category.projects.length > 0 && category.id !== 15)
   }
-});
+  else {
+    return [{ name: 'All', id: 0, projects: projects.value }]
+  }
+})
 
 chains = computed(() =>
   data.value !== null
-    ? ["All"].concat(
-        data.value.projectChains.data.map((chain) => chain.attributes.name)
+    ? ['All'].concat(
+        data.value.projectChains.data.map((chain: {
+          id: string
+          attributes: { name: string }
+        }) => chain.attributes.name),
       )
-    : ["All"]
-);
+    : ['All'],
+)
 </script>

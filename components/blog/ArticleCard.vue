@@ -11,11 +11,14 @@
           :src="post.image"
           :alt="post.title"
           class="object-cover w-full aspect-blog group-hover:scale-110 transition"
-        />
+        >
       </div>
       <div class="p-4 sm:p-5 pb-8 flex-1">
-        <time v-if="blog" class="text-slate-500 text-sm sm:text-base">{{
-          post.publishedDate
+        <time
+          v-if="blog"
+          class="text-slate-500 text-sm sm:text-base"
+        >{{
+          post.publishedAt
         }}</time>
         <h3
           class="text-slate-950 sm:text-lg line-clamp-3 leading-7 mt-1"
@@ -23,7 +26,12 @@
         >
           {{ post.title }}
         </h3>
-        <p v-if="!blog" class="text-slate-500">{{ post.description }}</p>
+        <p
+          v-if="!blog"
+          class="text-slate-500"
+        >
+          {{ post.description }}
+        </p>
       </div>
       <div class="text-right self-end p-4 sm:p-5">
         <ArrowRightIcon class="w-5 h-5 text-slate-500 group-hover:text-blue" />
@@ -33,9 +41,9 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
-const { locale } = useI18n();
-const i18n = locale.value === "ja" ? "/ja" : "";
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
+const { locale } = useI18n()
+const i18n = locale.value === 'ja' ? '/ja' : ''
 
 const props = defineProps({
   post: {
@@ -46,5 +54,5 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-});
+})
 </script>

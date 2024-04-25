@@ -10,10 +10,15 @@
           >
             {{ newsletter.title }}
           </h2>
-          <p class="text-white">{{ newsletter.description }}</p>
+          <p class="text-white">
+            {{ newsletter.description }}
+          </p>
         </div>
         <div class="shrink-0 text-center">
-          <Button @click="newsletterOpen = true" color="whiteBlue">
+          <Button
+            color="whiteBlue"
+            @click="newsletterOpen = true"
+          >
             {{ newsletter.button }}
           </Button>
         </div>
@@ -21,8 +26,15 @@
     </div>
   </div>
 
-  <TransitionRoot as="template" :show="newsletterOpen">
-    <Dialog as="div" class="relative z-50" @close="newsletterOpen = false">
+  <TransitionRoot
+    as="template"
+    :show="newsletterOpen"
+  >
+    <Dialog
+      as="div"
+      class="relative z-50"
+      @close="newsletterOpen = false"
+    >
       <TransitionChild
         as="template"
         enter="ease-out duration-300"
@@ -53,7 +65,10 @@
             <DialogPanel
               class="relative transform overflow-hidden rounded-2xl bg-white shadow-xl transition-all w-full sm:max-w-2xl"
             >
-              <iframe class="w-full h-[600px]" :src="newsletter.iframe" />
+              <iframe
+                class="w-full h-[600px]"
+                :src="newsletter.iframe"
+              />
               <button
                 type="button"
                 class="text-slate-500 transition cursor-pointer p-3 hover:bg-slate-100 hover:text-slate-700 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
@@ -70,40 +85,40 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { newsletterUrl } from "@/data/links";
+import { ref } from 'vue'
+import { newsletterUrl } from '@/data/links'
 import {
   Dialog,
   DialogPanel,
   TransitionChild,
   TransitionRoot,
-} from "@headlessui/vue";
-import { XMarkIcon } from "@heroicons/vue/24/outline";
-const newsletterOpen = ref(false);
-const { t } = useI18n();
+} from '@headlessui/vue'
+import { XMarkIcon } from '@heroicons/vue/24/outline'
+const newsletterOpen = ref(false)
+const { t } = useI18n()
 
 const props = defineProps({
   type: {
     type: String,
-    default: "global",
+    default: 'global',
   },
-});
+})
 
 const newsletters = {
   global: {
     iframe: newsletterUrl.global,
-    title: t("blog.newsletter.global.title"),
-    description: t("blog.newsletter.global.description"),
-    button: t("blog.newsletter.global.signup"),
+    title: t('blog.newsletter.global.title'),
+    description: t('blog.newsletter.global.description'),
+    button: t('blog.newsletter.global.signup'),
   },
   japan: {
     iframe: newsletterUrl.japan,
-    title: t("blog.newsletter.japan.title"),
-    description: t("blog.newsletter.japan.description"),
-    button: t("blog.newsletter.japan.signup"),
+    title: t('blog.newsletter.japan.title'),
+    description: t('blog.newsletter.japan.description'),
+    button: t('blog.newsletter.japan.signup'),
   },
-};
+}
 
-const newsletter =
-  props.type === "japan" ? newsletters.japan : newsletters.global;
+const newsletter
+  = props.type === 'japan' ? newsletters.japan : newsletters.global
 </script>

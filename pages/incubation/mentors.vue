@@ -12,6 +12,7 @@
       >
         <IncubationMentorsListItem
           v-for="(mentor, index) in mentors"
+          :key="mentor.name"
           :mentor="mentor"
           @modal="modalAction(index)"
         />
@@ -26,18 +27,18 @@
 </template>
 
 <script setup lang="ts">
-import { mentors } from "@/data/mentors";
-import { ref } from "vue";
+import { mentors } from '@/data/mentors'
+import { ref } from 'vue'
 
-const route = useRoute();
-import { meta } from "@/data/meta";
-const { t } = useI18n();
-const seoTitle = `${t("incubation.meta.mentors.title")} | ${t(
-  "incubation.meta.title"
-)}`;
-const seoDescription = t("incubation.meta.mentors.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}incubation.png`;
+const route = useRoute()
+import { meta } from '@/data/meta'
+const { t } = useI18n()
+const seoTitle = `${t('incubation.meta.mentors.title')} | ${t(
+  'incubation.meta.title',
+)}`
+const seoDescription = t('incubation.meta.mentors.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}incubation.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -46,27 +47,27 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 
-const open = ref(false);
-const mentorIndex = ref(0);
+const open = ref(false)
+const mentorIndex = ref(0)
 
 const modalAction = (index: number) => {
-  mentorIndex.value = index;
-  open.value = true;
-};
+  mentorIndex.value = index
+  open.value = true
+}
 
 const modalClose = () => {
-  open.value = false;
-};
+  open.value = false
+}
 </script>

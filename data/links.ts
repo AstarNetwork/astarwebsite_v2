@@ -5,11 +5,16 @@ export const bugBountyProgramUrl = "https://immunefi.com/bounty/astarnetwork";
 
 export const forumUrl = "https://forum.astar.network/";
 
-export const brandAssetsUrl = "https://github.com/AstarNetwork/brand-assets";
+export const brandAssetKitUrl = {
+  zip: "/astar-brand-asset-kit.zip",
+  figma:
+    "https://www.figma.com/file/xEu8dYHuvpraJhI7HfyG7y/Brand-Asset-Kit?type=design&node-id=0%3A1&mode=design&t=oMyNB877IZkMUUeB-1",
+};
 
 export const docsUrl = {
   index: "https://docs.astar.network/",
   dappStaking: "https://docs.astar.network/docs/learn/dapp-staking/",
+  networks: "https://docs.astar.network/docs/learn/networks/",
 };
 
 export const newsletterUrl = {
@@ -46,3 +51,12 @@ export const socialUrl = {
 export const grantsUrl = {
   inkubator: "https://use.ink/ubator/",
 };
+
+export const portalUrl = {
+  index: "https://portal.astar.network/",
+  dappStaking: "https://portal.astar.network/astar/dapp-staking/discover",
+};
+
+export const careerUrl = "https://boards.greenhouse.io/startale";
+
+export const startaleUrl = "https://startale.org/";

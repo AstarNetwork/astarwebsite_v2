@@ -1,0 +1,29 @@
+{
+  "brandAssetKit": {
+    "title": "Brand Asset Kit",
+    "description": "The Astar Brand Asset Kit is the definitive reference point for community members and ecosystem projects. Use this brand guide to discover the exciting possibilities and guidelines for using our branding elements.",
+    "logo": {
+      "title": "Our logo",
+      "description": "Do not edit, change, distort, recolour, or reconfigure the Astar logo. And, of course, don’t use our logo to refer to any product or service that’s not Astar.",
+      "primary": "Primary",
+      "zkEvm": "Astar zkEVM",
+      "symbol": "Symbol"
+    },
+    "colors": {
+      "title": "Colours",
+      "description": "The Astar brand should always be expressed using our colour palette. Please only use these approved colours with our logo and design elements."
+    },
+    "typography": {
+      "title": "Typography",
+      "description": "We chose Poppins as our typeface to communicate our values and establish a memorable brand presence.",
+      "getFont": "Get Poppins font"
+    },
+    "cta": {
+      "title": "Download Astar Brand Assets",
+      "description": "The ZIP file and Figma file contain Astar and Astar zkEVM identities.",
+      "downloadZip": "Download Zip",
+      "figmaFile": "Figma File"
+    },
+    "note": "If you employ the mark or any variation of it in association with illegal or deceitful activities, we reserve the right to withdraw this trademark license. In such a scenario, you must immediately discontinue all usage of the mark and its variations."
+  }
+}

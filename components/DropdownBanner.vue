@@ -1,7 +1,7 @@
 <template>
   <div
-    class="relative isolate flex items-center gap-x-6 overflow-hidden bg-slate-50 px-4 py-2.5 sm:px-3.5 sm:before:flex-1"
     v-if="isVisible"
+    class="relative isolate flex items-center gap-x-6 overflow-hidden bg-slate-50 px-4 py-2.5 sm:px-3.5 sm:before:flex-1"
   >
     <div
       class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
@@ -94,16 +94,19 @@
         @click="isVisible = false"
       >
         <span class="sr-only">Dismiss</span>
-        <XMarkIcon class="h-5 w-5 text-slate-950" aria-hidden="true" />
+        <XMarkIcon
+          class="h-5 w-5 text-slate-950"
+          aria-hidden="true"
+        />
       </button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { XMarkIcon } from "@heroicons/vue/20/solid";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-import { notification } from "@/data/notification";
-const { locale } = useI18n();
-const isVisible = ref(true);
+import { XMarkIcon } from '@heroicons/vue/20/solid'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
+import { notification } from '@/data/notification'
+const { locale } = useI18n()
+const isVisible = ref(true)
 </script>

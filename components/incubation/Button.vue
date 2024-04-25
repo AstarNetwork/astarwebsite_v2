@@ -1,42 +1,50 @@
 <template>
-  <NuxtLink v-if="href !== ''" :class="classes" :to="href">
+  <NuxtLink
+    v-if="href !== ''"
+    :class="classes"
+    :to="href"
+  >
     <slot>Button</slot>
   </NuxtLink>
-  <button v-else :class="classes" type="button">
+  <button
+    v-else
+    :class="classes"
+    type="button"
+  >
     <span><slot>Button</slot></span>
   </button>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed } from 'vue'
 
 const props = defineProps({
   href: {
     type: String,
-    default: "",
+    default: '',
   },
   color: {
     type: String,
-    default: "primary",
+    default: 'primary',
   },
   variant: {
     type: String,
-    default: "contained",
+    default: 'contained',
   },
   size: {
     type: String,
-    default: "md",
+    default: 'md',
   },
-});
+})
 
 const classes = computed(() => ({
   btn: true,
-  primary: props.color === "primary",
-  secondary: props.color === "secondary",
-  [`${props.size || "md"}`]: true,
-  contained: props.variant === "contained",
-  outlined: props.variant === "outlined",
-}));
+  primary: props.color === 'primary',
+  secondary: props.color === 'secondary',
+  [`${props.size || 'md'}`]: true,
+  contained: props.variant === 'contained',
+  outlined: props.variant === 'outlined',
+}))
 </script>
 
 <style lang="postcss" scoped>

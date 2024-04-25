@@ -1,6 +1,13 @@
 <template>
-  <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-10" @close="handleClick">
+  <TransitionRoot
+    as="template"
+    :show="open"
+  >
+    <Dialog
+      as="div"
+      class="relative z-10"
+      @close="handleClick"
+    >
       <TransitionChild
         as="template"
         enter="ease-out duration-300"
@@ -35,7 +42,7 @@
                     class="w-full object-cover rounded-sm mb-8"
                     :src="'/images/incubation/mentors/' + mentor.image"
                     :alt="mentor.name"
-                  />
+                  >
                   <IncubationMentorsModalDetail
                     :mentor="mentor"
                     class="hidden sm:block"
@@ -78,13 +85,13 @@
 </template>
 
 <script setup lang="ts">
-import { XMarkIcon, GlobeAltIcon } from "@heroicons/vue/24/outline";
+import { XMarkIcon, GlobeAltIcon } from '@heroicons/vue/24/outline'
 import {
   Dialog,
   DialogPanel,
   TransitionChild,
   TransitionRoot,
-} from "@headlessui/vue";
+} from '@headlessui/vue'
 
 defineProps({
   mentor: {},
@@ -92,13 +99,13 @@ defineProps({
     type: Boolean,
     default: false,
   },
-});
+})
 
-const emit = defineEmits(["close"]);
+const emit = defineEmits(['close'])
 
 const handleClick = () => {
-  emit("close");
-};
+  emit('close')
+}
 
-const { locale } = useI18n();
+const { locale } = useI18n()
 </script>

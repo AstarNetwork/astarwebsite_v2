@@ -12,59 +12,29 @@
       <ul
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
       >
-        <BlogArticleCard v-for="post in posts" :post="post" :blog="true" />
+        <BlogArticleCard
+          v-for="post in posts"
+          :key="post.slug"
+          :post="post"
+          :blog="true"
+        />
       </ul>
     </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import gql from "graphql-tag";
+import { meta } from '@/data/meta'
+import { getPosts } from '@/components/blog'
 
-// The subsocial space for news: https://polkaverse.com/10802 , and Japanese: https://polkaverse.com/11315
-const { locale } = useI18n();
-const astarSpace = locale.value === "ja" ? 11315 : 10802;
-const query = gql`
-  query PostsBySpaceId {
-    posts(where: { space: { id_eq: "${astarSpace}" }, hidden_eq: false }, orderBy: id_DESC) {
-      publishedDate: createdOnDay
-      title
-      href: canonical
-      image
-      slug
-      id
-    }
-  }
-`;
+const posts = await getPosts()
+const route = useRoute()
+const { t } = useI18n()
 
-const { data } = await useAsyncQuery({ query, clientId: "subsocial" });
-const posts = data.value.posts.map(
-  (item: { publishedDate: string | number | Date }) => {
-    const lowercaseSlug = item.slug.toLowerCase();
-    const date = new Date(item.publishedDate);
-    const formattedDate = date.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-    return {
-      ...item,
-      image: item.image
-        ? "https://ipfs.subsocial.network/ipfs/" + item.image
-        : "/images/blog/placeholder.webp",
-      publishedDate: formattedDate,
-      slug: lowercaseSlug,
-    };
-  }
-);
-
-const route = useRoute();
-const { t } = useI18n();
-import { meta } from "@/data/meta";
-const seoTitle = `${t("blog.title")} | ${meta.siteName} - ${t("meta.tagline")}`;
-const seoDescription = t("blog.description");
-const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}blog.png`;
+const seoTitle = `${t('blog.title')} | ${meta.siteName} - ${t('meta.tagline')}`
+const seoDescription = t('blog.description')
+const seoUrl = `${meta.url}${route.fullPath}`
+const seoImage = `${meta.image}blog.png`
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -73,15 +43,15 @@ useServerSeoMeta({
   ogDescription: () => seoDescription,
   ogImage: () => seoImage,
   ogImageUrl: () => seoImage,
-  ogType: () => "website",
+  ogType: () => 'website',
   ogUrl: () => seoUrl,
-  twitterCard: () => "summary_large_image",
+  twitterCard: () => 'summary_large_image',
   twitterTitle: () => seoTitle,
   twitterDescription: () => seoDescription,
   twitterImage: () => seoImage,
-});
+})
 
 definePageMeta({
   layout: false,
-});
+})
 </script>

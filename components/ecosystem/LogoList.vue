@@ -1,21 +1,27 @@
 <template>
   <!-- Search Box -->
   <div class="mb-4 sm:mb-6">
-    <label for="search" class="sr-only">
+    <label
+      for="search"
+      class="sr-only"
+    >
       {{ $t("ecosystem.searchTheEcosystem") }}
     </label>
     <div class="relative text-slate-950">
       <div
         class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4"
       >
-        <MagnifyingGlassIcon class="h-5 w-5" aria-hidden="true" />
+        <MagnifyingGlassIcon
+          class="h-5 w-5"
+          aria-hidden="true"
+        />
       </div>
       <input
         v-model="searchTerm"
         type="text"
         :placeholder="`${$t('ecosystem.searchTheEcosystem')}...`"
         class="block border border-slate-300 bg-white rounded-full p-3 lg:p-4 pl-10 lg:pl-10 w-full focus:ring-1 focus:ring-blue/50 placeholder:text-slate-400 text-slate-950"
-      />
+      >
     </div>
   </div>
 
@@ -30,15 +36,16 @@
     >
       <ul class="flex gap-1 mb-2">
         <li
-          v-for="chain in item.attributes.project_chains.data"
+          v-for="projectChain in item.attributes.project_chains.data"
+          :key="projectChain.id"
           class="text-xs py-1 px-2 rounded-sm whitespace-nowrap border"
           :class="
-            chain.id == 1
+            projectChain.id == 1
               ? 'bg-pink/10 text-pink border-pink/50'
               : 'bg-blue/10 text-blue border-blue/50'
           "
         >
-          {{ chain.attributes.name }}
+          {{ projectChain.attributes.name }}
         </li>
       </ul>
       <span class="block py-4 mb-2 lg:mb-4">
@@ -46,7 +53,7 @@
           :src="useStrapiMedia(item.attributes.logo.data.attributes.url)"
           :alt="item.attributes.name"
           class="w-32 lg:w-48 h-12 lg:h-16 object-contain mx-auto logo-image"
-        />
+        >
       </span>
       <div class="space-y-2 pb-4">
         <span
@@ -56,10 +63,11 @@
         </span>
         <ul class="flex justify-center flex-wrap gap-1">
           <li
-            v-for="category in item.attributes.project_categories.data"
+            v-for="projectCategory in item.attributes.project_categories.data"
+            :key="projectCategory.id"
             class="text-xs bg-slate-200 text-slate-500 py-1 px-2 rounded-sm whitespace-nowrap"
           >
-            {{ category.attributes.name }}
+            {{ projectCategory.attributes.name }}
           </li>
         </ul>
         <span
@@ -78,9 +86,9 @@
     class="flex justify-center items-center gap-4 my-4 w-full mt-6 lg:mt-12"
   >
     <button
-      @click="prevPage"
       :disabled="currentPage === 1"
       class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative group text-blue disabled:border-gray-300 disabled:text-gray-300 disabled:pointer-events-none"
+      @click="prevPage"
     >
       <span class="sr-only">Previous</span>
       <span
@@ -92,9 +100,9 @@
     </button>
     <span class=""> {{ currentPage }} / {{ totalPages }} </span>
     <button
-      @click="nextPage"
       :disabled="currentPage === totalPages"
       class="flex items-center justify-center border border-blue rounded-full w-12 h-12 relative group text-blue disabled:border-gray-300 disabled:text-gray-300 disabled:pointer-events-none"
+      @click="nextPage"
     >
       <span class="sr-only">Next</span>
       <span
@@ -112,86 +120,86 @@ import {
   ArrowRightIcon,
   ArrowLeftIcon,
   MagnifyingGlassIcon,
-} from "@heroicons/vue/24/outline";
-import { ProjectType } from "@/types";
+} from '@heroicons/vue/24/outline'
+import type { ProjectType } from '@/types'
 
 interface Props {
-  projects: ProjectType[];
-  category: string;
-  chain: string;
+  projects: ProjectType[]
+  category: string
+  chain: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   projects: () => [] as ProjectType[],
-  category: () => "",
-  chain: () => "",
-});
+  category: () => '',
+  chain: () => '',
+})
 
 // Updated computed property to filter by chain and search term
 const sortedProjects = computed(() => {
   return props.projects
     .filter((project) => {
       // Filter by category if specified
-      const categoryMatch =
-        props.category === "All" || !props.category
+      const categoryMatch
+        = props.category === 'All' || !props.category
           ? true
           : project.attributes.project_categories.data.some(
-              (category) => category.attributes.name === props.category
-            );
+            category => category.attributes.name === props.category,
+          )
 
       // Filter by chain if specified
-      const chainMatch =
-        props.chain === "All" || !props.chain
+      const chainMatch
+        = props.chain === 'All' || !props.chain
           ? true
           : project.attributes.project_chains.data.some(
-              (chain) => chain.attributes.name === props.chain
-            );
+            chain => chain.attributes.name === props.chain,
+          )
 
       // Filter by search term if specified
       const searchMatch = project.attributes.name
         .toLowerCase()
-        .includes(searchTerm.value.toLowerCase());
+        .includes(searchTerm.value.toLowerCase())
 
-      return categoryMatch && chainMatch && searchMatch;
+      return categoryMatch && chainMatch && searchMatch
     })
     .sort((a, b) =>
-      a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase() ? 1 : -1
-    );
-});
+      a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase() ? 1 : -1,
+    )
+})
 
 // Reactive property for search term
-const searchTerm = ref("");
-const currentPage = ref(1);
-const projectsPerPage = ref(16);
+const searchTerm = ref('')
+const currentPage = ref(1)
+const projectsPerPage = ref(16)
 
 // Watcher that resets currentPage to 1 whenever sortedProjects changes
 watch(
   sortedProjects,
   () => {
-    currentPage.value = 1;
+    currentPage.value = 1
   },
-  { deep: true }
-);
+  { deep: true },
+)
 
 const totalPages = computed(() =>
-  Math.ceil(sortedProjects.value.length / projectsPerPage.value)
-);
+  Math.ceil(sortedProjects.value.length / projectsPerPage.value),
+)
 
 function nextPage() {
   if (currentPage.value < totalPages.value) {
-    currentPage.value++;
+    currentPage.value++
   }
 }
 
 function prevPage() {
   if (currentPage.value > 1) {
-    currentPage.value--;
+    currentPage.value--
   }
 }
 
 const paginatedProjects = computed(() => {
-  const start = (currentPage.value - 1) * projectsPerPage.value;
-  const end = start + projectsPerPage.value;
-  return sortedProjects.value.slice(start, end);
-});
+  const start = (currentPage.value - 1) * projectsPerPage.value
+  const end = start + projectsPerPage.value
+  return sortedProjects.value.slice(start, end)
+})
 </script>

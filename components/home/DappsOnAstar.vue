@@ -12,19 +12,28 @@
         {{ $t("home.dAppsOnAstar.description") }}
       </p>
       <div class="text-center sm:text-left">
-        <Button :href="localePath('/community/ecosystem/')" color="whiteGray">
+        <Button
+          :href="localePath('/ecosystem/')"
+          color="whiteGray"
+        >
           {{ $t("home.dAppsOnAstar.cta") }}
         </Button>
       </div>
     </div>
-    <div class="flex-1" data-aos="fade-up">
-      <img src="/images/home/dapps-on-astar.svg" class="w-full" />
+    <div
+      class="flex-1"
+      data-aos="fade-up"
+    >
+      <img
+        src="/images/home/dapps-on-astar.svg"
+        class="w-full"
+      >
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
+const localePath = useLocalePath()
 </script>
 
 <style lang="postcss" scoped></style>

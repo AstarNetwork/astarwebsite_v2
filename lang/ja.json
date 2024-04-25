@@ -5,21 +5,9 @@
   },
   "footer": {
     "nav": {
-      "build": "Build",
-      "docs": "Docs",
-      "apply": "Apply",
-      "careers": "Careers",
-      "ambassadorProgram":"Astar Ambassador Program",
-      "bugBountyProgram":"Bug Bounty Program",
-      "learn": "Learn",
-      "blog": "Astar Blog",
-      "videos": "Videos",
-      "forum": "Forum",
-      "other": "Other",
-      "brandAssets": "Brand Assets",
+      "legal": "Legal",
       "privacyPolicy": "Privacy Policy",
-      "termsOfUse": "Terms of Use",
-      "contactUs": "Contact Us"
+      "termsOfUse": "Terms of Use"
     },
     "contactUs": {
       "title": "Contact Us",

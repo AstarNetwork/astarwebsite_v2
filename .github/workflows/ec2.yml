@@ -24,7 +24,7 @@ jobs:
             cd ~/ssr/astarwebsite_v2/
             git stash
             git pull
-            npm ci
+            npm install
             npm run build
             sudo systemctl restart astarweb.service
       
@@ -39,6 +39,6 @@ jobs:
             cd ~/ssr/astarwebsite_v2/
             git stash
             git pull 
-            npm ci 
+            npm install 
             npm run build 
             sudo systemctl restart astarweb.service

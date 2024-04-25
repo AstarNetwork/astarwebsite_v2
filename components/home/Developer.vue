@@ -1,20 +1,21 @@
 <template>
   <div class="container-md py-12 sm:py-20">
     <h2
-      class="text-white text-4xl sm:text-6xl tracking-tight text-center mb-8 sm:mb-12"
+      class="mb-8 text-center text-4xl tracking-tight text-white sm:mb-12 sm:text-6xl"
     >
       {{ $t("home.developer.title") }}
     </h2>
     <p
-      class="mx-auto max-w-3xl text-center mb-16 sm:mb-20 sm:text-lg leading-relaxed"
+      class="mx-auto mb-16 max-w-3xl text-center leading-relaxed sm:mb-20 sm:text-lg"
     >
       {{ $t("home.developer.description") }}
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 lg:gap-x-12">
+    <div class="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 lg:gap-x-12">
       <div
         v-for="(item, index) in data"
-        class="border rounded-xl p-6 sm:p-8 lg:p-12 relative"
+        :key="item.slug"
+        class="relative rounded-xl border p-6 sm:p-8 lg:p-12"
         :class="index === 0 ? 'border-stone-800' : 'border-slate-800'"
         data-aos="fade-up"
         :data-aos-delay="index * 100"
@@ -23,11 +24,11 @@
           :src="`/images/home/developer-bg-${
             index === 0 ? 'pink' : 'blue'
           }.svg`"
-          class="w-full object-cover absolute left-0 top-0 opacity-20"
+          class="absolute left-0 top-0 w-full object-cover opacity-20"
         />
         <div class="relative z-10">
           <p
-            class="flex justify-end items-center space-x-2 uppercase text-slate-300 text-xs sm:text-sm mb-6"
+            class="mb-6 flex items-center justify-end space-x-2 text-xs uppercase text-slate-300 sm:text-sm"
           >
             <span>
               {{ $t("home.developer.poweredBy") }}
@@ -39,15 +40,17 @@
               :alt="item.poweredBy.text"
             />
           </p>
-          <h3 class="text-2xl sm:text-3xl mb-4 sm:mb-6 leading-snug text-white">
+          <h3 class="mb-4 text-2xl leading-snug text-white sm:mb-6 sm:text-3xl">
             {{ item.name }}
           </h3>
-          <p class="leading-relaxed">{{ item.description }}</p>
-          <ul class="space-y-2 my-10">
-            <li v-for="feature in item.features" class="flex">
+          <p class="leading-relaxed">
+            {{ item.description }}
+          </p>
+          <ul class="my-10 space-y-2">
+            <li v-for="feature in item.features" :key="feature" class="flex">
               <CheckCircleIcon
                 :class="index === 0 ? 'text-pink' : 'text-blue'"
-                class="w-5 sm:w-6 h-5 sm:h-6 mr-2 shrink-0"
+                class="mr-2 h-5 w-5 shrink-0 sm:h-6 sm:w-6"
               />
               {{ feature }}
             </li>
@@ -56,12 +59,14 @@
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8 sm:mt-12">
+    <div
+      class="mt-8 flex flex-col items-center justify-center gap-4 text-center sm:mt-12 sm:flex-row"
+    >
       <Button :href="localePath('/developers/')" color="whiteGray">
         {{ $t("home.developer.cta.startBuilding") }}
       </Button>
 
-      <Button href="#" color="whiteGray">
+      <Button :href="docsUrl.networks" color="whiteGray">
         {{ $t("home.developer.cta.ourNetworks") }}
       </Button>
     </div>
@@ -71,6 +76,7 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 import { CheckCircleIcon } from "@heroicons/vue/24/solid";
+import { docsUrl } from "@/data/links";
 
 const { t } = useI18n();
 

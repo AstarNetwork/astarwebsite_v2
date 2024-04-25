@@ -8,7 +8,7 @@
         <p>
           {{ $t("developers.toolkit.description") }}
         </p>
-        <TextLink href="/community/ecosystem">
+        <TextLink href="/ecosystem">
           {{ $t("developers.toolkit.ecosystem") }}
         </TextLink>
       </div>
@@ -19,6 +19,7 @@
         >
           <div
             v-for="item in projects"
+            :key="item.attributes.name"
             class="flex items-center justify-center"
           >
             <NuxtLink
@@ -30,7 +31,7 @@
                 :src="useStrapiMedia(item.attributes.logo.data.attributes.url)"
                 :alt="item.attributes.name"
                 class="h-12 w-32 lg:w-48 object-contain"
-              />
+              >
             </NuxtLink>
           </div>
         </div>
@@ -40,9 +41,9 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
 
 const query = gql`
   query getAllData {
@@ -66,17 +67,55 @@ const query = gql`
       }
     }
   }
-`;
-const { data } = await useAsyncQuery({ query, clientId: "community" });
-
-let projects = [];
-if (data.value !== null) {
-  projects = data.value.projects.data.sort((a, b) => {
-    if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
-      return 1;
-    } else {
-      return -1;
+`
+const { data }: {
+  data: {
+    value: {
+      projects: {
+        data: {
+          attributes: {
+            name: string
+            website: string
+            description: string
+            logo: {
+              data: {
+                attributes: {
+                  url: string
+                }
+              }
+            }
+          }
+        }[]
+      }
     }
-  });
+  }
+} = await useAsyncQuery({ query, clientId: 'community' })
+
+let projects: {
+  attributes: {
+    name: string
+    website: string
+    description: string
+    logo: {
+      data: {
+        attributes: {
+          url: string
+        }
+      }
+    }
+  }
+}[] = []
+
+if (data.value !== null) {
+  projects = data.value.projects.data.sort(
+    (a, b) => {
+      if (a.attributes.name.toLowerCase() > b.attributes.name.toLowerCase()) {
+        return 1
+      }
+      else {
+        return -1
+      }
+    },
+  )
 }
 </script>

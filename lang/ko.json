@@ -5,21 +5,9 @@
   },
   "footer": {
     "nav": {
-      "build": "빌드 시작",
-      "docs": "공식 문서",
-      "apply": "신청하기",
-      "careers": "채용 정보",
-      "ambassadorProgram": "Astar 앰배서더 프로그램",
-      "bugBountyProgram": "버그 바운티 프로그램",
-      "learn": "학습하기",
-      "blog": "Astar 블로그",
-      "videos": "영상",
-      "forum": "포럼",
-      "other": "기타",
-      "brandAssets": "브랜드 에셋",
+      "legal": "약관",
       "privacyPolicy": "개인정보 처리방침",
-      "termsOfUse": "이용 약관",
-      "contactUs": "문의하기"
+      "termsOfUse": "이용 약관"
     },
     "contactUs": {
       "title": "문의하기",

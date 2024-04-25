@@ -64,7 +64,7 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronDownIcon } from "@heroicons/vue/24/outline";
+import { ChevronDownIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <style lang="postcss" scoped>

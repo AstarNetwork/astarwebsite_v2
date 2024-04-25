@@ -12,13 +12,24 @@
         >
           {{ title }}
         </h1>
-        <p
-          v-if="description"
-          class="sm:text-lg sm:leading-relaxed max-w-screen-sm mx-auto"
+        <div>
+          <h2
+            v-if="subtitle"
+            class="sm:text-lg sm:leading-relaxed font-semibold max-w-screen-sm mx-auto"
+          >
+            {{ subtitle }}
+          </h2>
+          <p
+            v-if="description"
+            class="sm:text-lg sm:leading-relaxed max-w-screen-sm mx-auto"
+          >
+            {{ description }}
+          </p>
+        </div>
+        <Button
+          v-if="button.to"
+          :href="button.to"
         >
-          {{ description }}
-        </p>
-        <Button v-if="button.to" :href="button.to">
           {{ button.label }}
         </Button>
         <slot />
@@ -28,23 +39,27 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   title: {
     type: String,
-    default: "",
+    default: '',
+  },
+  subtitle: {
+    type: String,
+    default: '',
   },
   description: {
     type: String,
-    default: "",
+    default: '',
   },
   button: {
     type: Object,
-    default: {
-      label: "",
-      to: "",
-    },
+    default: () => ({
+      label: '',
+      to: '',
+    }),
   },
-});
+})
 </script>
 
 <style lang="postcss" scoped></style>

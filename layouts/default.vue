@@ -1,6 +1,6 @@
 <template>
   <!-- <DropdownBanner /> -->
-  <div>
+  <div class="antialiased">
     <Header />
     <slot />
     <Footer />

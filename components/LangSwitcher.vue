@@ -1,12 +1,22 @@
 <template>
-  <Menu as="div" class="relative inline-block text-left">
+  <Menu
+    as="div"
+    class="relative inline-block text-left"
+  >
     <div>
       <MenuButton
-        class="inline-flex justify-center items-center gap-x-1.5 rounded-md border border-white px-3 py-2 text-white hover:bg-white/10 transition"
+        class="inline-flex justify-center items-center gap-x-1.5 rounded-md px-3 py-2 transition"
+        :class="{
+          'border border-white text-white hover:bg-white/10': color === 'white',
+          'text-slate-950': color === 'black',
+        }"
       >
         <GlobeAltIcon class="w-6 h-6 inline-block" />
         {{ currentLocale.name }}
-        <ChevronDownIcon class="-mr-1 h-5 w-5" aria-hidden="true" />
+        <ChevronDownIcon
+          class="-mr-1 h-5 w-5"
+          aria-hidden="true"
+        />
       </MenuButton>
     </div>
 
@@ -19,19 +29,27 @@
       leave-to-class="transform opacity-0 scale-95"
     >
       <MenuItems
-        class="absolute left-0 z-10 mt-2 w-44 origin-top-right rounded-md bg-white focus:outline-none"
+        class="absolute z-10 mt-2 w-44 origin-top-right rounded-md bg-white focus:outline-none"
+        :class="{
+          'left-0': menuPosition === 'left',
+          'right-0': menuPosition === 'right',
+        }"
       >
         <div class="py-1">
-          <MenuItem v-for="locale in locales" v-slot="{ active }">
+          <MenuItem
+            v-for="_locale in locales"
+            v-slot="{ active }"
+            :key="_locale.code"
+          >
             <NuxtLink
-              :to="switchLocalePath(locale.code)"
-              :key="locale.code"
+              :key="_locale.code"
+              :to="switchLocalePath(_locale.code)"
               :class="[
                 active ? 'bg-slate-100 text-slate-900' : 'text-slate-700',
                 'block px-4 py-2 text-sm',
               ]"
             >
-              {{ locale.name }}
+              {{ _locale.name }}
             </NuxtLink>
           </MenuItem>
         </div>
@@ -41,15 +59,25 @@
 </template>
 
 <script setup lang="ts">
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
-import { ChevronDownIcon } from "@heroicons/vue/20/solid";
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 
-import { GlobeAltIcon } from "@heroicons/vue/24/outline";
+import { GlobeAltIcon } from '@heroicons/vue/24/outline'
 
-const { locale, locales } = useI18n();
-const switchLocalePath = useSwitchLocalePath();
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 const currentLocale = computed(() => {
-  return locales.value.find((i) => i.code === locale.value);
-});
+  return locales.value.find(i => i.code === locale.value) ?? {
+    code: 'en',
+    name: 'English',
+  }
+})
+
+type Props = {
+  color: 'white' | 'black'
+  menuPosition: 'left' | 'right'
+}
+
+defineProps<Props>()
 </script>

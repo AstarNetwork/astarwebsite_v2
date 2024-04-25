@@ -1,0 +1,90 @@
+{
+  "header": {
+    "solution": {
+      "title": "ソリューションズ",
+      "solutions": {
+        "label": "ソリューションズ",
+        "description": "企業、開発者、そして全ての人々のためのWeb3ソリューション"
+      },
+      "startale": {
+        "label": "Startale Labs",
+        "description": "Web3のマスアダプションを加速、Astar Networkの開発、Web3インフラの提供"
+      },
+      "japan": {
+        "label": "Astar Japan Lab",
+        "description": "日本のサービスとビジネスの成長を促進"
+      },
+      "astar2": {
+        "label": "Astar 2.0",
+        "description": "すべての人のためのグローバルなWeb3ビジョンを推進するスケーラブルなネットワーク"
+      }
+    },
+    "ecosystem": {
+      "title": "エコシステム",
+      "use": {
+        "label": "使う",
+          "portal": {
+            "label": "ポータル",
+            "description": "資産管理のためのマルチチェーンプラットフォームハブ"
+          },
+          "dappStaking": {
+            "label": "dAppステーキング",
+            "description": "開発者とAstarコミュニティを繋ぐインセンティブプログラム"
+          },
+          "ecosystem": {
+            "label": "エコシステム",
+            "description": "Astar上の全てのアプリケーションとプロジェクト"
+          }
+      },
+      "developer": {
+        "label": "開発者",
+        "start": {
+          "label": "開発を始める",
+          "description": "複数のVM、レイヤー、コンセンサス・プロトコルの恩恵を得られる、クロスレイヤー技術スタック"
+        },
+        "docs": {
+          "label": "ドキュメント",
+          "description": "Astar Networkの総合的な情報ライブラリ"
+        }
+      },
+      "explore": {
+        "label": "探索する",
+        "community": {
+          "label": "コミュニティ",
+          "description": "Astarのコミュニティと繋がろう"
+        },
+        "blog": {
+          "label": "ブログ",
+          "description": "主要なニュース、エコシステムの告知、開発のアップデート、その他"
+        },
+        "agent": {
+          "label": "エージェントプログラム",
+          "description": "Astarのコミュニティをサポートするプログラム"
+        },
+        "discord": {
+          "label": "Discordコミュニティ",
+          "description": "開発者のコミュニティに参加しよう"
+        },
+        "forum": {
+          "label": "Astarフォーラム",
+          "description": "コミュニティ主導でAstarについて話し合おう"
+        }
+      }
+    },
+    "about": {
+      "title": "私たちについて",
+      "brand": {
+        "label": "ブランドアセットキット",
+        "description": "ブランドのガイドライン、アセットのダウンロード"
+      },
+      "career": {
+        "label": "キャリア",
+        "description": "理想の仕事を見つけよう"
+      },
+      "contact": {
+        "label": "お問い合わせ",
+        "description": "Astarチームに連絡する"
+      }
+    }
+  }
+}

@@ -1,20 +1,31 @@
 {
   "community": {
     "title": "Community",
-    "description": "The true stars of our ecosystem.",
+    "subtitle": "Connect with Astar’s community.",
+    "description": "Start your journey to learn with others and make your mark in web3.",
     "online_community": {
-      "description": "Excited for the future of Astar Network? We are too. Together, we can bring Web3 to the masses and help create an innovation future for all. Join the Astar community to build without limits and unlock the blockchain frontier, today.",
       "social": {
         "title": "Join our online community",
         "description": "Find your tribe and participate and grow our community with other Astar enthusiasts."
+      },
+      "space_club": {
+        "title": "Astar Ecosystem Agent Program",
+        "description": "Grow with Astar. Support the ecosystem and gain experience in web3 while receiving rewards.",
+        "button": {
+          "space_club": "Astar Space Club",
+          "read_more": "Read more"
+        }
       }
     },
     "builders": {
-      "title": "Build dApps on the Astar Network",
+      "title": "Build dApps on the Astar",
       "ecosystem": {
         "title": "Ecosystem",
         "description": "Take a look at who's already building on Astar Network, or visit the documentation to dive in yourself.",
-        "go_to_docs": "Go to documentation"
+        "button": {
+          "explore": "Explore ecosystem",
+          "docs": "Go to docs"
+        }
       },
       "space_labs": {
         "title": "Astar Space Labs",
@@ -29,6 +40,24 @@
       "title": "Become an Official Ambassador",
       "description": "We have created an open community program where every community member can join and support the Astar ecosystem. You can collect points and receive rewards through dApp staking with valid and useful contributions.",
       "button": "Ambassador Program"
+    },
+    "communities": {
+      "title": "Find Your Community On Astar",
+      "description": "Connect with like-minded people to discuss, learn, and celebrate Astar in your language.",
+      "table": {
+        "columns": {
+          "language": "Language",
+          "telegram": "Telegram Channel",
+          "twitter": "X(Twitter) Account"
+        },
+        "rows": {
+          "turkish": "Turkish",
+          "portuguese": "Portuguese",
+          "vietnamese": "Vietnamese",
+          "japanese": "Japanese",
+          "korean": "Korean"
+        }
+      }
     }
   }
 }

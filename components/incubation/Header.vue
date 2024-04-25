@@ -1,6 +1,9 @@
 <template>
   <header>
-    <div class="pointer-events-none inset-0 z-30" aria-hidden="true" />
+    <div
+      class="pointer-events-none inset-0 z-30"
+      aria-hidden="true"
+    />
 
     <Popover v-slot="{ open }">
       <div
@@ -62,7 +65,9 @@
             </nav>
           </div>
 
-          <div class="hidden lg:block"><LangSwitcher /></div>
+          <div class="hidden lg:block">
+            <LangSwitcher />
+          </div>
         </div>
       </div>
     </Popover>
@@ -70,10 +75,10 @@
 </template>
 
 <script setup lang="ts">
-import { Popover } from "@headlessui/vue";
+import { Popover } from '@headlessui/vue'
 
-const route = useRoute();
-const localePath = useLocalePath();
+const route = useRoute()
+const localePath = useLocalePath()
 </script>
 
 <style lang="postcss" scoped>

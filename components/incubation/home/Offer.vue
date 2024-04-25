@@ -11,9 +11,13 @@
     <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8">
       <li
         v-for="item in offer"
+        :key="item.text"
         class="p-6 lg:p-10 rounded border border-gray-500"
       >
-        <img :src="'/images/incubation/home/' + item.image" :alt="item.text" />
+        <img
+          :src="'/images/incubation/home/' + item.image"
+          :alt="item.text"
+        >
         <p class="text-black text-xl mt-5 mb-2 leading-snug">
           {{ item.text }}
         </p>
@@ -30,25 +34,25 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 const offer = [
   {
-    text: t("incubation.program.offer.connection.lead"),
-    image: "icon-connection.svg",
-    link: "connection",
+    text: t('incubation.program.offer.connection.lead'),
+    image: 'icon-connection.svg',
+    link: 'connection',
   },
   {
-    text: t("incubation.program.offer.support.lead"),
-    image: "icon-support.svg",
-    link: "support",
+    text: t('incubation.program.offer.support.lead'),
+    image: 'icon-support.svg',
+    link: 'support',
   },
   {
-    text: t("incubation.program.offer.grow.lead"),
-    image: "icon-grow.svg",
-    link: "grow",
+    text: t('incubation.program.offer.grow.lead'),
+    image: 'icon-grow.svg',
+    link: 'grow',
   },
-];
+]
 </script>

@@ -24,11 +24,11 @@
 defineProps({
   title: {
     type: String,
-    default: "",
+    default: '',
   },
   description: {
     type: String,
-    default: "",
+    default: '',
   },
-});
+})
 </script>

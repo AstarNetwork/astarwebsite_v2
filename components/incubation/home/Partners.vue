@@ -27,13 +27,13 @@
         src="/images/incubation/home/partners.svg"
         alt="Partners"
         class="min-w-[300px]"
-      />
+      >
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 
-const localePath = useLocalePath();
+const localePath = useLocalePath()
 </script>

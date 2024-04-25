@@ -6,7 +6,10 @@
     <ul
       class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-2 sm:gap-y-20"
     >
-      <template v-for="(item, index) in building">
+      <template
+        v-for="(item, index) in building"
+        :key="item.title"
+      >
         <li
           class="transition rounded-3xl mb-16 sm:mb-0 group"
           :class="
@@ -27,7 +30,7 @@
               :alt="item.title"
               width="182"
               height="184"
-            />
+            >
             <div class="px-4 sm:px-6 lg:px-7 pb-8 sm:pb-8">
               <h3 class="text-lg sm:text-xl font-bold leading-tight">
                 {{ item.title }}
@@ -45,40 +48,40 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 
-const { t } = useI18n();
+const { t } = useI18n()
 
 const building = [
   {
-    title: t("developers.start.evm"),
-    image: "building-ethereum.svg",
-    href: "https://docs.astar.network/docs/build/EVM/",
-    color: "bg-space-pink hover:bg-space-pink-lighter",
+    title: t('developers.start.evm'),
+    image: 'building-ethereum.svg',
+    href: 'https://docs.astar.network/docs/build/EVM/',
+    color: 'bg-space-pink hover:bg-space-pink-lighter',
   },
   {
-    title: t("developers.start.wasm"),
-    image: "building-wasm.svg",
-    href: "https://docs.astar.network/docs/build/wasm/",
-    color: "bg-space-purple hover:bg-space-purple-lighter",
+    title: t('developers.start.wasm'),
+    image: 'building-wasm.svg',
+    href: 'https://docs.astar.network/docs/build/wasm/',
+    color: 'bg-space-purple hover:bg-space-purple-lighter',
   },
   {
-    title: t("developers.start.collator"),
-    image: "building-collator.svg",
-    href: "https://docs.astar.network/docs/build/nodes/",
-    color: "bg-space-blue hover:bg-space-blue-lighter",
+    title: t('developers.start.collator'),
+    image: 'building-collator.svg',
+    href: 'https://docs.astar.network/docs/build/nodes/',
+    color: 'bg-space-blue hover:bg-space-blue-lighter',
   },
   {
-    title: t("developers.start.exchange"),
-    image: "building-exchange.svg",
-    href: "",
-    color: "bg-space-sky",
+    title: t('developers.start.exchange'),
+    image: 'building-exchange.svg',
+    href: '',
+    color: 'bg-space-sky',
   },
   {
-    title: t("developers.start.templates"),
-    image: "building-template.svg",
-    href: "https://github.com/inkdevhub",
-    color: "bg-space-cyan hover:bg-space-cyan-lighter",
+    title: t('developers.start.templates'),
+    image: 'building-template.svg',
+    href: 'https://github.com/inkdevhub',
+    color: 'bg-space-cyan hover:bg-space-cyan-lighter',
   },
-];
+]
 </script>

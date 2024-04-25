@@ -4,13 +4,16 @@
       <span>{{ $t("developers.why.title") }}</span>
     </h2>
     <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12 sm:gap-y-16">
-      <li v-for="(item, index) in advantages">
+      <li
+        v-for="item in advantages"
+        :key="item.name"
+      >
         <img
           :src="'/images/developers/' + item.image"
           :alt="item.name"
           width="150"
           height="130"
-        />
+        >
         <h3 class="font-bold text-lg sm:text-xl mt-4 mb-2 leading-tight">
           {{ item.name }}
         </h3>
@@ -21,38 +24,38 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const advantages = [
   {
-    name: t("developers.why.evm.title"),
-    description: t("developers.why.evm.description"),
-    image: "advantages-ethereum.svg",
+    name: t('developers.why.evm.title'),
+    description: t('developers.why.evm.description'),
+    image: 'advantages-ethereum.svg',
   },
   {
-    name: t("developers.why.wasm.title"),
-    description: t("developers.why.wasm.description"),
-    image: "advantages-wasm.svg",
+    name: t('developers.why.wasm.title'),
+    description: t('developers.why.wasm.description'),
+    image: 'advantages-wasm.svg',
   },
   {
-    name: t("developers.why.scalable.title"),
-    description: t("developers.why.scalable.description"),
-    image: "advantages-scalable.svg",
+    name: t('developers.why.scalable.title'),
+    description: t('developers.why.scalable.description'),
+    image: 'advantages-scalable.svg',
   },
   {
-    name: t("developers.why.secure.title"),
-    description: t("developers.why.secure.description"),
-    image: "advantages-secure.svg",
+    name: t('developers.why.secure.title'),
+    description: t('developers.why.secure.description'),
+    image: 'advantages-secure.svg',
   },
   {
-    name: t("developers.why.xcm.title"),
-    description: t("developers.why.xcm.description"),
-    image: "advantages-xcm.svg",
+    name: t('developers.why.xcm.title'),
+    description: t('developers.why.xcm.description'),
+    image: 'advantages-xcm.svg',
   },
   {
-    name: t("developers.why.buildAndEarn.title"),
-    description: t("developers.why.buildAndEarn.description"),
-    image: "advantages-income.svg",
+    name: t('developers.why.buildAndEarn.title'),
+    description: t('developers.why.buildAndEarn.description'),
+    image: 'advantages-income.svg',
   },
-];
+]
 </script>
