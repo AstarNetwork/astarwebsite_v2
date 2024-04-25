@@ -5,13 +5,13 @@
   >
     <div>
       <MenuButton
-        class="inline-flex justify-center items-center gap-x-1.5 rounded-md px-3 py-2 transition"
+        class="inline-flex items-center justify-center gap-x-1.5 rounded-md px-3 py-2 transition"
         :class="{
           'border border-white text-white hover:bg-white/10': color === 'white',
           'text-slate-950': color === 'black',
         }"
       >
-        <GlobeAltIcon class="w-6 h-6 inline-block" />
+        <GlobeAltIcon class="inline-block h-6 w-6" />
         {{ currentLocale.name }}
         <ChevronDownIcon
           class="-mr-1 h-5 w-5"
@@ -29,7 +29,7 @@
       leave-to-class="transform opacity-0 scale-95"
     >
       <MenuItems
-        class="absolute z-10 mt-2 w-44 origin-top-right rounded-md bg-white focus:outline-none"
+        class="absolute z-10 mt-2 w-44 origin-top-right rounded-md bg-white shadow focus:outline-none"
         :class="{
           'left-0': menuPosition === 'left',
           'right-0': menuPosition === 'right',
@@ -68,10 +68,12 @@ const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const currentLocale = computed(() => {
-  return locales.value.find(i => i.code === locale.value) ?? {
-    code: 'en',
-    name: 'English',
-  }
+  return (
+    locales.value.find(i => i.code === locale.value) ?? {
+      code: 'en',
+      name: 'English',
+    }
+  )
 })
 
 type Props = {
