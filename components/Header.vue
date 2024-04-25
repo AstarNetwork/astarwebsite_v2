@@ -1,9 +1,7 @@
 <template>
   <PopoverGroup>
     <div class="z-40 w-full transition">
-      <div
-        class="container-lg flex items-center justify-between gap-12 py-2 sm:py-3 lg:py-4"
-      >
+      <div class="container-lg flex items-center justify-between gap-12 py-2 sm:py-3 lg:py-4">
         <NuxtLink
           :to="localePath('/')"
           class="flex"
@@ -74,9 +72,7 @@
                         :is="item.icon"
                         class="h-6 w-6 text-white"
                       />
-                      <span class="text-base font-semibold text-slate-500">{{
-                        item.label
-                      }}</span>
+                      <span class="text-base font-semibold text-slate-500">{{ item.label }}</span>
                     </div>
                     <NuxtLink
                       v-for="menu in item.nav"
@@ -97,22 +93,16 @@
                           v-else
                           :class="[
                             'h-6 w-6',
-                            menu.iconColor
-                              ? `text-[${menu.iconColor}]`
-                              : 'text-white',
+                            menu.iconColor ? `text-[${menu.iconColor}]` : 'text-white',
                           ]"
                         />
-                        <span class="text-base font-semibold text-slate-950">{{
-                          menu.label
-                        }}</span>
+                        <span class="text-base font-semibold text-slate-950">{{ menu.label }}</span>
                         <ArrowTopRightOnSquareIcon
                           v-if="menu.href.includes('https')"
                           class="h-4 w-4 text-slate-950"
                         />
                       </div>
-                      <p
-                        class="whitespace-pre-line break-all text-sm font-normal text-slate-500"
-                      >
+                      <p class="whitespace-pre-line break-all text-sm font-normal text-slate-500">
                         {{ menu.description }}
                       </p>
                     </NuxtLink>
@@ -155,16 +145,8 @@ import {
   careerUrl,
   startaleUrl,
 } from '@/data/links'
-import {
-  Popover,
-  PopoverButton,
-  PopoverPanel,
-  PopoverGroup,
-} from '@headlessui/vue'
-import {
-  ChevronDownIcon,
-  ArrowTopRightOnSquareIcon,
-} from '@heroicons/vue/24/outline'
+import { Popover, PopoverButton, PopoverPanel, PopoverGroup } from '@headlessui/vue'
+import { ChevronDownIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 
 interface Menu {
   label: string
