@@ -98,12 +98,15 @@
           "developerExperience": "開発者が使い慣れたEthereumのツールとインフラが利用可能"
         }
       },
-      "cta": "Start building"
+      "cta": {
+        "startBuilding": "開発を始める",
+        "ourNetworks": "ネットワークについて"
+      }
     },
     "dAppsOnAstar": {
       "title": "dApps on Astar",
       "description": "Astar Networkは、次世代のdAppsとWeb3ソリューションを推進しています。",
-      "cta": "Explore ecosystem"
+      "cta": "エコシステムへ"
     },
     "funding": {
       "title": "Funding",
@@ -125,7 +128,7 @@
           "subjectToMarket": "(subject to market)"
         }
       },
-      "cta": "Developer support"
+      "cta": "開発者サポート"
     },
     "links": {
       "astrAndItsUtility": {

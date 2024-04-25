@@ -98,7 +98,10 @@
           "developerExperience": "Familiar developer experience powered by Ethereum’s proven stack of tooling and infrastructure"
         }
       },
-      "cta": "Start building"
+      "cta": {
+        "startBuilding": "Start building",
+        "ourNetworks": "Our networks"
+      }
     },
     "dAppsOnAstar": {
       "title": "dApps on Astar",

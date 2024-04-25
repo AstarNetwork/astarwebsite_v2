@@ -98,7 +98,10 @@
           "developerExperience": "이더리움의 검증된 스택, 툴링 및 인프라에 의한 친숙한 개발자 경험"
         }
       },
-      "cta": "개발 시작"
+      "cta": {
+        "startBuilding": "시작하기",
+        "ourNetworks": "네트워크 알아보기"
+      }
     },
     "dAppsOnAstar": {
       "title": "Astar의 dApps",
