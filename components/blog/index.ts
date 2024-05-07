@@ -7,9 +7,10 @@ import plugin from 'markdown-it-named-headings'
 export async function getPosts(
   filters: string = '',
   pagination: string = 'page: 1, pageSize: 100',
+  customLocale?: string,
 ) {
   const { $i18n } = useNuxtApp()
-  const locale = $i18n.locale
+  const locale = customLocale ?? $i18n.locale.value
   const md = new MarkdownIt().use(plugin)
   const strapiUrl = 'https://community.astar.network'
 
@@ -18,7 +19,7 @@ export async function getPosts(
       posts(
           filters: { ${filters} }
           pagination: { ${pagination} }
-          locale: "${locale.value}"
+          locale: "${locale}"
           sort: "publishedAt:DESC"
       ) {
         data {
