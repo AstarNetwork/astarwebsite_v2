@@ -128,68 +128,75 @@ if (!isNumeric(id)) {
 else {
   const fetchData = async () => {
     const filter = `id: { eq: "${id}" }`
-    const fetchedPosts = await getPosts(filter)
 
-    if (fetchedPosts && fetchedPosts.length > 0) {
-      post.value = fetchedPosts[0] as unknown as Post // Cast to Post
-      console.log(`tags|${post.value.tags}|${post.value.tags.length}|`)
+    const localedPosts = await getPosts(filter)
 
-      if (post.value) {
-        const orConditions = post.value.tags
-          .map(tag => `{ tags: { containsi: "${tag}" } }`)
-          .join(', ')
-
-        const filters = `id: { ne: "${id}" } and: { or: [${orConditions}] }`
-        const pagination = 'limit: 6'
-        posts.value = (await getPosts(filters, pagination)) as unknown as Post[]
-
-        const seoTitle = `${post.value.title} | ${meta.siteName}`
-        const seoDescription = post.value.summary
-        const seoUrl = `${meta.url}${route.fullPath}`
-
-        let twitterId = socialUrl.twitter.global.id
-        if (locale.value === 'ja') {
-          twitterId = socialUrl.twitter.japan.id
-        }
-        else if (locale.value === 'ko') {
-          twitterId = socialUrl.twitter.korea.id
-        }
-
-        useServerSeoMeta({
-          title: () => seoTitle,
-          description: () => seoDescription,
-          author: () => 'Astar Network Team',
-          ogSiteName: () => 'Astar Network',
-          ogLocale: () => locale.value,
-          ogTitle: () => seoTitle,
-          ogDescription: () => seoDescription,
-          ogImage: () => post.value?.image,
-          ogImageUrl: () => post.value?.image,
-          ogType: () => 'article',
-          ogUrl: () => seoUrl,
-          twitterSite: () => twitterId,
-          twitterCard: () => 'summary_large_image',
-          twitterTitle: () => seoTitle,
-          twitterDescription: () => seoDescription,
-          twitterImage: () => post.value?.image,
-        })
-
-        useSchemaOrg([
-          defineArticle({
-            author: {
-              name: 'Astar Network Team',
-            },
-          }),
-        ])
-
-        definePageMeta({
-          layout: false,
-        })
-      }
+    if (localedPosts && localedPosts.length > 0) {
+      post.value = localedPosts[0] as unknown as Post
     }
     else {
-      router.push('/blog')
+      const defaultPosts = await getPosts(filter, '', 'en')
+
+      if (defaultPosts && defaultPosts.length > 0) {
+        post.value = defaultPosts[0] as unknown as Post
+      }
     }
+
+    if (!post.value) {
+      router.back()
+      return
+    }
+
+    const orConditions = post.value.tags
+      .map(tag => `{ tags: { containsi: "${tag}" } }`)
+      .join(', ')
+
+    const filters = `id: { ne: "${id}" } and: { or: [${orConditions}] }`
+    const pagination = 'limit: 6'
+    posts.value = (await getPosts(filters, pagination)) as unknown as Post[]
+
+    const seoTitle = `${post.value.title} | ${meta.siteName}`
+    const seoDescription = post.value.summary
+    const seoUrl = `${meta.url}${route.fullPath}`
+
+    let twitterId = socialUrl.twitter.global.id
+    if (locale.value === 'ja') {
+      twitterId = socialUrl.twitter.japan.id
+    }
+    else if (locale.value === 'ko') {
+      twitterId = socialUrl.twitter.korea.id
+    }
+
+    useServerSeoMeta({
+      title: () => seoTitle,
+      description: () => seoDescription,
+      author: () => 'Astar Network Team',
+      ogSiteName: () => 'Astar Network',
+      ogLocale: () => locale.value,
+      ogTitle: () => seoTitle,
+      ogDescription: () => seoDescription,
+      ogImage: () => post.value?.image,
+      ogImageUrl: () => post.value?.image,
+      ogType: () => 'article',
+      ogUrl: () => seoUrl,
+      twitterSite: () => twitterId,
+      twitterCard: () => 'summary_large_image',
+      twitterTitle: () => seoTitle,
+      twitterDescription: () => seoDescription,
+      twitterImage: () => post.value?.image,
+    })
+
+    useSchemaOrg([
+      defineArticle({
+        author: {
+          name: 'Astar Network Team',
+        },
+      }),
+    ])
+
+    definePageMeta({
+      layout: false,
+    })
   }
 
   fetchData()

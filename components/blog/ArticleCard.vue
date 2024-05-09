@@ -1,7 +1,7 @@
 <template>
   <!-- post.slug is the slug of the article -->
   <NuxtLink
-    :href="blog ? i18n + '/blog/' + post.slug : post.link"
+    :href="blog ? localePath(`/blog/${post.slug}`) : post.link"
     :target="!blog && post.link.includes('https') ? '_blank' : '_self'"
     class="rounded-md bg-white/50 group transition h-full shadow-lg flex items-center justify-center overflow-hidden before:absolute before:h-0 before:w-0 before:rounded-full before:duration-300 before:ease-out hover:before:h-[600px] hover:before:w-[600px] before:bg-slate-50 relative"
   >
@@ -42,10 +42,9 @@
 
 <script setup lang="ts">
 import { ArrowRightIcon } from '@heroicons/vue/24/outline'
-const { locale } = useI18n()
-const i18n = locale.value === 'ja' ? '/ja' : ''
+const localePath = useLocalePath()
 
-const props = defineProps({
+defineProps({
   post: {
     type: Object,
     default: null,

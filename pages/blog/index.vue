@@ -27,9 +27,13 @@
 import { meta } from '@/data/meta'
 import { getPosts } from '@/components/blog'
 
-const posts = await getPosts()
+let posts = await getPosts()
 const route = useRoute()
 const { t } = useI18n()
+
+if (posts.length === 0) {
+  posts = await getPosts('', 'page: 1, pageSize: 100', 'en')
+}
 
 const seoTitle = `${t('blog.title')} | ${meta.siteName} - ${t('meta.tagline')}`
 const seoDescription = t('blog.description')
