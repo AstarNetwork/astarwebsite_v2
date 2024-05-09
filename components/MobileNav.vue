@@ -98,6 +98,7 @@
                               <NuxtLink
                                 v-for="menu in item.nav"
                                 :key="menu.label"
+                                :href="menu.href"
                                 :target="
                                   menu.href.includes('https')
                                     ? '_blank'
