@@ -147,6 +147,9 @@ else {
       return
     }
 
+    // when it goes to null, need to set as empty array
+    post.value.tags = post.value.tags ?? []
+
     const orConditions = post.value.tags
       .map(tag => `{ tags: { containsi: "${tag}" } }`)
       .join(', ')
