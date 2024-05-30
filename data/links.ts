@@ -57,6 +57,6 @@ export const portalUrl = {
   dappStaking: 'https://portal.astar.network/astar/dapp-staking/discover',
 }
 
-export const careerUrl = 'https://boards.greenhouse.io/startale'
+export const careerUrl = 'https://startale.com/en/career'
 
 export const startaleUrl = 'https://startale.org/'
