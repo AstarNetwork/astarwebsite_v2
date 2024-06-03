@@ -16,11 +16,11 @@
           "exploreEcosystem": "생태계 탐색"
         }
       },
-      "yokiOrigins": {
-        "title": "요키 오리진스",
-        "description": "'요키 오리진스'는 일본의 고대 요괴생물로부터 영감을 받은 요괴 캐릭터 수집을 위한 NFT 캠페인입니다. 여러분만의 요키들을 수집하고 업그레이드하여 재밋는 웹3 경험을 체험해보세요.",
+      "dappStaking": {
+        "title": "dApp Staking Period 002",
+        "description": "Stake safely with full control over your assets",
         "cta": {
-          "yokiOriginsWebsite": "요키 오리진스 웹사이트"
+          "portal": "Start Staking Now"
         }
       }
     },

@@ -16,11 +16,11 @@
           "exploreEcosystem": "Explore ecosystem"
         }
       },
-      "yokiOrigins": {
-        "title": "Yoki Origins",
-        "description": "Yoki Originsは、日本の超自然的な生き物にインスパイアされたオリジナルのYokiキャラクターを発見する旅です。エキサイティングでフレンドリーなWeb3の経験を通してYokiを集めてアップグレードしましょう。",
+      "dappStaking": {
+        "title": "dApp Staking Period 002",
+        "description": "資産を自分で管理しながら安全にステーキング",
         "cta": {
-          "yokiOriginsWebsite": "Yoki Origins website"
+          "portal": "ステーキングを始める"
         }
       }
     },
