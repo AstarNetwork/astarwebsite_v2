@@ -8,7 +8,10 @@
       :data-aos-delay="index * 100"
     >
       <div class="-mt-24 mb-4">
-        <img :src="`/images/home/${item.image}`" class="mx-auto w-full max-w-[460px]" />
+        <img
+          :src="`/images/home/${item.image}`"
+          class="mx-auto w-full max-w-[460px]"
+        >
       </div>
       <h2
         class="text-center text-3xl sm:text-4xl lg:text-5xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0047FF] to-[#00D1FF] leading-tight sm:leading-tight lg:leading-tight font-bold mb-4"
@@ -31,57 +34,60 @@
     </div>
 
     <div class="absolute -z-10 top-0">
-      <img src="/images/common/gradient-bg.svg" alt="" />
+      <img
+        src="/images/common/gradient-bg.svg"
+        alt=""
+      >
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
-const { t } = useI18n();
+const localePath = useLocalePath()
+const { t } = useI18n()
 
-import { portalUrl } from "@/data/links";
+import { portalUrl } from '@/data/links'
 
 const data: Array<{
-  title: string;
-  image: string;
-  description: string;
+  title: string
+  image: string
+  description: string
   links: Array<{
-    label: string;
-    url: string;
-    color: "blue" | "whiteBlue" | "whiteGray" | "outlinedGray";
-  }>;
+    label: string
+    url: string
+    color: 'blue' | 'whiteBlue' | 'whiteGray' | 'outlinedGray'
+  }>
 }> = [
   {
-    title: t("home.features.bridgeAndEcosystem.title"),
-    image: "bridge-and-ecosystem.svg",
-    description: t("home.features.bridgeAndEcosystem.description"),
+    title: t('home.features.bridgeAndEcosystem.title'),
+    image: 'bridge-and-ecosystem.svg',
+    description: t('home.features.bridgeAndEcosystem.description'),
     links: [
       {
-        label: t("home.features.bridgeAndEcosystem.cta.bridgeToAstar"),
-        url: "https://portal.astar.network/astar/bridge",
-        color: "blue",
+        label: t('home.features.bridgeAndEcosystem.cta.bridgeToAstar'),
+        url: 'https://portal.astar.network/astar/bridge',
+        color: 'blue',
       },
       {
-        label: t("home.features.bridgeAndEcosystem.cta.exploreEcosystem"),
-        url: "/ecosystem/",
-        color: "outlinedGray",
+        label: t('home.features.bridgeAndEcosystem.cta.exploreEcosystem'),
+        url: '/ecosystem/',
+        color: 'outlinedGray',
       },
     ],
   },
   {
-    title: t("home.features.dappStaking.title"),
-    image: "dapp-staking.webp",
-    description: t("home.features.dappStaking.description"),
+    title: t('home.features.dappStaking.title'),
+    image: 'dapp-staking.webp',
+    description: t('home.features.dappStaking.description'),
     links: [
       {
-        label: t("home.features.dappStaking.cta.portal"),
+        label: t('home.features.dappStaking.cta.portal'),
         url: portalUrl.dappStaking,
-        color: "blue",
+        color: 'blue',
       },
     ],
   },
-];
+]
 </script>
 
 <style lang="postcss" scoped></style>
