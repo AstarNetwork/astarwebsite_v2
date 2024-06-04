@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-6 container-lg mt-8 relative"
-  >
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-16 sm:gap-6 container-lg mt-8 relative">
     <div
       v-for="(item, index) in data"
       :key="item.title"
@@ -20,7 +18,7 @@
       >
         {{ item.title }}
       </h2>
-      <p class="leading-relaxed mb-8">
+      <p :class="`leading-relaxed mb-8 ${index === 1 ? 'text-center' : ''}`">
         {{ item.description }}
       </p>
       <div class="flex justify-center flex-col lg:flex-row gap-3">
@@ -47,6 +45,8 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { t } = useI18n()
+
+import { portalUrl } from '@/data/links'
 
 const data: Array<{
   title: string
@@ -76,13 +76,13 @@ const data: Array<{
     ],
   },
   {
-    title: t('home.features.yokiOrigins.title'),
-    image: 'yoki-origins.webp',
-    description: t('home.features.yokiOrigins.description'),
+    title: t('home.features.dappStaking.title'),
+    image: 'dapp-staking.webp',
+    description: t('home.features.dappStaking.description'),
     links: [
       {
-        label: t('home.features.yokiOrigins.cta.yokiOriginsWebsite'),
-        url: 'https://yoki.astar.network/',
+        label: t('home.features.dappStaking.cta.portal'),
+        url: portalUrl.dappStaking,
         color: 'blue',
       },
     ],

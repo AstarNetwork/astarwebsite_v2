@@ -16,11 +16,11 @@
           "exploreEcosystem": "Explore ecosystem"
         }
       },
-      "yokiOrigins": {
-        "title": "Yoki Origins",
-        "description": "Yoki Origins is a journey to discover original Yoki characters inspired by supernatural creatures from Japan. Collect and upgrade your Yoki in this exciting and friendly web3 experience for everyone.",
+      "dappStaking": {
+        "title": "dApp Staking Period 002",
+        "description": "Stake safely with full control over your assets",
         "cta": {
-          "yokiOriginsWebsite": "Yoki Origins website"
+          "portal": "Start Staking Now"
         }
       }
     },
