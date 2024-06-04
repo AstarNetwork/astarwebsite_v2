@@ -18,9 +18,9 @@
       },
       "dappStaking": {
         "title": "dApp Staking Period 002",
-        "description": "Stake safely with full control over your assets",
+        "description": "자산을 직접 관리하면서 안전하게 스테이킹 해보세요.",
         "cta": {
-          "portal": "Start Staking Now"
+          "portal": "스테이킹 시작하기"
         }
       }
     },
