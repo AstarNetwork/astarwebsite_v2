@@ -1,5 +1,5 @@
 export const ambassadorProgramUrl
-  = 'https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4'
+  = 'https://startale.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=74'
 
 export const bugBountyProgramUrl = 'https://immunefi.com/bounty/astarnetwork'
 

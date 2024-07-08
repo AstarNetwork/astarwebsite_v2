@@ -20,8 +20,8 @@
         </p>
         <div class="text-center lg:text-left">
           <Button
+            :href="ambassadorProgramUrl"
             color="whiteBlue"
-            href="https://astarnetwork.notion.site/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=4"
           >
             {{ $t("community.ambassador.button") }}
           </Button>
@@ -31,4 +31,6 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ambassadorProgramUrl } from '@/data/links'
+</script>
