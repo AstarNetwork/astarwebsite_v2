@@ -40,7 +40,7 @@
         {{ $t("community.online_community.space_club.description") }}
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <Button href="https://www.notion.so/Astar-Space-Club-2023-5e396c75fcf34d698baf288d9aa9230f?pvs=21">
+        <Button :href="ambassadorProgramUrl">
           {{ $t("community.online_community.space_club.button.space_club") }}
         </Button>
         <Button
@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { socialUrl, forumUrl } from '@/data/links'
+import { socialUrl, forumUrl, ambassadorProgramUrl } from '@/data/links'
 
 const X = resolveComponent('IconX')
 const Discord = resolveComponent('IconDiscord')
