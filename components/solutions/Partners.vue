@@ -4,7 +4,9 @@
       <h2 class="text-center text-4xl sm:text-6xl tracking-tight mb-8 sm:mb-12">
         {{ $t("solutions.partners.title") }}
       </h2>
-      <p class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-8 sm:mb-20">
+      <p
+        class="text-center max-w-3xl mx-auto sm:text-lg leading-relaxed mb-8 sm:mb-20"
+      >
         {{ $t("solutions.partners.description") }}
       </p>
 
