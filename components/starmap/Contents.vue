@@ -390,6 +390,7 @@
 </template>
 
 <script setup lang="ts">
+import { startaleUrl } from '@/data/links'
 import {
   XMarkIcon,
   ArrowTopRightOnSquareIcon,
@@ -460,7 +461,7 @@ const discoveries: { [index: string]: Discovery } = {
   startale: {
     title: t('starmap.expansion.startale.title'),
     description: t('starmap.expansion.startale.description'),
-    href: 'https://startale.org/',
+    href: startaleUrl,
     image: 'startale.webp',
   },
   techStack: {

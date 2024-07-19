@@ -84,6 +84,7 @@
 </template>
 
 <script setup lang="ts">
+import { startaleUrl } from '@/data/links'
 import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 const localePath = useLocalePath()
 const { t } = useI18n()
@@ -95,28 +96,26 @@ const data = {
     description: t('home.solutions.startale.description'),
     link: {
       label: t('home.solutions.startale.cta'),
-      url: 'https://startale.org/',
+      url: startaleUrl,
     },
     useCases: [
       {
         name: t('home.solutions.startale.useCases.sony.name'),
         image: 'sony.webp',
         description: t('home.solutions.startale.useCases.sony.description'),
-        link: 'https://startale.org/blog/39274',
+        link: 'https://startale.com/en/blog/Sony-Network-Communications-and-Startale-Labs-Form-Joint-39274',
       },
       {
         name: t('home.solutions.startale.useCases.bobg.name'),
         image: 'bobg.webp',
         description: t('home.solutions.startale.useCases.bobg.description'),
-        link: 'https://startale.org/blog/38915',
+        link: 'https://startale.com/en/blog/Announcement-of-Capital-and-Business-Alliance-between-38915',
       },
       {
         name: t('home.solutions.startale.useCases.uobAndSamsung.name'),
         image: 'uob-samsung.webp',
-        description: t(
-          'home.solutions.startale.useCases.uobAndSamsung.description',
-        ),
-        link: 'https://startale.org/blog/71699',
+        description: t('home.solutions.startale.useCases.uobAndSamsung.description'),
+        link: 'https://startale.com/en/blog/Startale-Labs-Raises-Additional-dollar3.5m-from-UOB-Venture-71699',
       },
     ],
   },
