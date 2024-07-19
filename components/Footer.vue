@@ -77,7 +77,7 @@
           </NuxtLink>
         </div>
 
-        <div class="grid gap-8 sm:grid-cols-4 lg:grid-cols-7">
+        <div class="grid gap-8 sm:grid-cols-3 lg:grid-cols-6">
           <LangSwitcher
             color="white"
             menu-position="left"
@@ -86,7 +86,7 @@
             v-for="category in nav"
             :key="category.name"
           >
-            <h3 class="font-medium text-white font-semibold text-lg">
+            <h3 class="text-white font-semibold text-lg">
               {{ category.name }}
             </h3>
             <ul
@@ -114,9 +114,21 @@
           </div>
         </div>
 
-        <p class="text-center text-white text-sm">
-          &copy; {{ new Date().getFullYear() }} Astar Network. All Rights Reserved.
-        </p>
+        <div class="text-white text-xs sm:text-sm flex gap-3 sm:gap-4 flex-wrap">
+          <p>&copy; {{ new Date().getFullYear() }} Astar Network.</p>
+          <NuxtLink
+            :to="localePath('/privacy-policy')"
+            class="text-white hover:underline hover:text-white"
+          >
+            {{ t('footer.nav.privacyPolicy') }}
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/term-of-use')"
+            class="text-white hover:underline hover:text-white"
+          >
+            {{ t('footer.nav.termsOfUse') }}
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </footer>
@@ -289,19 +301,6 @@ const nav = [
       {
         name: t('header.about.contact.label'),
         href: localePath('/contact'),
-      },
-    ],
-  },
-  {
-    name: t('footer.nav.legal'),
-    nav: [
-      {
-        name: t('footer.nav.privacyPolicy'),
-        href: '/privacy-policy',
-      },
-      {
-        name: t('footer.nav.termsOfUse'),
-        href: '/term-of-use',
       },
     ],
   },
