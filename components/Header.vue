@@ -176,7 +176,7 @@ const menus: Menu[] = [
             label: t('header.solution.startale.label'),
             description: t('header.solution.startale.description'),
             href: startaleUrl,
-            icon: '/images/header/startale-symbol.svg',
+            icon: '/images/common/startale-symbol.svg',
           },
           {
             label: t('header.solution.japan.label'),
