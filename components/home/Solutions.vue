@@ -134,16 +134,8 @@ const data = {
         description: t(
           'home.solutions.japanLab.useCases.shibuyaCity.description',
         ),
-        link: 'https://medium.com/astar-network/astar-partners-with-shibuya-city-6824712020da',
+        link: '',
       },
-      // {
-      //   name: t("home.solutions.japanLab.useCases.doubleJumpTokyo.name"),
-      //   image: "double-jump-tokyo.webp",
-      //   description: t(
-      //     "home.solutions.japanLab.useCases.doubleJumpTokyo.description"
-      //   ),
-      //   link: "https://www.doublejump.tokyo/",
-      // },
       {
         name: t('home.solutions.japanLab.useCases.hakuhodo.name'),
         image: 'hakuhodo.webp',
