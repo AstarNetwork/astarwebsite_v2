@@ -5,6 +5,7 @@
   },
   "footer": {
     "nav": {
+      "legal": "Legal",
       "privacyPolicy": "Privacy Policy",
       "termsOfUse": "Terms of Use"
     },

@@ -5,6 +5,7 @@
   },
   "footer": {
     "nav": {
+      "legal": "약관",
       "privacyPolicy": "개인정보 처리방침",
       "termsOfUse": "이용 약관"
     },
