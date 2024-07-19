@@ -36,17 +36,7 @@
     },
     "partners": {
       "title": "주요 파트너사",
-      "description": "Astar 미션을 함께 이루기 위해 뭉친 주요 파트너사",
-      "startale": {
-        "name": "Startale Labs",
-        "description": "Startale Labs는 웹3의 매스어덥션(Mass Adoption)을 가속화하기 위해 기여하고, 일본 최대의 퍼블릭 블록체인인 Astar Network의 개발조직으로, Startale 웹3 클라우드를 통해 웹3 인프라 솔루션을 제공합니다.",
-        "cta": "Startale Labs 웹사이트"
-      },
-      "sony": {
-        "name": "소니 네트워크 커뮤니케이션즈",
-        "description": "소니 네트워크 커뮤니케이션즈와 Astar 네트워크는 세계 최고의 창업가분들을 위한 공동 인큐베이션 프로그램을 만들어 웹3 스타트업 19개의 성장을 촉진했으며, 200개 이상의 신청서를 받았습니다.",
-        "cta": "웹3 인큐베이션 프로그램"
-      }
+      "description": "Astar 미션을 함께 이루기 위해 뭉친 주요 파트너사"
     },
     "japanAndAsia": {
       "title": "일본과 아시아",
