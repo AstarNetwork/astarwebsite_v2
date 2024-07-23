@@ -36,17 +36,7 @@
     },
     "partners": {
       "title": "Partners",
-      "description": "Our important partners to achieve our mission",
-      "startale": {
-        "name": "Startale Labs",
-        "description": "Startale Labs is dedicated to accelerating the mass adoption of Web3, developing Japan's largest public blockchain, Astar Network, and providing Web3 infrastructure through the Startale Web3 Cloud.",
-        "cta": "Startale Labs website"
-      },
-      "sony": {
-        "name": "Sony Network Communications",
-        "description": "Sony Network Communications and Astar Network created a joint incubation program that leveraged the world’s top innovators to drive growth for 19 web3 startups, receiving over 200 applications.",
-        "cta": "Web3 Incubation Program"
-      }
+      "description": "Our important partners to achieve our mission"
     },
     "japanAndAsia": {
       "title": "Japan and Asia",

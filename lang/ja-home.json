@@ -31,9 +31,9 @@
       "title": "Our Solutions",
       "description": "Astarでは、すべての人にソリューションがあります。企業、開発者、個人がWeb3につながります。",
       "startale": {
-        "name": "Startale Labs",
-        "description": "Startale Labsは、Web3のマスアダプションを加速させることに専念しており、日本最大の公共ブロックチェーンであるAstar Networkの開発と、Startale Web3 Cloudを通じたWeb3インフラの提供を行っています。",
-        "cta": "Startale labs website",
+        "name": "Startale",
+        "description": "Startaleは、世界中でWeb3テクノロジーの普及を加速させ、より公平な未来を築くための自律性と革新を促進していきます。",
+        "cta": "Startale website",
         "useCases": {
           "sony": {
             "name": "Sony Network Communications",

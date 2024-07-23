@@ -57,7 +57,7 @@ const posts = [
     title: t('solutions.japanAndAsia.korea.title'),
     image: '/images/solutions/japan-and-asia/korea.webp',
     description: t('solutions.japanAndAsia.korea.description'),
-    link: 'https://startale.org/blog/71699',
+    link: 'https://startale.com/en/blog/Startale-Labs-Raises-Additional-dollar3.5m-from-UOB-Venture-71699',
   },
   {
     title: t('solutions.japanAndAsia.japanTaxationAndGovernment.title'),

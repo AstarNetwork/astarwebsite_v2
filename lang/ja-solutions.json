@@ -36,17 +36,7 @@
     },
     "partners": {
       "title": "Partners",
-      "description": "ミッション達成のための重要なパートナー",
-      "startale": {
-        "name": "Startale Labs",
-        "description": "Startale Labsは、Web3の普及を加速させるべく、日本最大のパブリックブロックチェーンであるAstar Networkの開発、Startale Web3 CloudによるWeb3インフラの提供を行っています。",
-        "cta": "Startale labs website"
-      },
-      "sony": {
-        "name": "Sony Network Communications",
-        "description": "ソニーネットワークコミュニケーションズとAstar Networkは、世界トップクラスのイノベーターを活用して19のweb3スタートアップの成長を促進する共同インキュベーションプログラムを作成し、200件以上の応募を受け付けました。",
-        "cta": "Web3 Incubation Program"
-      }
+      "description": "ミッション達成のための重要なパートナー"
     },
     "japanAndAsia": {
       "title": "Japan and Asia",

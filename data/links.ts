@@ -59,4 +59,4 @@ export const portalUrl = {
 
 export const careerUrl = 'https://startale.com/en/career'
 
-export const startaleUrl = 'https://startale.org/'
+export const startaleUrl = 'https://startale.com/'

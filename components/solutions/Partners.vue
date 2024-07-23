@@ -19,9 +19,9 @@
           :data-aos-delay="index * 100"
         >
           <img
-            :src="`/images/solutions/partners/${item.image}`"
+            :src="`/images/home/${item.image}`"
             :alt="item.name"
-            class="h-16 sm:h-20 mx-auto"
+            class="h-8 sm:h-12 mx-auto"
           >
           <p>{{ item.description }}</p>
           <TextLink :href="item.link.url">
@@ -35,26 +35,18 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+import { startaleUrl } from '@/data/links'
 
 const data = [
   {
-    name: t('solutions.partners.startale.name'),
+    name: t('home.solutions.startale.name'),
     image: 'startale-logo.svg',
-    description: t('solutions.partners.startale.description'),
+    description: t('home.solutions.startale.description'),
     link: {
-      label: t('solutions.partners.startale.cta'),
-      url: 'https://startale.org/',
+      label: t('home.solutions.startale.cta'),
+      url: startaleUrl,
     },
   },
-  // {
-  //   name: t("solutions.partners.sony.name"),
-  //   image: "sony-logo.svg",
-  //   description: t("solutions.partners.sony.description"),
-  //   link: {
-  //     label: t("solutions.partners.sony.cta"),
-  //     url: "https://astar.network/incubation",
-  //   },
-  // },
 ]
 </script>
 
